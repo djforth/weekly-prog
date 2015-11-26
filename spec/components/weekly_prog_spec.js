@@ -4,7 +4,7 @@ const _ = require("lodash")
 
 const WeeklyProg = require("../../src/components/weekly_prog");
 
-describe("WeeklyProg", function() {
+xdescribe("WeeklyProg", function() {
   let weekly_prog;
   beforeEach(()=>{
     weekly_prog = TestUtils.renderIntoDocument(<WeeklyProg />);

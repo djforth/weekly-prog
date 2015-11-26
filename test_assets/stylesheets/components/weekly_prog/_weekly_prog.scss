@@ -1,0 +1,36 @@
+
+
+.weekly-prog{
+
+  .additional{
+    font-size: 1.231em; /* 16px */
+    padding:20px;
+
+    ul.list-group{
+      @include reset-normalize();
+      @include clearfix();
+      display: block;
+      margin-bottom:20px;
+
+      li{
+        @include reset-normalize();
+        margin-right:20px;
+      }
+    }
+
+    .description{
+      @include clearfix();
+      display: block;
+    }
+  }
+
+  .pagination{
+    padding:0 30px 20px;
+    text-align: center;
+    // border:1px solid red;
+    &.hide{
+      @include hidden();
+    }
+  }
+
+}

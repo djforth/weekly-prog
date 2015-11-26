@@ -422,6 +422,432 @@ td,
 th {
   padding: 0;
 }
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+```html
+<!-- `display: block` sprite -->
+<div class="icon-home"></div>
+
+<!-- `display: inline-block` sprite -->
+<img class="icon-home" />
+```
+*/
+/* line 148, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_accessibility-icons.scss */
+.icon-lift {
+  background-position: 0px -67px;
+  width: 59px;
+  height: 59px; }
+
+/* line 154, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_accessibility-icons.scss */
+.icon-lift,.icon-poolside-facilities{
+  background-image: url('/assets/sprites/accessibility-icons.png'); }
+.icon-poolside-facilities {
+  background-position: -178px 0px;
+  width: 54px;
+  height: 64px; }
+
+/* line 160, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_accessibility-icons.scss */
+.icon-poolside-hoist {
+  background-position: 0px -126px;
+  width: 46px;
+  height: 69px; }
+
+/* line 166, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_accessibility-icons.scss */
+.icon-poolside-hoist,.icon-wheelchair-p{
+  background-image: url('/assets/sprites/accessibility-icons.png'); }
+.icon-wheelchair-p {
+  background-position: 0px 0px;
+  width: 62px;
+  height: 67px; }
+
+/* line 172, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_accessibility-icons.scss */
+.icon-wheelchair-wc {
+  background-position: -123px 0px;
+  width: 55px;
+  height: 66px; }
+
+/* line 178, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_accessibility-icons.scss */
+.icon-wheelchair-wc,.icon-wheelchair{
+  background-image: url('/assets/sprites/accessibility-icons.png'); }
+.icon-wheelchair {
+  background-position: -62px 0px;
+  width: 61px;
+  height: 65px; }
+
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+```html
+<!-- `display: block` sprite -->
+<div class="icon-home"></div>
+
+<!-- `display: inline-block` sprite -->
+<img class="icon-home" />
+```
+*/
+/* line 126, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_arrows.scss */
+.icon-arrow-green {
+  background-position: -14px -20px;
+  width: 8px;
+  height: 4px; }
+
+/* line 132, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_arrows.scss */
+.icon-arrow-green,.icon-arrow-grey{
+  background-image: url('/assets/sprites/arrows.png'); }
+.icon-arrow-grey {
+  background-position: 0px 0px;
+  width: 26px;
+  height: 13px; }
+
+/* line 138, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_arrows.scss */
+.icon-arrow-orange-2 {
+  background-position: 0px -13px;
+  width: 14px;
+  height: 20px; }
+
+/* line 144, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_arrows.scss */
+.icon-arrow-orange-2,.icon-arrow-orange{
+  background-image: url('/assets/sprites/arrows.png'); }
+.icon-arrow-orange {
+  background-position: -14px -13px;
+  width: 5px;
+  height: 7px; }
+
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+```html
+<!-- `display: block` sprite -->
+<div class="icon-home"></div>
+
+<!-- `display: inline-block` sprite -->
+<img class="icon-home" />
+```
+*/
+/* line 126, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_circular-icons.scss */
+.icon-hot-air-balloon {
+  background-position: 0px 0px;
+  width: 90px;
+  height: 90px; }
+
+/* line 132, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_circular-icons.scss */
+.icon-hot-air-balloon,.icon-information{
+  background-image: url('/assets/sprites/circular-icons.png'); }
+.icon-information {
+  background-position: -90px -90px;
+  width: 26px;
+  height: 26px; }
+
+/* line 138, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_circular-icons.scss */
+.icon-people {
+  background-position: -90px 0px; }
+
+/* line 144, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_circular-icons.scss */
+.icon-people,.icon-ticket{
+  background-image: url('/assets/sprites/circular-icons.png');
+  width: 90px;
+  height: 90px; }
+.icon-ticket {
+  background-position: 0px -90px; }
+
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+```html
+<!-- `display: block` sprite -->
+<div class="icon-home"></div>
+
+<!-- `display: inline-block` sprite -->
+<img class="icon-home" />
+```
+*/
+/* line 203, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_facility-icons.scss */
+.icon-balloon {
+  background-position: -252px -61px;
+  width: 42px;
+  height: 68px; }
+
+/* line 209, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_facility-icons.scss */
+.icon-balloon,.icon-book{
+  background-image: url('/assets/sprites/facility-icons.png'); }
+.icon-book {
+  background-position: -60px -114px;
+  width: 74px;
+  height: 50px; }
+
+/* line 215, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_facility-icons.scss */
+.icon-coffee {
+  background-position: 0px -114px;
+  width: 60px;
+  height: 62px; }
+
+/* line 221, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_facility-icons.scss */
+.icon-coffee,.icon-dumbbells{
+  background-image: url('/assets/sprites/facility-icons.png'); }
+.icon-dumbbells {
+  background-position: 0px -65px;
+  width: 83px;
+  height: 49px; }
+
+/* line 227, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_facility-icons.scss */
+.icon-heart {
+  background-position: 0px -176px;
+  width: 67px;
+  height: 51px; }
+
+/* line 233, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_facility-icons.scss */
+.icon-heart,.icon-masks{
+  background-image: url('/assets/sprites/facility-icons.png'); }
+.icon-masks {
+  background-position: -192px -60px;
+  width: 56px;
+  height: 62px; }
+
+/* line 239, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_facility-icons.scss */
+.icon-pool-ladder {
+  background-position: -65px 0px;
+  width: 69px;
+  height: 60px; }
+
+/* line 245, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_facility-icons.scss */
+.icon-pool-ladder,.icon-present{
+  background-image: url('/assets/sprites/facility-icons.png'); }
+.icon-present {
+  background-position: -252px 0px;
+  width: 49px;
+  height: 61px; }
+
+/* line 251, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_facility-icons.scss */
+.icon-racquet {
+  background-position: 0px 0px;
+  width: 65px; }
+
+/* line 257, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_facility-icons.scss */
+.icon-racquet,.icon-shuttlecock{
+  background-image: url('/assets/sprites/facility-icons.png');
+  height: 65px; }
+.icon-shuttlecock {
+  background-position: -134px 0px;
+  width: 58px; }
+
+/* line 263, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_facility-icons.scss */
+.icon-tennis-ball {
+  background-image: url('/assets/sprites/facility-icons.png');
+  background-position: -192px 0px;
+  width: 60px;
+  height: 60px; }
+
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+```html
+<!-- `display: block` sprite -->
+<div class="icon-home"></div>
+
+<!-- `display: inline-block` sprite -->
+<img class="icon-home" />
+```
+*/
+/* line 159, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_map-icons.scss */
+.icon-legend-bike {
+  background-position: -41px 0px;
+  width: 48px;
+  height: 31px; }
+
+/* line 165, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_map-icons.scss */
+.icon-legend-bike,.icon-legend-bus{
+  background-image: url('/assets/sprites/map-icons.png'); }
+.icon-legend-bus {
+  background-position: -30px -62px;
+  width: 30px;
+  height: 39px; }
+
+/* line 171, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_map-icons.scss */
+.icon-legend-car {
+  background-position: -41px -31px;
+  width: 37px;
+  height: 31px; }
+
+/* line 177, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_map-icons.scss */
+.icon-legend-car,.icon-legend-pin{
+  background-image: url('/assets/sprites/map-icons.png'); }
+.icon-legend-pin {
+  background-position: -89px 0px;
+  width: 34px;
+  height: 42px; }
+
+/* line 183, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_map-icons.scss */
+.icon-legend-train {
+  background-position: 0px -62px;
+  width: 30px;
+  height: 43px; }
+
+/* line 189, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_map-icons.scss */
+.icon-legend-train,.icon-pin-primary{
+  background-image: url('/assets/sprites/map-icons.png'); }
+.icon-pin-primary {
+  background-position: 0px 0px;
+  width: 41px;
+  height: 62px; }
+
+/* line 195, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_map-icons.scss */
+.icon-pin-secondary {
+  background-image: url('/assets/sprites/map-icons.png');
+  background-position: -60px -62px;
+  width: 24px;
+  height: 37px; }
+
 /* line 10, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_breakpoints.scss */
 .wrap {
   padding: 0 10px; }
@@ -429,6 +855,12 @@ th {
 /* ---------- Global ---------- */
 /* ---------- End Global ---------- */
 /* ---------- Components ---------- */
+/* $apple */
+/* $apple */
+/* $apple */
+/* $apple */
+/* $apple */
+/* $apple */
 /* ---------- End Components ---------- */
 /* ---------- Pages ---------- */
 /* ---------- End Pages ---------- */
@@ -470,60 +902,72 @@ form .form-row {
 
 /* 16px */
 /* 24px based on 16px body font size */
-/* line 5, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
+/* line 4, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
 h1, .alpha {
-  font-size: 3em;
-  /* 48px */
+  font-size: 5.625em;
+  /* 90px */
   line-height: 1em; }
 
-/* line 10, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
+/* line 9, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
 h2, .beta {
-  font-size: 2.25em;
-  /* 36px */
+  font-size: 3.875em;
+  /* 62px */
   line-height: 1em; }
 
-/* line 15, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
+/* line 14, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
 h3, .gamma {
+  font-size: 2.625em;
+  /* 42px */
+  line-height: 1em; }
+
+/* line 19, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
+h4, .delta {
+  font-size: 2.188em;
+  /* 35px */
+  line-height: 1em; }
+
+/* line 24, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
+h4, .epsilon {
   font-size: 1.875em;
   /* 30px */
   line-height: 1em; }
 
-/* line 20, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
-h4, .delta {
-  font-size: 1.5em;
-  /* 24px */
+/* line 29, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
+h5, .zeta {
+  font-size: 1.25em;
+  /* 20px */
   line-height: 1em; }
 
-/* line 25, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
-h5, .epsilon {
-  font-size: 1.125em;
-  /* 18px */
-  line-height: 1em; }
-
-/* line 30, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
-h6, .zeta {
+/* line 34, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
+h6, .eta {
   font-size: 1em;
   /* 16px */
   line-height: 1em; }
 
-/* line 35, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
+/* line 39, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 10px; }
 
-/* line 39, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
-.eta {
-  font-size: 0.875em;
-  /* 14px */
-  line-height: 1em; }
+/* line 43, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
+.theta {
+  font-size: 0.938em;
+  /* 15px */ }
 
-/* line 44, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
+/* line 48, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
+.theta,.iota{
+  line-height: 1em; }
+.iota {
+  font-size: 0.813em;
+  /* 13px */ }
+
+/* line 53, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
 dd, dt, li, p {
   font-size: 0.813em;
   /* 13px */
   line-height: 1.84615em;
   /* 24px / 13px */ }
 
-/* line 49, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
+/* line 58, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
 p {
   margin: 0;
   padding: 0;
@@ -532,48 +976,89 @@ p {
   font-weight: normal;
   list-style: none;
   margin-bottom: 10px; }
+  /* line 62, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
+  p.tertiary {
+    color: #fff; }
 
-/* line 54, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
-strong, .bold {
-  font-weight: bold; }
+/* line 67, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
+strong, .bold-weight {
+  font-weight: 700 !important; }
 
-/* line 59, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
+/* line 72, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
 ul.bullets {
   list-style: disc inside; }
-  /* line 62, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
+  /* line 75, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
   ul.bullets li {
     margin-bottom: 10px; }
 
-/* line 68, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
+/* line 81, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
 .body-link {
-  color: #333;
-  text-decoration: none; }
-  /* line 72, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
+  color: #e14e00;
+  text-decoration: underline; }
+  /* line 85, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
+  .body-link:before {
+    content: "";
+    display: inline-block;
+    margin-right: 5px;
+    background-image: url(sprites/arrows.png);
+    background-position: -14px -13px;
+    width: 5px;
+    height: 7px; }
+  /* line 95, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
   .body-link:hover {
-    text-decoration: underline; }
+    text-decoration: none; }
 
-/* line 78, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
+/* line 101, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
 .gg {
-  color: #56a43f;
   font-family: "Garage Gothic", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: bold;
   text-transform: uppercase; }
+  /* line 107, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
+  .gg.primary {
+    color: #55a440; }
+    /* line 110, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
+    .gg.primary em {
+      color: #98cf50;
+      font-size: 0.85483870967742em;
+      /* 53px / 62px */ }
+  /* line 116, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
+  .gg.secondary {
+    color: #585858; }
+  /* line 120, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
+  .gg.tertiary {
+    color: #fff; }
+
+/* line 126, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
+.italic {
+  font-style: italic; }
+
+/* line 130, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
+.light-weight {
+  font-weight: 300 !important; }
+
+/* line 134, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
+.up-c {
+  text-transform: uppercase; }
 
 /* line 1, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_global.scss */
 body {
-  color: #333;
-  font-family: Arial, Verdana, sans-serif;
+  color: #585858;
+  font-family: "Lato", Arial, Verdana, sans-serif;
   font-size: 1em;
   font-weight: normal;
   position: relative;
   right: 0; }
 
 /* line 10, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_global.scss */
+img {
+  vertical-align: bottom; }
+
+/* line 14, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_global.scss */
 .center {
   text-align: center; }
 
-/* line 14, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_global.scss */
+/* line 18, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_global.scss */
 .clearfix {
   *zoom: 1; }
   /* line 4, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/utils/_mixins.scss */
@@ -584,7 +1069,7 @@ body {
   .clearfix:after {
     clear: both; }
 
-/* line 18, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_global.scss */
+/* line 22, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_global.scss */
 .content-padding {
   *zoom: 1;
   padding: 20px; }
@@ -596,7 +1081,16 @@ body {
   .content-padding:after {
     clear: both; }
 
-/* line 23, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_global.scss */
+/* line 27, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_global.scss */
+.hidden {
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  top: auto;
+  left: -10000px;
+  width: 1px; }
+
+/* line 31, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_global.scss */
 .row {
   *zoom: 1;
   margin: 20px 0; }
@@ -608,16 +1102,398 @@ body {
   .row:after {
     clear: both; }
 
-/* line 18, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/application.scss */
+/* line 1, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/buttons/_buttons.scss */
+.button, form input[type="submit"] {
+  display: inline-block !important;
+  font-family: "Garage Gothic", Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  /* 24px */
+  font-weight: bold;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+/* line 14, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/buttons/_buttons.scss */
+.button-news {
+  padding: 15px 20px;
+  background-color: #fff; }
+
+/* line 22, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/buttons/_buttons.scss */
+.button-primary, form input[type="submit"] {
+  padding: 15px 30px;
+  background-color: #e14e00;
+  color: #fff; }
+  /* line 30, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/buttons/_buttons.scss */
+  .button-primary:hover, form input[type="submit"]:hover {
+    background-color: #ae3c00; }
+
+/* line 35, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/buttons/_buttons.scss */
+.button-secondary {
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 1px solid #e14e00;
+  color: #e14e00; }
+  /* line 45, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/buttons/_buttons.scss */
+  .button-secondary:hover {
+    background-color: #e6e6e6; }
+
+/* line 50, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/buttons/_buttons.scss */
+.button-pagination {
+  padding: 10px 30px;
+  background-color: #dedede;
+  color: #797979; }
+  /* line 60, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/buttons/_buttons.scss */
+  .button-pagination:hover {
+    background-color: #c5c5c5; }
+
+/* line 1, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns.scss */
+.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+  float: left;
+  min-height: 10px;
+  padding: 0 15px; }
+
+/* line 1, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/fake_table/_fake_table.scss */
+em, .em {
+  color: #008bd0;
+  font-style: normal;
+  font-weight: 700; }
+
+/* line 9, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/fake_table/_fake_table.scss */
+.tbody .tr div.session-full {
+  display: block;
+  font-family: "Garage Gothic", Arial, Helvetica, sans-serif;
+  font-size: 1.30769230769231em;
+  /* 17px / 13px */
+  text-align: center;
+  text-transform: uppercase; }
+
+/* line 17, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/fake_table/_fake_table.scss */
+.tbody .tr div.places {
+  font-size: 2.46153846153846em;
+  /* 32px / 13px */
+  line-height: 0.5em; }
+
+/* line 24, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/fake_table/_fake_table.scss */
+span.session-full {
+  display: block;
+  font-family: "Garage Gothic", Arial, Helvetica, sans-serif;
+  font-size: 1.30769230769231em;
+  /* 17px / 13px */
+  text-align: center;
+  text-transform: uppercase; }
+
+/* line 32, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/fake_table/_fake_table.scss */
+span.places {
+  font-size: 2.46153846153846em;
+  /* 32px / 13px */ }
+
+/* line 37, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/fake_table/_fake_table.scss */
+.tbody {
+  font-size: 0.813em;
+  /* 13px */ }
+  /* line 41, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/fake_table/_fake_table.scss */
+  .tbody .tr:nth-child(even) {
+    background-color: #f0f0f0; }
+
+/* line 47, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/fake_table/_fake_table.scss */
+.tbody, .thead, .tr {
+  *zoom: 1; }
+  /* line 4, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/utils/_mixins.scss */
+  .tbody:before, .tbody:after, .thead:before, .thead:after, .tr:before, .tr:after {
+    content: "";
+    display: table; }
+  /* line 9, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/utils/_mixins.scss */
+  .tbody:after, .thead:after, .tr:after {
+    clear: both; }
+
+/* line 51, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/fake_table/_fake_table.scss */
+.thead {
+  padding-bottom: 5px;
+  color: #585858;
+  font-size: 0.75em;
+  /* 12px */
+  text-transform: uppercase; }
+
+/* line 61, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/fake_table/_fake_table.scss */
+.tr {
+  padding: 10px 0;
+  border-bottom: 1px solid #cfcfcf; }
+  /* line 68, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/fake_table/_fake_table.scss */
+  .tr .button, .tr form input[type="submit"], form .tr input[type="submit"] {
+    font-size: 1.84615384615385em;
+    /* 24px / 13px */ }
+
+/* line 2, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/header/_header.scss */
+header.main {
+  background-color: #707070; }
+  /* line 5, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/header/_header.scss */
+  header.main .button, header.main form input[type="submit"], form header.main input[type="submit"] {
+    float: right; }
+  /* line 9, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/header/_header.scss */
+  header.main .header-search {
+    float: right;
+    color: #fff;
+    text-decoration: none; }
+    /* line 17, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/header/_header.scss */
+    header.main .header-search svg {
+      position: relative;
+      top: 10px; }
+  /* line 23, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/header/_header.scss */
+  header.main .logo {
+    float: left;
+    padding: 10px 0; }
+
+/* line 1, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/icons/_icons.scss */
+.icon {
+  display: block; }
+  /* line 4, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/icons/_icons.scss */
+  .icon span {
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    left: -10000px;
+    width: 1px; }
+
+/* line 1, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/pills/_pills.scss */
+.pill {
+  display: inline-block;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.07692307692308em;
+  /* 14px / 13px */
+  text-transform: uppercase; }
+
+/* line 15, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/pills/_pills.scss */
+.pill-primary {
+  background-color: #008bd0; }
+
+/* line 19, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/pills/_pills.scss */
+.pill-secondary {
+  background-color: #9dcd53; }
+
+/* line 1, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/sections/_sections.scss */
+.page-header {
+  margin-bottom: 40px; }
+
+/* line 5, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/sections/_sections.scss */
+.page-header, .section-header {
+  *zoom: 1;
+  overflow: hidden;
+  text-align: center; }
+  /* line 4, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/utils/_mixins.scss */
+  .page-header:before, .page-header:after, .section-header:before, .section-header:after {
+    content: "";
+    display: table; }
+  /* line 9, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/utils/_mixins.scss */
+  .page-header:after, .section-header:after {
+    clear: both; }
+  /* line 11, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/sections/_sections.scss */
+  .page-header h1, .page-header h2, .page-header h3, .page-header h4, .page-header h5, .page-header h6, .section-header h1, .section-header h2, .section-header h3, .section-header h4, .section-header h5, .section-header h6 {
+    margin: 0 0 10px;
+    padding: 0;
+    vertical-align: baseline;
+    border: 0;
+    font-weight: normal;
+    list-style: none; }
+  /* line 18, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/sections/_sections.scss */
+  .page-header p, .section-header p {
+    margin: 0 0 20px;
+    padding: 0;
+    vertical-align: baseline;
+    border: 0;
+    font-weight: normal;
+    list-style: none;
+    font-size: 1em;
+    /* 16px */ }
+
+/* line 28, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/sections/_sections.scss */
+.section-header {
+  margin-bottom: 20px; }
+  /* line 31, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/sections/_sections.scss */
+  .section-header h1 {
+    display: table;
+    white-space: nowrap;
+    width: 100%; }
+    /* line 36, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/sections/_sections.scss */
+    .section-header h1:after {
+      left: 10px; }
+    /* line 40, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/sections/_sections.scss */
+    .section-header h1:after, .section-header h1:before {
+      border-top: 1px solid #9dcd53;
+      content: "";
+      display: table-cell;
+      position: relative;
+      top: 0.5em;
+      width: 43%; }
+    /* line 49, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/sections/_sections.scss */
+    .section-header h1:before {
+      right: 10px; }
+    /* line 53, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/sections/_sections.scss */
+    .section-header h1 em {
+      display: block;
+      font-style: normal; }
+
+/* line 1, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/tabbed_content/_tabbed_content.scss */
+.tabbed-content-body {
+  overflow: hidden;
+  padding: 40px 0;
+  position: relative;
+  background-color: #f8f8f8; }
+  /* line 10, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/tabbed_content/_tabbed_content.scss */
+  .tabbed-content-body:after {
+    content: "";
+    height: 10px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    width: 75%;
+    z-index: 1;
+    border-radius: 100px / 5px;
+    box-shadow: 0 0 18px rgba(88, 88, 88, 0.3); }
+
+/* line 28, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/tabbed_content/_tabbed_content.scss */
+.tabbed-content-body, .tabbed-content-nav {
+  *zoom: 1; }
+  /* line 4, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/utils/_mixins.scss */
+  .tabbed-content-body:before, .tabbed-content-body:after, .tabbed-content-nav:before, .tabbed-content-nav:after {
+    content: "";
+    display: table; }
+  /* line 9, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/utils/_mixins.scss */
+  .tabbed-content-body:after, .tabbed-content-nav:after {
+    clear: both; }
+
+/* line 32, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/tabbed_content/_tabbed_content.scss */
+.tabbed-content-nav {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  border: 0;
+  font-weight: normal;
+  list-style: none; }
+  /* line 39, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/tabbed_content/_tabbed_content.scss */
+  .tabbed-content-nav a {
+    display: block;
+    padding: 10px;
+    position: relative;
+    border-bottom: 1px solid #cfcfcf;
+    color: #585858;
+    text-decoration: none;
+    text-transform: uppercase; }
+    /* line 51, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/tabbed_content/_tabbed_content.scss */
+    .tabbed-content-nav a.active {
+      border-bottom: 2px solid #55a440;
+      color: #55a440;
+      font-weight: 400; }
+      /* line 56, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/tabbed_content/_tabbed_content.scss */
+      .tabbed-content-nav a.active:after {
+        content: "";
+        display: inline-block;
+        margin: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -6px;
+        background-image: url(sprites/arrows.png);
+        background-position: -14px -20px;
+        width: 8px;
+        height: 4px; }
+  /* line 72, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/tabbed_content/_tabbed_content.scss */
+  .tabbed-content-nav li {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: 0;
+    font-weight: normal;
+    list-style: none;
+    float: left;
+    font-size: 1.25em;
+    /* 20px */
+    font-weight: 300; }
+    /* line 83, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/tabbed_content/_tabbed_content.scss */
+    .tabbed-content-nav li.last {
+      border-right: 0 none; }
+
+/* line 89, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/tabbed_content/_tabbed_content.scss */
+.tabbed-content-tab {
+  display: none; }
+  /* line 92, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/tabbed_content/_tabbed_content.scss */
+  .tabbed-content-tab.active {
+    display: block; }
+
+/* line 5, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+.weekly-prog .additional {
+  font-size: 1.231em;
+  /* 16px */
+  padding: 20px; }
+  /* line 9, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+  .weekly-prog .additional ul.list-group {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: 0;
+    font-weight: normal;
+    list-style: none;
+    *zoom: 1;
+    display: block;
+    margin-bottom: 20px; }
+    /* line 4, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/utils/_mixins.scss */
+    .weekly-prog .additional ul.list-group:before, .weekly-prog .additional ul.list-group:after {
+      content: "";
+      display: table; }
+    /* line 9, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/utils/_mixins.scss */
+    .weekly-prog .additional ul.list-group:after {
+      clear: both; }
+    /* line 15, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+    .weekly-prog .additional ul.list-group li {
+      margin: 0;
+      padding: 0;
+      vertical-align: baseline;
+      border: 0;
+      font-weight: normal;
+      list-style: none;
+      margin-right: 20px; }
+  /* line 21, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+  .weekly-prog .additional .description {
+    *zoom: 1;
+    display: block; }
+    /* line 4, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/utils/_mixins.scss */
+    .weekly-prog .additional .description:before, .weekly-prog .additional .description:after {
+      content: "";
+      display: table; }
+    /* line 9, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/utils/_mixins.scss */
+    .weekly-prog .additional .description:after {
+      clear: both; }
+
+/* line 27, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+.weekly-prog .pagination {
+  padding: 0 30px 20px;
+  text-align: center; }
+  /* line 31, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+  .weekly-prog .pagination.hide {
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    left: -10000px;
+    width: 1px; }
+
+/* line 26, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/application.scss */
 .touchNav {
   width: 90%;
   height: 60px;
   overflow: hidden; }
-  /* line 24, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/application.scss */
+  /* line 32, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/application.scss */
   .touchNav .navitems {
     margin: 0;
     padding: 0; }
-    /* line 27, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/application.scss */
+    /* line 35, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/application.scss */
     .touchNav .navitems li {
       display: inline-block;
       padding: 20px; }
@@ -635,7 +1511,58 @@ body {
     clear: both; }
   /* line 3, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_global_responsive.scss */
   body.nav-open{
-    right: 66.66667%; } }
+    right: 66.66667%; }
+  /* line 2, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-sm-1{
+    width: calc(8.333333333333% - 30px);
+    /* 1/12 */ }
+  /* line 6, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-sm-2{
+    width: calc(16.666666666667% - 30px);
+    /* 2/12 */ }
+  /* line 10, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-sm-3{
+    width: calc(25% - 30px);
+    /* 3/12 */ }
+  /* line 14, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-sm-4{
+    width: calc(33.333333333333% - 30px);
+    /* 4/12 */ }
+  /* line 18, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-sm-5{
+    width: calc(41.666666666667% - 30px);
+    /* 5/12 */ }
+  /* line 22, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-sm-6{
+    width: calc(50% - 30px);
+    /* 6/12 */ }
+  /* line 26, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-sm-7{
+    width: calc(58.333333333333% - 30px);
+    /* 7/12 */ }
+  /* line 30, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-sm-8{
+    width: calc(66.666666666667% - 30px);
+    /* 8/12 */ }
+  /* line 34, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-sm-9{
+    width: calc(75% - 30px);
+    /* 9/12 */ }
+  /* line 38, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-sm-10{
+    width: calc(83.333333333333% - 30px);
+    /* 10/12 */ }
+  /* line 42, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-sm-11{
+    width: calc(91.666666666667% - 30px);
+    /* 11/12 */ }
+  /* line 46, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-sm-12{
+    width: calc(100% - 30px);
+    /* 12/12 */ }
+  /* line 4, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/header/_header_responsive.scss */
+  header.main .logo{
+    width: 30%; } }
 
 @media (min-width: 768px) and (max-width: 991px){
   /* line 10, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_breakpoints.scss */
@@ -650,7 +1577,58 @@ body {
     clear: both; }
   /* line 21, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_global_responsive.scss */
   body.nav-open{
-    right: 50%; } }
+    right: 50%; }
+  /* line 52, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-md-1{
+    width: calc(8.333333333333% - 30px);
+    /* 1/12 */ }
+  /* line 56, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-md-2{
+    width: calc(16.666666666667% - 30px);
+    /* 2/12 */ }
+  /* line 60, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-md-3{
+    width: calc(25% - 30px);
+    /* 3/12 */ }
+  /* line 64, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-md-4{
+    width: calc(33.333333333333% - 30px);
+    /* 4/12 */ }
+  /* line 68, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-md-5{
+    width: calc(41.666666666667% - 30px);
+    /* 5/12 */ }
+  /* line 72, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-md-6{
+    width: calc(50% - 30px);
+    /* 6/12 */ }
+  /* line 76, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-md-7{
+    width: calc(58.333333333333% - 30px);
+    /* 7/12 */ }
+  /* line 80, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-md-8{
+    width: calc(66.666666666667% - 30px);
+    /* 8/12 */ }
+  /* line 84, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-md-9{
+    width: calc(75% - 30px);
+    /* 9/12 */ }
+  /* line 88, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-md-10{
+    width: calc(83.333333333333% - 30px);
+    /* 10/12 */ }
+  /* line 92, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-md-11{
+    width: calc(91.666666666667% - 30px);
+    /* 11/12 */ }
+  /* line 96, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-md-12{
+    width: calc(100% - 30px);
+    /* 12/12 */ }
+  /* line 32, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/header/_header_responsive.scss */
+  header.main .logo{
+    width: 20%; } }
 
 @media (min-width: 992px){
   /* line 10, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_breakpoints.scss */
@@ -662,11 +1640,79 @@ body {
   .wrap:after{
     content: " ";
     display: block;
-    clear: both; } }
+    clear: both; }
+  /* line 102, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-lg-1{
+    width: calc(8.333333333333% - 30px);
+    /* 1/12 */ }
+  /* line 106, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-lg-2{
+    width: calc(16.666666666667% - 30px);
+    /* 2/12 */ }
+  /* line 110, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-lg-3{
+    width: calc(25% - 30px);
+    /* 3/12 */ }
+  /* line 114, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-lg-4{
+    width: calc(33.333333333333% - 30px);
+    /* 4/12 */ }
+  /* line 118, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-lg-5{
+    width: calc(41.666666666667% - 30px);
+    /* 5/12 */ }
+  /* line 122, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-lg-6{
+    width: calc(50% - 30px);
+    /* 6/12 */ }
+  /* line 126, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-lg-7{
+    width: calc(58.333333333333% - 30px);
+    /* 7/12 */ }
+  /* line 130, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-lg-8{
+    width: calc(66.666666666667% - 30px);
+    /* 8/12 */ }
+  /* line 134, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-lg-9{
+    width: calc(75% - 30px);
+    /* 9/12 */ }
+  /* line 138, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-lg-10{
+    width: calc(83.333333333333% - 30px);
+    /* 10/12 */ }
+  /* line 142, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-lg-11{
+    width: calc(91.666666666667% - 30px);
+    /* 11/12 */ }
+  /* line 146, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-lg-12{
+    width: calc(100% - 30px);
+    /* 12/12 */ }
+  /* line 41, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/header/_header_responsive.scss */
+  header.main{
+    position: relative; }
+  /* line 44, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/header/_header_responsive.scss */
+  header.main .logo{
+    width: 10%; }
+  /* line 11, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/sections/_sections_responsive.scss */
+  .page-header p{
+    width: 59.32203%;
+    float: left;
+    margin-right: 1.69492%;
+    padding-left: 20.33898%;
+    padding-right: 20.33898%; } }
 
 @media (max-width: 991px){
   /* line 10, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_global_responsive.scss */
   body{
     right: 0;
     -webkit-transition: right 0.2s ease-in-out;
-    transition: right 0.2s ease-in-out; } } /*# sourceMappingURL=application.css.map */
+    transition: right 0.2s ease-in-out; }
+  /* line 15, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/header/_header_responsive.scss */
+  body.nav-open header.main{
+    background-color: #8a8a8a; }
+  /* line 23, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/header/_header_responsive.scss */
+  header.main{
+    -webkit-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out; } } /*# sourceMappingURL=application.css.map */

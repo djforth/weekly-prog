@@ -6,6 +6,9 @@
 @import "breakpoint-sass/stylesheets/breakpoint",
         "susy/sass/susy";
 
+// Sprites
+@import "sprites/**/*";
+
 // Base and Setup
 @import "utils/mixins",
         "base/susy",
@@ -15,6 +18,11 @@
         "base/typography",
         "base/global",
         "base/global_responsive";
+
+
+// Components
+@import "components/**/*";
+
 .touchNav{
   width:90%;
   height:60px;
