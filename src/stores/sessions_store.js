@@ -15,6 +15,8 @@ const SessionsDispatcher = require("../dispatchers/sessions_dispatcher")
 
 let ajaxManager, processor, sessions;
 
+let fetched = false;
+
 function processData(groupBy){
   let sessions = DateManager(groupBy);
   // console.log('groupBy', groupBy);
@@ -59,11 +61,13 @@ const store = {
   }
 
   , _fetchData(date){
+
     if(!ajaxManager){
       throw new Error("please set API path")
     }
     ajaxManager.setQuery(date);
     return ajaxManager.fetch().then((data)=>{
+      fetched = true;
       sessions = processor(data);
       this.emitChange("fetched");
     })
@@ -79,8 +83,13 @@ const store = {
       if(current_day) return current_day;
     }
 
-    this._fetchData(this.current.getDate());
-    this.emitChange("fetching");
+    if(fetched){
+      this._fetchData(this.current.getDate());
+      this.emitChange("fetching");
+    } else {
+      return []
+    }
+
 
     return null;
   }
