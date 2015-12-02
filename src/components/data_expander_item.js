@@ -11,6 +11,7 @@ const DataItem  = require("./data_item");
 
 // Mixins
 const cssMixins  = require("morse-react-mixins").css_mixins;
+const textMixins  = require("morse-react-mixins").text_mixins;
 
 
 class DataExpanderItem extends DataItem {
@@ -29,6 +30,10 @@ class DataExpanderItem extends DataItem {
       show_additional: false
     };
 
+  }
+
+  _createKey(keys){
+    return this.createId(keys, this.props.data.get("id"));
   }
 
   _onClick(e) {
@@ -72,18 +77,17 @@ class DataExpanderItem extends DataItem {
 
     if(this.state.show_additional) {
       additional.push(
-        <ul className={`list-group ${this.state.acc_css}`} key={`additonal${this.props.data.get("id")}`}>
+        <ul className={`list-group ${this.state.acc_css}`} key={this._createKey("additional")}>
           {this._renderAll(extra)}
         </ul>
       );
       additional.push(
-        <div className="description">
+        <div className="description" key={this._createKey("description")}>
           {this._rawMarkup(this.props.data.get("description"))}
         </div>
       )
 
       let action = _.where(visible, {key:"actions"})
-      // console.log("action", action)
       if(!_.isEmpty(action)){
         additional.push(this._actions(this.props.data, action));
       }
@@ -96,7 +100,7 @@ class DataExpanderItem extends DataItem {
 
   _renderItem(col, data){
     // let title = _.find(visible, {key:key}).title
-    return <li className="list-group-item col-md-4" key={col.title+data.get("id")} ><strong>{col.title}:</strong> {this._displayData(data, col)}</li>;
+    return <li className="list-group-item col-md-4" key={this._createKey(col.title)}><strong>{col.title}:</strong> {this._displayData(data, col)}</li>;
   }
 
   _renderShowButton() {
@@ -109,7 +113,7 @@ class DataExpanderItem extends DataItem {
     }
 
     return (
-      <div className={this.checkCss(this.props.css, "expand")}>
+      <div className={this.checkCss(this.props.css, "expand")} key={this._createKey("book")}>
         <a href="#"
           onClick={this._onClick.bind(this)}
           className="icon icon-information"
@@ -124,10 +128,18 @@ class DataExpanderItem extends DataItem {
     let item = this.props.data;
     if(item && this.state.columns){
        return _.map(this.state.columns, function(col){
-        return (col.key === "expand") ? this._renderShowButton() : this._renderColumn(col, item);
+        return (col.key === "expand" && this._expandTest()) ? this._renderShowButton() : this._renderColumn(col, item);
       }.bind(this));
     }
     return "";
+  }
+
+  _expandTest(){
+    let visible  = _.pluck(ColumnsStore.getShowable(), "key");
+    return this.props.data.reduce((p, v, k)=>{
+      let t = (_.isBoolean(p)) ? p : false;
+      return (t) ? t : _.includes(visible, k);
+    });
   }
 
   render() {

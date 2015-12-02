@@ -1,12 +1,14 @@
 const assign      = require("react/lib/Object.assign")
   , EventEmitter  = require("events").EventEmitter
-  , _             = require("lodash");
+  , _             = require("lodash")
+  , DateFormatter = require("date-formatter");
 
 //Internal Modules
 const AjaxManager  = require("../utils/ajax_manager")
     , DateManager  = require("../factories/date_manager")
     , SessionsFcty = require("../factories/sessions_fcty")
-    , Breaker      = require("../utils/sessions_breaker");
+    , Breaker      = require("../utils/sessions_breaker")
+    , checker      = require("../utils/day_checker");
 
 
 //Flux
@@ -18,9 +20,11 @@ let ajaxManager, processor, sessions;
 let fetched = false;
 
 function processData(groupBy){
+
   let sessions = DateManager(groupBy);
-  // console.log('groupBy', groupBy);
+
   return function(d){
+
     let groups = Breaker(d, groupBy);
     _.forEach(_.values(groups), (ses)=>{
       sessions.addDate(ses.date, ses.sessions);
@@ -28,6 +32,25 @@ function processData(groupBy){
 
     return sessions
   };
+}
+
+function processDates(dates){
+  dates = dates.sort((a, b)=>{
+    if(a.getTime() > b.getTime()) return 1;
+    if(a.getTime() < b.getTime()) return -1;
+    return 0
+  })
+  return _.map(dates, (d)=>{
+    let dateFmt = new DateFormatter(d);
+    // console.log(dateFmt)
+    return {
+        date:d
+      , fmt:dateFmt
+      , title:dateFmt.formatDate("%a %d")
+      , alt:dateFmt.formatDate("%A, %d %B %Y")
+      , today: checker(d, new Date())
+    }
+  })
 }
 
 function currentDate(date){
@@ -60,13 +83,13 @@ const store = {
     sessions = processor(data);
   }
 
-  , _fetchData(date){
+  , _fetchData(progress, date){
 
     if(!ajaxManager){
       throw new Error("please set API path")
     }
-    ajaxManager.setQuery(date);
-    return ajaxManager.fetch().then((data)=>{
+    ajaxManager.addQuery(date);
+    return ajaxManager.fetch(progress).then((data)=>{
       fetched = true;
       sessions = processor(data);
       this.emitChange("fetched");
@@ -90,12 +113,11 @@ const store = {
       return []
     }
 
-
     return null;
   }
 
-  , _getTimePeriod(date, tp){
-    //
+  , _getAllDates(){
+    return processDates(sessions.getAllDates());
   }
 
   , _setApi(api){
@@ -109,13 +131,11 @@ const store = {
     this.current.setDate(date);
   }
 
-  , _setTimePeriods(){
-
-  }
-
   , _setGroups(groupBy){
-    // console.log(groupBy)
-    processor = processData(groupBy);
+    if(_.isString(groupBy)){
+      processor = processData(groupBy);
+    }
+
   }
 };
 
@@ -126,28 +146,36 @@ const registeredCallback = function(payload) {
   var action = payload.action;
   // console.log(action.type)
   switch(action.type) {
-    case "CHANGE_DAY":
-
+    case "CHANGE_DATE":
+      // console.log("Changing date");
+      SessionStore._setDate(action.date);
+      SessionStore.emitChange("changing_date");
       break;
-    case "GET_TIMEPERIOD":
+    // case "GET_TIMEPERIOD":
 
-      break;
+    //   break;
     case "FETCH_DATA":
-
+      SessionStore._fetchData(action.progress, action.date);
+      SessionStore.emitChange("fetching");
       break;
     case "PRERENDER_DATA":
       SessionStore._addSessions(action.data);
       SessionStore.emitChange("prerender");
       break;
     case "SET_GROUPBY":
-      // console.log(action.groupBy)
       SessionStore._setGroups(action.groupBy);
       SessionStore.emitChange("groupby");
+      break;
+    case "SET_API":
+      SessionStore._setApi(action.url);
+      SessionStore.emitChange("api_set");
+
       break;
 
   }
 };
 
 SessionStore.dispatchToken = SessionsDispatcher.register(registeredCallback);
+SessionStore.setMaxListeners(0);
 
 module.exports = SessionStore;

@@ -11,6 +11,7 @@ function createKey(date){
 function groupSessions(sessions){
   let new_sessions = _.sortBy(sessions, (s)=> s.groupBy);
   let date     = _.first(new_sessions).groupBy;
+  // console.log(date)
   let key      = createKey(date)
   let groups   = {};
   groups[key] = {date:date, sessions:[]};
@@ -34,8 +35,10 @@ function groupSessions(sessions){
 
 function makeDates(sessions, key){
   return _.map(sessions, (s)=>{
-    let date     = new DateFormatter(s[key]);
 
+    let date     = new DateFormatter(s[key]);
+    // console.log(s, key)
+    // console.log(s[key], date.getDate())
     s["groupBy"] = date.getDate();
 
     return s;

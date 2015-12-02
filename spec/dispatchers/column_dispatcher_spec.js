@@ -4,7 +4,7 @@ const ColumnsDispatcher = require("../../src/dispatchers/columns_dispatcher");
 const dispatcherHelper = require("react-jasmine").checkDispatcher;
 
 
-describe("handleAddToColumns", function() {
+describe("ColumnsDispatcher", function() {
 
   let options = [
     {

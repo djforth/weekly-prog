@@ -37,7 +37,7 @@ class DataItems extends React.Component {
 
   componentWillUnmount() {
     SessionsStore.removeChangeListener("fetched", this._onLoaded);
-    SessionsStore.removeChangeListener("prerender", this._onLoaded);
+
     SessionsStore.removeChangeListener("change", this._onChange);
     SessionsStore.removeChangeListener("pagination", this._onPagination);
   }

@@ -17,7 +17,9 @@ class PeriodSessions extends DataItems {
   constructor(props) {
     super(props);
     let sessions = this.props.sessions.getTimePeriod(this.props.time.st, this.props.time.fn)
-    this.pagination = ["pagination", {"hide": false}];
+    console.log(sessions.size, (sessions.size <= 4))
+    this.pagination = ["pagination", {"hide": (sessions.size <= 4)}];
+
     this.state = {
         data:sessions
       , keys:[]
@@ -27,8 +29,20 @@ class PeriodSessions extends DataItems {
       , pagination_css:this.getClasses(this.pagination)};
   }
 
+  componentDidMount() {
+    //Data Changers
+    SessionsStore.addChangeListener("changing_date", this._onLoaded.bind(this));
+    SessionsStore.addChangeListener("fetched", this._onLoaded.bind(this));
+  }
+
+  componentWillUnmount() {
+    SessionsStore.removeChangeListener("changing_date", this._onLoaded);
+    SessionsStore.removeChangeListener("fetched", this._onLoaded);
+  }
+
   _renderData(){
-    if(this.state.data){
+
+    if(this.state.data && this.state.data.size > 0){
        let data = this.state.data.slice(0, this.state.paginate);
 
        let items = data.map(function(k){
@@ -41,6 +55,10 @@ class PeriodSessions extends DataItems {
       }.bind(this));
 
       return items;
+    } else {
+      return (<div className="cols-lg-12">
+        <strong>There is no sessions this {this.props.title}</strong>
+      </div>);
     }
   }
 
@@ -65,20 +83,24 @@ class PeriodSessions extends DataItems {
   }
 
   _onLoaded(){
-    let sessions = SessionsStore._getDate().getTimePeriod(this.props.time.st, this.props.time.fn);
 
-    this.pagination.hide = false;
+    let sessions = SessionsStore._getDate().data.getTimePeriod(this.props.time.st, this.props.time.fn);
+    console.log(sessions, sessions.size)
 
-    this.setState({paginate:4, pagination_css:this.getClasses(this.pagination)})
+    this.pagination[1]["hide"] = (sessions.size <= 4 || _.isEmpty(sessions));
 
-    this.setState({data:sessions.data, keys:SessionsStore.getKeys()});
+    console.log(this.pagination, this.getClasses(this.pagination))
+    this.setState({paginate:4, pagination_css:this.getClasses(this.pagination), data:sessions});
   }
+
+  // _onChange(){
+
+  // }
 
   _paginate(e){
     e.preventDefault();
-    let pag = this.state.paginate * 2;
-    // console.log("pag", pag > this.state.data.count())
-    if(pag > this.state.data.count()){
+    let pag = this.state.paginate + 4;
+    if(pag > this.state.data.size){
 
       this.pagination  = this.toggleCss(this.pagination);
       // console.log("pag", this.pagination)

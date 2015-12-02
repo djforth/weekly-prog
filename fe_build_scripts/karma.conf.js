@@ -40,6 +40,7 @@ module.exports = function(config) {
       extensions: [ "es6.js", ".js"],
       bundleDelay: 1000,
       configure: function(bundle) {
+        console.log("eh?")
         bundle.transform(babelify, {presets: ["es2015", "react"]})
       }
     },

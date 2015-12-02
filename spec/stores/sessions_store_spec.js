@@ -39,9 +39,52 @@ do{
   i++;
 } while(i < 4);
 
-console.log(mockData)
+// console.log(mockData)
 
 describe("SessionsStore", function() {
+  let options = [
+    {
+      func:"_fetchData",
+      action:{
+        type:"FETCH_DATA",
+        progress:"foo",
+        date:1
+      },
+      args:["foo", 1],
+      change:"fetching"
+    },
+    {
+      func:"_addSessions",
+      action:{
+        type:"PRERENDER_DATA",
+        data:"foo"
+      },
+      args:"foo",
+      change:"prerender"
+    },
+    {
+      func:"_setGroups",
+      action:{
+        type:"SET_GROUPBY",
+        groupBy:"foo"
+      },
+      args:"foo",
+      change:"groupby"
+    },
+    {
+      func:"_setApi",
+      action:{
+        type:"SET_API",
+        url:"foo"
+      },
+      args:"foo",
+      change:"api_set"
+    }
+  ];
+
+  storeHelper.checkDispatcher(SessionsStore, "registeredCallback", options);
+
+
   storeHelper.checkChangeEvents(()=>{
     return SessionsStore.__get__("store");
   });
@@ -208,7 +251,7 @@ describe("SessionsStore", function() {
       describe('when ajaxManager set', function() {
         let ajax, processor, promise, pSpy, resolve, reject, sessions, spy;
         beforeEach(function() {
-          spy    = jasmine.createSpyObj("ajaxManager", ["setQuery", "fetch"])
+          spy    = jasmine.createSpyObj("ajaxManager", ["addQuery", "fetch"])
           ajax   = SessionsStore.__set__("ajaxManager", spy);
 
           promise = new Promise((res, rej)=>{
@@ -223,7 +266,7 @@ describe("SessionsStore", function() {
           sessions  = SessionsStore.__get__("sessions");
 
           spyOn(store, "emitChange");
-          store._fetchData(date);
+          store._fetchData(null, date);
         });
 
         afterEach(()=>{
@@ -231,8 +274,8 @@ describe("SessionsStore", function() {
           processor();
         });
 
-        it('should call setQuery', function() {
-          expect(spy.setQuery).toHaveBeenCalledWith(date)
+        it('should call addQuery', function() {
+          expect(spy.addQuery).toHaveBeenCalledWith(date)
         });
 
         it('should call fetch', function() {

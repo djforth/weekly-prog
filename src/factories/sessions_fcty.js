@@ -1,6 +1,7 @@
 
 const _           = require("lodash");
 const DataManager = require("datamanager");
+const Immutable   = require("immutable")
 
 class SessionsFcty extends DataManager {
 
@@ -13,16 +14,18 @@ class SessionsFcty extends DataManager {
       ) {
       return false;
     }
-    // console.log(time.getHours())
-    // console.log(st, fn);
+
     return time.getHours() >= st
            && time.getHours() <= fn
   }
 
   getTimePeriod(st, fn){
+    // console.log(this.data)
+    if(!this.data) return Immutable.fromJS([]);
+
     return this.data.filter((d)=>{
       let time = d.get(this.key);
-      // console.log(time, this.checkInPeriod(time, st, fn))
+
       return this.checkInPeriod(time, st, fn);
     })
   }

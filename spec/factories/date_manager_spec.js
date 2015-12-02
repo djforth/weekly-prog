@@ -17,14 +17,16 @@ do{
 
 describe('DateManager', function() {
   let dateManager, spy, revert;
+  describe('init', function() {
+    beforeEach(()=>{
+      dateManager = DateManager("start");
+    });
 
-  beforeEach(()=>{
-    dateManager = DateManager("start", dates);
+    it('should return an object', function() {
+      expect(_.isObject(dateManager)).toBeTruthy()
+    });
   });
 
-  it('should return an object', function() {
-    expect(_.isObject(dateManager)).toBeTruthy()
-  });
 
   describe('checkDates', function() {
     let checkDates, revert, spy, findDate;
@@ -66,7 +68,11 @@ describe('DateManager', function() {
     });
   });
 
-  describe('dateUpdate', function() {
+  // describe('when ', function() {
+
+  // });
+
+  describe('createFirstWeek', function() {
     let dateUpdate, revert, spy, findDate;
 
     beforeEach(()=>{
@@ -90,29 +96,111 @@ describe('DateManager', function() {
 
       expect(new_dates[0].data).toEqual(["foo"])
     });
+    let week
+    beforeEach(()=>{
+      spy = jasmine.createSpy("createFcty").and.returnValue("foo");
+      let createWeek = DateManager.__get__("createFirstWeek");
+      week = createWeek(spy);
+    });
+
+    it('should call factory 7 times', function() {
+      expect(spy).toHaveBeenCalled();
+      expect(spy.calls.count()).toEqual(7);
+    });
+
+    it('should create week array', function() {
+      expect(week.length).toEqual(7)
+      _.forEach(week, (w)=>{
+        expect(_.isDate(w.date)).toBeTruthy();
+        expect(w.data).toEqual("foo")
+      })
+    });
+  });
+
+
+  describe('createFcty', function() {
+     let createFactory, creator, spy, fcty;
+      beforeEach(()=>{
+        spy = jasmine.createSpyObj("fcty", ["constructor", "setTimeKey"]);
+        let wrapper = function(...args){
+          spy.constructor.apply(this, args);
+        }
+        wrapper.prototype.setTimeKey = function(...args) {
+          spy.setTimeKey.apply(this, args);
+        };
+        fcty = DateManager.__set__("SessionsFcty", wrapper);
+        createFactory = DateManager.__get__("createFactory");
+        creator = createFactory("bar")
+      });
+
+      afterEach(()=>{
+        fcty();
+      });
+
+      it('should return a function', function() {
+        expect(_.isFunction(creator)).toBeTruthy();
+      });
+
+      it('should create a new factory when called', function() {
+        let f = creator(["foo"]);
+        expect(spy.constructor).toHaveBeenCalled()
+        let calls = spy.constructor.calls.argsFor(0)
+        expect(calls).toContain(["foo"])
+        expect(spy.setTimeKey).toHaveBeenCalledWith("bar")
+      });
   });
 
 
   describe('api functions', function() {
+    let fcty, createWeek, createFcty, creator, cFcty, week;
     beforeEach(()=>{
-      dateManager = DateManager("start", dates);
+      fcty = jasmine.createSpy("fcty").and.returnValue(["foo"]);
+      creator = jasmine.createSpy("creator").and.returnValue(fcty);
+
+      createFcty = DateManager.__set__("createFactory", creator);
+
+      week = jasmine.createSpy("createFirstWeek").and.returnValue(dates);
+      createWeek = DateManager.__set__("createFirstWeek", week);
+
+      dateManager = DateManager("start");
+    });
+
+    afterEach(()=>{
+      createFcty();
+      createWeek();
+      creator.calls.reset();
+      week.calls.reset();
+    });
+
+    describe('when data is sent', function() {
+      beforeEach(function() {
+
+        dateManager = DateManager("start", dates);
+      });
+
+      it('call createFcty ', function() {
+        expect(creator).toHaveBeenCalledWith("start");
+      });
+
+      it('call not createFirstWeek if data sent', function() {
+        // expect(week).not.toHaveBeenCalled();
+        expect(dateManager.getAll()).toEqual(dates);
+      });
+    });
+
+    describe('when created should call the correct function', function() {
+      it('call createFcty ', function() {
+        expect(creator).toHaveBeenCalledWith("start")
+      });
+
+      it('call createFirstWeek if no data sent', function() {
+        expect(week).toHaveBeenCalledWith(fcty)
+      });
     });
 
     describe('addDates', function() {
-      let checkDate, dateUpdate, spyCD, spyFD, fcty, spyF;
+      let checkDate, dateUpdate, spyCD, spyFD;
       beforeEach(()=>{
-        spyF = jasmine.createSpyObj("fcty", ["constructor", "setTimeKey"]);
-        let wrapper = function(...args){
-          spyF.constructor.apply(this, args);
-        }
-
-        wrapper.prototype.setTimeKey = function(...args) {
-          spyF.setTimeKey.apply(this, args);
-        };
-
-        fcty = DateManager.__set__("SessionsFcty", wrapper);
-
-
         spyCD     = jasmine.createSpy("checkDate");
         checkDate = DateManager.__set__("checkDates", spyCD);
 
@@ -128,7 +216,7 @@ describe('DateManager', function() {
       afterEach(()=>{
         dateUpdate();
         checkDate();
-        fcty();
+        // fcty();
       });
 
       it('should add dates array if no date matched', function() {
@@ -138,11 +226,10 @@ describe('DateManager', function() {
          let d = dateManager.getAll();
          expect(d.length).toEqual(5);
 
-         expect(spyF.constructor).toHaveBeenCalled();
-         let calls = spyF.constructor.calls.argsFor(0);
+         expect(fcty).toHaveBeenCalled()
+         let calls  = fcty.calls.argsFor(0);
          expect(calls).toContain(["foo"]);
 
-        expect(spyF.setTimeKey).toHaveBeenCalledWith("start");
 
 
       });

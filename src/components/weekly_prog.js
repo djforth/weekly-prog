@@ -7,10 +7,8 @@ const cssMixins    = require("morse-react-mixins").css_mixins
     , textMixins   = require("morse-react-mixins").text_mixins
     , widthsMixins = require("morse-react-mixins").widths_mixins;
 
-
 // Morse Libraies
 const ViewportDetect = require("viewport-detection-es6");
-
 
 //Flux
 const ColumnsActions  = require("../actions/columns_actions")
@@ -19,17 +17,23 @@ const ColumnsActions  = require("../actions/columns_actions")
     , SessionsStore   = require("../stores/sessions_store");
 
 // Components
-const PeriodSessions = require("./period_sessions");
+const DateNav        = require("./date_nav")
+    , PeriodSessions = require("./period_sessions");
 
 
 class WeeklyProg extends React.Component {
   constructor(props) {
     super(props);
-
     SessionsActions.setGroupby(this.props.groupby);
 
     this.percent = 0;
     this.state = {sessions:[], keys:[], visible:[], device:"desktop"};
+  }
+
+  _fetchData(){
+    _.defer(()=>{
+      SessionsActions.fetchData()
+    });
   }
 
   _getSessions(){
@@ -38,9 +42,9 @@ class WeeklyProg extends React.Component {
     this.setState({date:session.date, sessions:session.data})
   }
 
-  _onLoaded(){
-    // console.log("Sessions fetched")
-  }
+  // _onLoaded(){
+  //   console.log("Sessions fetched")
+  // }
 
   _renderPeriodSessions(){
     return _.map(this.props.timeperiod, (tp)=>{
@@ -58,7 +62,8 @@ class WeeklyProg extends React.Component {
     SessionsActions.prerenderData(this.props.sessions);
     ColumnsActions.addingColumns(this.props.columns);
     ColumnsActions.changeDevice(this.device);
-
+    // let dates = SessionsStore._getAllDates();
+    // console.log(dates)
     this.setState({
       // device:device,
       loading:true,
@@ -84,7 +89,11 @@ class WeeklyProg extends React.Component {
 
     }.bind(this));
 
-    SessionsStore.addChangeListener("fetched", this._onLoaded.bind(this));
+    // SessionsStore.addChangeListener("fetched", this._onLoaded.bind(this));
+    SessionsStore.addChangeListener("api_set", this._fetchData.bind(this));
+
+    SessionsActions.setApi(this.props.sessionsApi);
+
   }
 
   componentWillUnmount() {
@@ -97,12 +106,10 @@ class WeeklyProg extends React.Component {
 
     return (
     <div className="tabbed-content weekly-prog">
-      <ul className="tabbed-content-nav" role="tablist">
-        <li role="presentation">
-          <a role="tab" href="#" rel="tab-0" aria-controls="tab-0" aria-selected="true" className=" active">Today</a>
-        </li>
-      </ul>
+      <DateNav />
+      <div id="sessions">
       {this._renderPeriodSessions()}
+      </div>
 
     </div>
 

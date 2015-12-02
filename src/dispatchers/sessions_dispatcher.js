@@ -2,17 +2,17 @@ const Dispatcher = require("flux").Dispatcher;
 const assign     = require("react/lib/Object.assign");
 
 const SessionsDispatcher = assign(new Dispatcher(), {
-  fetchData: function(action) {
+    changeDate: function(action) {
     var payload = {
-      source: "FETCH_DATA",
+      source: "CHANGE_DATE",
       action: action
     };
     this.dispatch(payload);
   }
 
-  , setGroupBy: function(action) {
+  , fetchData: function(action) {
     var payload = {
-      source: "SET_GROUPBY",
+      source: "FETCH_DATA",
       action: action
     };
     this.dispatch(payload);
@@ -21,6 +21,22 @@ const SessionsDispatcher = assign(new Dispatcher(), {
   , prerenderData: function(action) {
     var payload = {
       source: "PRERENDER_DATA",
+      action: action
+    };
+    this.dispatch(payload);
+  }
+
+  , setApi: function(action) {
+    var payload = {
+      source: "SET_API",
+      action: action
+    };
+    this.dispatch(payload);
+  }
+
+  , setGroupBy: function(action) {
+    var payload = {
+      source: "SET_GROUPBY",
       action: action
     };
     this.dispatch(payload);
