@@ -15,7 +15,7 @@ describe('Ajax manager', function() {
     });
 
     it('should return api + query if date string passed ', function() {
-      expect(setApi("api_path", "2015-01-18")).toEqual("api_path?date=2015-01-18");
+      expect(setApi("api_path.json", new Date(2015, 0, 18, 16, 44))).toEqual("api_path/2015/01/18.json");
     });
   });
 
@@ -46,7 +46,7 @@ describe('Ajax manager', function() {
       it('should set date', function() {
         let date = ajax.addQuery(new Date(2015, 0, 18, 16, 44));
 
-        expect(date).toEqual("2015-01-18T16:44:00.000Z");
+        expect(date).toEqual(new Date(2015, 0, 18, 16, 44));
       });
 
       it('should not set date', function() {

@@ -38,7 +38,8 @@ function sassFiles(bs){
         if(details)
           processSass(details, function(){
             if(sync)
-              sync(details.output);
+              console.log("SCSS >>>>>>>>>>>>", details.output)
+              sync();
           });
       }
     , processAll:function(){
@@ -46,7 +47,8 @@ function sassFiles(bs){
       es.readArray(sass_list)
         .on("end", function(){
           if(sync)
-            sync(_.pluck(sass_list, "output"));
+            console.log("SCSS >>>>", _.pluck(sass_list, "output"))
+            sync();
         })
        .pipe(es.through(function(scss){
           this.pause();

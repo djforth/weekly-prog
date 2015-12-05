@@ -49,11 +49,16 @@ class DataItem extends React.Component {
   }
 
   _actions(item, col){
-    if(item.has("buttons") && item.get("buttons").has("book")){
-      return (<a className="button button-secondary" href={item.get("buttons").get("book")}>Book</a>);
+    if(item.get("places_left") === 0){
+      return(<span className="session-full">Session full</span>);
     }
 
-    return(<span class="session-full">Session full</span>);
+    if(item.has("buttons")){
+      let link = item.get("buttons").get("book")
+      return (link === "#") ? "" : (<a className="button button-secondary" href={link}>Book</a>);
+    }
+
+
   }
 
   _concatData(item, col){

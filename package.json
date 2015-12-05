@@ -1,6 +1,6 @@
 {
   "name": "weekly-prog",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Better Weekly Prog",
   "main": "index.js",
   "babel": {
@@ -41,13 +41,14 @@
   "scripts": {
     "browserSync": "node ./fe_build_scripts/browserSync.js",
     "build": "babel src -x '.js' --source-maps  -d lib",
-    "build:watch": "babel  -x '.js' -w --source-maps src -d lib",
+    "build:watch": "babel src -x '.js' -w --source-maps  -d lib",
     "javascript:build": "node ./fe_build_scripts/browserify_build.js",
     "javascript:watch": "node ./fe_build_scripts/browserify_build.js -w",
     "lint": "eslint src/**",
     "lint:tests": "eslint spec/**",
     "sass:build": "node ./fe_build_scripts/sass-build.js -m",
     "sass:watch": "node ./fe_build_scripts/sass-build.js -w",
+    "start":"npm run browserSync & npm run build:watch",
     "test": "npm run lint && ./node_modules/.bin/karma start fe_build_scripts/karma.conf.js --browsers PhantomJS --single-run",
     "test:watch": "karma start fe_build_scripts/karma.conf.js --browsers PhantomJS",
     "test:mac": "karma start fe_build_scripts/karma.conf.js --single-run --browsers Chrome,Firefox,Safari"

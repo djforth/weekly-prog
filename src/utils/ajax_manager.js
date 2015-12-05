@@ -1,10 +1,15 @@
  const Ajax  = require("ajax-es6-module")
-    ,  _     = require("lodash");
+    ,  _     = require("lodash")
+    , DateFormatter = require("date-formatter");
 
 const ajaxManager = new Ajax();
 
 function setApi(api, date){
-  return (_.isString(date)) ? `${api}?date=${date}` : api;
+  if(!_.isDate(date)) return api;
+
+  let dateFmt = new DateFormatter(date);
+  let path = dateFmt.formatDate("/%Y/%m/%d.json");
+  return api.replace(/.json/, path)
 }
 
 
@@ -22,7 +27,7 @@ module.exports = function(api){
     }
 
     , addQuery:(d)=>{
-      date = (_.isDate(d)) ? d.toJSON() : null;
+      date = (_.isDate(d)) ? d : null;
       return date;
     }
 

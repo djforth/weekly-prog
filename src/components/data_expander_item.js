@@ -67,6 +67,17 @@ class DataExpanderItem extends DataItem {
     return "";
   }
 
+  _bookBtn(link, buttonText){
+    return (
+        <a href={link}
+          onClick={this._onClick.bind(this)}
+          className="icon icon-information"
+          title={buttonText} >
+          <span>{buttonText}</span>
+        </a>
+    );
+  }
+
   _renderAdditional() {
     let additional = [];
 
@@ -103,15 +114,12 @@ class DataExpanderItem extends DataItem {
     return <li className="list-group-item col-md-4" key={this._createKey(col.title)}><strong>{col.title}:</strong> {this._displayData(data, col)}</li>;
   }
 
-  _renderShowButton() {
-    let buttonText;
+  _renderButton() {
+    let buttonText = (this.state.active) ? "Less " : "More ";
+    buttonText += "Information";
 
-    if(this.state.active) {
-      buttonText = "Less Information";
-    } else {
-      buttonText = "More Information";
-    }
-
+    // let btn = (link === "#") ? "" : this._bookBtn(link, buttonText);
+    // console.log(btn, link)
     return (
       <div className={this.checkCss(this.props.css, "expand")} key={this._createKey("book")}>
         <a href="#"
@@ -121,14 +129,15 @@ class DataExpanderItem extends DataItem {
           <span>{buttonText}</span>
         </a>
       </div>
-    );
+
+    )
   }
 
   _renderTd(){
     let item = this.props.data;
     if(item && this.state.columns){
        return _.map(this.state.columns, function(col){
-        return (col.key === "expand" && this._expandTest()) ? this._renderShowButton() : this._renderColumn(col, item);
+        return (col.key === "expand" && this._expandTest()) ? this._renderButton() : this._renderColumn(col, item);
       }.bind(this));
     }
     return "";

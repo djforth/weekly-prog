@@ -1,7 +1,6 @@
 const SessionsDispatcher = require("../dispatchers/sessions_dispatcher");
 
 module.exports = {
-
   changeDate:(date)=>{
     SessionsDispatcher.changeDate({
       type: "CHANGE_DATE",
@@ -15,6 +14,12 @@ module.exports = {
       type: "FETCH_DATA",
       progress:progress,
       date:date
+    });
+  }
+
+  , getMoreDays(){
+    SessionsDispatcher.getMoreDays({
+      type: "MORE_DAYS",
     });
   }
 

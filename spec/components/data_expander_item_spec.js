@@ -211,12 +211,12 @@ describe("DataExpander", function() {
     });
 
 
-    describe('renderShowButton', function() {
+    describe('renderButton', function() {
         describe('when active', function() {
           let item, node;
           beforeEach(function() {
             dataexpander.state.active = false;
-            let c = React.cloneElement(dataexpander._renderShowButton());
+            let c = React.cloneElement(dataexpander._renderButton());
             item   = TestUtils.renderIntoDocument(c);
             node = item.getDOMNode();
           });

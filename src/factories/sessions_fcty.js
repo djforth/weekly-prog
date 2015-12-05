@@ -33,6 +33,10 @@ class SessionsFcty extends DataManager {
   setTimeKey(key){
     this.key = key;
   }
+
+  size(){
+    return (this.data) ? this.data.size : 0
+  }
 }
 
 module.exports = SessionsFcty;

@@ -105,9 +105,9 @@ class WeeklyProg extends React.Component {
   render(){
 
     return (
-    <div className="tabbed-content weekly-prog">
+    <div className="weekly-prog">
       <DateNav />
-      <div id="sessions">
+      <div id="sessions" className="clearfix">
       {this._renderPeriodSessions()}
       </div>
 

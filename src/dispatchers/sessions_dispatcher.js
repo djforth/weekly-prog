@@ -18,6 +18,14 @@ const SessionsDispatcher = assign(new Dispatcher(), {
     this.dispatch(payload);
   }
 
+  , getMoreDays: function(action) {
+    var payload = {
+      source: "MORE_DAYS",
+      action: action
+    };
+    this.dispatch(payload);
+  }
+
   , prerenderData: function(action) {
     var payload = {
       source: "PRERENDER_DATA",

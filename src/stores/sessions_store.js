@@ -35,22 +35,23 @@ function processData(groupBy){
 }
 
 function processDates(dates){
-  dates = dates.sort((a, b)=>{
-    if(a.getTime() > b.getTime()) return 1;
-    if(a.getTime() < b.getTime()) return -1;
-    return 0
+  let yesterday = new Date();
+  yesterday.setDate(yesterday.getDate()-1);
+  return _.filter(dates, (d)=>{
+    return d.date.getTime() >= yesterday.getTime();
   })
-  return _.map(dates, (d)=>{
-    let dateFmt = new DateFormatter(d);
-    // console.log(dateFmt)
-    return {
-        date:d
-      , fmt:dateFmt
-      , title:dateFmt.formatDate("%a %d")
-      , alt:dateFmt.formatDate("%A, %d %B %Y")
-      , today: checker(d, new Date())
-    }
-  })
+
+  // return _.map(dates, (d)=>{
+  //   let dateFmt = new DateFormatter(d);
+
+  //   return {
+  //       date:d
+  //     , fmt:dateFmt
+  //     , title:dateFmt.formatDate("%a %d")
+  //     , alt:dateFmt.formatDate("%A, %d %B %Y")
+  //     , today: checker(d, new Date())
+  //   }
+  // });
 }
 
 function currentDate(date){
@@ -93,7 +94,21 @@ const store = {
       fetched = true;
       sessions = processor(data);
       this.emitChange("fetched");
-    })
+      return sessions.getAllDates()
+    }).then(this._fetchRest.bind(this))
+  }
+
+  , _fetchRest(dates){
+      let fetch = _.filter(dates, (d)=>d.nosessions)
+      fetch = _.reduce(fetch, (prev, curr)=>{
+        if(prev.date.getTime() > curr.date.getTime()){
+          return curr;
+        }
+
+        return prev;
+      });
+      console.log(fetch)
+      if(fetch) this._fetchData(null, fetch.date)
   }
 
   , _getDate(date){
@@ -116,7 +131,16 @@ const store = {
     return null;
   }
 
+  , _getMoreDays(){
+    if(fetched){
+      let date = sessions.getMoreDays();
+      console.log("date", date)
+      if(_.isDate(date)) this._fetchData(null, date)
+    }
+  }
+
   , _getAllDates(){
+    // console.log(sessions.getAllDates())
     return processDates(sessions.getAllDates());
   }
 
@@ -147,7 +171,6 @@ const registeredCallback = function(payload) {
   // console.log(action.type)
   switch(action.type) {
     case "CHANGE_DATE":
-      // console.log("Changing date");
       SessionStore._setDate(action.date);
       SessionStore.emitChange("changing_date");
       break;
@@ -157,6 +180,11 @@ const registeredCallback = function(payload) {
     case "FETCH_DATA":
       SessionStore._fetchData(action.progress, action.date);
       SessionStore.emitChange("fetching");
+      break;
+
+    case "MORE_DAYS":
+      SessionStore._getMoreDays();
+      SessionStore.emitChange("more_days");
       break;
     case "PRERENDER_DATA":
       SessionStore._addSessions(action.data);

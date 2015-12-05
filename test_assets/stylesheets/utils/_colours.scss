@@ -34,6 +34,7 @@ $scorpion-t-02: rgba(88, 88, 88, 0.2);
 $scorpion-t-03: rgba(88, 88, 88, 0.3);
 $scorpion-t-04: rgba(88, 88, 88, 0.4);
 $silver: #ccc;
+$silver-t-05: rgba(204, 204, 204, 0.5);
 $tundora: #4a4a4a;
 
 // Other
@@ -131,6 +132,13 @@ $tabbed-content-nav-border: $alto-2 !default;
 $tabbed-content-nav-border-active: $apple !default;
 $tabbed-content-nav-text: $scorpion !default;
 $tabbed-content-nav-text-active: $apple !default;
+
+//Weekly programme
+$weekly-prog-nav-border: $alto-2 !default;
+$weekly-prog-nav-border-active: $apple !default;
+$weekly-prog-nav-text: $scorpion !default;
+$weekly-prog-nav-text-active: $apple !default;
+$weekly-prog-nav-today:$lochmara !default;
 /* ---------- End Components ---------- */
 
 /* ---------- Pages ---------- */

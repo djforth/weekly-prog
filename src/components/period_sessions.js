@@ -17,7 +17,6 @@ class PeriodSessions extends DataItems {
   constructor(props) {
     super(props);
     let sessions = this.props.sessions.getTimePeriod(this.props.time.st, this.props.time.fn)
-    console.log(sessions.size, (sessions.size <= 4))
     this.pagination = ["pagination", {"hide": (sessions.size <= 4)}];
 
     this.state = {
@@ -57,7 +56,7 @@ class PeriodSessions extends DataItems {
       return items;
     } else {
       return (<div className="cols-lg-12">
-        <strong>There is no sessions this {this.props.title}</strong>
+        <h5 className="no-sessions">There is no sessions this {this.props.title}</h5>
       </div>);
     }
   }
@@ -85,17 +84,12 @@ class PeriodSessions extends DataItems {
   _onLoaded(){
 
     let sessions = SessionsStore._getDate().data.getTimePeriod(this.props.time.st, this.props.time.fn);
-    console.log(sessions, sessions.size)
 
     this.pagination[1]["hide"] = (sessions.size <= 4 || _.isEmpty(sessions));
 
-    console.log(this.pagination, this.getClasses(this.pagination))
     this.setState({paginate:4, pagination_css:this.getClasses(this.pagination), data:sessions});
   }
 
-  // _onChange(){
-
-  // }
 
   _paginate(e){
     e.preventDefault();
@@ -103,8 +97,6 @@ class PeriodSessions extends DataItems {
     if(pag > this.state.data.size){
 
       this.pagination  = this.toggleCss(this.pagination);
-      // console.log("pag", this.pagination)
-      // console.log(this.getClasses(this.pagination))
     }
     this.setState({paginate:pag, pagination_css:this.getClasses(this.pagination)})
   }
