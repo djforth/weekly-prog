@@ -2,9 +2,17 @@ const Dispatcher = require("flux").Dispatcher;
 const assign     = require("react/lib/Object.assign");
 
 const SessionsDispatcher = assign(new Dispatcher(), {
-    changeDate: function(action) {
+  changeDate: function(action) {
     var payload = {
       source: "CHANGE_DATE",
+      action: action
+    };
+    this.dispatch(payload);
+  }
+
+  , calendarChange: function(action) {
+    var payload = {
+      source: "CALENDAR_CHANGE",
       action: action
     };
     this.dispatch(payload);
@@ -21,6 +29,14 @@ const SessionsDispatcher = assign(new Dispatcher(), {
   , getMoreDays: function(action) {
     var payload = {
       source: "MORE_DAYS",
+      action: action
+    };
+    this.dispatch(payload);
+  }
+
+  , getPreviousDays: function(action) {
+    var payload = {
+      source: "PREVIOUS_DAYS",
       action: action
     };
     this.dispatch(payload);

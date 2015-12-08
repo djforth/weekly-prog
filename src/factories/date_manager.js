@@ -1,7 +1,8 @@
 const _       = require("lodash")
     , checker = require("../utils/day_checker")
     , SessionsFcty = require("./sessions_fcty")
-    , DateFormatter = require("date-formatter");
+    , DateFormatter = require("date-formatter")
+    , Moment = require("moment");
 
 function getDate(dates, date){
   return _.find(dates, (d)=>{
@@ -65,15 +66,29 @@ function getNewDate(date, n=1){
 }
 
 function processForNav(dm){
-  let dateFmt = new DateFormatter(dm.date);
+  let dateFmt = Moment(dm.date);
   return {
       date:dm.date
     , fmt:dateFmt
-    , title:dateFmt.formatDate("%a %d")
-    , alt:dateFmt.formatDate("%A, %d %B %Y")
+    , title:dateFmt.format("ddd Do")
+    , alt:dateFmt.format("dddd, MMMM Do YYYY")
     , today: checker(dm.date, new Date())
     , nosessions:(dm.data.size() === 0 && !dm.fetched)
   }
+}
+
+function resetDates(dates){
+  return _.filter(dates, (dm)=>checker(dm.date, new Date()));
+}
+
+function earliestDate(dates){
+  return _.reduce(dates, (prev, curr)=>{
+    if(prev.date.getTime() > curr.date.getTime()){
+      return curr;
+    }
+
+    return prev;
+  });
 }
 
 
@@ -113,10 +128,9 @@ function dateManager(groupBy, ds){
         if(a.date.getTime() < b.date.getTime()) return -1;
         return 0
       });
-
-      return _.map(dates, (dm)=>processForNav(dm))
+      return _.map(dates, (dm)=>processForNav(dm));
     }
-
+    // Should refactor this ADE
     , getMoreDays(){
       let fetch_date = _.find(dates, (dm)=>{
         return dm.data.size() === 0 && !dm.fetched
@@ -126,12 +140,18 @@ function dateManager(groupBy, ds){
       let newDates = weekCreator(getNewDate(_.last(dates).date));
       dates = dates.concat(newDates);
 
-      return _.last(newDates).date;
+      return earliestDate(newDates).date;
     }
 
-    // , getRange:(st, fn)=>{
-    //   return _.filter(dates,
-    // }
+    , getPreviousDays(date){
+      let newDates = weekCreator(getNewDate(date, -7));
+      dates = dates.concat(newDates);
+      return earliestDate(newDates).date;
+    }
+
+    , resetDates(){
+      dates = resetDates(dates);
+    }
 
     , updateDate:(...args)=>{
       let fn = _.partial(dateUpdate, dates);

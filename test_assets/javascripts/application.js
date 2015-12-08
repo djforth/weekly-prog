@@ -74,7 +74,8 @@ let css = {
   default     : "col-lg-2 col-md-3 col-sm-5"
 , places_left : "col-lg-1"
 , activity    : "col-lg-1"
-, session     : "col-lg-2 col-md-3 col-sm-5"
+, start       : "col-lg-2 col-md-3 col-sm-4"
+, session     : "col-lg-2 col-md-3 col-sm-6"
 , expand      : "col-lg-1 col-md-2 col-sm-2 expander"
 , actions     : "col-lg-1 col-md-1 col-sm-3"
 }
@@ -95,6 +96,7 @@ ReactDom.render(
     columns     = {cols}
     css         = {css}
     groupby     = "start"
+    print       = "/timetable/print/:date.pdf"
     sessions    = {sessions(1, new Date())}
     sessionsApi = "/api/timetable.json"
     timeperiod  = {timeperiod}

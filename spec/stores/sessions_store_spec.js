@@ -43,14 +43,48 @@ do{
 
 describe("SessionsStore", function() {
   let options = [
+     {
+      func:"_setDate",
+      action:{
+        type:"CHANGE_DATE",
+        date:1
+      },
+      args:[1],
+      change:"changing_date"
+    },
+    {
+      func:"_calendarChange",
+      action:{
+        type:"CALENDAR_CHANGE",
+        date:1
+      },
+      args:[1],
+      change:"calendar_changing"
+    },
+    {
+      func:"_getMoreDays",
+      action:{
+        type:"MORE_DAYS"
+      },
+      args:[],
+      change:"more_days"
+    },
+    // {
+    //   func:"_getPreviousDays",
+    //   action:{
+    //     type:"PREVIOUS_DAYS",
+    //     date:1
+    //   },
+    //   args:[1],
+    //   change:"previous_days"
+    // },
     {
       func:"_fetchData",
       action:{
         type:"FETCH_DATA",
-        progress:"foo",
         date:1
       },
-      args:["foo", 1],
+      args:[1],
       change:"fetching"
     },
     {
@@ -159,17 +193,14 @@ describe("SessionsStore", function() {
     });
   });
 
+
   describe("store functions", function() {
-    let processor, store, sessions, fcty;
+    let processor, store, sessions, fcty, spy;
      beforeEach(()=>{
       store    = SessionsStore.__get__("store");
-      // processor = SessionsStore.__get__("sessions");
-      // spyOn(sessions, "findDate").and.returnValue(mockData["2015-01-18"]);
-    });
+      });
 
     describe('_addSessions', function() {
-      let processor, sessions, spy;
-
       beforeEach(function() {
         spy       = jasmine.createSpy("sessions").and.returnValue(["sessions"]);
         processor = SessionsStore.__set__("processor", spy);
@@ -238,6 +269,7 @@ describe("SessionsStore", function() {
       let date;
       beforeEach(function() {
         date = new Date(2015, 0, 18);
+
       });
 
 
@@ -247,118 +279,195 @@ describe("SessionsStore", function() {
           store._fetchData(date)
         }).toThrowError("please set API path");
       });
-
-      describe('when ajaxManager set', function() {
-        let ajax, processor, promise, pSpy, resolve, reject, sessions, spy;
-        beforeEach(function() {
-          spy    = jasmine.createSpyObj("ajaxManager", ["addQuery", "fetch"])
-          ajax   = SessionsStore.__set__("ajaxManager", spy);
-
-          promise = new Promise((res, rej)=>{
-            resolve = res;
-            reject  = rej;
-          });
-
-          spy.fetch.and.returnValue(promise);
-
-          pSpy = jasmine.createSpy("processor").and.returnValue("session")
-          processor = SessionsStore.__set__("processor", pSpy);
-          sessions  = SessionsStore.__get__("sessions");
-
-          spyOn(store, "emitChange");
-          store._fetchData(null, date);
-        });
-
-        afterEach(()=>{
-          ajax();
-          processor();
-        });
-
-        it('should call addQuery', function() {
-          expect(spy.addQuery).toHaveBeenCalledWith(date)
-        });
-
-        it('should call fetch', function() {
-          expect(spy.fetch).toHaveBeenCalled();
-        });
-
-        it("should fetch data", function(done) {
-          spy.fetch().then((data)=>{
-            expect(pSpy).toHaveBeenCalledWith("success");
-            expect(sessions).toEqual(["sessions"]);
-            expect(store.emitChange).toHaveBeenCalledWith("fetched")
-          });
-
-          resolve("success");
-
-          setTimeout(function() {
-              done();
-            }, 100);
-
-        });
-      });
-
     });
 
-    describe('_getDate', function() {
-      let current, currentDate, date, sessions, cSpy, sSpy, cdSpy;
+    describe('when ajaxManager set', function() {
+      let ajax, processor, promise, pSpy, resolve, reject, sessions, spy, sessionsSpy, date;
       beforeEach(function() {
         date = new Date(2015, 0, 18);
-        cSpy = jasmine.createSpyObj("current", ["setDate", "getDate"]);
-        cSpy.getDate.and.returnValue(date);
-        cdSpy =  jasmine.createSpy("currentDate").and.returnValue(cSpy)
-        currentDate = SessionsStore.__set__("currentDate", cdSpy);
+        spy    = jasmine.createSpyObj("ajaxManager", ["addQuery", "fetch"])
+        ajax   = SessionsStore.__set__("ajaxManager", spy);
 
-        sSpy = jasmine.createSpyObj("sessions", ["findDate"]);
-        // sSpy.findDate.and.returnValue("foo");
+        promise = new Promise((res, rej)=>{
+          resolve = res;
+          reject  = rej;
+        });
 
-        sessions = SessionsStore.__set__("sessions", sSpy);
+        spy.fetch.and.returnValue(promise);
+        sessionsSpy = jasmine.createSpyObj("Sessions", ["getAllDates"]);
+        sessionsSpy.getAllDates.and.returnValue("new date")
+        pSpy = jasmine.createSpy("processor").and.returnValue(sessionsSpy)
+        processor = SessionsStore.__set__("processor", pSpy);
 
-        spyOn(store, "_fetchData");
+
         spyOn(store, "emitChange");
+        store._fetchData(date);
+        spyOn(store, "_fetchRest")
       });
 
-      it('should create current if not created', function() {
-        store.current = undefined;
-        store._getDate(date);
-        expect(cdSpy).toHaveBeenCalledWith(date);
+      afterEach(()=>{
+        ajax();
+        processor();
       });
 
-      it('should call setDate', function() {
-        store.current = cSpy;
-        store._getDate(date);
-        expect(cSpy.setDate).toHaveBeenCalledWith(date);
+      it('should call addQuery', function() {
+        expect(spy.addQuery).toHaveBeenCalledWith(date)
       });
 
-      it('should return day data if available', function() {
-        store.current = undefined;
-        sSpy.findDate.and.returnValue("foo");
-        // store.current = cSpy;
-        let data = store._getDate(date);
-
-        expect(cSpy.getDate).toHaveBeenCalled();
-        expect(sSpy.findDate).toHaveBeenCalledWith(date);
-        expect(data).toEqual("foo");
-
-        expect(store._fetchData).not.toHaveBeenCalled();
-        expect(store.emitChange).not.toHaveBeenCalled();
+      it('should call fetch', function() {
+        expect(spy.fetch).toHaveBeenCalled();
       });
 
-      it('should fetch date if no date found', function() {
-        store.current = undefined;
-        sSpy.findDate.and.returnValue(null);
-        // store.current = cSpy;
-        let data = store._getDate(date);
+      it("should fetch data", function(done) {
+        spy.fetch().then((data)=>{
+          sessions  = SessionsStore.__get__("sessions");
+          expect(pSpy).toHaveBeenCalledWith("success", false);
 
-        expect(cSpy.getDate).toHaveBeenCalled();
-        expect(sSpy.findDate).toHaveBeenCalledWith(date);
-        expect(data).toBeNull();
+          expect(sessionsSpy.getAllDates).toHaveBeenCalled();
+          expect(sessions).toEqual(sessionsSpy);
+          expect(store.emitChange).toHaveBeenCalledWith("fetched");
+        });
 
-        expect(store._fetchData).toHaveBeenCalledWith(date);
-        expect(store.emitChange).toHaveBeenCalledWith("fetching");
+        resolve("success");
+
+        setTimeout(function() {
+            done();
+          }, 100);
+
       });
     });
+
 
 
   });
+
+
+  describe('_getDate', function() {
+   let processor, store, spy;
+   beforeEach(()=>{
+    store    = SessionsStore.__get__("store");
+    });
+    let current, currentDate, date, sessions, cSpy, sSpy, cdSpy;
+    beforeEach(function() {
+      date = new Date(2015, 0, 18);
+      cSpy = jasmine.createSpyObj("current", ["setDate", "getDate"]);
+      cSpy.getDate.and.returnValue(date);
+      cdSpy =  jasmine.createSpy("currentDate").and.returnValue(cSpy)
+      currentDate = SessionsStore.__set__("currentDate", cdSpy);
+
+      sSpy = jasmine.createSpyObj("sessions", ["findDate"]);
+      // sSpy.findDate.and.returnValue("foo");
+
+      sessions = SessionsStore.__set__("sessions", sSpy);
+
+      spyOn(store, "_fetchData");
+      spyOn(store, "emitChange");
+    });
+
+    it('should create current if not created', function() {
+      store.current = undefined;
+      store._getDate(date);
+      expect(cdSpy).toHaveBeenCalledWith(date);
+    });
+
+    it('should call setDate', function() {
+      store.current = cSpy;
+      store._getDate(date);
+      expect(cSpy.setDate).toHaveBeenCalledWith(date);
+    });
+
+    it('should return day data if available', function() {
+      store.current = undefined;
+      sSpy.findDate.and.returnValue("foo");
+      // store.current = cSpy;
+      let data = store._getDate(date);
+
+      expect(cSpy.getDate).toHaveBeenCalled();
+      expect(sSpy.findDate).toHaveBeenCalledWith(date);
+      expect(data).toEqual("foo");
+
+      expect(store._fetchData).not.toHaveBeenCalled();
+      expect(store.emitChange).not.toHaveBeenCalled();
+    });
+
+    it('should fetch date if no date found', function() {
+      store.fetched = false;
+      store.current = undefined;
+      sSpy.findDate.and.returnValue(null);
+      // store.current = cSpy;
+      let data = store._getDate(date);
+
+      expect(cSpy.getDate).toHaveBeenCalled();
+      expect(sSpy.findDate).toHaveBeenCalledWith(date);
+      expect(data).toBeNull();
+
+      expect(store._fetchData).toHaveBeenCalledWith(date);
+      expect(store.emitChange).toHaveBeenCalledWith("fetching");
+    });
+  });
+
+
+
+
+
+  // fdescribe('_getDate', function() {
+  //     let current, currentDate, date, sessions, cSpy, sSpy, cdSpy;
+  //     beforeEach(function() {
+  //       date = new Date(2015, 0, 18);
+  //       cSpy = jasmine.createSpyObj("current", ["setDate", "getDate"]);
+  //       cSpy.getDate.and.returnValue(date);
+  //       cdSpy =  jasmine.createSpy("currentDate").and.returnValue(cSpy)
+  //       currentDate = SessionsStore.__set__("currentDate", cdSpy);
+
+  //       sSpy = jasmine.createSpyObj("sessions", ["findDate"]);
+  //       // sSpy.findDate.and.returnValue("foo");
+
+  //       sessions = SessionsStore.__set__("sessions", sSpy);
+
+  //       spyOn(store, "_fetchData");
+  //       spyOn(store, "emitChange");
+  //     });
+
+  //     it('should create current if not created', function() {
+  //       store.current = undefined;
+  //       store._getDate(date);
+  //       expect(cdSpy).toHaveBeenCalledWith(date);
+  //     });
+
+  //     it('should call setDate', function() {
+  //       store.current = cSpy;
+  //       store._getDate(date);
+  //       expect(cSpy.setDate).toHaveBeenCalledWith(date);
+  //     });
+
+  //     it('should return day data if available', function() {
+  //       store.current = undefined;
+  //       sSpy.findDate.and.returnValue("foo");
+  //       // store.current = cSpy;
+  //       let data = store._getDate(date);
+
+  //       expect(cSpy.getDate).toHaveBeenCalled();
+  //       expect(sSpy.findDate).toHaveBeenCalledWith(date);
+  //       expect(data).toEqual("foo");
+
+  //       expect(store._fetchData).not.toHaveBeenCalled();
+  //       expect(store.emitChange).not.toHaveBeenCalled();
+  //     });
+
+  //     it('should fetch date if no date found', function() {
+  //       store.current = undefined;
+  //       sSpy.findDate.and.returnValue(null);
+  //       // store.current = cSpy;
+  //       let data = store._getDate(date);
+
+  //       expect(cSpy.getDate).toHaveBeenCalled();
+  //       expect(sSpy.findDate).toHaveBeenCalledWith(date);
+  //       expect(data).toBeNull();
+
+  //       expect(store._fetchData).toHaveBeenCalledWith(date);
+  //       expect(store.emitChange).toHaveBeenCalledWith("fetching");
+  //     });
+  //   });
+
+
 })

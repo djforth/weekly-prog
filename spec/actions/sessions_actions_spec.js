@@ -9,6 +9,34 @@ describe("SessionsAction", function() {
 
   let options = [
     {
+      action:"changeDate",
+      handler:"changeDate",
+      args:[date],
+      dispactchArgs:{
+        type     : "CHANGE_DATE",
+        date     : date
+      }
+    },
+    {
+      action:"calendarChange",
+      handler:"calendarChange",
+      args:[date],
+      dispactchArgs:{
+        type     : "CALENDAR_CHANGE",
+        date     : date
+      }
+    },
+    {
+      action:"fetchData",
+      handler:"fetchData",
+      args:["foo", date],
+      dispactchArgs:{
+        type     : "FETCH_DATA",
+        progress : "foo",
+        date     : date
+      }
+    },
+    {
       action:"fetchData",
       handler:"fetchData",
       args:["foo", date],

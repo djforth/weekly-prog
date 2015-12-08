@@ -72,7 +72,7 @@ describe('DateManager', function() {
 
   // });
 
-  describe('createFirstWeek', function() {
+  describe('createWeek', function() {
     let dateUpdate, revert, spy, findDate;
 
     beforeEach(()=>{
@@ -99,7 +99,7 @@ describe('DateManager', function() {
     let week
     beforeEach(()=>{
       spy = jasmine.createSpy("createFcty").and.returnValue("foo");
-      let createWeek = DateManager.__get__("createFirstWeek");
+      let createWeek = DateManager.__get__("createWeek");
       week = createWeek(spy);
     });
 
@@ -159,8 +159,8 @@ describe('DateManager', function() {
 
       createFcty = DateManager.__set__("createFactory", creator);
 
-      week = jasmine.createSpy("createFirstWeek").and.returnValue(dates);
-      createWeek = DateManager.__set__("createFirstWeek", week);
+      week = jasmine.createSpy("createWeek").and.returnValue(dates);
+      createWeek = DateManager.__set__("createWeek", week);
 
       dateManager = DateManager("start");
     });
@@ -182,7 +182,7 @@ describe('DateManager', function() {
         expect(creator).toHaveBeenCalledWith("start");
       });
 
-      it('call not createFirstWeek if data sent', function() {
+      it('call not createWeek if data sent', function() {
         // expect(week).not.toHaveBeenCalled();
         expect(dateManager.getAll()).toEqual(dates);
       });
@@ -193,7 +193,7 @@ describe('DateManager', function() {
         expect(creator).toHaveBeenCalledWith("start")
       });
 
-      it('call createFirstWeek if no data sent', function() {
+      it('call createWeek if no data sent', function() {
         expect(week).toHaveBeenCalledWith(fcty)
       });
     });

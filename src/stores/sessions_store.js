@@ -17,13 +17,15 @@ const SessionsDispatcher = require("../dispatchers/sessions_dispatcher")
 
 let ajaxManager, processor, sessions;
 
-let fetched = false;
+let fetched     = false;
+let requestMade = false;
 
 function processData(groupBy){
 
   let sessions = DateManager(groupBy);
 
-  return function(d){
+  return function(d, reset=false){
+    if(reset) sessions.resetDates();
 
     let groups = Breaker(d, groupBy);
     _.forEach(_.values(groups), (ses)=>{
@@ -40,18 +42,6 @@ function processDates(dates){
   return _.filter(dates, (d)=>{
     return d.date.getTime() >= yesterday.getTime();
   })
-
-  // return _.map(dates, (d)=>{
-  //   let dateFmt = new DateFormatter(d);
-
-  //   return {
-  //       date:d
-  //     , fmt:dateFmt
-  //     , title:dateFmt.formatDate("%a %d")
-  //     , alt:dateFmt.formatDate("%A, %d %B %Y")
-  //     , today: checker(d, new Date())
-  //   }
-  // });
 }
 
 function currentDate(date){
@@ -84,18 +74,32 @@ const store = {
     sessions = processor(data);
   }
 
-  , _fetchData(progress, date){
+  , _calendarChange(date){
+    this._setDate(date);
+    this._fetchData(date, true);
+  }
 
+  , _fetchData(date, reset=false){
     if(!ajaxManager){
       throw new Error("please set API path")
     }
+
     ajaxManager.addQuery(date);
-    return ajaxManager.fetch(progress).then((data)=>{
-      fetched = true;
-      sessions = processor(data);
-      this.emitChange("fetched");
-      return sessions.getAllDates()
-    }).then(this._fetchRest.bind(this))
+    let request = ajaxManager.fetch();
+
+    if(request){
+      return request.then((data)=>{
+        fetched = true;
+        sessions = processor(data, reset);
+
+        this.emitChange("fetched");
+
+        return sessions.getAllDates();
+      })
+      .then(this._fetchRest.bind(this));
+    }
+
+
   }
 
   , _fetchRest(dates){
@@ -107,8 +111,12 @@ const store = {
 
         return prev;
       });
-      console.log(fetch)
-      if(fetch) this._fetchData(null, fetch.date)
+
+      if(fetch) this._fetchData(fetch.date)
+  }
+
+  , _getCurrentDate(){
+    return this.current.getDate()
   }
 
   , _getDate(date){
@@ -132,10 +140,17 @@ const store = {
   }
 
   , _getMoreDays(){
+
     if(fetched){
       let date = sessions.getMoreDays();
-      console.log("date", date)
-      if(_.isDate(date)) this._fetchData(null, date)
+      if(_.isDate(date)) this._fetchData(date)
+    }
+  }
+
+  , _getPreviousDays(date){
+    let d = sessions.getPreviousDays(date);
+    if(_.isDate(d)){
+      this._fetchData(d);
     }
   }
 
@@ -159,7 +174,10 @@ const store = {
     if(_.isString(groupBy)){
       processor = processData(groupBy);
     }
+  }
 
+  , _progress(prog){
+    this.progress = prog
   }
 };
 
@@ -168,17 +186,18 @@ SessionStore.setMaxListeners(0);
 
 const registeredCallback = function(payload) {
   var action = payload.action;
-  // console.log(action.type)
   switch(action.type) {
     case "CHANGE_DATE":
       SessionStore._setDate(action.date);
       SessionStore.emitChange("changing_date");
       break;
-    // case "GET_TIMEPERIOD":
-
-    //   break;
+    case "CALENDAR_CHANGE":
+      SessionStore._calendarChange(action.date);
+      SessionStore.emitChange("calendar_changing");
+      break;
     case "FETCH_DATA":
-      SessionStore._fetchData(action.progress, action.date);
+      if(action.progress) SessionStore._progress(action.progress)
+      SessionStore._fetchData(action.date);
       SessionStore.emitChange("fetching");
       break;
 
@@ -186,6 +205,12 @@ const registeredCallback = function(payload) {
       SessionStore._getMoreDays();
       SessionStore.emitChange("more_days");
       break;
+
+    case "PREVIOUS_DAYS":
+      SessionStore._getPreviousDays(action.date);
+      SessionStore.emitChange("previous_days");
+      break;
+
     case "PRERENDER_DATA":
       SessionStore._addSessions(action.data);
       SessionStore.emitChange("prerender");

@@ -3,6 +3,9 @@ const React = require("react")
     , ReactDOM = require('react-dom')
     , _     = require("lodash");
 
+// Utils
+const checker = require("../utils/day_checker")
+
 //Mixins
 const cssMixins    = require("morse-react-mixins").css_mixins
     , textMixins   = require("morse-react-mixins").text_mixins
@@ -10,7 +13,8 @@ const cssMixins    = require("morse-react-mixins").css_mixins
 
 //Flux
 const SessionsActions = require("../actions/sessions_actions")
-    , SessionsStore   = require("../stores/sessions_store");
+    , SessionsStore   = require("../stores/sessions_store")
+    , ColumnsStore    = require("../stores/columns_store");
 
 
 const DateNavItem = require("./date_nav_item")
@@ -27,13 +31,6 @@ class DateNav extends React.Component {
 
   }
 
-  componentWillMount(){
-    // SessionsStore.addChangeListener("prerender", this._getDates.bind(this));
-    SessionsStore.addChangeListener("fetched", this._getDates.bind(this));
-    SessionsStore.addChangeListener("changing_date", this._getDates.bind(this));
-    SessionsStore.addChangeListener("more_days", this._setContainer.bind(this));
-  }
-
   componentDidMount(){
     this.setState({listWidth:this._setWidth()});
   }
@@ -45,38 +42,88 @@ class DateNav extends React.Component {
       this.setState({listWidth:this._setWidth()});
     } else {
       let widths = this.state.listWidth + this.state.listPos;
+
       if(holderWidth > widths){
         SessionsActions.getMoreDays();
       }
     }
+  }
 
-
-    console.log(this._setWidth(), this.state.listWidth)
+  componentWillMount(){
+    SessionsStore.addChangeListener("fetched", this._getDates.bind(this));
+    SessionsStore.addChangeListener("changing_date", this._getDates.bind(this));
+    SessionsStore.addChangeListener("calendar_changing", this._reset.bind(this));
+    ColumnsStore.addChangeListener("change", this._deviceChange.bind(this));
   }
 
   componentWillUnmount() {
-    // SessionsStore.removeChangeListener("prerender", this._getDates);
+    SessionsStore.removeChangeListener("calendar_changing", this._reset);
     SessionsStore.removeChangeListener("fetched", this._getDates);
     SessionsStore.removeChangeListener("changing_date", this._getDates);
-    SessionsStore.removeChangeListener("more_days", this._setContainer);
+    ColumnsStore.removeChangeListener("change", this._deviceChange);
+
+  }
+
+  _deviceChange(){
+    this.setState({listWidth:this._setWidth()})
+  }
+
+  _getDates(){
+    let dates = this._splitDates();
+    let today = dates[0];
+    this.setState({
+      dates:dates[1],
+      today:today,
+      listWidth:this._setWidth(),
+      current:SessionsStore._getCurrentDate()
+    });
+  }
+
+  _getDistance(move){
+    if(_.isEmpty(move)) return 0;
+
+   return  _.reduce(move, (prev, cur)=>{
+      return prev + cur
+    });
+  }
+
+  _getPrevious(pos){
+    if(pos >= 0){
+      let tomorrow = _.clone(this.state.today.date);
+      tomorrow.setDate(tomorrow.getDate()+1);
+      let firstDate = _.first(this.state.dates).date
+      if(!checker(tomorrow, firstDate)){
+        SessionsActions.getPreviousDays(firstDate);
+      }
+    }
+  }
+
+  _mover(dir, e){
+    e.preventDefault();
+    let elms = this.getAllWidths();
+    if(dir === "left" && this.pos > 0){
+      this.pos--;
+    } else if((dir === "right" && this.pos < elms.length)){
+      this.pos++;
+    }
+
+    let move  = _.pluck(_.take(elms, this.pos), "width");
+    let mover = -this._getDistance(move);
+    this.setState({listPos:mover});
+    this._getPrevious(mover);
   }
 
   _setCurrent(date){
     this.setState({current:date})
   }
 
-  _setContainer(){
-    // this.setState({listWidth:this._setWidth()});
-  }
-
   _setActive(date){
-    return (date.getTime() === this.state.current.getTime());
+    return checker(date, this.state.current);
   }
 
   _setStyle(){
 
     let styles = {"width":this.state.listWidth, left:this.state.listPos}
-    // style[k]=v.toString()
     return _.mapValues(styles, (v)=> {
       return v.toString();
     });
@@ -92,34 +139,12 @@ class DateNav extends React.Component {
     return [_.find(dates, (d)=>d.today), _.reject(dates, (d)=>d.today)]
   }
 
-  _getDates(){
-    let dates = this._splitDates();
-    let today = dates[0];
-    this.setState({dates:dates[1], today:today, listWidth:this._setWidth()})
-  }
-
-  _getDistance(move){
-    if(_.isEmpty(move)) return 0;
-
-   return  _.reduce(move, (prev, cur)=>{
-      return prev + cur
-    });
-  }
-
-  _mover(dir, e){
-    e.preventDefault();
-    let elms = this.getAllWidths();
-    if(dir === "left" && this.pos > 0){
-      this.pos--;
-    } else if((dir === "right" && this.pos < elms.length)){
-      this.pos++;
-    }
-
-    let move = _.pluck(_.take(elms, this.pos), "width")
-    this.setState({listPos:-this._getDistance(move)})
+  _reset(){
+    this.setState({listPos:0})
   }
 
   _renderDates(){
+
     if(this.state.dates.length){
       return _.map(this.state.dates, (d)=>{
         let key = this.createId(d.title, d.date.getDate(), d.date.getMonth());
@@ -127,6 +152,7 @@ class DateNav extends React.Component {
             ref      = {key}
             key      = {key}
             nav_item = {d}
+            device   = {this.props.device}
             callback = {this._setCurrent.bind(this)}
             active   = {this._setActive(d.date)}
           />)

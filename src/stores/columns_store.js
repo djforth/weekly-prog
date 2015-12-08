@@ -45,6 +45,10 @@ const store = {
 
   },
 
+  getDevice(){
+    return this.device;
+  },
+
   getColumn(id){
     let items;
     if(id){

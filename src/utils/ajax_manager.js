@@ -4,6 +4,8 @@
 
 const ajaxManager = new Ajax();
 
+let currentRequests = [];
+
 function setApi(api, date){
   if(!_.isDate(date)) return api;
 
@@ -32,8 +34,18 @@ module.exports = function(api){
     }
 
     , fetch:()=>{
+      let url = setApi(api, date);
+      if(_.includes(currentRequests, url)) return null;
+      currentRequests.push(url)
       ajaxManager.addUrl(setApi(api, date));
-      return ajaxManager.fetch(progress).catch((err)=>{
+
+      return ajaxManager.fetch(progress)
+        .then((data)=>{
+          currentRequests = _.reject(currentRequests, (cr)=>cr === url);
+          // console.log(currentRequests)
+          return data;
+        })
+        .catch((err)=>{
         throw new Error(err);
       });
     }

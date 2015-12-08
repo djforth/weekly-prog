@@ -48,7 +48,7 @@
     "lint:tests": "eslint spec/**",
     "sass:build": "node ./fe_build_scripts/sass-build.js -m",
     "sass:watch": "node ./fe_build_scripts/sass-build.js -w",
-    "start":"npm run browserSync & npm run build:watch",
+    "start": "npm run browserSync & npm run build:watch",
     "test": "npm run lint && ./node_modules/.bin/karma start fe_build_scripts/karma.conf.js --browsers PhantomJS --single-run",
     "test:watch": "karma start fe_build_scripts/karma.conf.js --browsers PhantomJS",
     "test:mac": "karma start fe_build_scripts/karma.conf.js --single-run --browsers Chrome,Firefox,Safari"
@@ -127,6 +127,7 @@
     "flux": "^2.1.1",
     "immutable": "^3.7.5",
     "lodash": "^3.10.1",
+    "moment": "^2.10.6",
     "morse-react-mixins": "git://github.com/djforth/morse-react-mixins.git",
     "normalize.css": "^3.0.3",
     "react": "^0.14.3",

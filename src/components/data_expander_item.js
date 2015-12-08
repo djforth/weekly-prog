@@ -117,9 +117,6 @@ class DataExpanderItem extends DataItem {
   _renderButton() {
     let buttonText = (this.state.active) ? "Less " : "More ";
     buttonText += "Information";
-
-    // let btn = (link === "#") ? "" : this._bookBtn(link, buttonText);
-    // console.log(btn, link)
     return (
       <div className={this.checkCss(this.props.css, "expand")} key={this._createKey("book")}>
         <a href="#"

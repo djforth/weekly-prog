@@ -8,6 +8,13 @@ module.exports = {
     });
   }
 
+  , calendarChange:(date)=>{
+    SessionsDispatcher.calendarChange({
+      type: "CALENDAR_CHANGE",
+      date:date
+    });
+  }
+
 
   , fetchData:(progress, date)=>{
     SessionsDispatcher.fetchData({
@@ -19,7 +26,14 @@ module.exports = {
 
   , getMoreDays(){
     SessionsDispatcher.getMoreDays({
-      type: "MORE_DAYS",
+      type: "MORE_DAYS"
+    });
+  }
+
+  , getPreviousDays(date){
+    SessionsDispatcher.getPreviousDays({
+      type: "PREVIOUS_DAYS",
+      date: date
     });
   }
 

@@ -1,6 +1,6 @@
 //Libraries
-const React = require("react");
-const _     = require("lodash");
+const React = require("react")
+    , _     = require("lodash");
 
 //Mixins
 const cssMixins    = require("morse-react-mixins").css_mixins
@@ -18,7 +18,9 @@ const ColumnsActions  = require("../actions/columns_actions")
 
 // Components
 const DateNav        = require("./date_nav")
-    , PeriodSessions = require("./period_sessions");
+    , Calendar       = require("./calendar")
+    , PeriodSessions = require("./period_sessions")
+    , PrintBtn       = require("./print_btn");
 
 
 class WeeklyProg extends React.Component {
@@ -31,6 +33,7 @@ class WeeklyProg extends React.Component {
   }
 
   _fetchData(){
+    SessionsStore.removeChangeListener("api_set", this._fetchData);
     _.defer(()=>{
       SessionsActions.fetchData()
     });
@@ -39,7 +42,9 @@ class WeeklyProg extends React.Component {
   _getSessions(){
     // console.log("PRERENDERED GET DATA", SessionsStore._getDate())
     let session = SessionsStore._getDate()
-    this.setState({date:session.date, sessions:session.data})
+    if(!_.isEmpty(session)) {
+      this.setState({date:session.date, sessions:session.data})
+    }
   }
 
   // _onLoaded(){
@@ -65,7 +70,6 @@ class WeeklyProg extends React.Component {
     // let dates = SessionsStore._getAllDates();
     // console.log(dates)
     this.setState({
-      // device:device,
       loading:true,
       loading_txt:"Sessions Loading",
       percent: 0
@@ -78,7 +82,7 @@ class WeeklyProg extends React.Component {
     this.device = detect.getDevice();
     this.size  = detect.windowSize();
     ColumnsActions.changeDevice(this.device);
-
+    // this.setState({device:this.device});
     detect.trackSize(function(device, size){
       if(this.device !== device){
         this.device = device;
@@ -91,14 +95,13 @@ class WeeklyProg extends React.Component {
 
     // SessionsStore.addChangeListener("fetched", this._onLoaded.bind(this));
     SessionsStore.addChangeListener("api_set", this._fetchData.bind(this));
-
     SessionsActions.setApi(this.props.sessionsApi);
 
   }
 
   componentWillUnmount() {
     SessionsStore.removeChangeListener("prerender", this._getSessions);
-    SessionsStore.removeChangeListener("fetched", this._onLoaded);
+    // SessionsStore.removeChangeListener("fetched", this._onLoaded);
   }
 
 
@@ -106,7 +109,11 @@ class WeeklyProg extends React.Component {
 
     return (
     <div className="weekly-prog">
-      <DateNav />
+      <div className="clearfix calendar-bar">
+        <Calendar device={this.state.device} />
+        <PrintBtn print={this.props.print} />
+      </div>
+      <DateNav device={this.state.device} />
       <div id="sessions" className="clearfix">
       {this._renderPeriodSessions()}
       </div>

@@ -8,13 +8,27 @@ const cssMixins    = require("morse-react-mixins").css_mixins
 
 //Flux
 const SessionsActions = require("../actions/sessions_actions")
+    , ColumnsStore    = require("../stores/columns_store")
 
 class DateNavItem extends React.Component {
   constructor(props) {
     super(props);
     this.listCss = ["date-nav-item", {"active":this.props.active}]
     this.linkCss = ["date-nav-item-link", {"loading-session":this.props.nav_item.nosessions}]
-    this.state = {list:this.getClasses(this.listCss), link:this.getClasses(this.linkCss)};
+    this.state = {list:this.getClasses(this.listCss), link:this.getClasses(this.linkCss), device:ColumnsStore.getDevice()};
+  }
+
+  componentDidMount(){
+    ColumnsStore.addChangeListener("change", this._setDevice.bind(this));
+  }
+
+  componentWillUnmount() {
+    ColumnsStore.removeChangeListener("change", this._setDevice);
+  }
+
+  _setDevice(){
+    // console.log("WTF>>>>>>>>>>>>>>>> ITEM", ColumnsStore.getDevice())
+    this.setState({device:ColumnsStore.getDevice()})
   }
 
   _loader(){
@@ -64,7 +78,22 @@ class DateNavItem extends React.Component {
 
   shouldComponentUpdate(nextProps, nextState){
     return (nextProps.active !== this.props.active)
-        || (nextProps.nav_item.nosessions !== this.props.nav_item.nosessions)
+        || (nextProps.nav_item.nosessions !== this.props.nav_item.nosessions) || this.state.device !== nextState.device
+  }
+
+  _renderTitle(){
+    let fmt = this.props.nav_item.fmt;
+    // console.log("device",this.state.device)
+    if(this.state.device === "mobile"){
+      return (
+        <span>
+          <span className="nav-date">{fmt.format("DD")}</span>
+          <span className="nav-day">{fmt.format("ddd")}</span>
+        </span>
+      );
+    } else {
+      return fmt.format("ddd Do");
+    }
   }
 
 
@@ -78,7 +107,7 @@ class DateNavItem extends React.Component {
            onClick   = {this._click.bind(this)}
            className = {this.state.link}
           >
-          {item.title}
+          {this._renderTitle()}
           </a>
       </li>
     );

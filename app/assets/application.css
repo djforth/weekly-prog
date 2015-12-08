@@ -1435,8 +1435,12 @@ header.main {
 .weekly-prog .additional {
   font-size: 1.231em;
   /* 16px */
-  padding: 20px; }
-  /* line 14, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+  padding: 20px;
+  display: none; }
+  /* line 15, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+  .weekly-prog .additional.active {
+    display: block; }
+  /* line 19, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
   .weekly-prog .additional ul.list-group {
     margin: 0;
     padding: 0;
@@ -1454,7 +1458,7 @@ header.main {
     /* line 9, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/utils/_mixins.scss */
     .weekly-prog .additional ul.list-group:after {
       clear: both; }
-    /* line 20, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+    /* line 25, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
     .weekly-prog .additional ul.list-group li {
       margin: 0;
       padding: 0;
@@ -1463,7 +1467,7 @@ header.main {
       font-weight: normal;
       list-style: none;
       margin-right: 20px; }
-  /* line 26, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+  /* line 31, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
   .weekly-prog .additional .description {
     *zoom: 1;
     display: block; }
@@ -1475,11 +1479,11 @@ header.main {
     .weekly-prog .additional .description:after {
       clear: both; }
 
-/* line 32, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+/* line 37, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
 .weekly-prog .pagination {
   padding: 0 30px 20px;
   text-align: center; }
-  /* line 36, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+  /* line 41, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
   .weekly-prog .pagination.hide {
     height: 1px;
     overflow: hidden;
@@ -1488,23 +1492,23 @@ header.main {
     left: -10000px;
     width: 1px; }
 
-/* line 42, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+/* line 47, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
 .weekly-prog .afternoon .pill.pill-secondary {
   background-color: #79b84f; }
 
-/* line 48, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+/* line 53, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
 .weekly-prog .evening .pill.pill-secondary {
   background-color: #55a440; }
 
-/* line 54, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+/* line 59, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
 .weekly-prog .old-session {
   background-color: #585858; }
 
-/* line 58, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+/* line 63, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
 .weekly-prog .now {
   background-color: #41a1db; }
 
-/* line 63, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+/* line 68, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
 .weekly-prog .date-nav {
   margin: 0;
   padding: 0;
@@ -1531,8 +1535,8 @@ header.main {
     left: 0;
     right: 0;
     background-color: #cfcfcf; }
-  /* line 73, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
-  /* line 89, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+  /* line 78, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+  /* line 94, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
   .weekly-prog .date-nav .date-list {
     margin: 0;
     padding: 0;
@@ -1546,21 +1550,21 @@ header.main {
     height: 50px;
     -webkit-transition: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
     transition: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1); }
-  /* line 102, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+  /* line 107, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
   .weekly-prog .date-nav .list-holder {
     width: calc(100% - 250px);
     overflow: hidden;
     float: left;
     position: relative;
     height: 70px; }
-  /* line 112, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+  /* line 117, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
   .weekly-prog .date-nav .today-nav {
     float: left; }
-    /* line 114, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+    /* line 119, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
     .weekly-prog .date-nav .today-nav a {
       color: #008bd0;
       border-right: 1px solid #cfcfcf; }
-  /* line 120, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+  /* line 125, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
   .weekly-prog .date-nav .nav-mover {
     margin: 0;
     padding: 0;
@@ -1570,7 +1574,7 @@ header.main {
     list-style: none;
     float: left;
     position: relative;
-    margin: 15px 20px;
+    margin: 15px;
     width: 10px;
     height: 20px;
     font-size: 1.25em;
@@ -1578,7 +1582,7 @@ header.main {
     font-weight: 300;
     line-height: 1em;
     background-size: contain; }
-    /* line 137, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+    /* line 142, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
     .weekly-prog .date-nav .nav-mover:after {
       content: "";
       position: absolute;
@@ -1586,20 +1590,20 @@ header.main {
       width: 1px;
       height: 20px;
       background-color: #cfcfcf; }
-    /* line 150, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+    /* line 155, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
     .weekly-prog .date-nav .nav-mover.move-left {
       background: url('data:image/svg+xml;utf8,<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="157.3 491.7 21.7 39"><style>.st0{fill: #cfcfcf}</style><path class="st0" d="M177 530.7l-19.6-19.5 2.1-2.1 19.6 19.5-2.1 2.1z"/><path class="st0" d="M179 493.8l-19.5 19.6-2.1-2.1 19.5-19.6 2.1 2.1z"/></svg>') center center no-repeat; }
-      /* line 153, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+      /* line 158, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
       .weekly-prog .date-nav .nav-mover.move-left:after {
         right: -20px; }
-    /* line 159, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+    /* line 164, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
     .weekly-prog .date-nav .nav-mover.move-right {
       float: right;
       background: url("data:image/svg+xml;utf8,<svg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='157.4 491.6 21.7 39.2'><style>.st0{fill:#cfcfcf}</style><path class='st0' d='M159.5 491.6l19.6 19.6-2.1 2.1-19.6-19.6 2.1-2.1z'/><path class='st0' d='M157.4 528.6L177 509l2.1 2.1-19.6 19.6-2.1-2.1z'/></svg>") center center no-repeat; }
-      /* line 163, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+      /* line 168, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
       .weekly-prog .date-nav .nav-mover.move-right:after {
         left: -20px; }
-  /* line 172, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+  /* line 177, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
   .weekly-prog .date-nav .date-nav-item-link {
     display: block;
     padding: 0 20px;
@@ -1608,7 +1612,7 @@ header.main {
     color: #585858;
     text-decoration: none;
     text-transform: uppercase; }
-  /* line 188, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+  /* line 193, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
   .weekly-prog .date-nav .date-nav-item {
     margin: 0;
     padding: 0;
@@ -1623,7 +1627,7 @@ header.main {
     /* 20px */
     font-weight: 300;
     line-height: 1em; }
-    /* line 205, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+    /* line 210, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
     .weekly-prog .date-nav .date-nav-item.active:after {
       content: "";
       width: 95%;
@@ -1634,10 +1638,10 @@ header.main {
       left: 0;
       right: 0;
       background-color: #55a440; }
-    /* line 220, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+    /* line 225, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
     .weekly-prog .date-nav .date-nav-item.active a {
       color: #55a440; }
-      /* line 225, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+      /* line 230, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
       .weekly-prog .date-nav .date-nav-item.active a:after {
         content: "";
         display: inline-block;
@@ -1650,10 +1654,10 @@ header.main {
         background-position: -14px -20px;
         width: 8px;
         height: 4px; }
-  /* line 245, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+  /* line 250, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
   .weekly-prog .date-nav .loading-session {
     color: #ccc !important; }
-  /* line 249, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+  /* line 254, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
   .weekly-prog .date-nav .loading {
     position: absolute;
     left: 0;
@@ -1662,6 +1666,61 @@ header.main {
     width: 100%;
     height: 50px;
     background: rgba(204, 204, 204, 0.5) url("data:image/svg+xml;utf8,<svg width='38' height='38' viewBox='0 0 38 38' xmlns='http://www.w3.org/2000/svg' stroke='#fff'><g transform='translate(1 1)' stroke-width='2' fill='none' fill-rule='evenodd'><circle stroke-opacity='.5' cx='18' cy='18' r='18'/><path d='M36 18c0-9.94-8.06-18-18-18'><animateTransform attributeName='transform' type='rotate' from='0 18 18' to='360 18 18' dur='1s' repeatCount='indefinite'/></path></g></svg>") center center no-repeat; }
+
+/* line 272, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+.weekly-prog .calendar-bar {
+  background: #dedede;
+  border-top: 2px solid #55a440; }
+
+/* line 279, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+.weekly-prog .print-prog {
+  display: inline-block;
+  position: relative;
+  float: right;
+  border-left: 1px solid #cfcfcf; }
+  /* line 287, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+  .weekly-prog .print-prog .print-prog-icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin: 8px 10px;
+    background: transparent url('data:image/svg+xml;utf8,<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 44"><style>.st0{fill:none;stroke:#585858;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10}</style><g id="icons"><path class="st0" d="M9 1h24v8H9V1zm0 32H1V9h40v24h-8"/><path class="st0" d="M9 27h24v16H9V27zm-4 0h32M13 37h16m-16-4h16"/><circle class="st0" cx="33.8" cy="19" r="2"/></g></svg>') center center no-repeat;
+    background-size: contain; }
+
+/* line 309, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+.weekly-prog .calendar-btn {
+  position: relative;
+  float: left; }
+  /* line 312, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+  .weekly-prog .calendar-btn button {
+    padding: 5px 10px;
+    background-color: #55a440;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid #dedede; }
+    /* line 322, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+    .weekly-prog .calendar-btn button:focus {
+      outline: none; }
+  /* line 327, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+  .weekly-prog .calendar-btn .month-str {
+    line-height: 1.5em;
+    display: inline-block;
+    float: right;
+    margin: 5px; }
+  /* line 334, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+  .weekly-prog .calendar-btn .calendar-holder {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000; }
+  /* line 342, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+  .weekly-prog .calendar-btn .calendar-icon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin: 5px;
+    background: #55a440 url('data:image/svg+xml;utf8,<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.8 44"><style>.st0{fill:none;stroke:#FFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10}.st1{fill:#FFF}</style><path class="st0" d="M1 15h40"/><path class="st1" d="M11 34h3v-8.6c0-.3.5-.7.5-1.1l-1.9 1.8-.2.2h-.2c-.1 0-.2 0-.3-.1s-.2-.1-.2-.2l-.8-1.2 4.5-3.9H17v13h2v2h-8V34zm17.9-13c.7 0 1.3.1 1.9.3.6.2 1 .5 1.5.9.4.4.7.8.9 1.3s.3 1.1.3 1.7c0 .5-.1 1-.2 1.5-.2.5-.4.9-.6 1.3l-.9 1.2c-.4.4-.7.8-1.1 1.2l-3.3 3.4c.3-.1.6 0 1 0 .3-.1.6.1.9.1h3.8c.3 0 .1-.1.3 0 .2.2-.2.2-.2.4V36H23v-.9c0-.2.4-.3.4-.5.1-.2.3-.4.5-.5l4.6-4.5c.4-.4.8-.7 1-1.1.3-.3.6-.7.8-1 .2-.3.4-.7.5-1 .1-.4.2-.7.2-1.1s0-.7-.2-.9c-.1-.3-.2-.5-.4-.7-.2-.2-.4-.3-.7-.4-.3-.1-.6-.1-.9-.1-.6 0-1.1.2-1.5.5s-.7.7-.8 1.2c-.1.3-.2.4-.3.6-.1.1-.3.2-.6.2h-.3l-1.3-.2c.1-.7.3-1.3.6-1.9.3-.5.7-1 1.1-1.3.4-.4.9-.6 1.5-.8.5-.5 1.1-.6 1.7-.6z"/><path class="st0" d="M36 5h6v38H1V5h6m7 0h16"/><path class="st0" d="M8 1h6v8H8V1zm22 0h6v8h-6V1z"/></svg>') center center no-repeat;
+    background-size: contain; }
 
 /* line 30, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/application.scss */
 .touchNav {
@@ -1741,7 +1800,46 @@ header.main {
     /* 12/12 */ }
   /* line 4, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/header/_header_responsive.scss */
   header.main .logo{
-    width: 30%; } }
+    width: 30%; }
+  /* line 5, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
+  .weekly-prog .date-nav{
+    height: 110px; }
+  /* line 8, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
+  .weekly-prog .date-nav .date-nav-item{
+    height: 90px; }
+  /* line 12, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
+  /* line 15, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
+  .weekly-prog .date-nav .nav-mover,.weekly-prog .date-nav .nav-mover:after{
+    height: 60px; }
+  /* line 20, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
+  .weekly-prog .date-nav .list-holder{
+    width: calc(100% - 200px);
+    height: 99px; }
+  /* line 26, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
+  .weekly-prog .date-nav .date-nav-item-link span{
+    display: block;
+    text-align: center; }
+  /* line 30, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
+  .weekly-prog .date-nav .date-nav-item-link span.nav-date{
+    font-size: 2em;
+    line-height: 1em; }
+  /* line 35, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
+  .weekly-prog .date-nav .date-nav-item-link span.nav-day{
+    font-size: 0.8em; }
+  /* line 44, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
+  .weekly-prog .tr .icon-information{
+    float: right;
+    width: 50px;
+    height: 50px;
+    background: url("data:image/svg+xml;utf8,<svg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='157.4 491.6 21.7 39.2'><style>.st0{fill:#cfcfcf}</style><path class='st0' d='M159.5 491.6l19.6 19.6-2.1 2.1-19.6-19.6 2.1-2.1z'/><path class='st0' d='M157.4 528.6L177 509l2.1 2.1-19.6 19.6-2.1-2.1z'/></svg>") center center no-repeat;
+    background-size: contain; }
+  /* line 54, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
+  .weekly-prog .tr .bold-weight{
+    font-size: 1.733em; }
+  /* line 58, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
+  .weekly-prog .tr .pill{
+    font-size: 1.467em;
+    text-align: center; } }
 
 @media (min-width: 768px) and (max-width: 991px){
   /* line 10, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_breakpoints.scss */

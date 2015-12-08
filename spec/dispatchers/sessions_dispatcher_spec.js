@@ -7,8 +7,24 @@ describe("SessionsDispatcher", function() {
 
   let options = [
     {
+      handler:"changeDate",
+      source:"CHANGE_DATE"
+    },
+    {
+      handler:"calendarChange",
+      source:"CALENDAR_CHANGE"
+    },
+    {
       handler:"fetchData",
       source:"FETCH_DATA"
+    },
+    {
+      handler:"getMoreDays",
+      source:"MORE_DAYS"
+    },
+    {
+      handler:"getPreviousDays",
+      source:"PREVIOUS_DAYS"
     },
     {
       handler:"prerenderData",
