@@ -68,7 +68,7 @@ class PeriodSessions extends DataItems {
           <h1 className="gg beta secondary">{this.props.title}</h1>
         </header>
          <div className="table">
-            <DataHead device={this.props.device} css={this.props.css} key={"morninghead"} />
+            <DataHead device={this.props.device} css={this.props.css} key={`${this.props.title.toLowerCase()}head`} />
             <div className="tbody">
               {this._renderData(this.state.paginate)}
             </div>
@@ -85,7 +85,7 @@ class PeriodSessions extends DataItems {
 
     let sessions = SessionsStore._getDate().data.getTimePeriod(this.props.time.st, this.props.time.fn);
 
-    this.pagination[1]["hide"] = (sessions.size <= 4 || _.isEmpty(sessions));
+    this.pagination[1]["hide"] = (sessions.size <= 4 );
 
     this.setState({paginate:4, pagination_css:this.getClasses(this.pagination), data:sessions});
   }
