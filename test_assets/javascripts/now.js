@@ -109,6 +109,9 @@ do{
   nav_items.push(nav);
 } while(i < 10);
 
+console.log(JSON.stringify(s))
+console.log(JSON.stringify(nav_items))
+
 ReactDom.render(
   <NowNext
     columns     = {cols}
@@ -118,7 +121,6 @@ ReactDom.render(
     title_tag   = "Sessions for"
     sessions    = {s}
     sessionsApi = "/api/nownext/index.json"
-    timeperiod  = {timeperiod}
   />,
   document.getElementById('weekly-prog')
 );
