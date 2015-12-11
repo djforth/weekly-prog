@@ -111,7 +111,7 @@ class DataExpanderItem extends DataItem {
 
   _renderItem(col, data){
     // let title = _.find(visible, {key:key}).title
-    return <li className="list-group-item col-md-4" key={this._createKey(col.title)}><strong>{col.title}:</strong> {this._displayData(data, col)}</li>;
+    return <li className="list-group-item col-md-4" key={this._createKey(col.title)}><strong>{col.title}:</strong> {this._showValues(col)}</li>;
   }
 
   _renderButton() {

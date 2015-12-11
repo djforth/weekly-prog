@@ -46,18 +46,18 @@ function timeManager(date){
   }
 }
 
-function addSessions(){
+function addSessions(filter){
 
   // var sessions  = []
 
   function createSession(date){
     let session = _.cloneDeep(default_session)
     session.id         = _.uniqueId()
-    session.session      = _.sample(titles)
+    session.session    = _.sample(titles)
     session.location   = _.sample(locations)
     session.instructor = _.sample(instructors)
     session.activity   = _.sample(activities)
-    let d = _.clone(date)
+    let d   = _.clone(date)
     let fmt = new DateFormatter(d);
     session.start      = fmt.formatDate("%Y-%m-%d %H:%M");
     d.setHours(d.getHours()+1);
@@ -69,6 +69,10 @@ function addSessions(){
       session.buttons.book = "";
     } else {
       session.places_left = _.random(0, 20);
+    }
+
+    if(filter){
+      session.filters = filter;
     }
     // console.log(session)
     return session;
@@ -98,7 +102,7 @@ function addSessions(){
 }
 
 
-module.exports = function(days=1, date){
+module.exports = function(days=1, date, filter){
   date = (_.isDate(date)) ? date : new Date(2015, 11, 1)
   date.setHours(9, 0, 0)
   var sessions = []
@@ -107,8 +111,8 @@ module.exports = function(days=1, date){
     _.forEach([9, 12, 18], (n)=>{
       date.setDate(date.getDate()+i);
       date.setHours(n)
-      let creator = _.partial(addSessions(), date);
-      let ses = creator(_.random(10, 20))
+      let creator = _.partial(addSessions(filter), date);
+      let ses = creator(_.random(10, 20), filter)
       sessions = sessions.concat(ses);
     })
     i++;

@@ -1,7 +1,7 @@
 
 
-
 .weekly-prog{
+
 
   .no-sessions{
     text-align: center;
@@ -45,24 +45,31 @@
 
   .afternoon{
     .pill.pill-secondary{
-      background-color: $mantis;
+      background-color: $weely-prog-pill-arvo;
     }
   }
 
   .evening{
     .pill.pill-secondary{
-      background-color: $apple;
+      // border:1px solid red;
+      background-color: $weely-prog-pill-evening;
     }
 
   }
 
-  .old-session{
-    background-color: $scorpion;
+  .pill.pill-secondary{
+    // border:1px solid red;
+    &.past{
+      background-color: $weely-prog-old-session !important;
+    }
+
+    &.now{
+      background-color: $weely-prog-now-session !important;
+    }
   }
 
-  .now{
-    background-color: $havelock-blue;
-  }
+
+
 
 
   .date-nav {
@@ -239,7 +246,7 @@
             bottom: -19.5px;
 
             // styling
-            @include sprite($arrow-green);
+            @include sprite($arrow-green-down);
           }
         }
 
@@ -354,6 +361,9 @@
     }
   }
 
+
   // Calendar-bar finish
 }
+
+
 

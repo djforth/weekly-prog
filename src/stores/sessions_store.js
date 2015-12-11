@@ -15,7 +15,7 @@ const AjaxManager  = require("../utils/ajax_manager")
 const SessionsDispatcher = require("../dispatchers/sessions_dispatcher")
     , SessionsAction     = require("../actions/sessions_actions");
 
-let ajaxManager, processor, sessions;
+let ajaxManager, processor, sessions, facility;
 
 let fetched     = false;
 let requestMade = false;
@@ -71,7 +71,9 @@ const store = {
 
   // <<<<<<<<<<<<<<< Fetching and processing session >>>>>>>>>>>>
   , _addSessions(data){
-    sessions = processor(data);
+    if(_.isFunction(processor)){
+      sessions = processor(data);
+    }
   }
 
   , _calendarChange(date){
@@ -98,8 +100,15 @@ const store = {
       })
       .then(this._fetchRest.bind(this));
     }
+  }
 
+  , _fetchNowNext(){
+    let request = ajaxManager.fetch().then((data)=>{
+        fetched = true;
+        sessions = processor(data, false);
 
+        this.emitChange("fetched");
+      });
   }
 
   , _fetchRest(dates){
@@ -139,6 +148,10 @@ const store = {
     return null;
   }
 
+  , _getFacility(){
+    return sessions.findDate(new Date()).data.filter("facility", facility)
+  }
+
   , _getMoreDays(){
 
     if(fetched){
@@ -155,7 +168,6 @@ const store = {
   }
 
   , _getAllDates(){
-    // console.log(sessions.getAllDates())
     return processDates(sessions.getAllDates());
   }
 
@@ -168,6 +180,10 @@ const store = {
       this.current = currentDate(date);
     }
     this.current.setDate(date);
+  }
+
+  , _setFacility(id){
+    facility = id;
   }
 
   , _setGroups(groupBy){
@@ -201,6 +217,12 @@ const registeredCallback = function(payload) {
       SessionStore.emitChange("fetching");
       break;
 
+    case "FETCH_NOWNEXT":
+      if(action.progress) SessionStore._progress(action.progress)
+      SessionStore._fetchNowNext();
+      SessionStore.emitChange("fetching_nownext");
+      break;
+
     case "MORE_DAYS":
       SessionStore._getMoreDays();
       SessionStore.emitChange("more_days");
@@ -215,6 +237,12 @@ const registeredCallback = function(payload) {
       SessionStore._addSessions(action.data);
       SessionStore.emitChange("prerender");
       break;
+
+    case "SET_FACILITY":
+      SessionStore._setFacility(action.id);
+      SessionStore.emitChange("set_facility");
+      break;
+
     case "SET_GROUPBY":
       SessionStore._setGroups(action.groupBy);
       SessionStore.emitChange("groupby");

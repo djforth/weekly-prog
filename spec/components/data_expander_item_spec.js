@@ -191,7 +191,7 @@ describe("DataExpander", function() {
 
     });
 
-    describe('renderDate', function() {
+    xdescribe('renderDate', function() {
       let item
       beforeEach(function() {
         spyOn(dataexpander, "_displayData").and.returnValue("Phil");

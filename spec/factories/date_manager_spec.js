@@ -20,6 +20,7 @@ describe('DateManager', function() {
   describe('init', function() {
     beforeEach(()=>{
       dateManager = DateManager("start");
+
     });
 
     it('should return an object', function() {
@@ -90,12 +91,14 @@ describe('DateManager', function() {
       revert();
     })
 
-    it("should update the date's data if found", function() {
+    xit("should update the date's data if found", function() {
       let day = new Date(2015, 0, 18)
+
       let new_dates = dateUpdate(dates, day, ["foo"]);
 
       expect(new_dates[0].data).toEqual(["foo"])
     });
+
     let week
     beforeEach(()=>{
       spy = jasmine.createSpy("createFcty").and.returnValue("foo");

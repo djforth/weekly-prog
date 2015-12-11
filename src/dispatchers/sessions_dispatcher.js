@@ -26,6 +26,14 @@ const SessionsDispatcher = assign(new Dispatcher(), {
     this.dispatch(payload);
   }
 
+  , fetchNowNext: function(action) {
+    var payload = {
+      source: "FETCH_NOWNEXT",
+      action: action
+    };
+    this.dispatch(payload);
+  }
+
   , getMoreDays: function(action) {
     var payload = {
       source: "MORE_DAYS",
@@ -53,6 +61,14 @@ const SessionsDispatcher = assign(new Dispatcher(), {
   , setApi: function(action) {
     var payload = {
       source: "SET_API",
+      action: action
+    };
+    this.dispatch(payload);
+  }
+
+  , setFacility: function(action) {
+    var payload = {
+      source: "SET_FACILITY",
       action: action
     };
     this.dispatch(payload);

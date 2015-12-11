@@ -19,14 +19,36 @@ class SessionsFcty extends DataManager {
            && time.getHours() <= fn
   }
 
+  checkFilter(filter, id){
+    if(_.isArray(filter)) return _.includes(filter, id)
+
+    return filter === id;
+  }
+
+  filter(key, id){
+    if(!this.data) return Immutable.fromJS([]);
+
+    return this.data.filter((d)=>{
+      if(!d.has("filters")) return false;
+
+      let filters = d.get("filters");
+      if(!filters.has(key)) return false;
+
+      return this.checkFilter(filters.get(key), id);
+    })
+  }
+
   getTimePeriod(st, fn){
     // console.log(this.data)
     if(!this.data) return Immutable.fromJS([]);
 
     return this.data.filter((d)=>{
-      let time = d.get(this.key);
+      if(this.key && d.has(this.key)){
+        let time = d.get(this.key);
 
-      return this.checkInPeriod(time, st, fn);
+        return this.checkInPeriod(time, st, fn);
+      }
+      return false;
     })
   }
 

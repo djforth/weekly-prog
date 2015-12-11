@@ -1,4 +1,4 @@
-const SessionsDispatcher = require("../dispatchers/sessions_dispatcher");
+ const SessionsDispatcher = require("../dispatchers/sessions_dispatcher");
 
 module.exports = {
   changeDate:(date)=>{
@@ -21,6 +21,13 @@ module.exports = {
       type: "FETCH_DATA",
       progress:progress,
       date:date
+    });
+  }
+
+  , fetchNowNext:(progress)=>{
+    SessionsDispatcher.fetchNowNext({
+      type: "FETCH_NOWNEXT",
+      progress:progress
     });
   }
 
@@ -48,6 +55,13 @@ module.exports = {
     SessionsDispatcher.setApi({
       type : "SET_API",
       url  : url
+    });
+  }
+
+  , setFacility:(id)=>{
+    SessionsDispatcher.setFacility({
+      type : "SET_FACILITY",
+      id   : id
     });
   }
 

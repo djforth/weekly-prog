@@ -1,6 +1,6 @@
 {
   "name": "weekly-prog",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "Better Weekly Prog",
   "main": "index.js",
   "babel": {
@@ -13,7 +13,7 @@
     "assets_in": "test_assets",
     "assets_out": "app/assets",
     "name": "server",
-    "port": 9000,
+    "port": 4000,
     "rails_port": 3030,
     "uiport": 9080
   },
@@ -32,7 +32,8 @@
       ".es6.js"
     ],
     "files": [
-      "application.js"
+      "application.js",
+      "now.js"
     ],
     "input": "app/assets_uncompiled/javascripts",
     "output": "app/assets/javascripts",
@@ -128,11 +129,13 @@
     "immutable": "^3.7.5",
     "lodash": "^3.10.1",
     "moment": "^2.10.6",
+    "moment-strftime": "^0.1.5",
     "morse-react-mixins": "git://github.com/djforth/morse-react-mixins.git",
     "normalize.css": "^3.0.3",
     "react": "^0.14.3",
     "react-date-range": "^0.1.8",
     "react-dom": "^0.14.3",
+    "touch-nav": "git://github.com/djforth/touch-nav.git",
     "viewport-detection-es6": "git://github.com/djforth/viewport-detection-es6.git"
   }
 }

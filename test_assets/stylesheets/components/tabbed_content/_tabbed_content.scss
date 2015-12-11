@@ -20,7 +20,7 @@
     z-index: 1;
 
     // styling
-    border-radius: 100px / 5px; 
+    border-radius: 100px / 5px;
     box-shadow: 0 0 18px $tabbed-content-body-shadow;
   }
 }
@@ -64,7 +64,7 @@
         bottom: -6px;
 
         // styling
-        @include sprite($arrow-green);
+        @include sprite($arrow-green-down);
       }
     }
   }
@@ -72,7 +72,7 @@
   li {
     // normalize resets
     @include reset-normalize;
-    
+
     // layout
     float: left;
 

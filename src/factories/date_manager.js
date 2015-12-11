@@ -50,9 +50,12 @@ function createWeek(createFcty, start=new Date()){
 
 
 function dateUpdate(dates, date, data){
+
   return _.map(dates, (d)=>{
     if(checker(d.date, date)){
-      d.data = data;
+      // console.log(d.data.size(), data.length)
+      d.data.add(data);
+      // console.log(d.data.size(), data.length)
       d.fetched = true;
     }
     return d
@@ -101,11 +104,12 @@ function dateManager(groupBy, ds){
   return {
     addDate:(date, data)=>{
       if(!_.isDate(date)) return false;
-      let fcty = fctyCreator(data);
+
       if(checkDates(dates,date)){
         let fn = _.partial(dateUpdate, dates);
-        dates = fn(date, fcty)
+        dates = fn(date, data)
       } else {
+        let fcty = fctyCreator(data);
         dates.push({date:date, data:fcty, fetched:true})
       }
     }

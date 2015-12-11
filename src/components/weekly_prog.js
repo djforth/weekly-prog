@@ -40,16 +40,14 @@ class WeeklyProg extends React.Component {
   }
 
   _getSessions(){
-    // console.log("PRERENDERED GET DATA", SessionsStore._getDate())
+
     let session = SessionsStore._getDate()
     if(!_.isEmpty(session)) {
       this.setState({date:session.date, sessions:session.data})
     }
   }
 
-  // _onLoaded(){
-  //   console.log("Sessions fetched")
-  // }
+
 
   _renderPeriodSessions(){
     return _.map(this.props.timeperiod, (tp)=>{
@@ -67,13 +65,7 @@ class WeeklyProg extends React.Component {
     SessionsActions.prerenderData(this.props.sessions);
     ColumnsActions.addingColumns(this.props.columns);
     ColumnsActions.changeDevice(this.device);
-    // let dates = SessionsStore._getAllDates();
-    // console.log(dates)
-    this.setState({
-      loading:true,
-      loading_txt:"Sessions Loading",
-      percent: 0
-    });
+
 
   }
 
