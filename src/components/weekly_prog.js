@@ -62,7 +62,10 @@ class WeeklyProg extends React.Component {
 
   componentWillMount(){
     SessionsStore.addChangeListener("prerender", this._getSessions.bind(this));
-    SessionsActions.prerenderData(this.props.sessions);
+    if(!_.isEmpty(this.props.sessions)){
+      SessionsActions.prerenderData(this.props.sessions);
+    }
+
     ColumnsActions.addingColumns(this.props.columns);
     ColumnsActions.changeDevice(this.device);
 
