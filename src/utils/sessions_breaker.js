@@ -86,11 +86,9 @@ function fillGaps(groups, start, end=7){
 }
 
 
-module.exports = function(sessions, groupBy){
+module.exports = function(sessions, groupBy, st){
   // console.log(groupBy, sessions)
   let list = makeDates(sessions, groupBy);
   let groups = groupSessions(list);
-
-  // console.log("groups", groups)
-  return fillGaps(groups);
+  return fillGaps(groups, st);
 }

@@ -23,10 +23,10 @@ function processData(groupBy){
 
   let sessions = DateManager(groupBy);
 
-  return function(d, reset=false){
+  return function(d, date, reset=false){
     if(reset) sessions.resetDates();
 
-    let groups = Breaker(d, groupBy);
+    let groups = Breaker(d, groupBy, date);
     _.forEach(_.values(groups), (ses)=>{
       sessions.addDate(ses.date, ses.sessions);
     });
@@ -91,7 +91,7 @@ const store = {
     if(request){
       return request.then((data)=>{
         fetched = true;
-        sessions = processor(data, reset);
+        sessions = processor(data, date, reset);
 
         this.emitChange("fetched");
 
