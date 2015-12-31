@@ -1,7 +1,6 @@
 const assign      = require("react/lib/Object.assign")
   , EventEmitter  = require("events").EventEmitter
-  , _             = require("lodash")
-  , DateFormatter = require("date-formatter");
+  , _             = require("lodash");
 
 //Internal Modules
 const AjaxManager  = require("../utils/ajax_manager")

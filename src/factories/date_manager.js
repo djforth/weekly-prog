@@ -70,6 +70,8 @@ function getNewDate(date, n=1){
 
 function processForNav(dm){
   let dateFmt = Moment(dm.date);
+
+  // if(dm.data.size() === 0) console.log("dm", dm)
   return {
       date:dm.date
     , fmt:dateFmt

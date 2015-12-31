@@ -70,20 +70,12 @@ class WeeklyProg extends React.Component {
   }
 
   componentDidMount(){
-    const detect = new ViewportDetect();
-    this.device = detect.getDevice();
-    this.size  = detect.windowSize();
+    this.detect = new ViewportDetect();
+    this.device = this.detect.getDevice();
+    this.size  = this.detect.windowSize();
     ColumnsActions.changeDevice(this.device);
     // this.setState({device:this.device});
-    detect.trackSize(function(device, size){
-      if(this.device !== device){
-        this.device = device;
-        ColumnsActions.changeDevice(device);
-      }
-
-      this.size   = size;
-
-    }.bind(this));
+    this.id = this.detect.trackSize(this._onDeviceChange.bind(this));
 
     // SessionsStore.addChangeListener("fetched", this._onLoaded.bind(this));
     SessionsStore.addChangeListener("api_set", this._fetchData.bind(this));
@@ -92,8 +84,19 @@ class WeeklyProg extends React.Component {
   }
 
   componentWillUnmount() {
+    this.detect.removeCallback(this.id);
     SessionsStore.removeChangeListener("prerender", this._getSessions);
     // SessionsStore.removeChangeListener("fetched", this._onLoaded);
+  }
+
+  _onDeviceChange(device, size){
+      if(this.device !== device){
+        this.device = device;
+        ColumnsActions.changeDevice(device);
+      }
+
+      this.size   = size;
+
   }
 
 
