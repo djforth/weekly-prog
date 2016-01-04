@@ -36,6 +36,7 @@ function processData(groupBy){
 }
 
 function processDates(dates){
+  if(_.isEmpty(dates)) return dates;
   let yesterday = new Date();
   yesterday.setDate(yesterday.getDate()-1);
   return _.filter(dates, (d)=>{
