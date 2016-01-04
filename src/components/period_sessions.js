@@ -55,7 +55,7 @@ class PeriodSessions extends DataItems {
 
       return items;
     } else {
-      return (<div className="cols-lg-12">
+      return (<div className="cols-lg-12" key={`${this.props.title.toLowerCase()}-nosessions`}>
         <h5 className="no-sessions">There is no sessions this {this.props.title}</h5>
       </div>);
     }
