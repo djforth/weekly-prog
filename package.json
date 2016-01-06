@@ -1,6 +1,6 @@
 {
   "name": "weekly-prog",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "Better Weekly Prog",
   "main": "index.js",
   "babel": {
