@@ -43,10 +43,10 @@ class PeriodSessions extends DataItems {
 
     if(this.state.data && this.state.data.size > 0){
        let data = this.state.data.slice(0, this.state.paginate);
-
-       let items = data.map(function(k){
+       let items = []
+       data.forEach(function(k){
          if(k){
-          return (
+          items.push(
             <DataExpander css={this.props.css} data={k} key={k.get("id")} />
             );
          }
@@ -63,7 +63,7 @@ class PeriodSessions extends DataItems {
 
   render() {
     return (
-      <section key="items" className={this.props.title.toLowerCase()}>
+      <section key="items" className={`clearfix ${this.props.title.toLowerCase()}`}>
         <header className="section-header">
           <h1 className="gg beta secondary">{this.props.title}</h1>
         </header>

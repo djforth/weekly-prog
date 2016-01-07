@@ -51,8 +51,8 @@ class NowNext extends React.Component {
     this.size  = this.detect.windowSize();
     ColumnsActions.changeDevice(this.device);
     // this.setState({device:this.device});
-    this.id = this.detect.trackSize(this_onDeviceChange.bind(this));
-    detect.trackSize(function(device, size){
+    this.id = this.detect.trackSize(this._onDeviceChange.bind(this));
+    this.detect.trackSize(function(device, size){
       if(this.device !== device){
         this.device = device;
         ColumnsActions.changeDevice(device);

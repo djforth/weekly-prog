@@ -32,7 +32,7 @@
       ".es6.js"
     ],
     "files": [
-      "application.js"
+      "application.js", "now.js"
     ],
     "input": "app/assets_uncompiled/javascripts",
     "output": "app/assets/javascripts",

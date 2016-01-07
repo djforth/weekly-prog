@@ -1,3 +1,6 @@
+
+require("babel-polyfill");
+
 const _        = require("lodash")
     , React    = require("react")
     , ReactDom = require('react-dom')

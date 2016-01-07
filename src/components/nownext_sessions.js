@@ -39,7 +39,7 @@ class NowNextSessions extends DataItems {
   _renderData(){
     if(this.state.data && this.state.data.size > 0){
        let data = this.state.data;
-
+       // let items = []
        let items = data.map(function(k){
          if(k){
           return (
