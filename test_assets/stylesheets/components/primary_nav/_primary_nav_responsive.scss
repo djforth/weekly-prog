@@ -1,0 +1,515 @@
+@include breakpoint($mobile-breakpoint) {
+  .nav-list {
+    // layout
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    // styling
+    background-color: $mobile-nav-bg;
+
+    li {
+      a {
+        // layout
+        display: block;
+        padding: 20px;
+        width: calc(100% - 40px);
+
+        // styling
+        border-bottom: 1px solid $mobile-nav-brdr;
+        color: $mobile-nav-txt;
+        font-size: 1.875em;
+        text-decoration: none;
+
+        &:hover {
+          background: $mobile-nav-hover-bg;
+          color: $mobile-nav-hover-txt;
+        }
+
+        &.has-subs {
+          position: relative;
+
+          &:after {
+            // layout
+            content: "";
+            display: block;
+            height: 15px;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 30px;
+            width: 15px;
+
+            // styling
+            background: inline_image("svg/arrow_apple.svg") center center no-repeat;
+          }
+
+          &:hover {
+            &:after {
+              background: inline_image("svg/arrow_white.svg") center center no-repeat;
+            }
+          }
+        }
+      }
+
+      &.current-section {
+        a {
+          color: $mobile-nav-current-txt;
+          text-transform: uppercase;
+
+          &:hover {
+            color: $mobile-nav-hover-txt;
+          }
+        }
+      }
+
+      &.previous-section {
+        a {
+          background: $mobile-nav-previous-bg;
+          color: $mobile-nav-previous-txt;
+
+          &:before {
+            // layout
+            content: "";
+            display: inline-block;
+            height: 15px;
+            margin: auto 8px auto 0;
+            width: 15px;
+
+            // styling
+            background: inline_image("svg/arrow_white.svg") center center no-repeat;
+            transform: rotate(180deg);
+          }
+
+          &:hover {
+            color: $mobile-nav-hover-txt;
+          }
+        }
+      }
+    }
+  }
+
+  .open-nav {
+    // layout
+    display: table-cell;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 24%;
+    width: 50px;
+
+    // styling
+    border-left: 1px solid $top-nav-border;
+    border-right: 1px solid $top-nav-border;
+
+    &:hover {
+      background-color: $top-nav-hover;
+    }
+
+    .icon-hamburger{
+      // layout
+      @include display(flex);
+      align-items: center;
+      display: block;
+      height: 100%;
+      justify-content: center;
+      margin: 0 auto;
+      width: 50%;
+
+      // styling
+      background: inline_image("svg/hamburger.svg") center center no-repeat;
+    }
+  }
+}
+
+@include breakpoint($tablet-and-desktop-breakpoint) {
+  .primery-nav {
+    // layout
+    position: relative;
+
+    // styling
+    background: $desktop-nav-bg;
+    color: $desktop-nav-txt;
+
+    .nav-holder {
+      float: left;
+      position: relative;
+      left: 50%;
+
+      .primary-nav-list {
+        float: left;
+        position: relative;
+        left: -50%;
+      }
+    }
+  }
+
+  .single {
+    // layout
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    // styling
+    background: $desktop-nav-l1-bg;
+    box-shadow: $desktop-nav-l1-shadow;
+
+    // Level 1 nav
+    .level-1 {
+      .home-link {
+        // layout
+        float: left;
+        height: 50px;
+        width: 20%;
+
+        // styling
+        background: $desktop-nav-l1-home-bg;
+
+        a {
+          // layout
+          display: block;
+          float: left;
+          padding: 15px 25px;
+
+          // styling
+          color: $desktop-nav-l1-home-txt;
+          font-size: 0.813em;
+          text-decoration: none;
+        }
+      }
+    }
+    // End Level 1 nav
+
+    // Level 2 or more nav
+    .level-2 {
+      .home-link {
+        margin: 0 20px;
+        padding: 30px 0;
+
+        a {
+          font-size: 1.438em;
+          font-weight: 300;
+          text-decoration: none;
+          text-transform: uppercase;
+        }
+      }
+
+      .nav-list {
+        // reset
+        @include reset-normalize;
+
+        // layout
+        float: left;
+        margin-top: 20px;
+
+        // styling
+        background-color: $desktop-nav-list;
+
+        .secondary-nav-list {
+          margin-top: 20px;
+        }
+      }
+
+      .secondary-nav-list {
+        border-bottom: 1px solid $desktop-nav-l2-brdr;
+
+        li {
+          // layout
+          @include clearfix;
+          position: relative;
+
+          // styling
+          border-top: 1px solid $desktop-nav-l2-brdr;
+          border-right: 1px solid $desktop-nav-l2-brdr;
+
+          &.active, &:hover {
+            a {
+              &:after {
+                // layout
+                content: "";
+                display: block;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                width: 10px;
+
+                // styling
+                background-color: $desktop-nav-l2-hover;
+              }
+            }
+          }
+
+          a {
+            // layout
+            display: block;
+            margin: 10px 10px 10px 30px;
+
+            // styling
+            color: $desktop-nav-l2-txt;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    // End Level 2 or more nav
+
+    .level-3 {
+      border-right: 1px solid $desktop-nav-l2-home-border;
+    }
+
+    .level-3, .level-4 {
+      // layout
+      margin-top: 20px;
+
+      // styling
+      background-color: $desktop-nav-list;
+
+      .nav-list {
+        li {
+          &.active, &:hover {
+            a {
+              background-color: $desktop-nav-l3-hover-bg;
+              color:$desktop-nav-l3-hover-txt;
+
+              &.has-subs {
+                &:after {
+                  background: inline_image("svg/arrow_white.svg") center center no-repeat;
+                }
+              }
+            }
+          }
+
+          a {
+            // layout
+            display: block;
+            padding: 5px 20px;
+
+            // styling
+            color: $desktop-nav-l2-txt;
+            text-decoration: none;
+
+            &.has-subs {
+              position: relative;
+
+              &:after {
+                // layout
+                content: "";
+                display: block;
+                height: 10px;
+                margin: auto;
+                position: absolute;
+                width: 10px;
+                top: 0;
+                bottom: 0;
+                right: 20px;
+
+                // styling
+                background: inline_image("svg/arrow_apple.svg") center center no-repeat;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .levels {
+      .home-link, .title-link {
+        border-bottom: 1px solid $desktop-nav-l2-home-border;
+        box-shadow: $desktop-nav-l2-home-brdr-sh;
+
+        &:before {
+          // layout
+          content: "";
+          display: inline-block;
+          height: 10px;
+          margin: 3px 10px 3px 0;
+          width: 10px;
+
+          // styling
+          background: inline_image("svg/arrow_apple.svg") center center no-repeat;
+          background-size: cover;
+        }
+
+        a {
+          color: $desktop-nav-l2-home-txt;
+          text-decoration: none;
+        }
+      }
+
+      .title-link {
+        margin: 0 20px;
+        padding: 15px 0;
+      }
+    }
+
+    .secondary-nav-touch-list {
+      // reset
+      @include reset-normalize;
+
+      // layout
+      height: 50px;
+      position: absolute;
+      left: 0;
+
+      // styling
+      transition: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
+
+      li {
+        display: inline-block;
+        float: left;
+
+        a {
+          // layout
+          display: block;
+          float: left;
+          padding:10px 25px;
+
+          // styling
+          color: $desktop-nav-l1-txt;
+          font-size: 1em;
+          text-decoration: none;
+        }
+      }
+
+      .secondary-nav-list {
+        &.level-1 {
+          li {
+            display: inline-block;
+            float: left;
+
+            a {
+              // layout
+              display: block;
+              float: left;
+              padding: 20px 30px;
+
+              // styling
+              color: $desktop-nav-l1-txt;
+              font-size: 1.154em;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+
+    .touch-sub-nav {
+      float: right;
+      width: 80%;
+
+      .list-holder {
+        float: left;
+        height: 40px;
+        overflow: hidden;
+        position: relative;
+        width: calc(100% - 100px);
+      }
+
+      .nav-mover {
+        // reset
+        @include reset-normalize;
+
+        // layout
+        float: left;
+        height: 20px;
+        margin: 15px;
+        position: relative;
+        width: 10px;
+
+        // styling
+        background-size: contain;
+        font-size: 1.25em; /* 20px */
+        font-weight: 300;
+        line-height: 1em;
+
+        &:after {
+          // layout
+          content: "";
+          height: 20px;
+          position: absolute;
+          top: 0;
+          width: 1px;
+          
+          // styling
+          background-color: $weekly-prog-nav-border;
+        }
+
+        &.move-left {
+          background: inline_image("svg/move-left.svg") center center no-repeat;
+
+          &:after {
+            right: -20px;
+          }
+        }
+
+        &.move-right {
+          // layout
+          float: right;
+          
+          // styling
+          background: inline_image("svg/move-right.svg") center center no-repeat;
+
+          &:after {
+            left: -20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint($tablet-breakpoint) {
+  .single {
+    .level-2 {
+      .nav-list {
+        width: 33.33%;
+      }
+    }
+
+    .level-3 {
+      width: 33.33%;
+    }
+
+    .level-3, .level-4 {
+      float: left;
+    }
+
+    .level-4 {
+      width: calc(33.33% - 2px);
+    }
+  }
+}
+
+@include breakpoint($desktop-breakpoint) {
+  .single {
+    .level-2 {
+      .nav-list {
+        width: percentage(3/12);
+      }
+    }
+
+    .level-3 {
+      width: percentage(3/12);
+    }
+
+    .level-3, .level-4 {
+      float: left;
+    }
+
+    .level-4 {
+      width: calc(50% - 2px);
+
+      .nav-list {
+        li {
+          float: left;
+          width: 50%;
+        }
+      }
+    }
+  }
+}

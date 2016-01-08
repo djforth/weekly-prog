@@ -1,0 +1,11 @@
+.alert {
+
+   @include breakpoint($mobile-breakpoint) {
+      width:calc(100% - 90px);
+   }
+
+
+   @include breakpoint($tablet-and-desktop-breakpoint) {
+      width:calc(80% - 90px);
+   }
+}

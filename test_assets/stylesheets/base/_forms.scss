@@ -8,34 +8,76 @@ form {
   }
 
   input[type="checkbox"] {
+    float: left;
     margin-right: 5px;
+    position: relative;
+    top: 5px;
   }
 
   input[type="email"], input[type="tel"], input[type="text"], textarea {
     // layout
     box-sizing: border-box;
-    padding: 10px;
     width: 100%;
     
     // styling
-    border: 1px solid $input-border;
+    background-color: $form-input-bg;
+    border-radius: 5px;
+    color: $form-input-text;
+    font-family: "Lato", Arial, Verdana, sans-serif;
     outline: none;
+
+    &:focus {
+      color: $form-input-text-focus;
+    }
   }
 
   input[type="submit"] {
     @extend .button;
     @extend .button-primary;
-    border: 0 none;
+
+    // layout
+    padding: 10px 30px !important;
+
+    // styling
+    border: 0 none !important;
   }
 
   label {
     // layout
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   
     // styling
-    color: $label;
+    color: $form-label;
     font-weight: bold;
+  }
+
+  select {
+    // Webkit fixes
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    // styling
+    background: image_url("forms/form-select-arrow.png") right center no-repeat $form-select-bg;
+    border: 2px solid $form-select-border;
+    outline: none;
+  }
+
+  .error {
+    // layout
+    display: block;
+
+    // styling
+    color: $form-error-border;
+    font-size: 0.688em; /* 13px */
+  }
+
+  .field-with-errors, .field_with_errors {
+    input, select {
+      background: image_url("forms/form-error.png") 99% 50% no-repeat;
+      border: 2px solid $form-error-border;
+    }
   }
 
   .form-row {

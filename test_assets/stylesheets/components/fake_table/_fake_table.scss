@@ -1,36 +1,8 @@
-em, .em {
-  color: $table-em;
-  font-style: normal;
-  font-weight: 700;
-}
-
-.tbody .tr {
-  div {
-    &.session-full {
-      display: block;
-      font-family: "Garage Gothic", Arial, Helvetica, sans-serif;
-      font-size: 1.30769230769231em; /* 17px / 13px */
-      text-align: center;
-      text-transform: uppercase;
-    }
-
-    &.places {
-      font-size: 2.46153846153846em; /* 32px / 13px */
-      line-height: 0.5em;
-    }
-  }
-}
-span {
-  &.session-full {
-    display: block;
-    font-family: "Garage Gothic", Arial, Helvetica, sans-serif;
-    font-size: 1.30769230769231em; /* 17px / 13px */
-    text-align: center;
-    text-transform: uppercase;
-  }
-
-  &.places {
-    font-size: 2.46153846153846em; /* 32px / 13px */
+.fake-table {
+  em, .em {
+    color: $table-em;
+    font-style: normal;
+    font-weight: 700;
   }
 }
 
@@ -40,6 +12,18 @@ span {
   .tr {
     &:nth-child(even) {
       background-color: $row-even;
+    }
+
+    .places {
+      font-size: 2.46153846153846em; /* 32px / 13px */
+    }
+
+    .session-full {
+      display: block;
+      font-family: "Garage Gothic", Arial, Helvetica, sans-serif;
+      font-size: 1.30769230769231em; /* 17px / 13px */
+      text-align: center;
+      text-transform: uppercase;
     }
   }
 }

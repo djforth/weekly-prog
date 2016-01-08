@@ -123,7 +123,7 @@ class DataExpanderItem extends DataItem {
           onClick={this._onClick.bind(this)}
           className="icon icon-information"
           title={buttonText} >
-          <span>{buttonText}</span>
+          <span className="hidden">{buttonText}</span>
         </a>
       </div>
 

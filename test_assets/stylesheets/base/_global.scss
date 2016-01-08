@@ -8,7 +8,12 @@ body {
 }
 
 img {
+  max-width: 100%;
   vertical-align: bottom;
+}
+
+svg {
+  max-height: 100%;
 }
 
 .center {
@@ -31,4 +36,8 @@ img {
 .row {
   @include clearfix;
   margin: 20px 0;
+}
+
+.wrap {
+  position: relative;
 }

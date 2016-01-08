@@ -1,7 +1,6 @@
 .tabbed-content-body {
   // layout
   overflow: hidden;
-  padding: 40px 0;
   position: relative;
 
   // styling
@@ -20,7 +19,7 @@
     z-index: 1;
 
     // styling
-    border-radius: 100px / 5px;
+    border-radius: 100px / 5px; 
     box-shadow: 0 0 18px $tabbed-content-body-shadow;
   }
 }
@@ -61,7 +60,8 @@
         position: absolute;
         left: 0;
         right: 0;
-        bottom: -6px;
+        bottom: -7px;
+        z-index: 1;
 
         // styling
         @include sprite($arrow-green-down);
@@ -72,7 +72,7 @@
   li {
     // normalize resets
     @include reset-normalize;
-
+    
     // layout
     float: left;
 

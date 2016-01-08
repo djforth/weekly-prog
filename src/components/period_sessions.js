@@ -17,7 +17,7 @@ class PeriodSessions extends DataItems {
   constructor(props) {
     super(props);
     let sessions = this.props.sessions.getTimePeriod(this.props.time.st, this.props.time.fn)
-    this.pagination = ["weekly-pagination", {"hide": (sessions.size <= 4)}];
+    this.pagination = ["weekly-pagination", {"hidden": (sessions.size <= 4)}];
 
     this.state = {
         data:sessions

@@ -1,0 +1,85 @@
+article {
+  &.activity-facility {
+    // layout
+    box-sizing: border-box;
+
+    // styling
+    border: 1px solid $activity-facility-border;
+    box-shadow: 0 0 10px 5px $activity-facility-shadow;
+
+    h1 {
+      // reset
+      @include reset-normalize;
+
+      // layout
+      position: absolute;
+      bottom: 10px;
+      left: 20px;
+      right: 20px;
+
+      // styling
+      color: $activity-facility-heading-text;
+    }
+
+    img {
+      // layout
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      // styling
+      opacity: 0.9;
+    }
+
+    .background-container {
+      @include linear-gradient(80deg, $activity-facility-bg-container-bg-1 0%, $activity-facility-bg-container-bg-1 69%, $activity-facility-bg-container-bg-2 69%);
+
+      a {
+        &:hover {
+          background-color: $activity-facility-bg-container-link-bg-hover;
+        }
+      }
+    }
+
+    .background-container, .image-container {
+      // layout
+      height: 0;
+      overflow: hidden;
+      padding-bottom: 44%; /* 330px / 750px */
+      position: relative;
+
+      a {
+        // layout
+        height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 1;
+
+        // styling
+        @include transition(background-color 0.2s ease-in-out);
+        text-decoration: none;
+      }
+    }
+
+    .image-container {
+      @include linear-gradient(top, $activity-facility-overlay-bg-1 50%, $activity-facility-overlay-bg-2 60%);
+
+      a {
+        &:hover {
+          background-color: $activity-facility-image-container-link-bg-hover;
+        }
+      }
+    }
+
+    // This is a temporary fix for displaying tables inside these panels. We can't use the responsive table module as it stands because the module is looking for a viewport change to "responsify" the tables, but even at desktop the columns aren't wide enough to show a full table.
+    .tinymce {
+      overflow: auto;
+    }
+  }
+}

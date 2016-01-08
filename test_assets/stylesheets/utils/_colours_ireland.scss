@@ -1,0 +1,146 @@
+/* ---------- Global ---------- */
+$primary-heading-text: $lochmara;
+$primary-heading-text-alt: $azure-radiance;
+/* ---------- End Global ---------- */
+
+/* ---------- Components ---------- */
+// Activity and Facility panel
+$activity-facility-bg-container-bg-1: $azure-radiance;
+$activity-facility-bg-container-bg-2: lighten($azure-radiance, 3%);
+$activity-facility-bg-container-link-bg-hover: $lochmara-t-043;
+$activity-facility-border: $lochmara-t-043;
+
+// Breadcrumbs
+$breadcrumbs-current-text: $lochmara;
+
+// Buttons
+$button-carousel-bg: $lochmara;
+$button-carousel-bg-hover: lighten($lochmara, 5%);
+$button-carousel-border: $lochmara;
+
+// Carousel
+$carousel-border: $lochmara;
+$carousel-dot-bg: $dodger-blue;
+$carousel-subtitle-text: $lochmara;
+$carousel-title-text: $dodger-blue;
+
+// Find us
+$map-legend-bg-1: $lochmara;
+$map-legend-bg-2: $dodger-blue;
+$map-legend-border: $lochmara;
+
+// Header
+$header-bg: $lochmara;
+$header-bg-nav-open: lighten($lochmara, 10%);
+
+// Maps
+$map-info-bg: linear-gradient(45deg, $lochmara 0%, $dodger-blue 100%);
+$map-info-brdr: $lochmara;
+
+// Membership benefit
+$membership-benefit-border: $lochmara-t-043;
+$membership-benefit-number-text: $lochmara;
+
+// Membership category
+$membership-category-border: $lochmara-t-043 ;
+$membership-category-heading-text: $lochmara;
+
+// Membership preview
+$membership-preview-border: $lochmara-t-043;
+$membership-preview-heading-text: $lochmara;
+$membership-preview-pricing-bg-1: $lochmara;
+$membership-preview-pricing-bg-2: $dodger-blue;
+
+// News items
+$news-item-border: $sprout; /* CHANGE */
+$news-filter-border: $sprout; /* CHANGE */
+$news-social-border: $sprout; /* CHANGE */
+
+// News items grid
+$news-items-grid-item-text-bg: $lochmara;
+
+// Pills
+$pill-secondary-bg: $dodger-blue;
+
+// Price grid
+$price-grid-body-cell: $lochmara;
+$price-grid-body-row-even-bg: $athens-grey;
+
+// Primary navigation
+// Desktop
+$desktop-nav-text-hover: $lochmara;
+
+$desktop-nav-l1-bg:linear-gradient(0deg, rgb(233, 231, 234) 0%, rgb(243, 243, 247) 100%); /* CHANGE? */
+$desktop-nav-l1-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.24); /* CHANGE? */
+
+$desktop-nav-l2-home-txt: $apple; /* CHANGE */
+$desktop-nav-l2-home-brdr-sh:  0px 0 1px 0px rgba(255, 255, 255, 0.76); /* CHANGE? */
+$desktop-nav-l2-hover: $apple; /* CHANGE */
+
+$desktop-nav-l3-hover-bg: $apple; /* CHANGE */
+
+$mobile-nav-hover-bg: $apple; /* CHANGE */
+$mobile-nav-current-txt: $apple; /* CHANGE */
+
+// Top nav
+$top-nav-border: $chalet-green; /* CHANGE */
+$top-nav-hover: $lochmara-2; /* CHANGE */
+
+// Not needed for primary nav but used elsewhere - Ian we should probably rename them...
+$primary-nav-dropdown-bg: darken($apple, 10%); /* CHANGE? NEEDED? */
+$primary-nav-dropdown-bg-hover: $apple; /* CHANGE? NEEDED? */
+$primary-nav-text-hover: $apple; /* CHANGE? NEEDED? */
+
+// Sections
+$section-header-border: $dodger-blue;
+
+// Tabbed content
+$tabbed-content-nav-border-active: $lochmara;
+$tabbed-content-nav-text-active: $lochmara;
+
+// Venue navigation
+$venue-nav-text-border: $lochmara;
+
+// Weekly programme
+$weekly-prog-nav-border-active: $apple; /* CHANGE */
+$weekly-prog-nav-text-active: $apple; /* CHANGE */
+$weely-prog-pill-arvo: $mantis; /* CHANGE */
+$weely-prog-pill-evening: $apple; /* CHANGE */
+
+$calendar-btn-bg: $apple; /* CHANGE */
+$calendar-bar-border: $apple; /* CHANGE */
+
+$weekly-prog-nav-active: $apple; /* CHANGE */
+/* ---------- End Components ---------- */
+
+/* ---------- Pages ---------- */
+// Centre locator
+$centre-locator-facility-border: $lochmara-t-043;
+$centre-locator-facility-heading-text: $lochmara;
+$centre-locator-locations-list-border: $lochmara;
+$centre-locator-locations-list-header-heading-text: $lochmara;
+$centre-locator-nav-border: $lochmara;
+$centre-locator-nav-text-active: $lochmara;
+
+$centre-locator-search-result-border: $lochmara-t-043;
+$centre-locator-search-result-heading-text: $lochmara;
+
+// Search
+$search-filter-border: $lochmara-t-043;
+
+// Venues memberships
+$membership-short-term-border: $lochmara-t-043;
+$membership-short-term-heading-text: $lochmara;
+$membership-short-term-pricing-bg-1: $lochmara;
+$membership-short-term-pricing-bg-2: $dodger-blue;
+$membership-toggle-bg-active: $lochmara;
+$membership-types-border: $lochmara;
+
+// Venues show
+$venue-join-day-pass-bg: $azure-radiance;
+$venue-join-day-pass-reflection: lighten($azure-radiance, 3%);
+$venue-join-drop-in-bg: $dodger-blue;
+$venue-join-drop-in-reflection: lighten($dodger-blue, 3%);
+$venue-join-join-bg: $lochmara;
+$venue-join-join-reflection: lighten($lochmara, 3%);
+/* ---------- End Pages ---------- */

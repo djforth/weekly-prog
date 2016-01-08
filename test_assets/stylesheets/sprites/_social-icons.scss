@@ -11,33 +11,44 @@ $icon-home: x y offset_x offset_y width height total_width total_height image_pa
 At the bottom of this section, we provide information about the spritesheet itself
 $spritesheet: width height image $spritesheet-sprites;
 */
+$envelope-name: 'envelope';
+$envelope-x: 0px;
+$envelope-y: 0px;
+$envelope-offset-x: 0px;
+$envelope-offset-y: 0px;
+$envelope-width: 41px;
+$envelope-height: 41px;
+$envelope-total-width: 82px;
+$envelope-total-height: 82px;
+$envelope-image: 'sprites/social-icons.png';
+$envelope: (0px, 0px, 0px, 0px, 41px, 41px, 82px, 82px, 'sprites/social-icons.png', 'envelope', );
 $facebook-name: 'facebook';
-$facebook-x: 0px;
+$facebook-x: 41px;
 $facebook-y: 0px;
-$facebook-offset-x: 0px;
+$facebook-offset-x: -41px;
 $facebook-offset-y: 0px;
-$facebook-width: 19px;
-$facebook-height: 19px;
-$facebook-total-width: 38px;
-$facebook-total-height: 19px;
+$facebook-width: 41px;
+$facebook-height: 41px;
+$facebook-total-width: 82px;
+$facebook-total-height: 82px;
 $facebook-image: 'sprites/social-icons.png';
-$facebook: (0px, 0px, 0px, 0px, 19px, 19px, 38px, 19px, 'sprites/social-icons.png', 'facebook', );
+$facebook: (41px, 0px, -41px, 0px, 41px, 41px, 82px, 82px, 'sprites/social-icons.png', 'facebook', );
 $twitter-name: 'twitter';
-$twitter-x: 19px;
-$twitter-y: 0px;
-$twitter-offset-x: -19px;
-$twitter-offset-y: 0px;
-$twitter-width: 19px;
-$twitter-height: 16px;
-$twitter-total-width: 38px;
-$twitter-total-height: 19px;
+$twitter-x: 0px;
+$twitter-y: 41px;
+$twitter-offset-x: 0px;
+$twitter-offset-y: -41px;
+$twitter-width: 41px;
+$twitter-height: 41px;
+$twitter-total-width: 82px;
+$twitter-total-height: 82px;
 $twitter-image: 'sprites/social-icons.png';
-$twitter: (19px, 0px, -19px, 0px, 19px, 16px, 38px, 19px, 'sprites/social-icons.png', 'twitter', );
-$spritesheet-width: 38px;
-$spritesheet-height: 19px;
+$twitter: (0px, 41px, 0px, -41px, 41px, 41px, 82px, 82px, 'sprites/social-icons.png', 'twitter', );
+$spritesheet-width: 82px;
+$spritesheet-height: 82px;
 $spritesheet-image: 'sprites/social-icons.png';
-$spritesheet-sprites: ($facebook, $twitter, );
-$spritesheet: (38px, 19px, 'sprites/social-icons.png', $spritesheet-sprites, );
+$spritesheet-sprites: ($envelope, $facebook, $twitter, );
+$spritesheet: (82px, 82px, 'sprites/social-icons.png', $spritesheet-sprites, );
 
 /*
 The provided mixins are intended to be used with the array-like variables
@@ -66,7 +77,7 @@ The provided mixins are intended to be used with the array-like variables
 
 @mixin sprite-image($sprite) {
   $sprite-image: nth($sprite, 9);
-  background-image: url(#{$sprite-image});
+  background-image: image-url('#{$sprite-image}');
 }
 
 @mixin sprite($sprite) {
@@ -101,15 +112,21 @@ Icon classes can be used entirely standalone. They are named after their origina
 <img class="icon-home" />
 ```
 */
-.icon-facebook {
+.icon-envelope {
   background-image: image-url('sprites/social-icons.png');
   background-position: 0px 0px;
-  width: 19px;
-  height: 19px;
+  width: 41px;
+  height: 41px;
+}
+.icon-facebook {
+  background-image: image-url('sprites/social-icons.png');
+  background-position: -41px 0px;
+  width: 41px;
+  height: 41px;
 }
 .icon-twitter {
   background-image: image-url('sprites/social-icons.png');
-  background-position: -19px 0px;
-  width: 19px;
-  height: 16px;
+  background-position: 0px -41px;
+  width: 41px;
+  height: 41px;
 }

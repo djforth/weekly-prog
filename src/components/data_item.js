@@ -94,7 +94,7 @@ class DataItem extends React.Component {
     if(_.isString(value) && value.match(/<|>/g)) return this._rawMarkup(value);
     if(col.type !== "time") return value;
     let checker = timeChecker(this.props.data, col);
-    return checker.setNowOrPast("Now", "Finished", value);
+    return checker.setNowOrPast(null, "Finished", value);
   }
 
   _wrapper(item, col){

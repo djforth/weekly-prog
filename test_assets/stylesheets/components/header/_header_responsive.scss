@@ -2,7 +2,24 @@
   header {
     &.main {
       .logo {
-        width: 30%;
+        width: 20%;
+      }
+    }
+
+    .top-nav {
+      li {
+        a {
+          // layout
+          text-align: center;
+
+          // styling
+          font-size: 1.563em;
+          text-transform: uppercase;
+
+          span {
+            @include hidden;
+          }
+        }
       }
     }
   }

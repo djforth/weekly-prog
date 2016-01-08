@@ -1,28 +1,101 @@
 header {
   &.main {
+    // layout
+    position: relative;
+    z-index: 999;
+
+    // styling
     background-color: $header-bg;
 
     .button {
       float: right;
     }
 
-    .header-search {
-      // layout
-      float: right;
-
-      // styling
-      color: $header-search-text;
-      text-decoration: none;
-
-      svg {
-        position: relative;
-        top: 10px;
-      }
-    }
-
     .logo {
       float: left;
       padding: 10px 0;
+    }
+
+    .logo-svg-container {
+      display: inline-block;
+      height: 58px;
+      position: relative;
+      user-select: none;
+      width: 100%;
+      
+      canvas {
+        display: block;
+        height: 100% !important;
+        visibility: hidden;
+      }
+
+      svg {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  .top-nav {
+    // reset
+    @include reset-normalize;
+
+    // layout
+    @include display(flex);
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 55%;
+
+    .icon-search {
+      // layout
+      display: inline-block;
+      height: 50px;
+      width: 50px;
+
+      // styling
+      background: inline_image("svg/search.svg") center center no-repeat;
+    }
+
+    li {
+      // reset
+      @include reset-normalize;
+
+      &:first-child {
+        border-left: 0 none;
+      }
+
+      // layout
+      flex: 1;
+      height: 100%;
+      position: relative;
+
+      // styling
+      border-left: 1px solid $top-nav-border;
+
+      a {
+        // layout
+        @include display(flex);
+        align-items: center;
+        height: 100%;
+        justify-content: center;
+
+        // styling
+        @include transition(background-color 0.2s ease-in-out);
+        color: $top-nav-txt;
+        text-decoration: none;
+
+        &:hover {
+          background-color: $top-nav-hover;
+        }
+      }
     }
   }
 }
