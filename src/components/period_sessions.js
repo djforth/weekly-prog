@@ -63,21 +63,20 @@ class PeriodSessions extends DataItems {
 
   render() {
     return (
-      <section key="items" className={`clearfix ${this.props.title.toLowerCase()}`}>
+      <section key="items" className={`panel ${this.props.title.toLowerCase()}`}>
         <header className="section-header">
           <h1 className="gg beta secondary">{this.props.title}</h1>
         </header>
-         <div className="table">
-            <DataHead device={this.props.device} css={this.props.css} key={`${this.props.title.toLowerCase()}head`} />
+        <div className="table">
+          <DataHead device={this.props.device} css={this.props.css} key={`${this.props.title.toLowerCase()}head`} />
             <div className="tbody">
               {this._renderData(this.state.paginate)}
             </div>
-         </div>
-         <div className={this.state.pagination_css}>
-            <a href="#" onClick={this._paginate.bind(this)} className="button button-pagination">Load More</a>
-         </div>
+        </div>
+        <div className={this.state.pagination_css}>
+          <a href="#" onClick={this._paginate.bind(this)} className="button button-pagination">Load More</a>
+        </div>
       </section>
-
     );
   }
 
