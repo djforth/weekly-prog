@@ -145,7 +145,6 @@ class DateNav extends React.Component {
   }
 
   _renderDates(){
-
     if(this.state.dates.length){
       return _.map(this.state.dates, (d)=>{
         let key = this.createId(d.title, d.date.getDate(), d.date.getMonth());
@@ -155,7 +154,7 @@ class DateNav extends React.Component {
             device   = {this.props.device}
             callback = {this._setCurrent.bind(this)}
             active   = {this._setActive(d.date)}
-            ref      = {key}
+            // ref      = {key}
           />)
       });
     }
