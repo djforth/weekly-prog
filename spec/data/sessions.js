@@ -1,5 +1,5 @@
 const _ = require("lodash")
-    , DateFormatter = require("date-formatter");
+    , DateFormatter = require("@djforth/date-formatter");
 
 let activities = ["Gymnastics", "Group Cycling", "Acting", "Adults", "Activities for Kids", "11 15 Years", "Children's & Teens", "Gym Based", "Closed", "Martial Arts", "Lane Swimming", "Group Cycling", "Boxfit", "Games", "8 15 Years", "5 11 Years", "Low Impact", "Group Cycling", "Athletics", "Dance", "Group Exercise", "Dance", "Boxing", "Mobile Library", "Lessons", "Dance", "Gym", "Circuit", "Fitness", "Fun"];
 

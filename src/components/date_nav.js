@@ -149,7 +149,7 @@ class DateNav extends React.Component {
       return _.map(this.state.dates, (d)=>{
         let key = this.createId(d.title, d.date.getDate(), d.date.getMonth());
         return (<DateNavItem
-            ref      = {key}
+            ref      = {'ref_'+key}
             key      = {key}
             nav_item = {d}
             device   = {this.props.device}
