@@ -154,7 +154,7 @@ class DateNav extends React.Component {
             device   = {this.props.device}
             callback = {this._setCurrent.bind(this)}
             active   = {this._setActive(d.date)}
-            // ref      = {key}
+            ref      = {key}
           />)
       });
     }
