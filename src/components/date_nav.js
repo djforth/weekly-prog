@@ -130,7 +130,7 @@ class DateNav extends React.Component {
   }
 
   _setWidth(){
-    console.log("refs", this.refs)
+    // console.log("refs", this.refs)
     this.convertReactComps(this.refs);
     return Math.ceil(this.getWidths());
   }
