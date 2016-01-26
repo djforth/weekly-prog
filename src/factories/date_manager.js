@@ -1,7 +1,7 @@
 const _       = require("lodash")
     , checker = require("../utils/day_checker")
     , SessionsFcty = require("./sessions_fcty")
-    , DateFormatter = require("date-formatter")
+    , DateFormatter = require("@djforth/date-formatter")
     , Moment = require("moment");
 
 function getDate(dates, date){

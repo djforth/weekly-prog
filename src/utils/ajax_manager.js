@@ -1,6 +1,6 @@
  const Ajax  = require("ajax-es6-module")
     ,  _     = require("lodash")
-    , DateFormatter = require("date-formatter");
+    , DateFormatter = require("@djforth/date-formatter");
 
 const ajaxManager = new Ajax();
 
