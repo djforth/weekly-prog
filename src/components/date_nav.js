@@ -130,6 +130,7 @@ class DateNav extends React.Component {
   }
 
   _setWidth(){
+    console.log("refs", this.refs)
     this.convertReactComps(this.refs);
     return Math.ceil(this.getWidths());
   }
@@ -149,12 +150,12 @@ class DateNav extends React.Component {
       return _.map(this.state.dates, (d)=>{
         let key = this.createId(d.title, d.date.getDate(), d.date.getMonth());
         return (<DateNavItem
-            ref      = {'ref_'+key}
             key      = {key}
             nav_item = {d}
             device   = {this.props.device}
             callback = {this._setCurrent.bind(this)}
             active   = {this._setActive(d.date)}
+            ref      = {key}
           />)
       });
     }
