@@ -1,6 +1,6 @@
 {
   "name": "weekly-prog",
-  "version": "1.0.32",
+  "version": "1.0.33",
   "dependencies": {
     "@djforth/date-formatter": {
       "version": "1.0.3",
