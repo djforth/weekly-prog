@@ -134,7 +134,7 @@
     "react": "0.14.3",
     "react-date-range": "0.2.2",
     "react-dom": "0.14.3",
-    "touch-nav": "^1.0.18",
-    "viewport-detection-es6": "0.0.9"
+    "touch-nav": "^1.0.20",
+    "viewport-detection-es6": "0.0.10"
   }
 }
