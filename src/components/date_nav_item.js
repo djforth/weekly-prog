@@ -100,8 +100,8 @@ class DateNavItem extends React.Component {
   render(){
     let item = this.props.nav_item
     return (
-      <li role="presentation" className={this.state.list} ref={this.props.referance}>
-        {this._loader()}
+      <li role="presentation" className={this.state.list}>
+        <span>{this._loader()}</span>
         <a href      = "#"
            title     = {item.alt}
            onClick   = {this._click.bind(this)}

@@ -1,3 +1,5 @@
 ./app
 ./fe_build_scripts
-./specs
+./spec
+./test_asset
+./public

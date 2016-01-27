@@ -32,6 +32,7 @@ class DateNav extends React.Component {
   }
 
   componentDidMount(){
+    // console.log(this._setWidth())
     this.setState({listWidth:this._setWidth()});
   }
 
@@ -130,8 +131,7 @@ class DateNav extends React.Component {
   }
 
   _setWidth(){
-    // console.log("refs", this.refs)
-    this.convertReactComps(this.refs);
+    this.convertDomlist(this.refs.datelist.querySelectorAll("li"));
     return Math.ceil(this.getWidths());
   }
 
@@ -145,6 +145,7 @@ class DateNav extends React.Component {
   }
 
   _renderDates(){
+
     if(this.state.dates.length){
       return _.map(this.state.dates, (d)=>{
         let key = this.createId(d.title, d.date.getDate(), d.date.getMonth());
@@ -154,7 +155,6 @@ class DateNav extends React.Component {
             device   = {this.props.device}
             callback = {this._setCurrent.bind(this)}
             active   = {this._setActive(d.date)}
-            ref      = {key}
           />)
       });
     }
@@ -184,7 +184,7 @@ class DateNav extends React.Component {
       </a>
       {this._renderToday()}
       <div className="list-holder">
-        <ul className="date-list" role="tablist" style={this._setStyle()}>
+        <ul className="date-list" role="tablist" ref="datelist" style={this._setStyle()}>
           {this._renderDates()}
         </ul>
       </div>

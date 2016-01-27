@@ -84,8 +84,8 @@ class PeriodSessions extends DataItems {
 
     let sessions = SessionsStore._getDate().data.getTimePeriod(this.props.time.st, this.props.time.fn);
 
-    this.pagination[1]["hide"] = (sessions.size <= 4 );
-
+    this.pagination[1]["hidden"] = (sessions.size <= 4 );
+    console.log("pagination", this.pagination)
     this.setState({paginate:4, pagination_css:this.getClasses(this.pagination), data:sessions});
   }
 

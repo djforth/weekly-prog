@@ -109,9 +109,8 @@
     "postcss-import": "^7.1.3",
     "postcss-merge-longhand": "^2.0.1",
     "postcss-merge-rules": "^2.0.1",
-    "react-addons-test-utils": "^0.14.3",
+    "react-addons-test-utils": "0.14.3",
     "react-jasmine": "0.1.6",
-    "react-tools": "^0.13.3",
     "readdirp": "^2.0.0",
     "require-dir": "^0.3.0",
     "rewireify": "^0.2.5",
@@ -121,21 +120,21 @@
     "watchify": "^3.6.1"
   },
   "dependencies": {
+    "@djforth/date-formatter": "1.0.3",
     "ajax-es6-module": "0.0.8",
     "classnames": "^2.2.0",
     "datamanager": "0.0.18",
-    "@djforth/date-formatter": "1.0.3",
     "flux": "^2.1.1",
     "immutable": "^3.7.5",
     "lodash": "^3.10.1",
     "moment": "^2.10.6",
     "moment-strftime": "^0.1.5",
-    "morse-react-mixins": "0.1.12",
+    "morse-react-mixins": "0.1.13",
     "normalize.css": "^3.0.3",
-    "react": "^0.14.3",
+    "react": "0.14.3",
     "react-date-range": "0.2.2",
-    "react-dom": "^0.14.3",
-    "touch-nav": "1.0.17",
+    "react-dom": "0.14.3",
+    "touch-nav": "^1.0.18",
     "viewport-detection-es6": "0.0.9"
   }
 }
