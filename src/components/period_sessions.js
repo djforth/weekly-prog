@@ -47,7 +47,7 @@ class PeriodSessions extends DataItems {
        data.forEach(function(k){
          if(k){
           items.push(
-            <DataExpander css={this.props.css} data={k} key={k.get("id")} />
+            <DataExpander css={this.props.css} data={k} key={`session-${k.get("id")}`} />
             );
          }
 

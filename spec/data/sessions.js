@@ -66,7 +66,7 @@ function addSessions(filter){
     let p = _.random(0, 20);
     if(p%4 === 0){
       session.places_left = 0;
-      session.buttons.book = "";
+      session.buttons.book = "#";
     } else {
       session.places_left = _.random(0, 20);
     }

@@ -56,7 +56,6 @@ class DataExpanderItem extends DataItem {
     let data = this.props.data;
 
     if(data && visible) {
-
       let li = _.map(visible, (col) => {
         return this._renderItem(col, data);
       });
