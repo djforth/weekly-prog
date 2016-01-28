@@ -129,12 +129,12 @@
     "lodash": "^3.10.1",
     "moment": "^2.10.6",
     "moment-strftime": "^0.1.5",
-    "morse-react-mixins": "0.1.13",
+    "morse-react-mixins": "0.1.16",
     "normalize.css": "^3.0.3",
     "react": "0.14.3",
     "react-date-range": "0.2.2",
     "react-dom": "0.14.3",
-    "touch-nav": "1.0.23",
+    "touch-nav": "1.0.24",
     "viewport-detection-es6": "0.0.10"
   }
 }
