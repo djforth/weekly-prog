@@ -33,6 +33,7 @@ class WeeklyProg extends React.Component {
   }
 
   _fetchData(){
+
     SessionsStore.removeChangeListener("api_set", this._fetchData);
     _.defer(()=>{
       SessionsActions.fetchData()
@@ -61,10 +62,11 @@ class WeeklyProg extends React.Component {
   }
 
   componentWillMount(){
+
     SessionsStore.addChangeListener("prerender", this._getSessions.bind(this));
-    if(!_.isEmpty(this.props.sessions)){
-      SessionsActions.prerenderData(this.props.sessions);
-    }
+    let ses = (_.isEmpty(this.props.sessions)) ? [] : this.props.sessions
+    SessionsActions.prerenderData(ses);
+
 
     ColumnsActions.addingColumns(this.props.columns);
     ColumnsActions.changeDevice(this.device);

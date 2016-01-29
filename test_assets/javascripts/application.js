@@ -50,9 +50,7 @@ function createColumns(){
   return obj;
 }
 
-// rubocop:disable all
-
-//rubocop:enable all
+console.log("EH >>>>>>>>>>>>")
 let cols = createColumns()
            .addMobile([
             {
@@ -99,7 +97,6 @@ ReactDom.render(
     css         = {css}
     groupby     = "start"
     print       = "/timetable/print/:date.pdf"
-    sessions    = {sessions(1, new Date())}
     sessionsApi = "/api/timetable.json"
     timeperiod  = {timeperiod}
   />,

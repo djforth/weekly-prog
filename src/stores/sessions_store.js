@@ -31,6 +31,8 @@ function processData(groupBy){
       sessions.addDate(ses.date, ses.sessions);
     });
 
+
+
     return sessions
   };
 }
@@ -71,6 +73,7 @@ const store = {
 
   // <<<<<<<<<<<<<<< Fetching and processing session >>>>>>>>>>>>
   , _addSessions(data){
+
     if(_.isFunction(processor)){
       sessions = processor(data);
     }
@@ -168,6 +171,7 @@ const store = {
   }
 
   , _getAllDates(){
+    if(_.isUndefined(sessions)) return [new Date()]
     return processDates(sessions.getAllDates());
   }
 

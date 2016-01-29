@@ -10,10 +10,13 @@ function createKey(date){
 
 function groupSessions(sessions){
   let new_sessions = _.sortBy(sessions, (s)=> s.groupBy);
+  let groups   = {};
+  let ses      = _.first(new_sessions);
+  if(_.isUndefined(ses) || _.isEmpty(ses)) return groups;
   let date     = _.first(new_sessions).groupBy;
   // console.log(date)
   let key      = createKey(date)
-  let groups   = {};
+
   groups[key] = {date:date, sessions:[]};
   _.forEach(new_sessions, (session)=>{
 
