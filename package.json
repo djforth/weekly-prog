@@ -43,7 +43,7 @@
     "browserSync": "node ./fe_build_scripts/browserSync.js",
     "build": "babel src -x '.js' -d lib",
     "build:watch": "babel src -x '.js' -w --source-maps  -d lib",
-    "javascript:build": "node ./fe_build_scripts/browserify_build.js",
+    "javascript:build": "node ./fe_build_scripts/browserify_build.js -m",
     "javascript:watch": "node ./fe_build_scripts/browserify_build.js -w",
     "lint": "eslint src/**",
     "lint:tests": "eslint spec/**",
