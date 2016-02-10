@@ -1,5 +1,5 @@
 const React = require("react")
-    , _     = require("lodash");
+    , _     = require("lodash/core");
 
 //Mixins
 const cssMixins    = require("morse-react-mixins").css_mixins

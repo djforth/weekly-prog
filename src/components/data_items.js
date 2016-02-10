@@ -1,6 +1,6 @@
 //Libraries
 const React = require("react");
-// const _     = require("lodash");
+// const _     = require("lodash/core");
 
 //Flux
 const SessionsStore      = require("../stores/sessions_store");

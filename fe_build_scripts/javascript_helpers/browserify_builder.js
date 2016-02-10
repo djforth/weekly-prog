@@ -3,27 +3,28 @@ var browserify = require('browserify')
  , browserSync = require("browser-sync")
  , config      = require("../config").javascript
  , es          = require('event-stream')
+ , envify      = require('envify/custom')
  , folder      = require('../utils/folder_helpers')
  , fs          = require('fs')
  , path        = require('path')
- // , UglifyJS    = require("uglify-js")
+ , UglifyJS    = require("uglify-js")
  , watchify    = require("watchify");
 
 var inPaths  = fileIn(config.input)
 var outPaths = fileRegExp(config.ext, config.output);
 
 
-// function uglifyScript(file){
-//   var result = UglifyJS.minify(file);
-//   // console.log(result.code);
-//   fs.writeFile(file.replace(".js", ".min.js"), result.code, function(err) {
-//       if(err) {
-//           return console.error(err);
-//       }
+function uglifyScript(file){
+  var result = UglifyJS.minify(file);
+  // console.log(result.code);
+  fs.writeFile(file.replace(".js", ".min.js"), result.code, function(err) {
+      if(err) {
+          return console.error(err);
+      }
 
-//       console.log("Minified "+file);
-//   });
-// }
+      console.log("Minified "+file);
+  });
+}
 
 function fileRegExp(exts_in, output, ext){
   ext = ext || ".js"
@@ -53,8 +54,8 @@ function writeFile(file, minify, bs){
     wr.on("close", function(ex) {
       //Minifiy if required
 
-      // if(mini)
-      //   uglifyScript(outPaths(file))
+      if(mini)
+        uglifyScript(outPaths(file))
       console.log("file", filePath)
       if(bs)
         bs();
@@ -98,6 +99,7 @@ module.exports = function(file, watch, minify, server){
   var writer = writeFile(file, minify, server);
 
   b.transform("babelify", {presets: ["es2015", "react"]});
+  b.transform(envify({NODE_ENV: 'production'}));
 
   if(watch){
     console.log("watching")

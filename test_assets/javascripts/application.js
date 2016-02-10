@@ -1,11 +1,11 @@
 require("babel-polyfill");
 
-const _        = require("lodash")
+const _        = require("lodash/core")
     , React    = require("react")
     , ReactDom = require('react-dom');
 
 let sessions = require("../../spec/data/sessions.js")
-// console.log(sessions(1))
+console.log(sessions(1))
 const WeeklyProg = require("../../src/components/weekly_prog")
 
 function createColumns(){
@@ -50,7 +50,6 @@ function createColumns(){
   return obj;
 }
 
-console.log("EH >>>>>>>>>>>>")
 let cols = createColumns()
            .addMobile([
             {
@@ -70,35 +69,35 @@ let cols = createColumns()
            .addTablet([{key:"actions", title:""}])
            .additional(["description"]).value()
 
-let css = {
-  default     : "col-lg-2 col-md-3 col-sm-5"
-, places_left : "col-lg-1"
-, activity    : "col-lg-1"
-, start       : "col-lg-2 col-md-3 col-sm-4"
-, session     : "col-lg-2 col-md-3 col-sm-6"
-, expand      : "col-lg-1 col-md-2 col-sm-2 expander"
-, actions     : "col-lg-1 col-md-1 col-sm-3"
-}
+// let css = {
+//   default     : "col-lg-2 col-md-3 col-sm-5"
+// , places_left : "col-lg-1"
+// , activity    : "col-lg-1"
+// , start       : "col-lg-2 col-md-3 col-sm-4"
+// , session     : "col-lg-2 col-md-3 col-sm-6"
+// , expand      : "col-lg-1 col-md-2 col-sm-2 expander"
+// , actions     : "col-lg-1 col-md-1 col-sm-3"
+// }
 
-let timeperiod = [
-    {title:"Morning"  , time:{st:0, fn:11}}
-  , {title:"Afternoon", time:{st:12, fn:17}}
-  , {title:"Evening"  , time:{st:18, fn:23}}
-]
+// let timeperiod = [
+//     {title:"Morning"  , time:{st:0, fn:11}}
+//   , {title:"Afternoon", time:{st:12, fn:17}}
+//   , {title:"Evening"  , time:{st:18, fn:23}}
+// ]
 
 
 
 
 // console.log(sessions(1, new Date()))
 
-ReactDom.render(
-  <WeeklyProg
-    columns     = {cols}
-    css         = {css}
-    groupby     = "start"
-    print       = "/timetable/print/:date.pdf"
-    sessionsApi = "/api/timetable.json"
-    timeperiod  = {timeperiod}
-  />,
-  document.getElementById('weekly-prog')
-);
+// ReactDom.render(
+//   <WeeklyProg
+//     columns     = {cols}
+//     css         = {css}
+//     groupby     = "start"
+//     print       = "/timetable/print/:date.pdf"
+//     sessionsApi = "/api/timetable.json"
+//     timeperiod  = {timeperiod}
+//   />,
+//   document.getElementById('weekly-prog')
+// );

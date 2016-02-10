@@ -1,8 +1,11 @@
-const _       = require("lodash")
-    , checker = require("../utils/day_checker")
+const checker = require("../utils/day_checker")
     , SessionsFcty = require("./sessions_fcty")
     // , DateFormatter = require("@djforth/date-formatter")
     , Moment = require("moment");
+
+//lodash
+ const _       = require("lodash/core")
+     , partial = require("lodash/partial")
 
 function getDate(dates, date){
   return _.find(dates, (d)=>{
@@ -34,7 +37,7 @@ function createWeek(createFcty, start=new Date()){
   var i     = 1;
 
   do{
-    start = _.clone(start);
+    start = new Date(start.getTime());
     start.setDate(start.getDate()+1);
     week.push({
         date:start
@@ -100,7 +103,7 @@ function earliestDate(dates){
 
 function dateManager(groupBy, ds){
   let fctyCreator = createFactory(groupBy);
-  let weekCreator = _.partial(createWeek, fctyCreator)
+  let weekCreator = partial(createWeek, fctyCreator)
   let dates = (_.isArray(ds)) ? ds : weekCreator();
 
   return {
@@ -108,7 +111,7 @@ function dateManager(groupBy, ds){
       if(!_.isDate(date)) return false;
 
       if(checkDates(dates,date)){
-        let fn = _.partial(dateUpdate, dates);
+        let fn = partial(dateUpdate, dates);
         dates = fn(date, data)
       } else {
         let fcty = fctyCreator(data);
@@ -119,7 +122,7 @@ function dateManager(groupBy, ds){
     , createWeek:weekCreator
 
     , findDate:(...args)=>{
-        let fn = _.partial(getDate, dates);
+        let fn = partial(getDate, dates);
         return fn.apply(this, args)
 
       }
@@ -160,7 +163,7 @@ function dateManager(groupBy, ds){
     }
 
     , updateDate:(...args)=>{
-      let fn = _.partial(dateUpdate, dates);
+      let fn = partial(dateUpdate, dates);
       dates = fn.apply(this, args)
     }
   }

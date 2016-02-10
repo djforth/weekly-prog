@@ -43,7 +43,7 @@
     "browserSync": "node ./fe_build_scripts/browserSync.js",
     "build": "babel src -x '.js' -d lib",
     "build:watch": "babel src -x '.js' -w --source-maps  -d lib",
-    "javascript:build": "node ./fe_build_scripts/browserify_build.js",
+    "javascript:build": "node ./fe_build_scripts/browserify_build.js -m",
     "javascript:watch": "node ./fe_build_scripts/browserify_build.js -w",
     "lint": "eslint src/**",
     "lint:tests": "eslint spec/**",
@@ -98,6 +98,7 @@
     "karma-phantomjs-launcher": "^0.2.1",
     "karma-safari-launcher": "^0.1.1",
     "karma-story-reporter": "^0.3.1",
+    "normalize.css": "^3.0.3",
     "mime": "^1.3.4",
     "mkdirp": "^0.5.1",
     "node-sass": "^3.4.2",
@@ -119,22 +120,21 @@
     "uglify-js": "^2.6.1",
     "watchify": "^3.6.1"
   },
-  "dependencies": {
+  "dependencies":{
     "@djforth/date-formatter": "1.0.3",
-    "ajax-es6-module": "0.0.8",
+    "ajax-es6-module": "1.0.1",
+    "datamanager": "1.0.1",
+    "morse-react-mixins": "1.0.1",
+    "touch-nav": "1.0.24",
+    "viewport-detection-es6": "2.0.2",
     "classnames": "^2.2.0",
-    "datamanager": "0.0.18",
     "flux": "^2.1.1",
     "immutable": "^3.7.5",
-    "lodash": "^3.10.1",
+    "lodash": "^4.3.0",
     "moment": "^2.10.6",
     "moment-strftime": "^0.1.5",
-    "morse-react-mixins": "0.1.16",
-    "normalize.css": "^3.0.3",
     "react": "0.14.3",
     "react-date-range": "0.2.2",
-    "react-dom": "0.14.3",
-    "touch-nav": "1.0.24",
-    "viewport-detection-es6": "0.0.10"
+    "react-dom": "0.14.3"
   }
 }

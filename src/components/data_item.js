@@ -1,5 +1,5 @@
 const React = require("react")
-    , _     = require("lodash");
+    , _     = require("lodash/core");
 
 const ColumnsStore   = require("../stores/columns_store");
 

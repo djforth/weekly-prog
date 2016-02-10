@@ -1,5 +1,5 @@
 const moment = require('moment-strftime')
-    , _      = require("lodash");
+    , _      = require("lodash/core");
 
 
 function getFormat(col){

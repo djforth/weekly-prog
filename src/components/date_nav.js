@@ -1,7 +1,7 @@
 //Libraries
 const React = require("react")
     , ReactDOM = require('react-dom')
-    , _     = require("lodash");
+    , _     = require("lodash/core");
 
 // Utils
 const checker = require("../utils/day_checker")

@@ -18,8 +18,7 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       '../node_modules/babel-polyfill/browser.js',
-      '../node_modules/react-tools/src/test/phantomjs-shims.js',
-      '../spec/**/*_spec.js'
+      '../spec/utils/*_spec.js'
     ],
 
 
@@ -31,7 +30,7 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-       '../spec/**/*_spec.js': ['browserify']
+       '../spec/utils/*_spec.js': ['browserify']
     },
 
     browserify: {
@@ -40,7 +39,6 @@ module.exports = function(config) {
       extensions: [ "es6.js", ".js"],
       bundleDelay: 1000,
       configure: function(bundle) {
-        console.log("eh?")
         bundle.transform(babelify, {presets: ["es2015", "react"]})
       }
     },

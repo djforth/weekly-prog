@@ -1,74 +1,150 @@
+ /**
+ * Weekly programme module.
+ * @module  weekly-prog/actions/sessions_actions
+*/
+
  const SessionsDispatcher = require("../dispatchers/sessions_dispatcher");
 
-module.exports = {
-  changeDate:(date)=>{
-    SessionsDispatcher.changeDate({
-      type: "CHANGE_DATE",
-      date:date
-    });
-  }
+/**
+  * This will change current date in sessions store
+  * @type {function}
+  * @param {date} date (required).
+  * @return {} returns nothing
+  */
 
-  , calendarChange:(date)=>{
-    SessionsDispatcher.calendarChange({
-      type: "CALENDAR_CHANGE",
-      date:date
-    });
-  }
+var changeDate = (date)=>{
+  SessionsDispatcher.changeDate({
+    type: "CHANGE_DATE",
+    date:date
+  });
+}
 
+/**
+  * This will change current date in sessions store from calendar
+  * @type {function}
+  * @param {date} date (required).
+  * @return {} returns nothing
+  */
 
-  , fetchData:(progress, date)=>{
-    SessionsDispatcher.fetchData({
-      type: "FETCH_DATA",
-      progress:progress,
-      date:date
-    });
-  }
+var calendarChange = (date)=>{
+  SessionsDispatcher.calendarChange({
+    type: "CALENDAR_CHANGE",
+    date:date
+  });
+}
 
-  , fetchNowNext:(progress)=>{
+/**
+  * Will fetch data
+  * @type {function}
+  * @param {progress} function - tracks loading.
+  * @param {date} date, to add to query string.
+  * @return {} returns nothing
+  */
+var fetchData = (progress, date)=>{
+  SessionsDispatcher.fetchData({
+    type: "FETCH_DATA",
+    progress:progress,
+    date:date
+  });
+}
+
+/**
+  * Will fetch now/next data
+  * @type {function}
+  * @param {progress} function - tracks loading.
+  * @return {} returns nothing
+  */
+var fetchNowNext = (progress)=>{
     SessionsDispatcher.fetchNowNext({
       type: "FETCH_NOWNEXT",
       progress:progress
     });
   }
 
-  , getMoreDays(){
-    SessionsDispatcher.getMoreDays({
-      type: "MORE_DAYS"
-    });
-  }
+/**
+  * Will get the following days data
+  * @type {function}
+  * @return {} returns nothing
+  */
+var getMoreDays = ()=>{
+  SessionsDispatcher.getMoreDays({
+    type: "MORE_DAYS"
+  });
+}
 
-  , getPreviousDays(date){
-    SessionsDispatcher.getPreviousDays({
-      type: "PREVIOUS_DAYS",
-      date: date
-    });
-  }
+/**
+  * Will get the previous days data
+  * @type {function}
+  * @return {} returns nothing
+  */
+var getPreviousDays = (date)=>{
+  SessionsDispatcher.getPreviousDays({
+    type: "PREVIOUS_DAYS",
+    date: date
+  });
+}
 
-  , prerenderData:(data)=>{
-    SessionsDispatcher.prerenderData({
-      type: "PRERENDER_DATA",
-      data: data
-    });
-  }
+/**
+  * Will add prerender data to store
+  * @type {function}
+  * @param {data} array
+  * @return {} returns nothing
+  */
+var prerenderData = (data)=>{
+  SessionsDispatcher.prerenderData({
+    type: "PRERENDER_DATA",
+    data: data
+  });
+}
 
-  , setApi:(url)=>{
-    SessionsDispatcher.setApi({
-      type : "SET_API",
-      url  : url
-    });
-  }
+/**
+  * Will set api
+  * @type {function}
+  * @param {string} url for api call
+  * @return {} returns nothing
+  */
+var setApi = (url)=>{
+  SessionsDispatcher.setApi({
+    type : "SET_API",
+    url  : url
+  });
+}
 
-  , setFacility:(id)=>{
-    SessionsDispatcher.setFacility({
-      type : "SET_FACILITY",
-      id   : id
-    });
-  }
+/**
+  * Will set facility in store (for now/next)
+  * @type {function}
+  * @param {number} id of facility
+  * @return {} returns nothing
+  */
+var setFacility = (id)=>{
+  SessionsDispatcher.setFacility({
+    type : "SET_FACILITY",
+    id   : id
+  });
+}
 
-  , setGroupby:(groupBy)=>{
-    SessionsDispatcher.setGroupBy({
-      type: "SET_GROUPBY",
-      groupBy: groupBy
-    });
-  }
+/**
+  * Will set groupby in store
+  * @type {function}
+  * @param {string} key
+  * @return {} returns nothing
+  */
+var setGroupby = (groupBy)=>{
+  SessionsDispatcher.setGroupBy({
+    type: "SET_GROUPBY",
+    groupBy: groupBy
+  });
+}
+
+module.exports = {
+    changeDate:changeDate
+  , calendarChange:calendarChange
+  , fetchData:fetchData
+  , fetchNowNext:fetchNowNext
+  , getMoreDays:getMoreDays
+  , getPreviousDays: getPreviousDays
+  , prerenderData:prerenderData
+  , setApi:setApi
+  , setFacility:setFacility
+  , setGroupby:setGroupby
 }

@@ -1,5 +1,6 @@
-const _ = require("lodash")
-    , DateFormatter = require("@djforth/date-formatter");
+const _ = require("lodash/core")
+    , Moment = require("moment-strftime")
+    // , DateFormatter = require("@djforth/date-formatter");
 
 let activities = ["Gymnastics", "Group Cycling", "Acting", "Adults", "Activities for Kids", "11 15 Years", "Children's & Teens", "Gym Based", "Closed", "Martial Arts", "Lane Swimming", "Group Cycling", "Boxfit", "Games", "8 15 Years", "5 11 Years", "Low Impact", "Group Cycling", "Athletics", "Dance", "Group Exercise", "Dance", "Boxing", "Mobile Library", "Lessons", "Dance", "Gym", "Circuit", "Fitness", "Fun"];
 
@@ -58,11 +59,11 @@ function addSessions(filter){
     session.instructor = _.sample(instructors)
     session.activity   = _.sample(activities)
     let d   = _.clone(date)
-    let fmt = new DateFormatter(d);
-    session.start      = fmt.formatDate("%Y-%m-%d %H:%M");
+    let fmt = moment(d);
+    session.start      = fmt.strftime("%Y-%m-%d %H:%M");
     d.setHours(d.getHours()+1);
-    fmt = new DateFormatter(d);
-    session.finish     = fmt.formatDate("%Y-%m-%d %H:%M");
+    fmt = moment(d);
+    session.finish     = fmt.strftime("%Y-%m-%d %H:%M");
     let p = _.random(0, 20);
     if(p%4 === 0){
       session.places_left = 0;

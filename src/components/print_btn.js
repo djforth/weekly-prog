@@ -1,6 +1,6 @@
 //Libraries
 const React  = require("react")
-    , _      = require("lodash")
+    , _      = require("lodash/core")
     , Moment = require("moment");
 
 //Flux

@@ -1,6 +1,6 @@
 const assign      = require("react/lib/Object.assign")
   , EventEmitter  = require("events").EventEmitter
-  , _             = require("lodash");
+  , _             = require("lodash/core");
 
 //Internal Modules
 const AjaxManager  = require("../utils/ajax_manager")
@@ -101,7 +101,10 @@ const store = {
 
         return sessions.getAllDates();
       })
-      .then(this._fetchRest.bind(this));
+      .then((data)=>{
+        this._fetchRest(data)
+        return data
+      });
     }
   }
 
@@ -191,12 +194,12 @@ const store = {
   }
 
   , _setGroups(groupBy){
-    if(_.isString(groupBy)){
-      processor = processData(groupBy);
-    }
+    if(!_.isString(groupBy)) return;
+    processor = processData(groupBy);
   }
 
   , _progress(prog){
+    if(!_.isFunction(prog)) return;
     this.progress = prog
   }
 };

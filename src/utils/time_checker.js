@@ -1,5 +1,5 @@
 
-const _       = require("lodash")
+const _       = require("lodash/core")
     , Moment  = require("moment");
 
 

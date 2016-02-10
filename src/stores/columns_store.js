@@ -1,7 +1,9 @@
 const EventEmitter  = require("events").EventEmitter;
 const assign        = require("react/lib/Object.assign");
 
-const _ = require("lodash");
+const _    = require("lodash/core")
+    , includes = require("lodash/includes")
+    , pick = require("lodash/pick");
 
 const textMixins = require("morse-react-mixins").text_mixins;
 const ColumnsDispatcher = require("../dispatchers/columns_dispatcher");
@@ -84,7 +86,7 @@ const store = {
 
   getKeys(id){
     let visible = this.getColumn(id).visible;
-    return _.pluck(visible, "key");
+    return _.map(visible, "key");
   },
 
   getKeyAndTitle(id){
@@ -118,7 +120,7 @@ const store = {
     let column = this.getColumn(id);
     let showables = _.chain(column.cols)
       .filter((col)=>{
-        return col.show && !_.includes(column.visible, col);
+        return col.show && !includes(column.visible, col);
       })
       .map((col)=> this.reduceObj(col, ["key", "title"]))
       .value();
@@ -137,7 +139,7 @@ const store = {
 
   getTitles(id){
     let visible = this.getColumn(id).visible;
-    return _.pluck(visible, "title");
+    return _.map(visible, "title");
   },
 
   getTitleForKey(key, id){
@@ -151,15 +153,12 @@ const store = {
   },
 
   reduceObj(obj, values){
-    let reduced = _.omit(obj, (v, k)=>{
-      return !_.includes(values, k);
-    });
-    return reduced;
+    return pick(obj, values)
   },
 
   removeCols(removeItems){
     return _.reject(this.columns, (col)=>{
-      return _.includes(removeItems, col);
+      return includes(removeItems, col);
     });
   },
 
@@ -167,7 +166,7 @@ const store = {
     let check = {};
     check[this.device] = true;
 
-    return _.where(cols, check);
+    return _.filter(cols, (c)=>c[this.device]);
   },
 
   setTitles(columns){
@@ -175,7 +174,7 @@ const store = {
       // console.log(that.capitalize)
       if(!_.has(col, "title")){
         let title = this.capitalize(col.key);
-        _.set(col, "title", title);
+        col.title = title;
       }
 
       return col;

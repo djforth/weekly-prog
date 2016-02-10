@@ -4,7 +4,8 @@ const ColumnsStore = require('../../src/stores/columns_store');
 const storeHelper    = require("react-jasmine").storeHelpers;
 const defaultsHelper = require("react-jasmine").checkDefaults;
 
-const _         = require('lodash');
+const _    = require('lodash')
+    , omit = require("lodash/omit");
 const Immutable = require('immutable');
 
 
@@ -32,7 +33,7 @@ describe('ColumnsStore', function() {
       return col
     });
 
-    tablet = _.where(final, {tablet:true});
+    tablet = _.filter(final, (c)=>c.tablet);
   })
 
   let options = [
@@ -198,7 +199,7 @@ describe('ColumnsStore', function() {
         let searchable = store.getSearchable(1);
         expect(store.getColumn).toHaveBeenCalledWith(1);
         expect(searchable.length).toEqual(6);
-        let titles = _.pluck(searchable, "title");
+        let titles = _.map(searchable, "title");
         expect(titles).toEqual(["Assigned to", "Region", "Requested By", "Request made on", "Required by", "expected_returned"]);
         let keys = _.keys(searchable[0]);
         expect(keys).toEqual(["key", "title"]);
@@ -207,7 +208,7 @@ describe('ColumnsStore', function() {
       it("should return showable columns", function() {
         let showable = store.getShowable();
         expect(showable.length).toEqual(1);
-        let titles = _.pluck(showable, "title");
+        let titles = _.map(showable, "title");
         expect(titles).toEqual(["Assigned to"]);
         let keys = _.keys(showable[0]);
         expect(keys).toEqual(["key", "title"]);

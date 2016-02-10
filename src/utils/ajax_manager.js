@@ -1,6 +1,7 @@
  const Ajax  = require("ajax-es6-module")
-    ,  _     = require("lodash")
-    , DateFormatter = require("@djforth/date-formatter");
+    ,  _     = require("lodash/core")
+    , Moment = require("moment-strftime");
+    // , DateFormatter = require("@djforth/date-formatter");
 
 const ajaxManager = new Ajax();
 
@@ -9,8 +10,9 @@ let currentRequests = [];
 function setApi(api, date){
   if(!_.isDate(date)) return api;
 
-  let dateFmt = new DateFormatter(date);
-  let path = dateFmt.formatDate("/%Y/%m/%d.json");
+  let dateFmt = Moment(date);
+  // new DateFormatter(date);
+  let path = dateFmt.strftime("/%Y/%m/%d[.json]");
   return api.replace(/.json/, path)
 }
 
