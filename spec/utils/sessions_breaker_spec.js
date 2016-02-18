@@ -28,7 +28,7 @@ do{
   i++;
 } while(i < 4);
 
-console.log("dates", with_dates.length)
+// console.log("dates", with_dates.length)
 
 describe('SessionsBreaker', function() {
   let breaker, spy, revert;
@@ -94,7 +94,7 @@ describe('SessionsBreaker', function() {
     });
 
     it('should add sessions', function() {
-      let values = _.pluck(_.values(groups), "sessions")
+      let values = _.map(_.values(groups), "sessions")
       expect(values.length).toEqual(4);
       _.forEach(values, (v)=>{
         expect(_.isArray(v)).toBeTruthy();
@@ -103,7 +103,7 @@ describe('SessionsBreaker', function() {
     });
 
     it('should add dates', function() {
-      let values = _.pluck(_.values(groups), "date")
+      let values = _.map(_.values(groups), "date")
       expect(values.length).toEqual(4);
       _.forEach(values, (v)=>{
         expect(_.isDate(v)).toBeTruthy();

@@ -1,5 +1,7 @@
-const _             = require("lodash/core")
-    , Moment        = require("moment-strftime");
+const Moment        = require("moment-strftime");
+
+const _        = require("lodash/core")
+    , includes = require("lodash/includes")
 
 var checker       = require("./day_checker");
 
@@ -74,7 +76,7 @@ function currentDates(dates){
 }
 
 function fillGaps(groups, start, end=7){
-  let dates = currentDates(_.pluck(_.values(groups), "date"));
+  let dates = currentDates(_.map(_.values(groups), "date"));
   start = (_.isUndefined(start)) ? _.first(dates) : start;
   start = Moment(start);
   end = start.clone().add(end, "d");

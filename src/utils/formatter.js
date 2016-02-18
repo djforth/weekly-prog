@@ -3,17 +3,10 @@ const moment = require('moment-strftime')
 
 
 function getFormat(col){
-  if(_.has(col, "fmt")){
-    return col.fmt;
-  }
+  if(_.has(col, "fmt")) return col.fmt;
 
-  if(_.has(col, "type") ){
-    if(col.type === "dateTime"){
-      return "%d/%m/%Y %H:%M";
-    }
-    if(col.type === "date"){
-      return "%d/%m/%Y";
-    }
+  if(_.has(col, "type") && col.type === "dateTime"){
+    return "%d/%m/%Y %H:%M";
   }
 
   return "%d/%m/%Y";
@@ -23,9 +16,6 @@ function displayData(data, col){
   if(!_.isDate(data)) return data;
   return moment(data).strftime(getFormat(col));
 }
-
-
-
 
 function getValue(item, keys){
   if(_.isString(keys)) return item.get(keys);

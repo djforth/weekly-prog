@@ -2,6 +2,7 @@
 // Generated on Thu Nov 19 2015 09:49:23 GMT+0000 (GMT)
 
 var babelify    = require("babelify");
+// var babelMoreOptions = { presets: 'es2015' };
 
 module.exports = function(config) {
   config.set({
@@ -42,6 +43,7 @@ module.exports = function(config) {
         bundle.transform(babelify, {presets: ["es2015", "react"]})
       }
     },
+
 
 
     // test results reporter to use

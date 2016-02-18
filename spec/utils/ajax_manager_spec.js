@@ -22,8 +22,6 @@ describe('Ajax manager', function() {
   describe('api', function() {
     let ajax, ajaxManager, spy, resolve, reject, promise;
     beforeEach(function() {
-      ajax = Ajax("http://astainforth.com");
-
       ajaxManager   = Ajax.__get__("ajaxManager");
       promise = new Promise((res, rej)=>{
         resolve = res;
@@ -32,7 +30,7 @@ describe('Ajax manager', function() {
 
       spyOn(ajaxManager, "addUrl")
       spyOn(ajaxManager, "fetch").and.returnValue(promise);
-
+      ajax = Ajax("http://astainforth.com");
     });
 
 
@@ -98,7 +96,7 @@ describe('Ajax manager', function() {
 
         it("should throw error data", function(done) {
 
-          ajax.fetch().catch((err)=>{
+          ajax.fetch().then(()=>{console.log("shouldn't run")}).catch((err)=>{
             expect(err).toEqual(new Error("failure"));
           })
           reject("failure");

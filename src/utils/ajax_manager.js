@@ -1,7 +1,10 @@
  const Ajax  = require("ajax-es6-module")
-    ,  _     = require("lodash/core")
     , Moment = require("moment-strftime");
     // , DateFormatter = require("@djforth/date-formatter");
+
+const _        = require("lodash/core")
+    , includes = require("lodash/includes")
+    , reject   = require("lodash/reject")
 
 const ajaxManager = new Ajax();
 
@@ -37,25 +40,19 @@ module.exports = function(api){
 
     , fetch:()=>{
       let url = setApi(api, date);
-      if(_.includes(currentRequests, url)) return null;
+      if(includes(currentRequests, url)) return null;
       currentRequests.push(url)
       ajaxManager.addUrl(setApi(api, date));
 
       return ajaxManager.fetch(progress)
         .then((data)=>{
-          currentRequests = _.reject(currentRequests, (cr)=>cr === url);
+          currentRequests = reject(currentRequests, (cr)=>cr === url);
           // console.log(currentRequests)
           return data;
         })
         .catch((err)=>{
-        throw new Error(err);
-      });
+          throw new Error(err);
+        });
     }
-
-
-
-
   }
-
-
 }

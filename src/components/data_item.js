@@ -31,6 +31,10 @@ class DataItem extends React.Component {
     ColumnsStore.removeChangeListener("change", this._onChange);
   }
 
+  _nobooking(){
+    return (<span className="session-full">No booking required</span>);
+  }
+
   _actions(col){
     let item = this.props.data;
     let places = item.get("places_left");
@@ -40,10 +44,10 @@ class DataItem extends React.Component {
 
     if(item.has("buttons") && item.get("buttons").has("book")){
       let link = item.get("buttons").get("book")
-      return (link === "#" || _.isEmpty(link)) ? "" : (<a className="button button-secondary" href={link}>Book</a>);
+      return (link === "#" || _.isEmpty(link)) ? this._nobooking() : (<a className="button button-secondary" href={link}>Book</a>);
     }
 
-    return "";
+    return this._nobooking();
   }
 
   _onChange(){
