@@ -1,6 +1,6 @@
 {
   "name": "@djforth/weekly-prog",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Better Weekly Prog",
   "main": "index.js",
   "babel": {
@@ -33,7 +33,8 @@
           "babelify",
           {
             "presets": [
-              "es2015", "react"
+              "es2015",
+              "react"
             ]
           }
         ]
