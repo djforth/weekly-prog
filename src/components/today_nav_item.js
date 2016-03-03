@@ -1,6 +1,5 @@
 //Libraries
-const React = require("react")
-    , _     = require("lodash/core");
+const React = require("react");
 
 const DateNavItem = require("./date_nav_item");
 

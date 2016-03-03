@@ -1,6 +1,10 @@
 const _ = require("lodash/core")
-    , Moment = require("moment-strftime")
+    , moment = require("moment-strftime")
     // , DateFormatter = require("@djforth/date-formatter");
+_.partial = require("lodash/partial")
+_.random = require("lodash/random")
+_.cloneDeep = require("lodash/cloneDeep")
+_.sample = require("lodash/sample")
 
 let activities = ["Gymnastics", "Group Cycling", "Acting", "Adults", "Activities for Kids", "11 15 Years", "Children's & Teens", "Gym Based", "Closed", "Martial Arts", "Lane Swimming", "Group Cycling", "Boxfit", "Games", "8 15 Years", "5 11 Years", "Low Impact", "Group Cycling", "Athletics", "Dance", "Group Exercise", "Dance", "Boxing", "Mobile Library", "Lessons", "Dance", "Gym", "Circuit", "Fitness", "Fun"];
 
@@ -33,6 +37,7 @@ var afternoon = 12;
 var evening   = 18;
 
 function timeManager(date){
+  console.log(date)
   var mins  = date.getMinutes();
   var hours = date.getHours();
 
@@ -52,13 +57,14 @@ function addSessions(filter){
   // var sessions  = []
 
   function createSession(date){
+
     let session = _.cloneDeep(default_session)
     session.id         = _.uniqueId()
     session.session    = _.sample(titles)
     session.location   = _.sample(locations)
     session.instructor = _.sample(instructors)
     session.activity   = _.sample(activities)
-    let d   = _.clone(date)
+    let d   = new Date(date)
     let fmt = moment(d);
     session.start      = fmt.strftime("%Y-%m-%d %H:%M");
     d.setHours(d.getHours()+1);
@@ -82,7 +88,8 @@ function addSessions(filter){
 
 
   return function(st, n){
-    let date = _.clone(st);
+    console.log(st, n)
+    let date = new Date(st);
 
     var i = 0;
     var increment = timeManager(date);
@@ -112,6 +119,7 @@ module.exports = function(days=1, date, filter){
     _.forEach([9, 12, 18], (n)=>{
       date.setDate(date.getDate()+i);
       date.setHours(n)
+      let test = addSessions(filter)
       let creator = _.partial(addSessions(filter), date);
       let ses = creator(_.random(10, 20), filter)
       sessions = sessions.concat(ses);
@@ -119,7 +127,7 @@ module.exports = function(days=1, date, filter){
     i++;
   } while(i < days);
 
-
+  console.log(sessions)
   return sessions
 
 }

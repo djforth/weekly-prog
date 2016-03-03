@@ -2,6 +2,9 @@
 const React = require("react")
     , ReactDOM = require('react-dom')
     , _     = require("lodash/core");
+_.take = require("lodash/take");
+_.mapValues = require("lodash/mapValues");
+_.reject = require("lodash/reject");
 
 // Utils
 const checker = require("../utils/day_checker")
@@ -108,7 +111,7 @@ class DateNav extends React.Component {
       this.pos++;
     }
 
-    let move  = _.pluck(_.take(elms, this.pos), "width");
+    let move  = _.map(_.take(elms, this.pos), "width");
     let mover = -this._getDistance(move);
     this.setState({listPos:mover});
     this._getPrevious(mover);

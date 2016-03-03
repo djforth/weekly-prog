@@ -3,6 +3,8 @@ const _       = require("lodash/core")
     , Moment  = require("moment");
 
 
+_.includes = require('lodash/includes')
+
 function isNow(st, fn){
   let now = Moment();
   return (

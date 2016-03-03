@@ -1,6 +1,5 @@
 //Libraries
-const React = require("react")
-    , _     = require("lodash/core");
+const React = require("react");
 
 const DataHead     = require("./data_head")
     , DataItems    = require("./data_items")

@@ -1,6 +1,8 @@
 const moment = require('moment-strftime')
     , _      = require("lodash/core");
 
+_.partial = require("lodash/partial");
+
 
 function getFormat(col){
   if(_.has(col, "fmt")) return col.fmt;

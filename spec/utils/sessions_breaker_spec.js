@@ -113,7 +113,7 @@ describe('SessionsBreaker', function() {
 
   describe('api', function() {
     // let makeDates;
-    let groupSpy, group_revert;
+    let groupSpy, group_revert, fillGapsSpy, fillGapsRevert;
     beforeEach(()=>{
       //Stub make dates
       spy = jasmine.createSpy("makeDates").and.returnValue(with_dates);
@@ -123,11 +123,15 @@ describe('SessionsBreaker', function() {
       groupSpy = jasmine.createSpy("groupSessions").and.returnValue("foo");
       group_revert  = Breaker.__set__("groupSessions", groupSpy);
 
+      fillGapsSpy = jasmine.createSpy("fillGaps").and.returnValue("some dates");
+      fillGapsRevert  = Breaker.__set__("fillGaps", fillGapsSpy);
+
       breaker = Breaker(json, "start_time");
     });
 
     afterEach(()=>{
       revert();
+      fillGapsRevert();
       group_revert();
     })
 
@@ -143,8 +147,17 @@ describe('SessionsBreaker', function() {
        let calls = groupSpy.calls.argsFor(0);
        expect(calls).toContain(with_dates);
 
+       // //Check return
+       // expect(breaker).toEqual("foo");
+    });
+
+    it('should call fillGaps', function() {
+       expect(fillGapsSpy).toHaveBeenCalled();
+       let calls = fillGapsSpy.calls.argsFor(0);
+       expect(calls).toContain("foo");
+
        //Check return
-       expect(breaker).toEqual("foo");
+       expect(breaker).toEqual("some dates");
     });
 
 

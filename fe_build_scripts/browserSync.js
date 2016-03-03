@@ -2,6 +2,7 @@ var _          = require("lodash")
   , browserify = require("./bs_helpers/bs_browserify")
   , config     = require("./config").browserSync
   , exec       = require('child_process').exec
+  , helper     = require("./bs_helpers/bs_helper")
   // , imageMin   = require("./bs_helpers/bs_images")
   // , manifest  = require("./config").manifest
   , pckage     = require("../package")
@@ -61,7 +62,7 @@ function startBS(){
   }, function callback() {
       // (server is now up)
       // set up watch to reload browsers when source changes
-      browserify();
+      browserify(helper);
       sassBuild(true);
   });
 }

@@ -66,7 +66,7 @@ function dateUpdate(dates, date, data){
 }
 
 function getNewDate(date, n=1){
-  let create_date = _.clone(date);
+  let create_date = new Date(date);
   create_date.setDate(create_date.getDate()+n);
   return create_date;
 }

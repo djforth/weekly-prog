@@ -470,7 +470,7 @@ Icon classes can be used entirely standalone. They are named after their origina
   height: 59px; }
 
 /* line 154, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_accessibility-icons.scss */
-.icon-lift,.icon-poolside-facilities{
+.icon-lift,.icon-poolside-facilities {
   background-image: url('/assets/sprites/accessibility-icons.png'); }
 .icon-poolside-facilities {
   background-position: -178px 0px;
@@ -484,7 +484,7 @@ Icon classes can be used entirely standalone. They are named after their origina
   height: 69px; }
 
 /* line 166, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_accessibility-icons.scss */
-.icon-poolside-hoist,.icon-wheelchair-p{
+.icon-poolside-hoist,.icon-wheelchair-p {
   background-image: url('/assets/sprites/accessibility-icons.png'); }
 .icon-wheelchair-p {
   background-position: 0px 0px;
@@ -498,7 +498,7 @@ Icon classes can be used entirely standalone. They are named after their origina
   height: 66px; }
 
 /* line 178, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_accessibility-icons.scss */
-.icon-wheelchair-wc,.icon-wheelchair{
+.icon-wheelchair-wc,.icon-wheelchair {
   background-image: url('/assets/sprites/accessibility-icons.png'); }
 .icon-wheelchair {
   background-position: -62px 0px;
@@ -551,7 +551,7 @@ Icon classes can be used entirely standalone. They are named after their origina
   background-position: -26px -45px; }
 
 /* line 242, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_arrows.scss */
-.icon-arrow-borough-quick-link,.icon-arrow-breadcrumbs{
+.icon-arrow-borough-quick-link,.icon-arrow-breadcrumbs {
   background-image: url('/assets/sprites/arrows.png');
   width: 6px;
   height: 9px; }
@@ -563,7 +563,7 @@ Icon classes can be used entirely standalone. They are named after their origina
   background-position: 0px 0px; }
 
 /* line 254, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_arrows.scss */
-.icon-arrow-content-carousel-next,.icon-arrow-content-carousel-previous{
+.icon-arrow-content-carousel-next,.icon-arrow-content-carousel-previous {
   background-image: url('/assets/sprites/arrows.png');
   width: 45px;
   height: 45px; }
@@ -575,7 +575,7 @@ Icon classes can be used entirely standalone. They are named after their origina
   background-position: -42px -45px; }
 
 /* line 266, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_arrows.scss */
-.icon-arrow-green-down,.icon-arrow-green-up{
+.icon-arrow-green-down,.icon-arrow-green-up {
   background-image: url('/assets/sprites/arrows.png');
   width: 10px;
   height: 5px; }
@@ -589,7 +589,7 @@ Icon classes can be used entirely standalone. They are named after their origina
   height: 13px; }
 
 /* line 278, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_arrows.scss */
-.icon-arrow-grey,.icon-arrow-orange-2{
+.icon-arrow-grey,.icon-arrow-orange-2 {
   background-image: url('/assets/sprites/arrows.png'); }
 .icon-arrow-orange-2 {
   background-position: -90px -21px;
@@ -603,7 +603,7 @@ Icon classes can be used entirely standalone. They are named after their origina
   height: 21px; }
 
 /* line 290, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_arrows.scss */
-.icon-arrow-orange-3,.icon-arrow-orange{
+.icon-arrow-orange-3,.icon-arrow-orange {
   background-image: url('/assets/sprites/arrows.png'); }
 .icon-arrow-orange {
   background-position: -21px -58px;
@@ -617,7 +617,7 @@ Icon classes can be used entirely standalone. They are named after their origina
   height: 14px; }
 
 /* line 302, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_arrows.scss */
-.icon-arrow-white,.icon-arrow_news{
+.icon-arrow-white,.icon-arrow_news {
   background-image: url('/assets/sprites/arrows.png'); }
 .icon-arrow_news {
   background-position: -90px -41px;
@@ -631,7 +631,7 @@ Icon classes can be used entirely standalone. They are named after their origina
   height: 9px; }
 
 /* line 314, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_arrows.scss */
-.icon-arrow_news_filter,.icon-arrow_news_hover{
+.icon-arrow_news_filter,.icon-arrow_news_hover {
   background-image: url('/assets/sprites/arrows.png'); }
 .icon-arrow_news_hover {
   background-position: 0px -72px;
@@ -734,7 +734,7 @@ Icon classes can be used entirely standalone. They are named after their origina
   height: 90px; }
 
 /* line 132, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_circular-icons.scss */
-.icon-hot-air-balloon,.icon-information{
+.icon-hot-air-balloon,.icon-information {
   background-image: url('/assets/sprites/circular-icons.png'); }
 .icon-information {
   background-position: -90px -90px;
@@ -746,7 +746,7 @@ Icon classes can be used entirely standalone. They are named after their origina
   background-position: -90px 0px; }
 
 /* line 144, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_circular-icons.scss */
-.icon-people,.icon-ticket{
+.icon-people,.icon-ticket {
   background-image: url('/assets/sprites/circular-icons.png');
   width: 90px;
   height: 90px; }
@@ -799,7 +799,7 @@ Icon classes can be used entirely standalone. They are named after their origina
   background-position: 0px 0px; }
 
 /* line 132, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_contact-icons.scss */
-.icon-contact-envelope,.icon-contact-pin{
+.icon-contact-envelope,.icon-contact-pin {
   background-image: url('/assets/sprites/contact-icons.png');
   width: 64px;
   height: 64px; }
@@ -813,7 +813,7 @@ Icon classes can be used entirely standalone. They are named after their origina
   height: 26px; }
 
 /* line 144, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_contact-icons.scss */
-.icon-contact-telephone-small,.icon-contact-telephone{
+.icon-contact-telephone-small,.icon-contact-telephone {
   background-image: url('/assets/sprites/contact-icons.png'); }
 .icon-contact-telephone {
   background-position: 0px -64px;
@@ -868,7 +868,7 @@ Icon classes can be used entirely standalone. They are named after their origina
   height: 68px; }
 
 /* line 209, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_facility-icons.scss */
-.icon-balloon,.icon-book{
+.icon-balloon,.icon-book {
   background-image: url('/assets/sprites/facility-icons.png'); }
 .icon-book {
   background-position: -60px -114px;
@@ -882,7 +882,7 @@ Icon classes can be used entirely standalone. They are named after their origina
   height: 62px; }
 
 /* line 221, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_facility-icons.scss */
-.icon-coffee,.icon-dumbbells{
+.icon-coffee,.icon-dumbbells {
   background-image: url('/assets/sprites/facility-icons.png'); }
 .icon-dumbbells {
   background-position: 0px -65px;
@@ -896,7 +896,7 @@ Icon classes can be used entirely standalone. They are named after their origina
   height: 51px; }
 
 /* line 233, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_facility-icons.scss */
-.icon-heart,.icon-masks{
+.icon-heart,.icon-masks {
   background-image: url('/assets/sprites/facility-icons.png'); }
 .icon-masks {
   background-position: -192px -60px;
@@ -910,7 +910,7 @@ Icon classes can be used entirely standalone. They are named after their origina
   height: 60px; }
 
 /* line 245, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_facility-icons.scss */
-.icon-pool-ladder,.icon-present{
+.icon-pool-ladder,.icon-present {
   background-image: url('/assets/sprites/facility-icons.png'); }
 .icon-present {
   background-position: -252px 0px;
@@ -923,7 +923,7 @@ Icon classes can be used entirely standalone. They are named after their origina
   width: 65px; }
 
 /* line 257, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_facility-icons.scss */
-.icon-racquet,.icon-shuttlecock{
+.icon-racquet,.icon-shuttlecock {
   background-image: url('/assets/sprites/facility-icons.png');
   height: 65px; }
 .icon-shuttlecock {
@@ -984,7 +984,7 @@ Icon classes can be used entirely standalone. They are named after their origina
   height: 31px; }
 
 /* line 110, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_footer-icons.scss */
-.icon-big-society,.icon-social-enterprise{
+.icon-big-society,.icon-social-enterprise {
   background-image: url('/assets/sprites/footer-icons.png');
   width: 116px; }
 .icon-social-enterprise {
@@ -1039,7 +1039,7 @@ Icon classes can be used entirely standalone. They are named after their origina
   height: 32px; }
 
 /* line 121, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_form-icons.scss */
-.icon-form-error,.icon-form-mandatory{
+.icon-form-error,.icon-form-mandatory {
   background-image: url('/assets/sprites/form-icons.png'); }
 .icon-form-mandatory {
   background-position: 0px 0px;
@@ -1101,7 +1101,7 @@ Icon classes can be used entirely standalone. They are named after their origina
   height: 31px; }
 
 /* line 165, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_map-icons.scss */
-.icon-legend-bike,.icon-legend-bus{
+.icon-legend-bike,.icon-legend-bus {
   background-image: url('/assets/sprites/map-icons.png'); }
 .icon-legend-bus {
   background-position: -30px -62px;
@@ -1115,7 +1115,7 @@ Icon classes can be used entirely standalone. They are named after their origina
   height: 31px; }
 
 /* line 177, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_map-icons.scss */
-.icon-legend-car,.icon-legend-pin{
+.icon-legend-car,.icon-legend-pin {
   background-image: url('/assets/sprites/map-icons.png'); }
 .icon-legend-pin {
   background-position: -89px 0px;
@@ -1129,7 +1129,7 @@ Icon classes can be used entirely standalone. They are named after their origina
   height: 43px; }
 
 /* line 189, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_map-icons.scss */
-.icon-legend-train,.icon-pin-primary{
+.icon-legend-train,.icon-pin-primary {
   background-image: url('/assets/sprites/map-icons.png'); }
 .icon-pin-primary {
   background-position: 0px 0px;
@@ -1191,7 +1191,7 @@ Icon classes can be used entirely standalone. They are named after their origina
   height: 21px; }
 
 /* line 110, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_news-icons.scss */
-.icon-news-calendar,.icon-news-tag{
+.icon-news-calendar,.icon-news-tag {
   background-image: url('/assets/sprites/news-icons.png'); }
 .icon-news-tag {
   background-position: -21px 0px;
@@ -1244,7 +1244,7 @@ Icon classes can be used entirely standalone. They are named after their origina
   background-position: 0px 0px; }
 
 /* line 121, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_social-icons.scss */
-.icon-envelope,.icon-facebook{
+.icon-envelope,.icon-facebook {
   background-image: url('/assets/sprites/social-icons.png');
   width: 41px;
   height: 41px; }
@@ -1353,7 +1353,7 @@ form .form-row {
   list-style: none; }
 
 /* line 24, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_tinymce.scss */
-.tinymce h1, .tinymce h2, .tinymce h3, .tinymce h4, .tinymce h5, .tinymce h6,.tinymce li{
+.tinymce h1, .tinymce h2, .tinymce h3, .tinymce h4, .tinymce h5, .tinymce h6,.tinymce li {
   margin: 0 0 10px;
   padding: 0;
   vertical-align: baseline;
@@ -1500,13 +1500,13 @@ ul.bullets {
   /* line 119, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
   .gg.alpha {
     font-size: 5.625em;
-    /* 90px */ }
-  /* line 124, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
-  .gg.alpha,.gg.beta{
+    /* 90px */
     line-height: 1em; }
+  /* line 124, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
   .gg.beta {
     font-size: 3.875em;
-    /* 62px */ }
+    /* 62px */
+    line-height: 1em; }
   /* line 129, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
   .gg.gamma {
     font-size: 3.313em;
@@ -1527,7 +1527,7 @@ ul.bullets {
     font-size: 2.125em;
     /* 34px */ }
   /* line 149, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
-  .gg.zeta,.gg.eta{
+  .gg.zeta,.gg.eta {
     line-height: 1em; }
   .gg.eta {
     font-size: 1.75em;
@@ -1691,7 +1691,7 @@ article.activity-facility {
   position: relative;
   border-radius: 5px; }
   /* line 12, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/alerts/_alerts.scss */
-  .alert,.alert .more-info{
+  .alert,.alert .more-info {
   color: #fff; }
   /* line 16, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/alerts/_alerts.scss */
   .alert .close-alert {
@@ -1699,9 +1699,9 @@ article.activity-facility {
     top: 15px;
     width: 15px;
     height: 15px;
-    background: url('data:image/svg+xmlbase64,PHN2ZyBpZD0iaWNvbnMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI0IDI0Ij48c3R5bGU+LnN0MHtmaWxsOm5vbmU7c3Ryb2tlOiNGRkY7c3Ryb2tlLXdpZHRoOjI7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwfTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTAgMGwyMiAyMk0wIDIyTDIyIDAiLz48L3N2Zz4=') center center no-repeat; }
+    background: url('') center center no-repeat; }
   /* line 26, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/alerts/_alerts.scss */
-  .alert .close-alert,.alert:before{
+  .alert .close-alert,.alert:before {
     display: block;
     position: absolute; }
   .alert:before {
@@ -1715,19 +1715,19 @@ article.activity-facility {
     background: #008bd0; }
     /* line 39, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/alerts/_alerts.scss */
     .alert.low:before {
-      background: url('data:image/svg+xmlbase64,PHN2ZyBpZD0iaWNvbnMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI2LjIgMjcuNyI+PHN0eWxlPi5zdDB7ZmlsbDpub25lfS5zdDAsLnN0MXtzdHJva2U6I0ZGRjtzdHJva2Utd2lkdGg6MjtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6MTB9LnN0MXtmaWxsOiMzYWFhMzV9PC9zdHlsZT48Y2lyY2xlIGNsYXNzPSJzdDAiIGN4PSIxMi43IiBjeT0iMTMuNyIgcj0iMTEiLz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTIuNyAxNS43di04Ii8+PGNpcmNsZSBjbGFzcz0ic3QxIiBjeD0iMTIuNyIgY3k9IjE5LjEiIHI9Ii4zIi8+PC9zdmc+') center center no-repeat; }
+      background: url('') center center no-repeat; }
   /* line 44, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/alerts/_alerts.scss */
   .alert.medium {
     background: #fc7e29; }
     /* line 47, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/alerts/_alerts.scss */
     .alert.medium:before {
-      background: url('data:image/svg+xmlbase64,PHN2ZyBpZD0iaWNvbnMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI4LjcgMjciPjxzdHlsZT4uc3Qwe2ZpbGw6bm9uZX0uc3QwLC5zdDF7c3Ryb2tlOiNmZGZkZmQ7c3Ryb2tlLXdpZHRoOjI7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwfS5zdDF7ZmlsbDojM2FhYTM1fTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTEzLjYgMTcuNXYtOCIvPjxjaXJjbGUgY2xhc3M9InN0MSIgY3g9IjEzLjYiIGN5PSIyMC45IiByPSIuMyIvPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0wIDI0LjVMMTMuNiAxbDEzLjYgMjMuNXoiLz48L3N2Zz4=') center center no-repeat; }
+      background: url('') center center no-repeat; }
   /* line 52, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/alerts/_alerts.scss */
   .alert.high {
     background: #ff0000; }
     /* line 55, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/alerts/_alerts.scss */
     .alert.high:before {
-      background: url('data:image/svg+xmlbase64,PHN2ZyBpZD0iaWNvbnMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI4LjEgMjYuMSI+PHN0eWxlPi5zdDB7ZmlsbDpub25lfS5zdDAsLnN0MXtzdHJva2U6I0ZGRjtzdHJva2Utd2lkdGg6MjtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6MTB9LnN0MXtmaWxsOiMzYWFhMzV9PC9zdHlsZT48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTUgMTVWNyIvPjxjaXJjbGUgY2xhc3M9InN0MSIgY3g9IjE1IiBjeT0iMTguNCIgcj0iLjMiLz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNOC41IDI0LjJMMiAxMi45IDguNSAxLjZoMTMuMWw2LjUgMTEuMy02LjUgMTEuM3oiLz48L3N2Zz4=') center center no-repeat; }
+      background: url('') center center no-repeat; }
 
 /* line 1, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/breadcrumbs/_breadcrumbs.scss */
 .breadcrumbs {
@@ -1794,7 +1794,7 @@ article.activity-facility {
     .button-news:hover .icon {
       background-position: 0px -72px; }
   /* line 47, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/buttons/_buttons.scss */
-  .button-news:hover .icon,.button-news .icon{
+  .button-news:hover .icon,.button-news .icon {
       background-image: url('/assets/sprites/arrows.png');
       width: 14px;
       height: 20px; }
@@ -2250,7 +2250,7 @@ section.find-us .map-legend {
     margin: 0 0 0 60px;
     vertical-align: baseline; }
   /* line 23, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/find_us/_find_us.scss */
-  section.find-us .map-legend dd,section.find-us .map-legend dl{
+  section.find-us .map-legend dd,section.find-us .map-legend dl {
     padding: 0;
     border: 0;
     font-weight: normal;
@@ -2346,7 +2346,7 @@ footer.main {
   footer.main h1 {
     margin: 0 0 5px; }
   /* line 18, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer.scss */
-  footer.main h1,footer.main li, footer.main ul{
+  footer.main h1,footer.main li, footer.main ul {
     padding: 0;
     vertical-align: baseline;
     border: 0;
@@ -2475,7 +2475,7 @@ header .top-nav {
     display: inline-block;
     height: 50px;
     width: 50px;
-    background: url('data:image/svg+xmlbase64,PHN2ZyBpZD0nTGF5ZXJfMScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PSctMjcyIDM5NS45IDUwIDUwJz48c3R5bGU+LnN0MHtmaWxsOm5vbmU7c3Ryb2tlLWxpbmVjYXA6cm91bmR9LnN0MCwuc3Qxe3N0cm9rZTojRkZGO3N0cm9rZS1taXRlcmxpbWl0OjEwfS5zdDF7ZmlsbDojRkZGfTwvc3R5bGU+PGNpcmNsZSBjbGFzcz0nc3QwJyBjeD0nLTI0NycgY3k9JzQyMC45JyByPScxNS41Jy8+PHBhdGggY2xhc3M9J3N0MScgZD0nTS0yNDAuMyA0MjcuNWMtLjUuNS0xLjMuNS0xLjggMGwtMi4zLTIuM2E2LjA2IDYuMDYgMCAwIDEtOS40LTUuMWMwLTMuNCAyLjctNi4xIDYuMS02LjEgMy40IDAgNi4xIDIuNyA2LjEgNi4xIDAgMS4yLS40IDIuMy0xIDMuM2wyLjMgMi4zYy41LjUuNSAxLjMgMCAxLjh6bS03LjQtMTEuN2MtMi40IDAtNC4zIDEuOS00LjMgNC4zczEuOSA0LjMgNC4zIDQuMyA0LjMtMS45IDQuMy00LjMtMS45LTQuMy00LjMtNC4zeicvPjwvc3ZnPg==') center center no-repeat; }
+    background: url('') center center no-repeat; }
   /* line 67, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/header/_header.scss */
   header .top-nav li {
     margin: 0;
@@ -2553,7 +2553,7 @@ header .top-nav {
     display: inline-block;
     width: 20px;
     height: 20px;
-    background: url('data:image/svg+xmlbase64,PHN2ZyBmaWxsPSIjRkZGIiBoZWlnaHQ9IjQ4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSI0OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTkgNi40MUwxNy41OSA1IDEyIDEwLjU5IDYuNDEgNSA1IDYuNDEgMTAuNTkgMTIgNSAxNy41OSA2LjQxIDE5IDEyIDEzLjQxIDE3LjU5IDE5IDE5IDE3LjU5IDEzLjQxIDEyeiIvPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz48L3N2Zz4=') left top no-repeat;
+    background: url('') left top no-repeat;
     background-size: cover; }
   /* line 39, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/maps/_map.scss */
   .infowindow .details-holder {
@@ -2565,7 +2565,7 @@ header .top-nav {
       width: 40px;
       height: 40px;
       float: left;
-      background: url('data:image/svg+xmlbase64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMjAuMyAyNS4yIj48c3R5bGU+LnN0MHtmaWxsOm5vbmU7c3Ryb2tlOiNGRkY7c3Ryb2tlLXdpZHRoOjI7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwfTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTE3LjUgMTUuNmMxLjEtMS41IDEuOC0zLjQgMS44LTUuNUMxOS4zIDUgMTUuMiAxIDEwLjIgMSA1LjEgMSAxIDUuMSAxIDEwLjFjMCAyIC43IDMuOSAxLjggNS41bDcuMyA4LjYgNy40LTguNnoiLz48Y2lyY2xlIGNsYXNzPSJzdDAiIGN4PSIxMC4xIiBjeT0iMTAuMSIgcj0iMy44Ii8+PC9zdmc+') left top no-repeat; }
+      background: url('') left top no-repeat; }
     /* line 51, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/maps/_map.scss */
     .infowindow .details-holder .details {
       display: inline-block;
@@ -3150,7 +3150,7 @@ section.news-items-grid .articles {
   /* line 92, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/tabbed_content/_tabbed_content.scss */
 
 /* line 1, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/toggle_button/_toggle_button.scss */
-.tabbed-content-tab.active,.button-toggle{
+.tabbed-content-tab.active,.button-toggle {
     display: block; }
 .button-toggle {
   margin-right: -10px;
@@ -3179,7 +3179,7 @@ section.news-items-grid .articles {
     width: 1px;
     background-color: #e14e00; }
   /* line 39, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/toggle_button/_toggle_button.scss */
-  .button-toggle .divider,.button-toggle .icon{
+  .button-toggle .divider,.button-toggle .icon {
     margin: auto;
     position: absolute;
     top: 0;
@@ -3555,7 +3555,7 @@ section.news-items-grid .articles {
     -webkit-transition: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
     transition: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1); }
   /* line 197, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
-  .date-nav .date-list,.date-nav .date-nav-item{
+  .date-nav .date-list,.date-nav .date-nav-item {
     margin: 0;
     padding: 0;
     vertical-align: baseline;
@@ -3690,7 +3690,7 @@ section.news-items-grid .articles {
       border: 1px solid #cecece;
       border-radius: 10px; }
       /* line 371, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
-      .timetable-nav .timetable-nav-holder ul,.timetable-nav .timetable-nav-holder ul li{
+      .timetable-nav .timetable-nav-holder ul,.timetable-nav .timetable-nav-holder ul li {
       margin: 0;
       padding: 0;
       vertical-align: baseline;
@@ -3916,11 +3916,10 @@ section.news-items-grid .articles {
     top: 0;
     bottom: 0;
     right: 30px;
-    width: 15px;
-    background: url('data:image/svg+xmlbase64,PHN2ZyBpZD0nTGF5ZXJfMScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PSctMjgxIDQwNC45IDYuNiA4LjknPjxzdHlsZT4uc3Qwe2ZpbGw6bm9uZTtzdHJva2U6IzU1YTQ0MDtzdHJva2Utd2lkdGg6MjtzdHJva2UtbWl0ZXJsaW1pdDoxMH08L3N0eWxlPjxwYXRoIGNsYXNzPSdzdDAnIGQ9J00tMjgwIDQwNS45bDQgMy41LTQgMy41Jy8+PC9zdmc+') center center no-repeat; }
+    width: 15px; }
   /* line 50, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .nav-list li a.has-subs:hover:after{
-    background: url('data:image/svg+xmlbase64,PHN2ZyBpZD0nTGF5ZXJfMScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PSctMjgxIDQwNC45IDYuNiA4LjknPjxzdHlsZT4uc3Qwe2ZpbGw6bm9uZTtzdHJva2U6I2ZmZjtzdHJva2Utd2lkdGg6MjtzdHJva2UtbWl0ZXJsaW1pdDoxMH08L3N0eWxlPjxwYXRoIGNsYXNzPSdzdDAnIGQ9J00tMjgwIDQwNS45bDQgMy41LTQgMy41Jy8+PC9zdmc+') center center no-repeat; }
+  .nav-list li a.has-subs:after,.nav-list li a.has-subs:hover:after{
+    background: url('') center center no-repeat; }
   /* line 58, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
   .nav-list li.current-section a{
     color: #55a440;
@@ -3939,7 +3938,7 @@ section.news-items-grid .articles {
     height: 15px;
     margin: auto 8px auto 0;
     width: 15px;
-    background: url('data:image/svg+xmlbase64,PHN2ZyBpZD0nTGF5ZXJfMScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PSctMjgxIDQwNC45IDYuNiA4LjknPjxzdHlsZT4uc3Qwe2ZpbGw6bm9uZTtzdHJva2U6I2ZmZjtzdHJva2Utd2lkdGg6MjtzdHJva2UtbWl0ZXJsaW1pdDoxMH08L3N0eWxlPjxwYXRoIGNsYXNzPSdzdDAnIGQ9J00tMjgwIDQwNS45bDQgMy41LTQgMy41Jy8+PC9zdmc+') center center no-repeat;
+    background: url('') center center no-repeat;
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg); }
   /* line 86, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
@@ -3979,7 +3978,7 @@ section.news-items-grid .articles {
     justify-content: center;
     margin: 0 auto;
     width: 50%;
-    background: url('data:image/svg+xmlbase64,PHN2ZyBpZD0nTGF5ZXJfMScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PScwIDAgNDYgMjYnPjxzdHlsZT4uc3QwLC5zdDF7ZGlzcGxheTpub25lfS5zdDF7c3Ryb2tlOiM5OTk7c3Ryb2tlLXdpZHRoOi4xfS5zdDEsLnN0MntmaWxsOm5vbmU7c3Ryb2tlLW1pdGVybGltaXQ6MTB9LnN0MntzdHJva2U6I0ZGRjtzdHJva2Utd2lkdGg6MjtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmR9PC9zdHlsZT48ZyBpZD0nZ3JpZCc+PHBhdGggY2xhc3M9J3N0MCcgZD0nTTIzLTE1LjljMTYuNSAwIDI5LjkgMTMuNCAyOS45IDI5LjlTMzkuNSA0My45IDIzIDQzLjktNi45IDMwLjUtNi45IDE0IDYuNS0xNS45IDIzLTE1LjltMC0uMUM2LjQtMTYtNy0yLjYtNyAxNFM2LjQgNDQgMjMgNDRzMzAtMTMuNCAzMC0zMC0xMy40LTMwLTMwLTMweicvPjxwYXRoIGNsYXNzPSdzdDAnIGQ9J00yMyA0LjFjNS41IDAgOS45IDQuNCA5LjkgOS45cy00LjQgOS45LTkuOSA5LjktOS45LTQuNC05LjktOS45IDQuNC05LjkgOS45LTkuOW0wLS4xYy01LjUgMC0xMCA0LjUtMTAgMTBzNC41IDEwIDEwIDEwIDEwLTQuNSAxMC0xMFMyOC41IDQgMjMgNHonLz48cGF0aCBjbGFzcz0nc3QwJyBkPSdNMjMtNS45QzM0LTUuOSA0Mi45IDMgNDIuOSAxNFMzNCAzMy45IDIzIDMzLjkgMy4xIDI1IDMuMSAxNCAxMi01LjkgMjMtNS45bTAtLjFDMTItNiAzIDMgMyAxNHM5IDIwIDIwIDIwIDIwLTkgMjAtMjBTMzQtNiAyMy02eicvPjxwYXRoIGNsYXNzPSdzdDAnIGQ9J001My0xNnY2MEgtN3YtNjBoNjBtMCAwSC03djYwaDYwdi02MHonLz48cGF0aCBjbGFzcz0nc3QxJyBkPSdNLTItMTFsNTAgNTBtMC01MEwtMiAzOScvPjwvZz48cGF0aCBjbGFzcz0nc3QyJyBkPSdNMSAxNGg0NE0xIDJoNDRNMSAyNmg0NCcgaWQ9J2ljb25zJy8+PC9zdmc+') center center no-repeat; }
+    background: url('') center center no-repeat; }
   /* line 3, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
   .weekly-prog .date-nav{
     height: 110px; }
@@ -4536,7 +4535,7 @@ section.news-items-grid .articles {
     color: #fff; }
   /* line 280, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
   .single .level-3 .nav-list li.active a.has-subs:after, .single .level-3 .nav-list li:hover a.has-subs:after, .single .level-4 .nav-list li.active a.has-subs:after, .single .level-4 .nav-list li:hover a.has-subs:after{
-    background: url('data:image/svg+xmlbase64,PHN2ZyBpZD0nTGF5ZXJfMScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PSctMjgxIDQwNC45IDYuNiA4LjknPjxzdHlsZT4uc3Qwe2ZpbGw6bm9uZTtzdHJva2U6I2ZmZjtzdHJva2Utd2lkdGg6MjtzdHJva2UtbWl0ZXJsaW1pdDoxMH08L3N0eWxlPjxwYXRoIGNsYXNzPSdzdDAnIGQ9J00tMjgwIDQwNS45bDQgMy41LTQgMy41Jy8+PC9zdmc+') center center no-repeat; }
+    background: url('') center center no-repeat; }
   /* line 287, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
   .single .level-3 .nav-list li a, .single .level-4 .nav-list li a{
     display: block;
@@ -4557,7 +4556,7 @@ section.news-items-grid .articles {
     top: 0;
     bottom: 0;
     right: 20px;
-    background: url('data:image/svg+xmlbase64,PHN2ZyBpZD0nTGF5ZXJfMScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PSctMjgxIDQwNC45IDYuNiA4LjknPjxzdHlsZT4uc3Qwe2ZpbGw6bm9uZTtzdHJva2U6IzU1YTQ0MDtzdHJva2Utd2lkdGg6MjtzdHJva2UtbWl0ZXJsaW1pdDoxMH08L3N0eWxlPjxwYXRoIGNsYXNzPSdzdDAnIGQ9J00tMjgwIDQwNS45bDQgMy41LTQgMy41Jy8+PC9zdmc+') center center no-repeat; }
+    background: url('') center center no-repeat; }
   /* line 321, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
   .single .levels .home-link, .single .levels .title-link{
     border-bottom: 1px solid #c7c7c7;
@@ -4569,7 +4568,7 @@ section.news-items-grid .articles {
     height: 10px;
     margin: 3px 10px 3px 0;
     width: 10px;
-    background: url('data:image/svg+xmlbase64,PHN2ZyBpZD0nTGF5ZXJfMScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PSctMjgxIDQwNC45IDYuNiA4LjknPjxzdHlsZT4uc3Qwe2ZpbGw6bm9uZTtzdHJva2U6IzU1YTQ0MDtzdHJva2Utd2lkdGg6MjtzdHJva2UtbWl0ZXJsaW1pdDoxMH08L3N0eWxlPjxwYXRoIGNsYXNzPSdzdDAnIGQ9J00tMjgwIDQwNS45bDQgMy41LTQgMy41Jy8+PC9zdmc+') center center no-repeat;
+    background: url('') center center no-repeat;
     background-size: cover; }
   /* line 338, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
   .single .levels .home-link a, .single .levels .title-link a{
@@ -4655,14 +4654,14 @@ section.news-items-grid .articles {
     background-color: #cfcfcf; }
   /* line 442, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
   .single .touch-sub-nav .nav-mover.move-left{
-    background: url('data:image/svg+xmlbase64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIxNTcuMyA0OTEuNyAyMS43IDM5Ij48c3R5bGU+LnN0MHtmaWxsOiNjZmNmY2Z9PC9zdHlsZT48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTc3IDUzMC43bC0xOS42LTE5LjUgMi4xLTIuMSAxOS42IDE5LjUtMi4xIDIuMXoiLz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTc5IDQ5My44bC0xOS41IDE5LjYtMi4xLTIuMSAxOS41LTE5LjYgMi4xIDIuMXoiLz48L3N2Zz4=') center center no-repeat; }
+    background: url('') center center no-repeat; }
   /* line 445, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
   .single .touch-sub-nav .nav-mover.move-left:after{
     right: -20px; }
   /* line 450, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
   .single .touch-sub-nav .nav-mover.move-right{
     float: right;
-    background: url('data:image/svg+xmlbase64,PHN2ZyBpZD0nTGF5ZXJfMScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PScxNTcuNCA0OTEuNiAyMS43IDM5LjInPjxzdHlsZT4uc3Qwe2ZpbGw6I2NmY2ZjZn08L3N0eWxlPjxwYXRoIGNsYXNzPSdzdDAnIGQ9J00xNTkuNSA0OTEuNmwxOS42IDE5LjYtMi4xIDIuMS0xOS42LTE5LjYgMi4xLTIuMXonLz48cGF0aCBjbGFzcz0nc3QwJyBkPSdNMTU3LjQgNTI4LjZMMTc3IDUwOWwyLjEgMi4xLTE5LjYgMTkuNi0yLjEtMi4xeicvPjwvc3ZnPg==') center center no-repeat; }
+    background: url('') center center no-repeat; }
   /* line 457, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
   .single .touch-sub-nav .nav-mover.move-right:after{
     left: -20px; } }

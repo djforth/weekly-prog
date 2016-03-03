@@ -1,6 +1,16 @@
 //Libraries
 const React = require("react");
-const _     = require("lodash/core");
+var _ = require("lodash/core");
+_.includes = require("lodash/includes");
+_.reject = require("lodash/reject");
+
+
+// _.reject
+// _.where
+
+// _.pluck
+
+//  _.includes
 
 // Flux
 const ColumnsStore   = require("../stores/columns_store");
@@ -97,7 +107,7 @@ class DataExpanderItem extends DataItem {
         </div>
       )
 
-      let action = _.where(visible, {key:"actions"})
+      let action = _.filter(visible, {key:"actions"})
       if(!_.isEmpty(action)){
         additional.push(this._actions(this.props.data, action));
       }
@@ -140,7 +150,7 @@ class DataExpanderItem extends DataItem {
   }
 
   _expandTest(){
-    let visible  = _.pluck(ColumnsStore.getShowable(), "key");
+    let visible  = _.map(ColumnsStore.getShowable(), "key");
     return this.props.data.reduce((p, v, k)=>{
       let t = (_.isBoolean(p)) ? p : false;
       return (t) ? t : _.includes(visible, k);

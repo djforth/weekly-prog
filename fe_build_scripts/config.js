@@ -7,10 +7,6 @@ var assets_in   = pckage.config.assets_in || path.join("test_assets");
 var assets_out  = pckage.config.assets_out || path.join("app", "assets");
 assets_out = path.join(assets_out)
 
-var critical = pckage.critical_config
-
-var img_ext  = pckage.img_config.ext || ['*.png', '*.gif', '*.jpg', '*.jpeg', '*.svg']
-
 var config  = pckage.config;
 
 var js = pckage.js_config;
@@ -31,12 +27,7 @@ module.exports = {
     , uiport : Number(config.uiport) || 8080
   }
   // Images configuration
-  , images : {
-    ext    : img_ext
-  , input  : path.join(assets_in, "images")
-  , output : assets_out
-  , temp   : path.join("tmp", "images")
-  }
+
   // Javascript config
   , javascript : {
       ext    : js.ext || ['.js', ".es6.js"]
