@@ -1,6 +1,6 @@
 {
-  "name": "weekly-prog",
-  "version": "1.2.0",
+  "name": "@djforth/weekly-prog",
+  "version": "2.0.0",
   "description": "Better Weekly Prog",
   "main": "index.js",
   "babel": {
@@ -118,9 +118,7 @@
     "sinon": "^1.17.2",
     "through2": "^2.0.0",
     "uglify-js": "^2.6.1",
-    "watchify": "^3.6.1"
-  },
-  "dependencies":{
+    "watchify": "^3.6.1",
     "@djforth/date-formatter": "1.0.3",
     "ajax-es6-module": "1.0.1",
     "datamanager": "1.0.1",
@@ -130,11 +128,29 @@
     "classnames": "^2.2.0",
     "flux": "^2.1.1",
     "immutable": "^3.7.5",
-    "lodash": "^4.3.0",
+    "lodash": "^4.6.0",
     "moment": "^2.10.6",
     "moment-strftime": "^0.1.5",
     "react": "0.14.3",
     "react-date-range": "0.2.2",
     "react-dom": "0.14.3"
-  }
+  },
+  "peerDependencies": {
+    "@djforth/date-formatter": "1.0.3",
+    "ajax-es6-module": "1.0.1",
+    "datamanager": "1.0.1",
+    "morse-react-mixins": "1.0.1",
+    "touch-nav": "1.0.24",
+    "viewport-detection-es6": "2.0.2",
+    "classnames": "^2.2.0",
+    "flux": "^2.1.1",
+    "immutable": "^3.7.5",
+    "lodash": "^4.6.0",
+    "moment": "^2.10.6",
+    "moment-strftime": "^0.1.5",
+    "react": "0.14.3",
+    "react-date-range": "0.2.2",
+    "react-dom": "0.14.3"
+  },
+  "dependencies": {}
 }
