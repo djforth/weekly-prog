@@ -28,7 +28,7 @@ module.exports = function(item, col){
 
 
   return {
-      isNow:()=>isNow(st, fn)
+    isNow:()=>isNow(st, fn)
     , isPast:()=> isPast(fn)
     , setNowOrPast:(now, past="", fallback="")=>{
       if(!_.isNull(now) && isNow(st, fn)) return now;

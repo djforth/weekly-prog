@@ -70,8 +70,10 @@ function addSessions(filter){
     d.setHours(d.getHours()+1);
     fmt = moment(d);
     session.finish     = fmt.strftime("%Y-%m-%d %H:%M");
+
     let p = _.random(0, 20);
     if(p%4 === 0){
+      session.cancelled = true;
       session.places_left = 0;
       session.buttons.book = "#";
     } else {
@@ -88,7 +90,6 @@ function addSessions(filter){
 
 
   return function(st, n){
-    console.log(st, n)
     let date = new Date(st);
 
     var i = 0;

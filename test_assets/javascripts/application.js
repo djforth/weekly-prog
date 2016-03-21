@@ -9,7 +9,7 @@ console.log(sessions(1))
 const WeeklyProg = require("../../src/components/weekly_prog")
 
 function createColumns(){
-  let columns = [{key:"id"}]
+  let columns = [{key:"id"}, {key:"cancelled"}];
   let additional = _.partial(addColumn, {show:true});
   let mobile     = _.partial(addColumn, {desktop:true, mobile:true, tablet:true, show:true});
   let tablet     = _.partial(addColumn, {desktop:true, mobile:false, tablet:true, show:true});
@@ -17,7 +17,6 @@ function createColumns(){
 
   function addColumn(defaults, keys){
     return _.map(keys, (k)=>{
-      // console.log(k)
       k = (_.isString(k)) ? {key:k} : k;
       return _.defaults(k, defaults);
     });
@@ -95,6 +94,7 @@ ReactDom.render(
     columns     = {cols}
     css         = {css}
     groupby     = "start"
+    no_sessions = "There are no activities this"
     print       = "/timetable/print/:date.pdf"
     sessionsApi = "/api/timetable.json"
     sessions    = {sessions(1, new Date())}

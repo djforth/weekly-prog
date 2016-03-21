@@ -8,7 +8,7 @@ var fs = require('fs')
 var mime = require('mime')
   , sizeOf = require('image-size');
 
-var store_images = require("../utils/cache_images");
+// var store_images = require("../utils/cache_images");
 
 var Processor = {
 
@@ -100,22 +100,22 @@ var Processor = {
     var fp = this.cache_bust(filepath);
     var src = this.real_path(fp, 'images');
 
-    var stored64 = store_images.checkJson(fp);
+    // var stored64 = store_images.checkJson(fp);
 
-    if(stored64){
-      done(stored64)
-    } else {
+    // if(stored64){
+    //   done(stored64)
+    // } else {
       mime_type = mime_type || mime.lookup(src);
       fs.readFile(src, function(err, data){
         if(err) {
           console.error(err)
           done("")
         } else {
-          store_images.addJson('data:'+mime_type+';base64,'+data.toString('base64'), fp)
+          // store_images.addJson('data:'+mime_type+';base64,'+data.toString('base64'), fp)
           done('data:'+mime_type+';base64,'+data.toString('base64'));
         }
       });
-    }
+    // }
   }
 
   , real_path:function(filepath, segment) {
