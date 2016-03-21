@@ -178,7 +178,7 @@
     "moment": "^2.10.6",
     "moment-strftime": "^0.1.5",
     "react": "0.14.3",
-    "react-date-range": "0.2.2",
+    "react-date-range": "0.2.4",
     "react-dom": "0.14.3"
   },
   "dependencies": {}
