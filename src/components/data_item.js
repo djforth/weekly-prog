@@ -100,7 +100,6 @@ class DataItem extends React.Component {
     let value = this.formatter(col);
     if(_.isString(value) && value.match(/<|>/g)) return this._rawMarkup(value);
     if(col.type !== "time") return value;
-    console.log(this.props.data.get('cancelled'))
     if(this.props.data.has('cancelled') && this.props.data.get('cancelled')) return this._cancelled(value);
     let checker = timeChecker(this.props.data, col);
     let time = checker.setNowOrPast("This session has started", "This session has finished", `This sessions runs between ${value}`);
