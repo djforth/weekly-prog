@@ -11,6 +11,8 @@ var config  = pckage.config;
 
 var js = pckage.js_config;
 
+var img_ext  = ['*.png', '*.gif', '*.jpg', '*.jpeg', '*.svg']
+
 var rails_server = (config.rails_port) ? "http://localhost:"+config.rails_port : "http://localhost:3030"
 
 // var sprite_ext = pckage.sprite_config.ext || ["*.png", "*.gif"];
@@ -27,14 +29,13 @@ module.exports = {
     , uiport : Number(config.uiport) || 8080
   }
   // Images configuration
-
-  // Javascript config
-  , javascript : {
-      ext    : js.ext || ['.js', ".es6.js"]
-    , files  : js.files || ["components.es6.js"]
-    , input  : path.join(assets_in, "javascripts")
-    , output : js.output || path.join("app", "assets", "javascripts")
+  , images : {
+    ext    : img_ext
+  , input  : path.join(assets_in, "images")
+  , output : assets_out
+  , temp   : path.join("tmp", "images")
   }
+
   // SCSS config
   , stylesheets : {
     ext    : ['*.css', '*.css.map', "*.gz"]

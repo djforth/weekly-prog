@@ -1,263 +1,25 @@
 [
 {
-"id": 4428874,
-"start": "2016-03-23 15:45",
-"finish": "2016-03-23 16:45",
-"session": "Football<p>&nbsp;</p>",
-"lanes": null,
-"location": "Sports Hall",
-"instructor": "Abdul",
-"activity": "Football",
-"places_left": null,
-"description": null,
-"buttons": {
-"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
-}
-},
-{
-"id": 4428979,
-"start": "2016-03-23 16:45",
-"finish": "2016-03-23 17:45",
-"session": "Football<p>&nbsp;</p>",
-"lanes": null,
-"location": "Sports Hall",
-"instructor": "Abdul",
-"activity": "Football",
-"places_left": null,
-"description": null,
-"buttons": {
-"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
-}
-},
-{
-"id": 4429084,
-"start": "2016-03-24 18:00",
-"finish": "2016-03-24 19:00",
-"session": "Judo<p>&nbsp;</p>",
-"lanes": null,
-"location": "Sports Hall",
-"instructor": "Leon",
-"activity": "Judo",
-"places_left": null,
-"description": "<p><p dir=\"ltr\" align=\"left\">Judo is one of the most popular martial arts which improves physical fitness, balance, flexibility, coordination and posture.? These sessions have a highly-motivating and rewarding non-competitive grading scheme so ideal for beginners and graded students of the sport.</p></p>",
-"buttons": {
-"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
-}
-},
-{
-"id": 4429188,
-"start": "2016-03-24 19:00",
-"finish": "2016-03-24 20:00",
-"session": "Judo<p>&nbsp;</p>",
-"lanes": null,
-"location": "Sports Hall",
-"instructor": "Leon",
-"activity": "Judo",
-"places_left": null,
-"description": "<p><p dir=\"ltr\" align=\"left\">Judo is one of the most popular martial arts which improves physical fitness, balance, flexibility, coordination and posture.? These sessions have a highly-motivating and rewarding non-competitive grading scheme so ideal for beginners and graded students of the sport.</p></p>",
-"buttons": {
-"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
-}
-},
-{
-"id": 4429294,
-"start": "2016-03-24 16:00",
-"finish": "2016-03-24 17:00",
-"session": "Mixed Tennis<p>&nbsp;</p>",
-"lanes": null,
-"location": "Outdoor Tennis Courts",
-"instructor": "Alex",
-"activity": "Mixed Tennis",
-"places_left": null,
-"description": "<p><p>Organised sessions with all the equipment provided and guidance if needed.</p></p>",
-"buttons": {
-"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
-}
-},
-{
-"id": 4429399,
-"start": "2016-03-24 17:00",
-"finish": "2016-03-24 18:00",
-"session": "Mixed Tennis<p>&nbsp;</p>",
-"lanes": null,
-"location": "Outdoor Tennis Courts",
-"instructor": "Alex",
-"activity": "Mixed Tennis",
-"places_left": null,
-"description": "<p><p>Organised sessions with all the equipment provided and guidance if needed.</p></p>",
-"buttons": {
-"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
-}
-},
-{
-"id": 4429505,
-"start": "2016-03-24 18:00",
-"finish": "2016-03-24 19:00",
-"session": "Mixed Tennis - (T)<p>&nbsp;</p>",
-"lanes": null,
-"location": "Tennis Courts",
-"instructor": "Alex",
-"activity": "Mixed Tennis",
-"places_left": null,
-"description": "<p><p>Organised sessions with all the equipment provided and guidance if needed.</p></p>",
-"buttons": {
-"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
-}
-},
-{
-"id": 4429609,
-"start": "2016-03-23 17:00",
-"finish": "2016-03-23 18:00",
-"session": "Badminton<p>&nbsp;</p>",
-"lanes": null,
-"location": "Sports Hall",
-"instructor": "Norbert",
-"activity": "Badminton",
-"places_left": null,
-"description": "<p><p>A coached session for all abilities to learn the skills of badminton</p></p>",
-"buttons": {
-"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
-}
-},
-{
-"id": 4429609,
-"start": "2016-03-23 18:00",
-"finish": "2016-03-23 19:00",
-"session": "Badminton<p>&nbsp;</p>",
-"lanes": null,
-"location": "Sports Hall",
-"instructor": "Norbert",
-"activity": "Badminton",
-"places_left": null,
-"description": "<p><p>A coached session for all abilities to learn the skills of badminton</p></p>",
-"buttons": {
-"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
-}
-},
-{
-"id": 6070898,
-"start": "2016-03-22 16:00",
-"finish": "2016-03-22 16:30",
-"session": "Ballet<p>&nbsp;</p>",
-"lanes": null,
-"location": "Dance Studio",
-"instructor": "Joe ",
-"activity": "Ballet",
-"places_left": null,
-"description": null,
-"buttons": {
-"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
-}
-},
-{
-"id": 6071212,
-"start": "2016-03-22 16:30",
-"finish": "2016-03-22 17:00",
-"session": "Ballet<p>&nbsp;</p>",
-"lanes": null,
-"location": "Dance Studio",
-"instructor": "Joe",
-"activity": "Ballet",
-"places_left": null,
-"description": null,
-"buttons": {
-"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
-}
-},
-{
-"id": 6727149,
-"start": "2016-03-26 10:00",
-"finish": "2016-03-26 11:00",
-"session": "Mixed Tennis<p>&nbsp;</p>",
-"lanes": null,
-"location": "Outdoor Tennis Courts",
-"instructor": "Saul",
-"activity": "Mixed Tennis",
-"places_left": null,
-"description": "<p><p>Organised sessions with all the equipment provided and guidance if needed.</p></p>",
-"buttons": {
-"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
-}
-},
-{
-"id": 6727254,
-"start": "2016-03-26 11:00",
-"finish": "2016-03-26 12:00",
-"session": "Mixed Tennis<p>&nbsp;</p>",
-"lanes": null,
-"location": "Outdoor Tennis Courts",
-"instructor": "Saul",
-"activity": "Mixed Tennis",
-"places_left": null,
-"description": "<p><p>Organised sessions with all the equipment provided and guidance if needed.</p></p>",
-"buttons": {
-"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
-}
-},
-{
-"id": 8397038,
-"start": "2016-03-22 12:00",
-"finish": "2016-03-22 15:00",
-"session": "Toddlers World<p>&nbsp;</p>",
-"lanes": null,
-"location": "Sports Hall",
-"instructor": null,
-"activity": "Toddlers World",
-"places_left": null,
-"description": "<p><p>A fun filled and colourful environment designed to challenge and stimulate children under the age of 5.</p>\r\n<p>Equipment can include soft play, inflatables, ladders, slides and a variety of other elements that will assist develop balance, coordination and social skills.</p>\r\n<p> </p></p>",
-"buttons": {
-"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
-}
-},
-{
-"id": 8431954,
-"start": "2016-03-28 07:30",
-"finish": "2016-03-28 08:15",
+"id": 8431956,
+"cancelled": false,
+"start": "2016-04-11 07:30",
+"finish": "2016-04-11 08:15",
 "session": "Circuits<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
 "instructor": "Charles",
 "activity": "Circuits",
 "places_left": null,
-"description": "<p><p>Intense workout for immense results. We’ll put you through your paces, with high-energy interval training, designed to push you that little bit further and encourage a bit of healthy competition.</p>\r\n<p>Better for: Strength, stamina and endurance.</p>\r\n<p>Approx. 480 calories per hour.</p></p>",
+"description": "<p><p>Intense workout for immense results. We’ll put you through your paces, with high-energy interval training, designed to push you that little bit further and encourage a bit of healthy competition.</p>\r\n<p>Better for: Strength, stamina and endurance.</p>\r\n<p>Approx. 480 calories per hour.</p>\r\n<p><iframe src=\"//www.youtube.com/embed/CPWw7ngQlYc\" width=\"560\" height=\"314\" allowfullscreen=\"allowfullscreen\"></iframe></p></p>",
 "buttons": {
 "book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
 }
 },
 {
-"id": 8432057,
-"start": "2016-03-28 10:00",
-"finish": "2016-03-28 11:00",
-"session": "Total Body Conditioning<p>&nbsp;</p>",
-"lanes": null,
-"location": "Studio",
-"instructor": "Georgina",
-"activity": "Total Body Conditioning",
-"places_left": null,
-"description": "<p><p>Once you start, you won’t ever want to stop. These intense, exciting classes combine cardio and conditioning for a full on, high-energy workout.</p>\r\n<p>Better for: Strength and conditioning.</p>\r\n<p>Approx. 420 calories per hour.</p></p>",
-"buttons": {
-"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
-}
-},
-{
-"id": 8432162,
-"start": "2016-03-28 12:00",
-"finish": "2016-03-28 12:45",
-"session": "Group Cycle<p>&nbsp;</p>",
-"lanes": null,
-"location": "Spin Studio",
-"instructor": "Sarah",
-"activity": "Group Cycle",
-"places_left": null,
-"description": "<p><p>Pedal your way fit. Work at your own pace as you cycle along with the group in one of our themed classes to uplifting music, or focus on achieving your goals in one of our discipline -based classes.</p>\r\n<p>Better for: Lower body strength and conditioning. </p>\r\n<p>Approx. 560 calories per hour.</p></p>",
-"buttons": {
-"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
-}
-},
-{
-"id": 8432267,
-"start": "2016-03-28 16:30",
-"finish": "2016-03-28 17:00",
+"id": 8432269,
+"cancelled": false,
+"start": "2016-04-11 16:30",
+"finish": "2016-04-11 17:00",
 "session": "Cardio - (T)<p>&nbsp;</p>",
 "lanes": null,
 "location": "Gym",
@@ -270,39 +32,26 @@
 }
 },
 {
-"id": 8432677,
-"start": "2016-03-28 18:00",
-"finish": "2016-03-28 19:00",
+"id": 8432679,
+"cancelled": false,
+"start": "2016-04-11 18:00",
+"finish": "2016-04-11 19:00",
 "session": "Circuits<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
 "instructor": "Charles",
 "activity": "Circuits",
 "places_left": null,
-"description": "<p><p>Intense workout for immense results. We’ll put you through your paces, with high-energy interval training, designed to push you that little bit further and encourage a bit of healthy competition.</p>\r\n<p>Better for: Strength, stamina and endurance.</p>\r\n<p>Approx. 480 calories per hour.</p></p>",
+"description": "<p><p>Intense workout for immense results. We’ll put you through your paces, with high-energy interval training, designed to push you that little bit further and encourage a bit of healthy competition.</p>\r\n<p>Better for: Strength, stamina and endurance.</p>\r\n<p>Approx. 480 calories per hour.</p>\r\n<p><iframe src=\"//www.youtube.com/embed/CPWw7ngQlYc\" width=\"560\" height=\"314\" allowfullscreen=\"allowfullscreen\"></iframe></p></p>",
 "buttons": {
 "book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
 }
 },
 {
-"id": 8432781,
-"start": "2016-03-28 19:00",
-"finish": "2016-03-28 19:45",
-"session": "Group Cycle<p>&nbsp;</p>",
-"lanes": null,
-"location": "Spin Studio",
-"instructor": "Charles",
-"activity": "Group Cycle",
-"places_left": null,
-"description": "<p><p>Pedal your way fit. Work at your own pace as you cycle along with the group in one of our themed classes to uplifting music, or focus on achieving your goals in one of our discipline -based classes.</p>\r\n<p>Better for: Lower body strength and conditioning. </p>\r\n<p>Approx. 560 calories per hour.</p></p>",
-"buttons": {
-"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
-}
-},
-{
-"id": 8432885,
-"start": "2016-03-28 19:30",
-"finish": "2016-03-28 20:00",
+"id": 8432887,
+"cancelled": false,
+"start": "2016-04-11 19:30",
+"finish": "2016-04-11 20:00",
 "session": "Strength & Conditioning<p>&nbsp;</p>",
 "lanes": null,
 "location": "X-Cube ",
@@ -315,9 +64,10 @@
 }
 },
 {
-"id": 8432989,
-"start": "2016-03-28 20:00",
-"finish": "2016-03-28 21:00",
+"id": 8432991,
+"cancelled": false,
+"start": "2016-04-11 20:00",
+"finish": "2016-04-11 21:00",
 "session": "Yoga<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
@@ -330,24 +80,26 @@
 }
 },
 {
-"id": 8433092,
-"start": "2016-03-22 09:30",
-"finish": "2016-03-22 10:30",
+"id": 8433095,
+"cancelled": false,
+"start": "2016-04-12 09:30",
+"finish": "2016-04-12 10:30",
 "session": "Dance Aerobics<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
 "instructor": "Sarah",
 "activity": "Dance Aerobics",
 "places_left": null,
-"description": "<p><p>Dance yourself fit! Our range of Dance Aerobics classes combine exercise and choreography with infectious music to keep you motivated every step of the way. Choose from one of our themed or discipline-based classes.</p>\r\n<p>Better for: Cardio fitness.</p>\r\n<p>Approx. 550 calories per hour.</p></p>",
+"description": "<p><p>Dance yourself fit! Our range of Dance Aerobics classes combine exercise and choreography with infectious music to keep you motivated every step of the way. Choose from one of our themed or discipline-based classes.</p>\r\n<p>Better for: Cardio fitness.</p>\r\n<p>Approx. 550 calories per hour.</p>\r\n<p><iframe src=\"//www.youtube.com/embed/8LLELO4XXKk\" width=\"560\" height=\"314\" allowfullscreen=\"allowfullscreen\"></iframe></p></p>",
 "buttons": {
 "book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
 }
 },
 {
-"id": 8433197,
-"start": "2016-03-22 10:30",
-"finish": "2016-03-22 11:30",
+"id": 8433199,
+"cancelled": false,
+"start": "2016-04-12 10:30",
+"finish": "2016-04-12 11:30",
 "session": "Total Body Conditioning<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
@@ -360,24 +112,26 @@
 }
 },
 {
-"id": 8433300,
-"start": "2016-03-22 14:00",
-"finish": "2016-03-22 14:45",
+"id": 8433303,
+"cancelled": false,
+"start": "2016-04-12 14:00",
+"finish": "2016-04-12 14:45",
 "session": "Circuits<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
 "instructor": "Billy",
 "activity": "Circuits",
 "places_left": null,
-"description": "<p><p>Intense workout for immense results. We’ll put you through your paces, with high-energy interval training, designed to push you that little bit further and encourage a bit of healthy competition.</p>\r\n<p>Better for: Strength, stamina and endurance.</p>\r\n<p>Approx. 480 calories per hour.</p></p>",
+"description": "<p><p>Intense workout for immense results. We’ll put you through your paces, with high-energy interval training, designed to push you that little bit further and encourage a bit of healthy competition.</p>\r\n<p>Better for: Strength, stamina and endurance.</p>\r\n<p>Approx. 480 calories per hour.</p>\r\n<p><iframe src=\"//www.youtube.com/embed/CPWw7ngQlYc\" width=\"560\" height=\"314\" allowfullscreen=\"allowfullscreen\"></iframe></p></p>",
 "buttons": {
 "book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
 }
 },
 {
-"id": 8433404,
-"start": "2016-03-22 17:30",
-"finish": "2016-03-22 18:00",
+"id": 8433407,
+"cancelled": false,
+"start": "2016-04-12 17:30",
+"finish": "2016-04-12 18:00",
 "session": "Strength & Conditioning<p>&nbsp;</p>",
 "lanes": null,
 "location": "X-Cube ",
@@ -390,39 +144,26 @@
 }
 },
 {
-"id": 8433508,
-"start": "2016-03-22 18:00",
-"finish": "2016-03-22 19:00",
+"id": 8433511,
+"cancelled": false,
+"start": "2016-04-12 18:00",
+"finish": "2016-04-12 19:00",
 "session": "Step<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
 "instructor": "Alida",
 "activity": "Step",
 "places_left": null,
-"description": "<p><p>Step it up and get in great shape. A motivational class using a platform and fast music for a high intensity workout. It’s so much fun, you’ll forget you’re working out!</p>\r\n<p>Better for: Cardio fitness and conditioning of the whole body.</p>\r\n<p>Approx. 650 calories per hour.</p></p>",
+"description": "<p><p>Step it up and get in great shape. A motivational class using a platform and fast music for a high intensity workout. It’s so much fun, you’ll forget you’re working out!</p>\r\n<p>Better for: Cardio fitness and conditioning of the whole body.</p>\r\n<p>Approx. 650 calories per hour.</p>\r\n<p><iframe src=\"//www.youtube.com/embed/l8KsMBknxQk\" width=\"560\" height=\"314\" allowfullscreen=\"allowfullscreen\"></iframe></p></p>",
 "buttons": {
 "book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
 }
 },
 {
-"id": 8433613,
-"start": "2016-03-22 19:00",
-"finish": "2016-03-22 19:45",
-"session": "Group Cycle<p>&nbsp;</p>",
-"lanes": null,
-"location": "Spin Studio",
-"instructor": "Alida",
-"activity": "Group Cycle",
-"places_left": null,
-"description": "<p><p>Pedal your way fit. Work at your own pace as you cycle along with the group in one of our themed classes to uplifting music, or focus on achieving your goals in one of our discipline -based classes.</p>\r\n<p>Better for: Lower body strength and conditioning. </p>\r\n<p>Approx. 560 calories per hour.</p></p>",
-"buttons": {
-"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
-}
-},
-{
-"id": 8433717,
-"start": "2016-03-23 07:30",
-"finish": "2016-03-23 08:00",
+"id": 8433720,
+"cancelled": false,
+"start": "2016-04-13 07:30",
+"finish": "2016-04-13 08:00",
 "session": "Strength & Conditioning<p>&nbsp;</p>",
 "lanes": null,
 "location": "X-Cube ",
@@ -435,39 +176,10 @@
 }
 },
 {
-"id": 8433821,
-"start": "2016-03-23 09:15",
-"finish": "2016-03-23 10:00",
-"session": "Group Cycle<p>&nbsp;</p>",
-"lanes": null,
-"location": "Spin Studio",
-"instructor": "Richard",
-"activity": "Group Cycle",
-"places_left": null,
-"description": "<p><p>Pedal your way fit. Work at your own pace as you cycle along with the group in one of our themed classes to uplifting music, or focus on achieving your goals in one of our discipline -based classes.</p>\r\n<p>Better for: Lower body strength and conditioning. </p>\r\n<p>Approx. 560 calories per hour.</p></p>",
-"buttons": {
-"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
-}
-},
-{
-"id": 8433925,
-"start": "2016-03-23 11:00",
-"finish": "2016-03-23 12:00",
-"session": "Group Cycle<p>&nbsp;</p>",
-"lanes": null,
-"location": "Studio",
-"instructor": "Marcus",
-"activity": "Group Cycle",
-"places_left": null,
-"description": "<p><p>Pedal your way fit. Work at your own pace as you cycle along with the group in one of our themed classes to uplifting music, or focus on achieving your goals in one of our discipline -based classes.</p>\r\n<p>Better for: Lower body strength and conditioning. </p>\r\n<p>Approx. 560 calories per hour.</p></p>",
-"buttons": {
-"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
-}
-},
-{
-"id": 8434348,
-"start": "2016-03-23 17:30",
-"finish": "2016-03-23 18:00",
+"id": 8434351,
+"cancelled": false,
+"start": "2016-04-13 17:30",
+"finish": "2016-04-13 18:00",
 "session": "Stamina & Endurance<p>&nbsp;</p>",
 "lanes": null,
 "location": "Gym",
@@ -480,39 +192,10 @@
 }
 },
 {
-"id": 8434557,
-"start": "2016-03-23 14:00",
-"finish": "2016-03-23 15:00",
-"session": "Cardio - (T)<p>&nbsp;</p>",
-"lanes": null,
-"location": "Gym",
-"instructor": "Zoltan",
-"activity": "Cardio",
-"places_left": null,
-"description": "<p><p>Burn calories and feel great. A series of cardio exercises will get you burning serious calories, and feeling fitter and more energised. Better for: Cardio fitness.</p></p>",
-"buttons": {
-"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
-}
-},
-{
-"id": 8434766,
-"start": "2016-03-23 18:00",
-"finish": "2016-03-23 18:45",
-"session": "Group Cycle<p>&nbsp;</p>",
-"lanes": null,
-"location": "Spin Studio",
-"instructor": "Alida",
-"activity": "Group Cycle",
-"places_left": null,
-"description": "<p><p>Pedal your way fit. Work at your own pace as you cycle along with the group in one of our themed classes to uplifting music, or focus on achieving your goals in one of our discipline -based classes.</p>\r\n<p>Better for: Lower body strength and conditioning. </p>\r\n<p>Approx. 560 calories per hour.</p></p>",
-"buttons": {
-"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
-}
-},
-{
-"id": 8434869,
-"start": "2016-03-23 19:00",
-"finish": "2016-03-23 20:00",
+"id": 8434872,
+"cancelled": false,
+"start": "2016-04-13 19:00",
+"finish": "2016-04-13 20:00",
 "session": "Core Stability<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
@@ -525,24 +208,26 @@
 }
 },
 {
-"id": 8435181,
-"start": "2016-03-24 09:30",
-"finish": "2016-03-24 10:30",
+"id": 8435183,
+"cancelled": false,
+"start": "2016-04-07 09:30",
+"finish": "2016-04-07 10:30",
 "session": "Extreme Interval Fitness<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
 "instructor": "Georgina",
 "activity": "Extreme Interval Fitness",
 "places_left": null,
-"description": "<p><p>Better results, faster. Push yourself to the limit with 30 minutes of quick, intense bursts of exercise, followed by short recovery periods that will keep your heart rate up and help you reach your goals quicker.</p>\r\n<p>Better for: A full body workout.</p>\r\n<p>Approx. 570 calories per hour.</p></p>",
+"description": "<p><p>Better results, faster. Push yourself to the limit with 30 minutes of quick, intense bursts of exercise, followed by short recovery periods that will keep your heart rate up and help you reach your goals quicker.</p>\r\n<p>Better for: A full body workout.</p>\r\n<p>Approx. 570 calories per hour.</p>\r\n<p><iframe src=\"//www.youtube.com/embed/dpsyOKOjxp8\" width=\"560\" height=\"314\" allowfullscreen=\"allowfullscreen\"></iframe></p></p>",
 "buttons": {
 "book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
 }
 },
 {
-"id": 8435286,
-"start": "2016-03-24 10:00",
-"finish": "2016-03-24 10:30",
+"id": 8435288,
+"cancelled": false,
+"start": "2016-04-07 10:00",
+"finish": "2016-04-07 10:30",
 "session": "Cardio<p>&nbsp;</p>",
 "lanes": null,
 "location": "Gym",
@@ -555,54 +240,42 @@
 }
 },
 {
-"id": 8435494,
-"start": "2016-03-24 10:30",
-"finish": "2016-03-24 11:30",
+"id": 8435496,
+"cancelled": false,
+"start": "2016-04-07 10:30",
+"finish": "2016-04-07 11:30",
 "session": "Dance Aerobics<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
 "instructor": "Anna",
 "activity": "Dance Aerobics",
 "places_left": null,
-"description": "<p><p>Dance yourself fit! Our range of Dance Aerobics classes combine exercise and choreography with infectious music to keep you motivated every step of the way. Choose from one of our themed or discipline-based classes.</p>\r\n<p>Better for: Cardio fitness.</p>\r\n<p>Approx. 550 calories per hour.</p></p>",
+"description": "<p><p>Dance yourself fit! Our range of Dance Aerobics classes combine exercise and choreography with infectious music to keep you motivated every step of the way. Choose from one of our themed or discipline-based classes.</p>\r\n<p>Better for: Cardio fitness.</p>\r\n<p>Approx. 550 calories per hour.</p>\r\n<p><iframe src=\"//www.youtube.com/embed/8LLELO4XXKk\" width=\"560\" height=\"314\" allowfullscreen=\"allowfullscreen\"></iframe></p></p>",
 "buttons": {
 "book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
 }
 },
 {
-"id": 8435700,
-"start": "2016-03-24 17:30",
-"finish": "2016-03-24 18:15",
-"session": "Group Cycle<p>&nbsp;</p>",
-"lanes": null,
-"location": "Spin Studio",
-"instructor": "Zoltan",
-"activity": "Group Cycle",
-"places_left": null,
-"description": "<p><p>Pedal your way fit. Work at your own pace as you cycle along with the group in one of our themed classes to uplifting music, or focus on achieving your goals in one of our discipline -based classes.</p>\r\n<p>Better for: Lower body strength and conditioning. </p>\r\n<p>Approx. 560 calories per hour.</p></p>",
-"buttons": {
-"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
-}
-},
-{
-"id": 8435907,
-"start": "2016-03-24 18:15",
-"finish": "2016-03-24 19:00",
+"id": 8435909,
+"cancelled": false,
+"start": "2016-04-07 18:15",
+"finish": "2016-04-07 19:00",
 "session": "Step<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
 "instructor": "Alida",
 "activity": "Step",
 "places_left": null,
-"description": "<p><p>Step it up and get in great shape. A motivational class using a platform and fast music for a high intensity workout. It’s so much fun, you’ll forget you’re working out!</p>\r\n<p>Better for: Cardio fitness and conditioning of the whole body.</p>\r\n<p>Approx. 650 calories per hour.</p></p>",
+"description": "<p><p>Step it up and get in great shape. A motivational class using a platform and fast music for a high intensity workout. It’s so much fun, you’ll forget you’re working out!</p>\r\n<p>Better for: Cardio fitness and conditioning of the whole body.</p>\r\n<p>Approx. 650 calories per hour.</p>\r\n<p><iframe src=\"//www.youtube.com/embed/l8KsMBknxQk\" width=\"560\" height=\"314\" allowfullscreen=\"allowfullscreen\"></iframe></p></p>",
 "buttons": {
 "book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
 }
 },
 {
-"id": 8436011,
-"start": "2016-03-24 19:00",
-"finish": "2016-03-24 20:00",
+"id": 8436013,
+"cancelled": false,
+"start": "2016-04-07 19:00",
+"finish": "2016-04-07 20:00",
 "session": "Total Body Conditioning<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
@@ -615,39 +288,26 @@
 }
 },
 {
-"id": 8436115,
-"start": "2016-03-24 20:00",
-"finish": "2016-03-24 21:00",
+"id": 8436117,
+"cancelled": false,
+"start": "2016-04-07 20:00",
+"finish": "2016-04-07 21:00",
 "session": "Pilates<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
 "instructor": "Liz",
 "activity": "Pilates",
 "places_left": null,
-"description": "<p><p>Centre yourself. Our Pilates classes come in all shapes and sizes, but they all focus on concentration and muscle control, for a highly effective workout.</p>\r\n<p>Better for: Lengthening and strengthening your core.</p>\r\n<p>Approx. 165 calories per hour.</p></p>",
+"description": "<p><p>Centre yourself. Our Pilates classes come in all shapes and sizes, but they all focus on concentration and muscle control, for a highly effective workout.</p>\r\n<p>Better for: Lengthening and strengthening your core.</p>\r\n<p>Approx. 165 calories per hour.</p>\r\n<p><iframe src=\"//www.youtube.com/embed/eg5fhw4VNPw\" width=\"560\" height=\"314\" allowfullscreen=\"allowfullscreen\"></iframe></p></p>",
 "buttons": {
 "book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
 }
 },
 {
-"id": 8436427,
-"start": "2016-03-25 07:30",
-"finish": "2016-03-25 08:15",
-"session": "Group Cycle<p>&nbsp;</p>",
-"lanes": null,
-"location": "Spin Studio",
-"instructor": "Charles",
-"activity": "Group Cycle",
-"places_left": null,
-"description": "<p><p>Pedal your way fit. Work at your own pace as you cycle along with the group in one of our themed classes to uplifting music, or focus on achieving your goals in one of our discipline -based classes.</p>\r\n<p>Better for: Lower body strength and conditioning. </p>\r\n<p>Approx. 560 calories per hour.</p></p>",
-"buttons": {
-"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
-}
-},
-{
-"id": 8436531,
-"start": "2016-03-25 10:00",
-"finish": "2016-03-25 11:00",
+"id": 8436533,
+"cancelled": false,
+"start": "2016-04-08 10:00",
+"finish": "2016-04-08 11:00",
 "session": "Total Body Conditioning<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
@@ -660,9 +320,10 @@
 }
 },
 {
-"id": 8436635,
-"start": "2016-03-25 13:00",
-"finish": "2016-03-25 14:00",
+"id": 8436638,
+"cancelled": false,
+"start": "2016-04-08 13:00",
+"finish": "2016-04-08 14:00",
 "session": "Yoga<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
@@ -675,9 +336,10 @@
 }
 },
 {
-"id": 8436740,
-"start": "2016-03-25 17:30",
-"finish": "2016-03-25 18:00",
+"id": 8436742,
+"cancelled": false,
+"start": "2016-04-08 17:30",
+"finish": "2016-04-08 18:00",
 "session": "Strength & Conditioning<p>&nbsp;</p>",
 "lanes": null,
 "location": "X-Cube ",
@@ -690,9 +352,10 @@
 }
 },
 {
-"id": 8436844,
-"start": "2016-03-26 09:30",
-"finish": "2016-03-26 10:00",
+"id": 8436847,
+"cancelled": false,
+"start": "2016-04-09 09:30",
+"finish": "2016-04-09 10:00",
 "session": "Strength & Conditioning<p>&nbsp;</p>",
 "lanes": null,
 "location": "X-Cube ",
@@ -705,39 +368,26 @@
 }
 },
 {
-"id": 8436949,
-"start": "2016-03-26 10:00",
-"finish": "2016-03-26 11:00",
+"id": 8436952,
+"cancelled": false,
+"start": "2016-04-09 10:00",
+"finish": "2016-04-09 11:00",
 "session": "Circuits<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
 "instructor": "Sarah",
 "activity": "Circuits",
 "places_left": null,
-"description": "<p><p>Intense workout for immense results. We’ll put you through your paces, with high-energy interval training, designed to push you that little bit further and encourage a bit of healthy competition.</p>\r\n<p>Better for: Strength, stamina and endurance.</p>\r\n<p>Approx. 480 calories per hour.</p></p>",
+"description": "<p><p>Intense workout for immense results. We’ll put you through your paces, with high-energy interval training, designed to push you that little bit further and encourage a bit of healthy competition.</p>\r\n<p>Better for: Strength, stamina and endurance.</p>\r\n<p>Approx. 480 calories per hour.</p>\r\n<p><iframe src=\"//www.youtube.com/embed/CPWw7ngQlYc\" width=\"560\" height=\"314\" allowfullscreen=\"allowfullscreen\"></iframe></p></p>",
 "buttons": {
 "book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
 }
 },
 {
-"id": 8437055,
-"start": "2016-03-26 11:00",
-"finish": "2016-03-26 11:45",
-"session": "Group Cycle<p>&nbsp;</p>",
-"lanes": null,
-"location": "Spin Studio",
-"instructor": "Sarah",
-"activity": "Group Cycle",
-"places_left": null,
-"description": "<p><p>Pedal your way fit. Work at your own pace as you cycle along with the group in one of our themed classes to uplifting music, or focus on achieving your goals in one of our discipline -based classes.</p>\r\n<p>Better for: Lower body strength and conditioning. </p>\r\n<p>Approx. 560 calories per hour.</p></p>",
-"buttons": {
-"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
-}
-},
-{
-"id": 8437160,
-"start": "2016-03-26 12:30",
-"finish": "2016-03-26 13:00",
+"id": 8437162,
+"cancelled": false,
+"start": "2016-04-09 12:30",
+"finish": "2016-04-09 13:00",
 "session": "Strength & Conditioning<p>&nbsp;</p>",
 "lanes": null,
 "location": "X-Cube ",
@@ -750,9 +400,10 @@
 }
 },
 {
-"id": 8437265,
-"start": "2016-03-27 10:00",
-"finish": "2016-03-27 10:30",
+"id": 8437267,
+"cancelled": false,
+"start": "2016-04-10 10:00",
+"finish": "2016-04-10 10:30",
 "session": "Cardio<p>&nbsp;</p>",
 "lanes": null,
 "location": "Gym",
@@ -765,9 +416,10 @@
 }
 },
 {
-"id": 8437370,
-"start": "2016-03-27 10:30",
-"finish": "2016-03-27 11:30",
+"id": 8437372,
+"cancelled": false,
+"start": "2016-04-10 10:30",
+"finish": "2016-04-10 11:30",
 "session": "Total Body Conditioning<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
@@ -780,24 +432,10 @@
 }
 },
 {
-"id": 8437580,
-"start": "2016-03-27 11:30",
-"finish": "2016-03-27 12:15",
-"session": "Group Cycle<p>&nbsp;</p>",
-"lanes": null,
-"location": "Spin Studio",
-"instructor": "Charles",
-"activity": "Group Cycle",
-"places_left": null,
-"description": "<p><p>Pedal your way fit. Work at your own pace as you cycle along with the group in one of our themed classes to uplifting music, or focus on achieving your goals in one of our discipline -based classes.</p>\r\n<p>Better for: Lower body strength and conditioning. </p>\r\n<p>Approx. 560 calories per hour.</p></p>",
-"buttons": {
-"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
-}
-},
-{
-"id": 8437685,
-"start": "2016-03-27 12:30",
-"finish": "2016-03-27 13:00",
+"id": 8437687,
+"cancelled": false,
+"start": "2016-04-10 12:30",
+"finish": "2016-04-10 13:00",
 "session": "Strength & Conditioning<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
@@ -810,9 +448,10 @@
 }
 },
 {
-"id": 8448025,
-"start": "2016-03-23 15:30",
-"finish": "2016-03-23 17:30",
+"id": 8448033,
+"cancelled": false,
+"start": "2016-04-08 15:30",
+"finish": "2016-04-08 17:30",
 "session": "Junior Gym - (T)<p>&nbsp;</p>",
 "lanes": null,
 "location": "Gym",
@@ -825,9 +464,10 @@
 }
 },
 {
-"id": 8448027,
-"start": "2016-03-25 15:30",
-"finish": "2016-03-25 17:30",
+"id": 8448034,
+"cancelled": false,
+"start": "2016-04-11 15:30",
+"finish": "2016-04-11 17:30",
 "session": "Junior Gym - (T)<p>&nbsp;</p>",
 "lanes": null,
 "location": "Gym",
@@ -840,9 +480,10 @@
 }
 },
 {
-"id": 8448028,
-"start": "2016-03-28 15:30",
-"finish": "2016-03-28 17:30",
+"id": 8448035,
+"cancelled": false,
+"start": "2016-04-13 15:30",
+"finish": "2016-04-13 17:30",
 "session": "Junior Gym - (T)<p>&nbsp;</p>",
 "lanes": null,
 "location": "Gym",
@@ -855,9 +496,10 @@
 }
 },
 {
-"id": 8448339,
-"start": "2016-03-26 10:00",
-"finish": "2016-03-26 12:00",
+"id": 8448341,
+"cancelled": false,
+"start": "2016-04-09 10:00",
+"finish": "2016-04-09 12:00",
 "session": "Junior Gym - (T)<p>&nbsp;</p>",
 "lanes": null,
 "location": "Gym",
@@ -865,6 +507,838 @@
 "activity": "Junior Gym",
 "places_left": null,
 "description": null,
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8601989,
+"cancelled": false,
+"start": "2016-04-07 16:00",
+"finish": "2016-04-07 17:00",
+"session": "Mixed Tennis<p>&nbsp;</p>",
+"lanes": null,
+"location": "Tennis Courts",
+"instructor": "Saul",
+"activity": "Mixed Tennis",
+"places_left": null,
+"description": "<p><p>Organised sessions with all the equipment provided and guidance if needed.</p></p>",
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8602094,
+"cancelled": false,
+"start": "2016-04-07 17:00",
+"finish": "2016-04-07 18:00",
+"session": "Mixed Tennis<p>&nbsp;</p>",
+"lanes": null,
+"location": "Tennis Courts",
+"instructor": "Saul",
+"activity": "Mixed Tennis",
+"places_left": null,
+"description": "<p><p>Organised sessions with all the equipment provided and guidance if needed.</p></p>",
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8602198,
+"cancelled": false,
+"start": "2016-04-07 18:00",
+"finish": "2016-04-07 19:00",
+"session": "Mixed Tennis<p>&nbsp;</p>",
+"lanes": null,
+"location": "Tennis Courts",
+"instructor": "Saul",
+"activity": "Mixed Tennis",
+"places_left": null,
+"description": "<p><p>Organised sessions with all the equipment provided and guidance if needed.</p></p>",
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8602304,
+"cancelled": false,
+"start": "2016-04-08 15:45",
+"finish": "2016-04-08 16:45",
+"session": "Gymnastics<p>&nbsp;</p>",
+"lanes": null,
+"location": "Sports Hall",
+"instructor": "Jenna, Nina",
+"activity": "Gymnastics",
+"places_left": null,
+"description": null,
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8602408,
+"cancelled": false,
+"start": "2016-04-08 16:45",
+"finish": "2016-04-08 17:45",
+"session": "Gymnastics<p>&nbsp;</p>",
+"lanes": null,
+"location": "Sports Hall",
+"instructor": "Jenna, Nina",
+"activity": "Gymnastics",
+"places_left": null,
+"description": null,
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8602619,
+"cancelled": false,
+"start": "2016-04-12 16:00",
+"finish": "2016-04-12 16:30",
+"session": "Ballet<p>&nbsp;</p>",
+"lanes": null,
+"location": "Dance Studio",
+"instructor": "Joe",
+"activity": "Ballet",
+"places_left": null,
+"description": null,
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8602724,
+"cancelled": false,
+"start": "2016-04-12 16:30",
+"finish": "2016-04-12 17:00",
+"session": "Ballet<p>&nbsp;</p>",
+"lanes": null,
+"location": "Dance Studio",
+"instructor": "Joe",
+"activity": "Ballet",
+"places_left": null,
+"description": null,
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8602829,
+"cancelled": false,
+"start": "2016-04-12 17:00",
+"finish": "2016-04-12 17:45",
+"session": "Dance<p>&nbsp;</p>",
+"lanes": null,
+"location": "Dance Studio",
+"instructor": "Joe",
+"activity": "Dance",
+"places_left": null,
+"description": null,
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8603144,
+"cancelled": false,
+"start": "2016-04-13 15:45",
+"finish": "2016-04-13 16:45",
+"session": "Football<p>&nbsp;</p>",
+"lanes": null,
+"location": "Sports Hall",
+"instructor": "Abdul",
+"activity": "Football",
+"places_left": null,
+"description": null,
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8603354,
+"cancelled": false,
+"start": "2016-04-13 16:45",
+"finish": "2016-04-13 17:45",
+"session": "Football<p>&nbsp;</p>",
+"lanes": null,
+"location": "Sports Hall",
+"instructor": "Abdul",
+"activity": "Football",
+"places_left": null,
+"description": null,
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8603565,
+"cancelled": false,
+"start": "2016-04-13 17:00",
+"finish": "2016-04-13 18:00",
+"session": "Badminton<p>&nbsp;</p>",
+"lanes": null,
+"location": "Sports Hall",
+"instructor": "Norbert",
+"activity": "Badminton",
+"places_left": null,
+"description": "<p><p>A coached session for all abilities to learn the skills of badminton</p></p>",
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8603565,
+"cancelled": false,
+"start": "2016-04-13 18:00",
+"finish": "2016-04-13 19:00",
+"session": "Badminton<p>&nbsp;</p>",
+"lanes": null,
+"location": "Sports Hall",
+"instructor": "Norbert",
+"activity": "Badminton",
+"places_left": null,
+"description": "<p><p>A coached session for all abilities to learn the skills of badminton</p></p>",
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8603774,
+"cancelled": false,
+"start": "2016-04-07 18:00",
+"finish": "2016-04-07 19:00",
+"session": "Judo<p>&nbsp;</p>",
+"lanes": null,
+"location": "Sports Hall",
+"instructor": "Leon",
+"activity": "Judo",
+"places_left": null,
+"description": "<p><p dir=\"ltr\" align=\"left\">Judo is one of the most popular martial arts which improves physical fitness, balance, flexibility, coordination and posture.? These sessions have a highly-motivating and rewarding non-competitive grading scheme so ideal for beginners and graded students of the sport.</p></p>",
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8603880,
+"cancelled": false,
+"start": "2016-04-07 19:00",
+"finish": "2016-04-07 20:00",
+"session": "Judo<p>&nbsp;</p>",
+"lanes": null,
+"location": "Sports Hall",
+"instructor": "Leon",
+"activity": "Judo",
+"places_left": null,
+"description": "<p><p dir=\"ltr\" align=\"left\">Judo is one of the most popular martial arts which improves physical fitness, balance, flexibility, coordination and posture.? These sessions have a highly-motivating and rewarding non-competitive grading scheme so ideal for beginners and graded students of the sport.</p></p>",
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8606711,
+"cancelled": false,
+"start": "2016-04-08 13:00",
+"finish": "2016-04-08 15:00",
+"session": "Toddlers World<p>&nbsp;</p>",
+"lanes": null,
+"location": "Sports Hall",
+"instructor": null,
+"activity": "Toddlers World",
+"places_left": null,
+"description": "<p><p>A fun filled and colourful environment designed to challenge and stimulate children under the age of 5.</p>\r\n<p>Equipment can include soft play, inflatables, ladders, slides and a variety of other elements that will assist develop balance, coordination and social skills.</p>\r\n<p> </p></p>",
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8606712,
+"cancelled": false,
+"start": "2016-04-12 13:00",
+"finish": "2016-04-12 15:00",
+"session": "Toddlers World<p>&nbsp;</p>",
+"lanes": null,
+"location": "Sports Hall",
+"instructor": null,
+"activity": "Toddlers World",
+"places_left": null,
+"description": "<p><p>A fun filled and colourful environment designed to challenge and stimulate children under the age of 5.</p>\r\n<p>Equipment can include soft play, inflatables, ladders, slides and a variety of other elements that will assist develop balance, coordination and social skills.</p>\r\n<p> </p></p>",
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8606714,
+"cancelled": false,
+"start": "2016-04-13 13:00",
+"finish": "2016-04-13 15:00",
+"session": "Toddlers World<p>&nbsp;</p>",
+"lanes": null,
+"location": "Sports Hall",
+"instructor": null,
+"activity": "Toddlers World",
+"places_left": null,
+"description": "<p><p>A fun filled and colourful environment designed to challenge and stimulate children under the age of 5.</p>\r\n<p>Equipment can include soft play, inflatables, ladders, slides and a variety of other elements that will assist develop balance, coordination and social skills.</p>\r\n<p> </p></p>",
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8607158,
+"cancelled": false,
+"start": "2016-04-08 12:00",
+"finish": "2016-04-08 13:00",
+"session": "Zorball for £1.00<p>&nbsp;</p>",
+"lanes": null,
+"location": "Sports Hall",
+"instructor": null,
+"activity": "Zorball for £1.00",
+"places_left": null,
+"description": null,
+"buttons": {
+"book": "#"
+}
+},
+{
+"id": 8607159,
+"cancelled": false,
+"start": "2016-04-11 12:00",
+"finish": "2016-04-11 13:00",
+"session": "Zorball for £1.00<p>&nbsp;</p>",
+"lanes": null,
+"location": "Sports Hall",
+"instructor": null,
+"activity": "Zorball for £1.00",
+"places_left": null,
+"description": null,
+"buttons": {
+"book": "#"
+}
+},
+{
+"id": 8607160,
+"cancelled": false,
+"start": "2016-04-13 12:00",
+"finish": "2016-04-13 13:00",
+"session": "Zorball for £1.00<p>&nbsp;</p>",
+"lanes": null,
+"location": "Sports Hall",
+"instructor": null,
+"activity": "Zorball for £1.00",
+"places_left": null,
+"description": null,
+"buttons": {
+"book": "#"
+}
+},
+{
+"id": 8607164,
+"cancelled": false,
+"start": "2016-04-08 13:00",
+"finish": "2016-04-08 14:00",
+"session": "Zorball for £1.00<p>&nbsp;</p>",
+"lanes": null,
+"location": "Sports Hall",
+"instructor": null,
+"activity": "Zorball for £1.00",
+"places_left": null,
+"description": null,
+"buttons": {
+"book": "#"
+}
+},
+{
+"id": 8607165,
+"cancelled": false,
+"start": "2016-04-11 13:00",
+"finish": "2016-04-11 14:00",
+"session": "Zorball for £1.00<p>&nbsp;</p>",
+"lanes": null,
+"location": "Sports Hall",
+"instructor": null,
+"activity": "Zorball for £1.00",
+"places_left": null,
+"description": null,
+"buttons": {
+"book": "#"
+}
+},
+{
+"id": 8607166,
+"cancelled": false,
+"start": "2016-04-13 13:00",
+"finish": "2016-04-13 14:00",
+"session": "Zorball for £1.00<p>&nbsp;</p>",
+"lanes": null,
+"location": "Sports Hall",
+"instructor": null,
+"activity": "Zorball for £1.00",
+"places_left": null,
+"description": null,
+"buttons": {
+"book": "#"
+}
+},
+{
+"id": 8607170,
+"cancelled": false,
+"start": "2016-04-08 10:00",
+"finish": "2016-04-08 11:00",
+"session": "Football for £1<p>&nbsp;</p>",
+"lanes": null,
+"location": "Astro Pitch",
+"instructor": null,
+"activity": "Football for £1",
+"places_left": null,
+"description": null,
+"buttons": {
+"book": "#"
+}
+},
+{
+"id": 8607171,
+"cancelled": false,
+"start": "2016-04-11 10:00",
+"finish": "2016-04-11 11:00",
+"session": "Football for £1<p>&nbsp;</p>",
+"lanes": null,
+"location": "Astro Pitch",
+"instructor": null,
+"activity": "Football for £1",
+"places_left": null,
+"description": null,
+"buttons": {
+"book": "#"
+}
+},
+{
+"id": 8607172,
+"cancelled": false,
+"start": "2016-04-13 10:00",
+"finish": "2016-04-13 11:00",
+"session": "Football for £1<p>&nbsp;</p>",
+"lanes": null,
+"location": "Astro Pitch",
+"instructor": null,
+"activity": "Football for £1",
+"places_left": null,
+"description": null,
+"buttons": {
+"book": "#"
+}
+},
+{
+"id": 8607176,
+"cancelled": false,
+"start": "2016-04-08 11:00",
+"finish": "2016-04-08 12:00",
+"session": "Football for £1<p>&nbsp;</p>",
+"lanes": null,
+"location": "Astro Pitch",
+"instructor": null,
+"activity": "Football for £1",
+"places_left": null,
+"description": null,
+"buttons": {
+"book": "#"
+}
+},
+{
+"id": 8607177,
+"cancelled": false,
+"start": "2016-04-11 11:00",
+"finish": "2016-04-11 12:00",
+"session": "Football for £1<p>&nbsp;</p>",
+"lanes": null,
+"location": "Astro Pitch",
+"instructor": null,
+"activity": "Football for £1",
+"places_left": null,
+"description": null,
+"buttons": {
+"book": "#"
+}
+},
+{
+"id": 8607178,
+"cancelled": false,
+"start": "2016-04-13 11:00",
+"finish": "2016-04-13 12:00",
+"session": "Football for £1<p>&nbsp;</p>",
+"lanes": null,
+"location": "Astro Pitch",
+"instructor": null,
+"activity": "Football for £1",
+"places_left": null,
+"description": null,
+"buttons": {
+"book": "#"
+}
+},
+{
+"id": 8607391,
+"cancelled": false,
+"start": "2016-04-08 10:00",
+"finish": "2016-04-08 12:00",
+"session": "Toddlers World<p>&nbsp;</p>",
+"lanes": null,
+"location": "Sports Hall",
+"instructor": "Holiday Club ",
+"activity": "Toddlers World",
+"places_left": null,
+"description": "<p><p>A fun filled and colourful environment designed to challenge and stimulate children under the age of 5.</p>\r\n<p>Equipment can include soft play, inflatables, ladders, slides and a variety of other elements that will assist develop balance, coordination and social skills.</p>\r\n<p> </p></p>",
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8607391,
+"cancelled": false,
+"start": "2016-04-08 12:00",
+"finish": "2016-04-08 13:00",
+"session": "Toddlers World<p>&nbsp;</p>",
+"lanes": null,
+"location": "Sports Hall",
+"instructor": "Holiday Club ",
+"activity": "Toddlers World",
+"places_left": null,
+"description": "<p><p>A fun filled and colourful environment designed to challenge and stimulate children under the age of 5.</p>\r\n<p>Equipment can include soft play, inflatables, ladders, slides and a variety of other elements that will assist develop balance, coordination and social skills.</p>\r\n<p> </p></p>",
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8607392,
+"cancelled": false,
+"start": "2016-04-11 10:00",
+"finish": "2016-04-11 12:00",
+"session": "Toddlers World<p>&nbsp;</p>",
+"lanes": null,
+"location": "Sports Hall",
+"instructor": "Holiday Club ",
+"activity": "Toddlers World",
+"places_left": null,
+"description": "<p><p>A fun filled and colourful environment designed to challenge and stimulate children under the age of 5.</p>\r\n<p>Equipment can include soft play, inflatables, ladders, slides and a variety of other elements that will assist develop balance, coordination and social skills.</p>\r\n<p> </p></p>",
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8607392,
+"cancelled": false,
+"start": "2016-04-11 12:00",
+"finish": "2016-04-11 13:00",
+"session": "Toddlers World<p>&nbsp;</p>",
+"lanes": null,
+"location": "Sports Hall",
+"instructor": "Holiday Club ",
+"activity": "Toddlers World",
+"places_left": null,
+"description": "<p><p>A fun filled and colourful environment designed to challenge and stimulate children under the age of 5.</p>\r\n<p>Equipment can include soft play, inflatables, ladders, slides and a variety of other elements that will assist develop balance, coordination and social skills.</p>\r\n<p> </p></p>",
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8607393,
+"cancelled": false,
+"start": "2016-04-13 10:00",
+"finish": "2016-04-13 12:00",
+"session": "Toddlers World<p>&nbsp;</p>",
+"lanes": null,
+"location": "Sports Hall",
+"instructor": "Holiday Club ",
+"activity": "Toddlers World",
+"places_left": null,
+"description": "<p><p>A fun filled and colourful environment designed to challenge and stimulate children under the age of 5.</p>\r\n<p>Equipment can include soft play, inflatables, ladders, slides and a variety of other elements that will assist develop balance, coordination and social skills.</p>\r\n<p> </p></p>",
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8607393,
+"cancelled": false,
+"start": "2016-04-13 12:00",
+"finish": "2016-04-13 13:00",
+"session": "Toddlers World<p>&nbsp;</p>",
+"lanes": null,
+"location": "Sports Hall",
+"instructor": "Holiday Club ",
+"activity": "Toddlers World",
+"places_left": null,
+"description": "<p><p>A fun filled and colourful environment designed to challenge and stimulate children under the age of 5.</p>\r\n<p>Equipment can include soft play, inflatables, ladders, slides and a variety of other elements that will assist develop balance, coordination and social skills.</p>\r\n<p> </p></p>",
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8607813,
+"cancelled": false,
+"start": "2016-04-12 12:15",
+"finish": "2016-04-12 12:55",
+"session": "Running Group<p>&nbsp;</p>",
+"lanes": null,
+"location": "Outdoor Parks",
+"instructor": "Billy ",
+"activity": "Running Group",
+"places_left": null,
+"description": null,
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8608021,
+"cancelled": false,
+"start": "2016-04-10 09:30",
+"finish": "2016-04-10 10:00",
+"session": "Running Group<p>&nbsp;</p>",
+"lanes": null,
+"location": "Outdoor Parks",
+"instructor": "Billy ",
+"activity": "Running Group",
+"places_left": null,
+"description": null,
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8608283,
+"cancelled": false,
+"start": "2016-04-09 09:00",
+"finish": "2016-04-09 11:00",
+"session": "No Strings Badminton<p>&nbsp;</p>",
+"lanes": null,
+"location": "Sports Hall",
+"instructor": "Norbert",
+"activity": "No Strings Badminton",
+"places_left": null,
+"description": "<p><p>Welcome badminton back into your busy schedule. With the refreshingly no strings 'Pay &amp; Play' sessions, it's all about convenient court times without the need to commit to any future involvement.</p>\r\n<p>No Strings brings you the chance to turn up and play with like minded people, so no need to find yourself a partner.  Previous experience is not necessary no is any equipment as these coached sessions are an enjoyable way to take part in the sport.</p>\r\n<p> </p></p>",
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8608437,
+"cancelled": false,
+"start": "2016-04-10 10:00",
+"finish": "2016-04-10 12:00",
+"session": "Badminton<p>&nbsp;</p>",
+"lanes": null,
+"location": "Sports Hall",
+"instructor": "Marcus",
+"activity": "Badminton",
+"places_left": null,
+"description": "<p><p>A coached session for all abilities to learn the skills of badminton</p></p>",
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8608646,
+"cancelled": false,
+"start": "2016-04-07 13:00",
+"finish": "2016-04-07 15:00",
+"session": "Badminton young@hearts - (S)<p>&nbsp;</p>",
+"lanes": null,
+"location": "Sports Hall",
+"instructor": null,
+"activity": "Badminton young@hearts",
+"places_left": null,
+"description": null,
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8618996,
+"cancelled": false,
+"start": "2016-04-11 10:00",
+"finish": "2016-04-11 11:00",
+"session": "Total Body Conditioning<p>&nbsp;</p>",
+"lanes": null,
+"location": "Studio",
+"instructor": "Georgina",
+"activity": "Total Body Conditioning",
+"places_left": null,
+"description": "<p><p>Once you start, you won’t ever want to stop. These intense, exciting classes combine cardio and conditioning for a full on, high-energy workout.</p>\r\n<p>Better for: Strength and conditioning.</p>\r\n<p>Approx. 420 calories per hour.</p></p>",
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8626982,
+"cancelled": false,
+"start": "2016-04-09 11:00",
+"finish": "2016-04-09 11:45",
+"session": "Group Cycle<p>&nbsp;</p>",
+"lanes": null,
+"location": "Group Cycle Studio",
+"instructor": "Sarah",
+"activity": "Group Cycle",
+"places_left": null,
+"description": "<p><p>Pedal your way fit. Work at your own pace as you cycle along with the group in one of our themed classes to uplifting music, or focus on achieving your goals in one of our discipline -based classes.</p>\r\n<p>Better for: Lower body strength and conditioning. </p>\r\n<p>Approx. 560 calories per hour.</p>\r\n<p> </p>\r\n<p><iframe src=\"//www.youtube.com/embed/MsbIws1DPrI\" width=\"560\" height=\"314\" allowfullscreen=\"allowfullscreen\"></iframe></p></p>",
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8627807,
+"cancelled": false,
+"start": "2016-04-10 11:30",
+"finish": "2016-04-10 12:15",
+"session": "Group Cycle<p>&nbsp;</p>",
+"lanes": null,
+"location": "Group Cycle Studio",
+"instructor": "Charles",
+"activity": "Group Cycle",
+"places_left": null,
+"description": "<p><p>Pedal your way fit. Work at your own pace as you cycle along with the group in one of our themed classes to uplifting music, or focus on achieving your goals in one of our discipline -based classes.</p>\r\n<p>Better for: Lower body strength and conditioning. </p>\r\n<p>Approx. 560 calories per hour.</p>\r\n<p> </p>\r\n<p><iframe src=\"//www.youtube.com/embed/MsbIws1DPrI\" width=\"560\" height=\"314\" allowfullscreen=\"allowfullscreen\"></iframe></p></p>",
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8628120,
+"cancelled": false,
+"start": "2016-04-11 12:00",
+"finish": "2016-04-11 12:45",
+"session": "Group Cycle<p>&nbsp;</p>",
+"lanes": null,
+"location": "Group Cycle Studio",
+"instructor": "Sarah",
+"activity": "Group Cycle",
+"places_left": null,
+"description": "<p><p>Pedal your way fit. Work at your own pace as you cycle along with the group in one of our themed classes to uplifting music, or focus on achieving your goals in one of our discipline -based classes.</p>\r\n<p>Better for: Lower body strength and conditioning. </p>\r\n<p>Approx. 560 calories per hour.</p>\r\n<p> </p>\r\n<p><iframe src=\"//www.youtube.com/embed/MsbIws1DPrI\" width=\"560\" height=\"314\" allowfullscreen=\"allowfullscreen\"></iframe></p></p>",
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8628328,
+"cancelled": false,
+"start": "2016-04-11 19:00",
+"finish": "2016-04-11 19:45",
+"session": "Group Cycle<p>&nbsp;</p>",
+"lanes": null,
+"location": "Group Cycle Studio",
+"instructor": "Charles",
+"activity": "Group Cycle",
+"places_left": null,
+"description": "<p><p>Pedal your way fit. Work at your own pace as you cycle along with the group in one of our themed classes to uplifting music, or focus on achieving your goals in one of our discipline -based classes.</p>\r\n<p>Better for: Lower body strength and conditioning. </p>\r\n<p>Approx. 560 calories per hour.</p>\r\n<p> </p>\r\n<p><iframe src=\"//www.youtube.com/embed/MsbIws1DPrI\" width=\"560\" height=\"314\" allowfullscreen=\"allowfullscreen\"></iframe></p></p>",
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8628536,
+"cancelled": false,
+"start": "2016-04-12 19:00",
+"finish": "2016-04-12 19:45",
+"session": "Group Cycle<p>&nbsp;</p>",
+"lanes": null,
+"location": "Group Cycle Studio",
+"instructor": "Alida",
+"activity": "Group Cycle",
+"places_left": null,
+"description": "<p><p>Pedal your way fit. Work at your own pace as you cycle along with the group in one of our themed classes to uplifting music, or focus on achieving your goals in one of our discipline -based classes.</p>\r\n<p>Better for: Lower body strength and conditioning. </p>\r\n<p>Approx. 560 calories per hour.</p>\r\n<p> </p>\r\n<p><iframe src=\"//www.youtube.com/embed/MsbIws1DPrI\" width=\"560\" height=\"314\" allowfullscreen=\"allowfullscreen\"></iframe></p></p>",
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8628848,
+"cancelled": false,
+"start": "2016-04-13 09:15",
+"finish": "2016-04-13 10:00",
+"session": "Group Cycle<p>&nbsp;</p>",
+"lanes": null,
+"location": "Group Cycle Studio",
+"instructor": "Richard",
+"activity": "Group Cycle",
+"places_left": null,
+"description": "<p><p>Pedal your way fit. Work at your own pace as you cycle along with the group in one of our themed classes to uplifting music, or focus on achieving your goals in one of our discipline -based classes.</p>\r\n<p>Better for: Lower body strength and conditioning. </p>\r\n<p>Approx. 560 calories per hour.</p>\r\n<p> </p>\r\n<p><iframe src=\"//www.youtube.com/embed/MsbIws1DPrI\" width=\"560\" height=\"314\" allowfullscreen=\"allowfullscreen\"></iframe></p></p>",
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8629162,
+"cancelled": false,
+"start": "2016-04-13 18:00",
+"finish": "2016-04-13 18:45",
+"session": "Group Cycle<p>&nbsp;</p>",
+"lanes": null,
+"location": "Group Cycle Studio",
+"instructor": "Alida",
+"activity": "Group Cycle",
+"places_left": null,
+"description": "<p><p>Pedal your way fit. Work at your own pace as you cycle along with the group in one of our themed classes to uplifting music, or focus on achieving your goals in one of our discipline -based classes.</p>\r\n<p>Better for: Lower body strength and conditioning. </p>\r\n<p>Approx. 560 calories per hour.</p>\r\n<p> </p>\r\n<p><iframe src=\"//www.youtube.com/embed/MsbIws1DPrI\" width=\"560\" height=\"314\" allowfullscreen=\"allowfullscreen\"></iframe></p></p>",
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8629788,
+"cancelled": false,
+"start": "2016-04-07 17:30",
+"finish": "2016-04-07 18:15",
+"session": "Group Cycle<p>&nbsp;</p>",
+"lanes": null,
+"location": "Group Cycle Studio",
+"instructor": "Zoltan",
+"activity": "Group Cycle",
+"places_left": null,
+"description": "<p><p>Pedal your way fit. Work at your own pace as you cycle along with the group in one of our themed classes to uplifting music, or focus on achieving your goals in one of our discipline -based classes.</p>\r\n<p>Better for: Lower body strength and conditioning. </p>\r\n<p>Approx. 560 calories per hour.</p>\r\n<p> </p>\r\n<p><iframe src=\"//www.youtube.com/embed/MsbIws1DPrI\" width=\"560\" height=\"314\" allowfullscreen=\"allowfullscreen\"></iframe></p></p>",
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8629893,
+"cancelled": false,
+"start": "2016-04-08 07:30",
+"finish": "2016-04-08 08:15",
+"session": "Group Cycle<p>&nbsp;</p>",
+"lanes": null,
+"location": "Group Cycle Studio",
+"instructor": "Charles",
+"activity": "Group Cycle",
+"places_left": null,
+"description": "<p><p>Pedal your way fit. Work at your own pace as you cycle along with the group in one of our themed classes to uplifting music, or focus on achieving your goals in one of our discipline -based classes.</p>\r\n<p>Better for: Lower body strength and conditioning. </p>\r\n<p>Approx. 560 calories per hour.</p>\r\n<p> </p>\r\n<p><iframe src=\"//www.youtube.com/embed/MsbIws1DPrI\" width=\"560\" height=\"314\" allowfullscreen=\"allowfullscreen\"></iframe></p></p>",
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8631673,
+"cancelled": false,
+"start": "2016-04-13 16:30",
+"finish": "2016-04-13 17:00",
+"session": "Cardio - (T)<p>&nbsp;</p>",
+"lanes": null,
+"location": "Gym",
+"instructor": "Zoltan",
+"activity": "Cardio",
+"places_left": null,
+"description": "<p><p>Burn calories and feel great. A series of cardio exercises will get you burning serious calories, and feeling fitter and more energised. Better for: Cardio fitness.</p></p>",
+"buttons": {
+"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
+}
+},
+{
+"id": 8751256,
+"cancelled": false,
+"start": "2016-04-13 11:00",
+"finish": "2016-04-13 12:00",
+"session": "Yoga<p>&nbsp;</p>",
+"lanes": null,
+"location": "Studio",
+"instructor": "Marcus",
+"activity": "Yoga",
+"places_left": null,
+"description": "<p><p>Loosen up and let go. Our mix of Yoga classes feature a range of exercises from energetic, full-body workouts to relaxing, more traditional poses.</p>\r\n<p>Better for: Gaining peace of mind, improving overall strength and wellbeing.</p>\r\n<p>Approx. 280 calories per hour.</p></p>",
 "buttons": {
 "book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
 }

@@ -15,31 +15,56 @@ function getFormat(col){
 }
 
 function displayData(data, col){
-  if(!_.isDate(data)) return data;
-  return moment(data).strftime(getFormat(col));
+
+  // if(_.isBoolean(data) || data === "true") alert(`${col.key} ${data} ${typeof data}`)
+  if(!_.isDate(data)){
+
+    return data;
+  }
+  let time = moment(data).strftime(getFormat(col))
+  if(!time.match(/\d*:\d*/)) alert(`${col.key} ${time}`)
+  // if(col.key === 'start') alert(moment(data).strftime(getFormat(col)))
+  return time;//moment(data).strftime(getFormat(col));
 }
 
-function getValue(item, keys){
-  if(_.isString(keys)) return item.get(keys);
-  return _.map(keys, (key)=>{
-    return item.get(key);
-  })
+function getValue(item){
+  var data = item
+  return function(keys){
+    if(_.isString(keys)) return data.get(keys);
+    // alert(keys)
+    return _.map(keys, (key)=>{
+      if(!_.isDate(data.get(key))){
+        alert(`${key} >>>>>> ${data.toJS()}`)
+      }
+      return data.get(key);
+    })
+  }
+
 }
 
 
 function concatValues(item, col){
   let concat = item([col.key, col.concat]);
-  return _.map(concat, (d)=>{
-    return displayData(d, col);
-  }).join(` ${col.split} `);
+  // alert(concat)
+  let val = _.map(concat, (d)=>{
+    let data = displayData(d, col)
+    return data;
+  });
+
+  if(val === "true -  true"){
+      alert(`Value: ${val}`)
+    }
+
+  return val.join(` ${col.split} `)
 }
 
 
 
 module.exports = function(item){
-  let value = _.partial(getValue, item);
+  let value = getValue(item);
 
   return (col)=>{
+
     return (_.has(col, "concat")) ? concatValues(value, col) : value(col.key);
   }
 }

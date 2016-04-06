@@ -37,7 +37,6 @@ var afternoon = 12;
 var evening   = 18;
 
 function timeManager(date){
-  console.log(date)
   var mins  = date.getMinutes();
   var hours = date.getHours();
 
@@ -128,7 +127,6 @@ module.exports = function(days=1, date, filter){
     i++;
   } while(i < days);
 
-  console.log(sessions)
   return sessions
 
 }

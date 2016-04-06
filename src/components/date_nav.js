@@ -75,6 +75,9 @@ class DateNav extends React.Component {
   _getDates(){
     let dates = this._splitDates();
     let today = dates[0];
+    if(!_.isDate(today.date) || !_.isDate(SessionsStore._getCurrentDate())){
+      alert(today.date + " : " + SessionsStore._getCurrentDate())
+    }
     this.setState({
       dates:dates[1],
       today:today,

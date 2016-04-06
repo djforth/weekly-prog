@@ -10,6 +10,10 @@ const timeChecker = require("../utils/time_checker")
 let mixins = require("morse-react-mixins");
 const [cssMixins, textMixins]  = [mixins.css_mixins, mixins.text_mixins];
 
+// Components
+let ColumnItem = require('./column_item'),
+    ExpandBtn  = require('./simple/expand_btn');
+
 class DataItem extends React.Component {
   constructor(props) {
     super(props);
@@ -18,6 +22,10 @@ class DataItem extends React.Component {
     this.formatter = formatter(this.props.data)
     this.state = {data:this.props.data, columns:[], datefield:[]};
 
+  }
+
+  _createKey(keys){
+    return this.createId(keys, this.props.data.get("id"));
   }
 
   componentWillMount() {
@@ -31,23 +39,24 @@ class DataItem extends React.Component {
     ColumnsStore.removeChangeListener("change", this._onChange);
   }
 
-  _nobooking(){
-    return (<span className="session-full">No booking required</span>);
+  _expandTest(col){
+    if(col.key !== "expand") return false;
+    let visible  = _.map(ColumnsStore.getShowable(), "key");
+    return this.props.data.reduce((p, v, k)=>{
+      let t = (_.isBoolean(p)) ? p : false;
+      return (t) ? t : _.includes(visible, k);
+    });
   }
 
-  _actions(col){
-    let item = this.props.data;
-    let places = item.get("places_left");
-    if(_.isNumber(places) && places === 0){
-      return(<span className="session-full">Session full</span>);
-    }
-
-    if(item.has("buttons") && item.get("buttons").has("book")){
-      let link = item.get("buttons").get("book")
-      return (link === "#" || _.isEmpty(link)) ? this._nobooking() : (<a className="button button-secondary" href={link}>Book</a>);
-    }
-
-    return this._nobooking();
+  _expander(){
+    let buttonText = (this.state.active) ? "Less " : "More ";
+    buttonText += "Information";
+    return (<ExpandBtn
+      css = {this.checkCss(this.props.css, "expand")}
+      expand = {this.props.expand}
+      key = {this._createKey('expand')}
+      text = {buttonText}
+    />);
   }
 
   _onChange(){
@@ -58,24 +67,23 @@ class DataItem extends React.Component {
     }
   }
 
-  _rawMarkup(data) {
-    return <span dangerouslySetInnerHTML={ {__html: data} } />;
-  }
-
-  _renderColumn(col, item){
-    return (
-      <div className={this.checkCss(this.props.css, col.key)} key={_.uniqueId("dataItem")}>
-        {this._wrapper(item, col)}
-      </div>
-    );
-  }
-
   _renderTd(){
     let item = this.props.data;
     if(item && this.state.columns){
        let td = _.map(this.state.columns, function(col){
 
-         return this._renderColumn(col, item);
+        if(this._expandTest(col)){
+          return this._expander()
+        }
+
+
+         return (<ColumnItem
+            css  = {this.props.css}
+            col  = {col}
+            item = {item}
+            key  = {this._createKey(col.key)}
+          />)
+         this._renderColumn(col, item);
       }.bind(this));
 
       return td;
@@ -83,44 +91,9 @@ class DataItem extends React.Component {
     return "";
   }
 
-  _setCss(item, col){
-
-    if(!col.type === "time" || _.isUndefined(col.concat)) return col.wrapper;
-
-    let checker = timeChecker(item, col);
-    return `${col.wrapper} ${checker.setNowOrPast("now", "past")}`;
-  }
-
-  _cancelled(value){
-    return <span title={`The session between ${value} is cancelled`}>Cancelled</span>
-  }
-
-  _showValues(col){
-    if(col.key === "actions") return this._actions(col);
-    let value = this.formatter(col);
-    if(_.isString(value) && value.match(/<|>/g)) return this._rawMarkup(value);
-    if(col.type !== "time") return value;
-    if(this.props.data.has('cancelled') && this.props.data.get('cancelled')) return this._cancelled(value);
-    let checker = timeChecker(this.props.data, col);
-    let time = checker.setNowOrPast("This session has started", "This session has finished", `This sessions runs between ${value}`);
-    return <span title={time}>{value}</span>;
-  }
-
-  _wrapper(item, col){
-    if(_.has(col, "wrapper")){
-      return (
-        <div className={this._setCss(item, col)}>
-          {this._showValues(col)}
-        </div>);
-    }
-
-    return this._showValues(col);
-  }
-
-
   render() {
     return (
-      <div className="row tr vPad5">
+      <div className="clearfix">
         {this._renderTd()}
       </div>
     );

@@ -5,7 +5,6 @@ const _        = require("lodash/core")
     , ReactDom = require('react-dom');
 
 let sessions = require("../../spec/data/sessions.js")
-console.log(sessions(1))
 const WeeklyProg = require("../../src/components/weekly_prog")
 
 function createColumns(){

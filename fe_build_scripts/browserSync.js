@@ -63,7 +63,7 @@ function startBS(){
       // (server is now up)
       // set up watch to reload browsers when source changes
       browserify(helper);
-      sassBuild(true);
+      // sassBuild(true);
   });
 }
 

@@ -62,11 +62,11 @@
   }
 
   .now {
-    background-color: $weely-prog-now-session;
+    background-color: $weely-prog-now-session !important;
   }
 
   .old-session {
-    background-color: $weely-prog-old-session;
+    background-color: $weely-prog-old-session !important;
   }
 
   .weekly-pagination {
@@ -91,7 +91,7 @@
   display: inline-block;
   float: right;
   position: relative;
-  
+
   // styling
   border-left: 1px solid $calendar-print-border;
 
@@ -219,7 +219,7 @@
         left: 0;
         right: 0;
         width: 95%;
-        
+
         // styling
         background-color: $weekly-prog-nav-border-active;
       }
@@ -284,7 +284,7 @@
   }
 
   .nav-mover {
-    // reset 
+    // reset
     @include reset-normalize;
 
     // layout
@@ -333,7 +333,7 @@
     }
   }
 
-  .today-nav { 
+  .today-nav {
     float: left;
 
     a {
@@ -358,7 +358,7 @@
     ul {
       // reset
       @include reset-normalize;
-      
+
       // layout
       position: relative;
       float: left;

@@ -1,427 +1,4 @@
-/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-
-/**
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS and IE text size adjust after device orientation change,
- *    without disabling user zoom.
- */
-
-html {
-  font-family: sans-serif; /* 1 */
-  -ms-text-size-adjust: 100%; /* 2 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-}
-
-/**
- * Remove default margin.
- */
-
-body {
-  margin: 0;
-}
-
-/* HTML5 display definitions
-   ========================================================================== */
-
-/**
- * Correct `block` display not defined for any HTML5 element in IE 8/9.
- * Correct `block` display not defined for `details` or `summary` in IE 10/11
- * and Firefox.
- * Correct `block` display not defined for `main` in IE 11.
- */
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section,
-summary {
-  display: block;
-}
-
-/**
- * 1. Correct `inline-block` display not defined in IE 8/9.
- * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
- */
-
-audio,
-canvas,
-progress,
-video {
-  display: inline-block; /* 1 */
-  vertical-align: baseline; /* 2 */
-}
-
-/**
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
- */
-
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-/**
- * Address `[hidden]` styling not present in IE 8/9/10.
- * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
- */
-
-[hidden],
-template {
-  display: none;
-}
-
-/* Links
-   ========================================================================== */
-
-/**
- * Remove the gray background color from active links in IE 10.
- */
-
-a {
-  background-color: transparent;
-}
-
-/**
- * Improve readability of focused elements when they are also in an
- * active/hover state.
- */
-
-a:active,
-a:hover {
-  outline: 0;
-}
-
-/* Text-level semantics
-   ========================================================================== */
-
-/**
- * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
- */
-
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-
-/**
- * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
- */
-
-b,
-strong {
-  font-weight: bold;
-}
-
-/**
- * Address styling not present in Safari and Chrome.
- */
-
-dfn {
-  font-style: italic;
-}
-
-/**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari, and Chrome.
- */
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-/**
- * Address styling not present in IE 8/9.
- */
-
-mark {
-  background: #ff0;
-  color: #000;
-}
-
-/**
- * Address inconsistent and variable font size in all browsers.
- */
-
-small {
-  font-size: 80%;
-}
-
-/**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
- */
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sup {
-  top: -0.5em;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-/* Embedded content
-   ========================================================================== */
-
-/**
- * Remove border when inside `a` element in IE 8/9/10.
- */
-
-img {
-  border: 0;
-}
-
-/**
- * Correct overflow not hidden in IE 9/10/11.
- */
-
-svg:not(:root) {
-  overflow: hidden;
-}
-
-/* Grouping content
-   ========================================================================== */
-
-/**
- * Address margin not present in IE 8/9 and Safari.
- */
-
-figure {
-  margin: 1em 40px;
-}
-
-/**
- * Address differences between Firefox and other browsers.
- */
-
-hr {
-  box-sizing: content-box;
-  height: 0;
-}
-
-/**
- * Contain overflow in all browsers.
- */
-
-pre {
-  overflow: auto;
-}
-
-/**
- * Address odd `em`-unit font size rendering in all browsers.
- */
-
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-
-/* Forms
-   ========================================================================== */
-
-/**
- * Known limitation: by default, Chrome and Safari on OS X allow very limited
- * styling of `select`, unless a `border` property is set.
- */
-
-/**
- * 1. Correct color not being inherited.
- *    Known issue: affects color of disabled elements.
- * 2. Correct font properties not being inherited.
- * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
- */
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  color: inherit; /* 1 */
-  font: inherit; /* 2 */
-  margin: 0; /* 3 */
-}
-
-/**
- * Address `overflow` set to `hidden` in IE 8/9/10/11.
- */
-
-button {
-  overflow: visible;
-}
-
-/**
- * Address inconsistent `text-transform` inheritance for `button` and `select`.
- * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
- * Correct `select` style inheritance in Firefox.
- */
-
-button,
-select {
-  text-transform: none;
-}
-
-/**
- * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
- *    and `video` controls.
- * 2. Correct inability to style clickable `input` types in iOS.
- * 3. Improve usability and consistency of cursor style between image-type
- *    `input` and others.
- */
-
-button,
-html input[type="button"], /* 1 */
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button; /* 2 */
-  cursor: pointer; /* 3 */
-}
-
-/**
- * Re-set default cursor for disabled elements.
- */
-
-button[disabled],
-html input[disabled] {
-  cursor: default;
-}
-
-/**
- * Remove inner padding and border in Firefox 4+.
- */
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-/**
- * Address Firefox 4+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
- */
-
-input {
-  line-height: normal;
-}
-
-/**
- * It's recommended that you don't attempt to style these elements.
- * Firefox's implementation doesn't respect box-sizing, padding, or width.
- *
- * 1. Address box sizing set to `content-box` in IE 8/9/10.
- * 2. Remove excess padding in IE 8/9/10.
- */
-
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
-}
-
-/**
- * Fix the cursor style for Chrome's increment/decrement buttons. For certain
- * `font-size` values of the `input`, it causes the cursor style of the
- * decrement button to change from `default` to `text`.
- */
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-
-/**
- * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
- */
-
-input[type="search"] {
-  -webkit-appearance: textfield; /* 1 */
-  box-sizing: content-box; /* 2 */
-}
-
-/**
- * Remove inner padding and search cancel button in Safari and Chrome on OS X.
- * Safari (but not Chrome) clips the cancel button when the search input has
- * padding (and `textfield` appearance).
- */
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-/**
- * Define consistent border, margin, and padding.
- */
-
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
-
-/**
- * 1. Correct `color` not being inherited in IE 8/9/10/11.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
- */
-
-legend {
-  border: 0; /* 1 */
-  padding: 0; /* 2 */
-}
-
-/**
- * Remove default vertical scrollbar in IE 8/9/10/11.
- */
-
-textarea {
-  overflow: auto;
-}
-
-/**
- * Don't inherit the `font-weight` (applied by a rule above).
- * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
- */
-
-optgroup {
-  font-weight: bold;
-}
-
-/* Tables
-   ========================================================================== */
-
-/**
- * Remove most spacing between table cells.
- */
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-td,
-th {
-  padding: 0;
-}
+@import url(normalize.css);
 /*
 SCSS variables are information about icon's compiled state, stored under its original file name
 
@@ -465,42 +42,42 @@ Icon classes can be used entirely standalone. They are named after their origina
 */
 /* line 148, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_accessibility-icons.scss */
 .icon-lift {
+  background-image: url('/assets/sprites/accessibility-icons.png');
   background-position: 0px -67px;
   width: 59px;
   height: 59px; }
 
 /* line 154, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_accessibility-icons.scss */
-.icon-lift,.icon-poolside-facilities {
-  background-image: url('/assets/sprites/accessibility-icons.png'); }
 .icon-poolside-facilities {
+  background-image: url('/assets/sprites/accessibility-icons.png');
   background-position: -178px 0px;
   width: 54px;
   height: 64px; }
 
 /* line 160, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_accessibility-icons.scss */
 .icon-poolside-hoist {
+  background-image: url('/assets/sprites/accessibility-icons.png');
   background-position: 0px -126px;
   width: 46px;
   height: 69px; }
 
 /* line 166, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_accessibility-icons.scss */
-.icon-poolside-hoist,.icon-wheelchair-p {
-  background-image: url('/assets/sprites/accessibility-icons.png'); }
 .icon-wheelchair-p {
+  background-image: url('/assets/sprites/accessibility-icons.png');
   background-position: 0px 0px;
   width: 62px;
   height: 67px; }
 
 /* line 172, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_accessibility-icons.scss */
 .icon-wheelchair-wc {
+  background-image: url('/assets/sprites/accessibility-icons.png');
   background-position: -123px 0px;
   width: 55px;
   height: 66px; }
 
 /* line 178, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_accessibility-icons.scss */
-.icon-wheelchair-wc,.icon-wheelchair {
-  background-image: url('/assets/sprites/accessibility-icons.png'); }
 .icon-wheelchair {
+  background-image: url('/assets/sprites/accessibility-icons.png');
   background-position: -62px 0px;
   width: 61px;
   height: 65px; }
@@ -548,92 +125,98 @@ Icon classes can be used entirely standalone. They are named after their origina
 */
 /* line 236, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_arrows.scss */
 .icon-arrow-borough-quick-link {
-  background-position: -26px -45px; }
-
-/* line 242, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_arrows.scss */
-.icon-arrow-borough-quick-link,.icon-arrow-breadcrumbs {
   background-image: url('/assets/sprites/arrows.png');
+  background-position: -26px -45px;
   width: 6px;
   height: 9px; }
+
+/* line 242, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_arrows.scss */
 .icon-arrow-breadcrumbs {
-  background-position: -90px -61px; }
+  background-image: url('/assets/sprites/arrows.png');
+  background-position: -90px -61px;
+  width: 6px;
+  height: 9px; }
 
 /* line 248, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_arrows.scss */
 .icon-arrow-content-carousel-next {
-  background-position: 0px 0px; }
-
-/* line 254, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_arrows.scss */
-.icon-arrow-content-carousel-next,.icon-arrow-content-carousel-previous {
   background-image: url('/assets/sprites/arrows.png');
+  background-position: 0px 0px;
   width: 45px;
   height: 45px; }
+
+/* line 254, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_arrows.scss */
 .icon-arrow-content-carousel-previous {
-  background-position: -45px 0px; }
+  background-image: url('/assets/sprites/arrows.png');
+  background-position: -45px 0px;
+  width: 45px;
+  height: 45px; }
 
 /* line 260, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_arrows.scss */
 .icon-arrow-green-down {
-  background-position: -42px -45px; }
-
-/* line 266, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_arrows.scss */
-.icon-arrow-green-down,.icon-arrow-green-up {
   background-image: url('/assets/sprites/arrows.png');
+  background-position: -42px -45px;
   width: 10px;
   height: 5px; }
+
+/* line 266, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_arrows.scss */
 .icon-arrow-green-up {
-  background-position: -32px -45px; }
+  background-image: url('/assets/sprites/arrows.png');
+  background-position: -32px -45px;
+  width: 10px;
+  height: 5px; }
 
 /* line 272, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_arrows.scss */
 .icon-arrow-grey {
+  background-image: url('/assets/sprites/arrows.png');
   background-position: 0px -45px;
   width: 26px;
   height: 13px; }
 
 /* line 278, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_arrows.scss */
-.icon-arrow-grey,.icon-arrow-orange-2 {
-  background-image: url('/assets/sprites/arrows.png'); }
 .icon-arrow-orange-2 {
+  background-image: url('/assets/sprites/arrows.png');
   background-position: -90px -21px;
   width: 14px;
   height: 20px; }
 
 /* line 284, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_arrows.scss */
 .icon-arrow-orange-3 {
+  background-image: url('/assets/sprites/arrows.png');
   background-position: -90px 0px;
   width: 14px;
   height: 21px; }
 
 /* line 290, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_arrows.scss */
-.icon-arrow-orange-3,.icon-arrow-orange {
-  background-image: url('/assets/sprites/arrows.png'); }
 .icon-arrow-orange {
+  background-image: url('/assets/sprites/arrows.png');
   background-position: -21px -58px;
   width: 5px;
   height: 7px; }
 
 /* line 296, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_arrows.scss */
 .icon-arrow-white {
+  background-image: url('/assets/sprites/arrows.png');
   background-position: 0px -58px;
   width: 21px;
   height: 14px; }
 
 /* line 302, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_arrows.scss */
-.icon-arrow-white,.icon-arrow_news {
-  background-image: url('/assets/sprites/arrows.png'); }
 .icon-arrow_news {
+  background-image: url('/assets/sprites/arrows.png');
   background-position: -90px -41px;
   width: 14px;
   height: 20px; }
 
 /* line 308, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_arrows.scss */
 .icon-arrow_news_filter {
+  background-image: url('/assets/sprites/arrows.png');
   background-position: -96px -61px;
   width: 6px;
   height: 9px; }
 
 /* line 314, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_arrows.scss */
-.icon-arrow_news_filter,.icon-arrow_news_hover {
-  background-image: url('/assets/sprites/arrows.png'); }
 .icon-arrow_news_hover {
+  background-image: url('/assets/sprites/arrows.png');
   background-position: 0px -72px;
   width: 14px;
   height: 20px; }
@@ -729,29 +312,31 @@ Icon classes can be used entirely standalone. They are named after their origina
 */
 /* line 126, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_circular-icons.scss */
 .icon-hot-air-balloon {
+  background-image: url('/assets/sprites/circular-icons.png');
   background-position: 0px 0px;
   width: 90px;
   height: 90px; }
 
 /* line 132, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_circular-icons.scss */
-.icon-hot-air-balloon,.icon-information {
-  background-image: url('/assets/sprites/circular-icons.png'); }
 .icon-information {
+  background-image: url('/assets/sprites/circular-icons.png');
   background-position: -90px -90px;
   width: 26px;
   height: 26px; }
 
 /* line 138, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_circular-icons.scss */
 .icon-people {
-  background-position: -90px 0px; }
-
-/* line 144, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_circular-icons.scss */
-.icon-people,.icon-ticket {
   background-image: url('/assets/sprites/circular-icons.png');
+  background-position: -90px 0px;
   width: 90px;
   height: 90px; }
+
+/* line 144, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_circular-icons.scss */
 .icon-ticket {
-  background-position: 0px -90px; }
+  background-image: url('/assets/sprites/circular-icons.png');
+  background-position: 0px -90px;
+  width: 90px;
+  height: 90px; }
 
 /*
 SCSS variables are information about icon's compiled state, stored under its original file name
@@ -796,26 +381,28 @@ Icon classes can be used entirely standalone. They are named after their origina
 */
 /* line 126, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_contact-icons.scss */
 .icon-contact-envelope {
-  background-position: 0px 0px; }
-
-/* line 132, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_contact-icons.scss */
-.icon-contact-envelope,.icon-contact-pin {
   background-image: url('/assets/sprites/contact-icons.png');
+  background-position: 0px 0px;
   width: 64px;
   height: 64px; }
+
+/* line 132, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_contact-icons.scss */
 .icon-contact-pin {
-  background-position: -64px 0px; }
+  background-image: url('/assets/sprites/contact-icons.png');
+  background-position: -64px 0px;
+  width: 64px;
+  height: 64px; }
 
 /* line 138, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_contact-icons.scss */
 .icon-contact-telephone-small {
+  background-image: url('/assets/sprites/contact-icons.png');
   background-position: -64px -64px;
   width: 26px;
   height: 26px; }
 
 /* line 144, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_contact-icons.scss */
-.icon-contact-telephone-small,.icon-contact-telephone {
-  background-image: url('/assets/sprites/contact-icons.png'); }
 .icon-contact-telephone {
+  background-image: url('/assets/sprites/contact-icons.png');
   background-position: 0px -64px;
   width: 64px;
   height: 64px; }
@@ -863,72 +450,73 @@ Icon classes can be used entirely standalone. They are named after their origina
 */
 /* line 203, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_facility-icons.scss */
 .icon-balloon {
+  background-image: url('/assets/sprites/facility-icons.png');
   background-position: -252px -61px;
   width: 42px;
   height: 68px; }
 
 /* line 209, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_facility-icons.scss */
-.icon-balloon,.icon-book {
-  background-image: url('/assets/sprites/facility-icons.png'); }
 .icon-book {
+  background-image: url('/assets/sprites/facility-icons.png');
   background-position: -60px -114px;
   width: 74px;
   height: 50px; }
 
 /* line 215, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_facility-icons.scss */
 .icon-coffee {
+  background-image: url('/assets/sprites/facility-icons.png');
   background-position: 0px -114px;
   width: 60px;
   height: 62px; }
 
 /* line 221, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_facility-icons.scss */
-.icon-coffee,.icon-dumbbells {
-  background-image: url('/assets/sprites/facility-icons.png'); }
 .icon-dumbbells {
+  background-image: url('/assets/sprites/facility-icons.png');
   background-position: 0px -65px;
   width: 83px;
   height: 49px; }
 
 /* line 227, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_facility-icons.scss */
 .icon-heart {
+  background-image: url('/assets/sprites/facility-icons.png');
   background-position: 0px -176px;
   width: 67px;
   height: 51px; }
 
 /* line 233, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_facility-icons.scss */
-.icon-heart,.icon-masks {
-  background-image: url('/assets/sprites/facility-icons.png'); }
 .icon-masks {
+  background-image: url('/assets/sprites/facility-icons.png');
   background-position: -192px -60px;
   width: 56px;
   height: 62px; }
 
 /* line 239, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_facility-icons.scss */
 .icon-pool-ladder {
+  background-image: url('/assets/sprites/facility-icons.png');
   background-position: -65px 0px;
   width: 69px;
   height: 60px; }
 
 /* line 245, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_facility-icons.scss */
-.icon-pool-ladder,.icon-present {
-  background-image: url('/assets/sprites/facility-icons.png'); }
 .icon-present {
+  background-image: url('/assets/sprites/facility-icons.png');
   background-position: -252px 0px;
   width: 49px;
   height: 61px; }
 
 /* line 251, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_facility-icons.scss */
 .icon-racquet {
+  background-image: url('/assets/sprites/facility-icons.png');
   background-position: 0px 0px;
-  width: 65px; }
+  width: 65px;
+  height: 65px; }
 
 /* line 257, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_facility-icons.scss */
-.icon-racquet,.icon-shuttlecock {
-  background-image: url('/assets/sprites/facility-icons.png');
-  height: 65px; }
 .icon-shuttlecock {
+  background-image: url('/assets/sprites/facility-icons.png');
   background-position: -134px 0px;
-  width: 58px; }
+  width: 58px;
+  height: 65px; }
 
 /* line 263, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_facility-icons.scss */
 .icon-tennis-ball {
@@ -980,15 +568,16 @@ Icon classes can be used entirely standalone. They are named after their origina
 */
 /* line 104, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_footer-icons.scss */
 .icon-big-society {
+  background-image: url('/assets/sprites/footer-icons.png');
   background-position: 0px -52px;
+  width: 116px;
   height: 31px; }
 
 /* line 110, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_footer-icons.scss */
-.icon-big-society,.icon-social-enterprise {
-  background-image: url('/assets/sprites/footer-icons.png');
-  width: 116px; }
 .icon-social-enterprise {
+  background-image: url('/assets/sprites/footer-icons.png');
   background-position: 0px 0px;
+  width: 116px;
   height: 52px; }
 
 /*
@@ -1034,14 +623,14 @@ Icon classes can be used entirely standalone. They are named after their origina
 */
 /* line 115, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_form-icons.scss */
 .icon-form-error {
+  background-image: url('/assets/sprites/form-icons.png');
   background-position: -40px 0px;
   width: 32px;
   height: 32px; }
 
 /* line 121, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_form-icons.scss */
-.icon-form-error,.icon-form-mandatory {
-  background-image: url('/assets/sprites/form-icons.png'); }
 .icon-form-mandatory {
+  background-image: url('/assets/sprites/form-icons.png');
   background-position: 0px 0px;
   width: 40px;
   height: 40px; }
@@ -1096,42 +685,42 @@ Icon classes can be used entirely standalone. They are named after their origina
 */
 /* line 159, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_map-icons.scss */
 .icon-legend-bike {
+  background-image: url('/assets/sprites/map-icons.png');
   background-position: -41px 0px;
   width: 48px;
   height: 31px; }
 
 /* line 165, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_map-icons.scss */
-.icon-legend-bike,.icon-legend-bus {
-  background-image: url('/assets/sprites/map-icons.png'); }
 .icon-legend-bus {
+  background-image: url('/assets/sprites/map-icons.png');
   background-position: -30px -62px;
   width: 30px;
   height: 39px; }
 
 /* line 171, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_map-icons.scss */
 .icon-legend-car {
+  background-image: url('/assets/sprites/map-icons.png');
   background-position: -41px -31px;
   width: 37px;
   height: 31px; }
 
 /* line 177, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_map-icons.scss */
-.icon-legend-car,.icon-legend-pin {
-  background-image: url('/assets/sprites/map-icons.png'); }
 .icon-legend-pin {
+  background-image: url('/assets/sprites/map-icons.png');
   background-position: -89px 0px;
   width: 34px;
   height: 42px; }
 
 /* line 183, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_map-icons.scss */
 .icon-legend-train {
+  background-image: url('/assets/sprites/map-icons.png');
   background-position: 0px -62px;
   width: 30px;
   height: 43px; }
 
 /* line 189, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_map-icons.scss */
-.icon-legend-train,.icon-pin-primary {
-  background-image: url('/assets/sprites/map-icons.png'); }
 .icon-pin-primary {
+  background-image: url('/assets/sprites/map-icons.png');
   background-position: 0px 0px;
   width: 41px;
   height: 62px; }
@@ -1186,14 +775,14 @@ Icon classes can be used entirely standalone. They are named after their origina
 */
 /* line 104, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_news-icons.scss */
 .icon-news-calendar {
+  background-image: url('/assets/sprites/news-icons.png');
   background-position: 0px 0px;
   width: 21px;
   height: 21px; }
 
 /* line 110, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_news-icons.scss */
-.icon-news-calendar,.icon-news-tag {
-  background-image: url('/assets/sprites/news-icons.png'); }
 .icon-news-tag {
+  background-image: url('/assets/sprites/news-icons.png');
   background-position: -21px 0px;
   width: 20px;
   height: 20px; }
@@ -1241,15 +830,17 @@ Icon classes can be used entirely standalone. They are named after their origina
 */
 /* line 115, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_social-icons.scss */
 .icon-envelope {
-  background-position: 0px 0px; }
-
-/* line 121, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_social-icons.scss */
-.icon-envelope,.icon-facebook {
   background-image: url('/assets/sprites/social-icons.png');
+  background-position: 0px 0px;
   width: 41px;
   height: 41px; }
+
+/* line 121, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_social-icons.scss */
 .icon-facebook {
-  background-position: -41px 0px; }
+  background-image: url('/assets/sprites/social-icons.png');
+  background-position: -41px 0px;
+  width: 41px;
+  height: 41px; }
 
 /* line 127, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/sprites/_social-icons.scss */
 .icon-twitter {
@@ -1261,6 +852,39 @@ Icon classes can be used entirely standalone. They are named after their origina
 /* line 10, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_breakpoints.scss */
 .wrap {
   padding: 0 10px; }
+  @media (max-width: 767px) {
+    /* line 10, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_breakpoints.scss */
+    .wrap {
+      max-width: 767px;
+      margin-left: auto;
+      margin-right: auto; }
+      /* line 12, /Users/adrianstainforth/sites/modules/weekly-prog/bower_components/susy/sass/susy/output/support/_clearfix.scss */
+      .wrap:after {
+        content: " ";
+        display: block;
+        clear: both; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    /* line 10, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_breakpoints.scss */
+    .wrap {
+      max-width: 991px;
+      margin-left: auto;
+      margin-right: auto; }
+      /* line 12, /Users/adrianstainforth/sites/modules/weekly-prog/bower_components/susy/sass/susy/output/support/_clearfix.scss */
+      .wrap:after {
+        content: " ";
+        display: block;
+        clear: both; } }
+  @media (min-width: 992px) {
+    /* line 10, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_breakpoints.scss */
+    .wrap {
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto; }
+      /* line 12, /Users/adrianstainforth/sites/modules/weekly-prog/bower_components/susy/sass/susy/output/support/_clearfix.scss */
+      .wrap:after {
+        content: " ";
+        display: block;
+        clear: both; } }
 
 /* ---------- Global ---------- */
 /* ---------- End Global ---------- */
@@ -1334,6 +958,33 @@ form .field-with-errors input, form .field-with-errors select, form .field_with_
 form .form-row {
   margin-bottom: 10px; }
 
+@media (max-width: 767px) {
+  /* line 3, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_forms_responsive.scss */
+  form input[type="email"], form input[type="tel"], form input[type="text"], form select, form textarea {
+    padding: 20px;
+    border: 2px solid #d7d7d7;
+    font-size: 1em;
+    /* 16px */ }
+    /* line 11, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_forms_responsive.scss */
+    form input[type="email"].required, form input[type="tel"].required, form input[type="text"].required, form select.required, form textarea.required {
+      background: url('/assets/forms/form-mandatory.png') 100% 0 no-repeat; }
+  /* line 16, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_forms_responsive.scss */
+  form label {
+    font-size: 1em;
+    /* 16px */ } }
+
+@media (min-width: 768px) {
+  /* line 22, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_forms_responsive.scss */
+  form input[type="email"], form input[type="tel"], form input[type="text"], form select, form textarea {
+    padding: 15px;
+    border: 1px solid #d7d7d7;
+    font-size: 0.813em;
+    /* 13px */ }
+  /* line 31, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_forms_responsive.scss */
+  form label {
+    font-size: 0.875em;
+    /* 14px */ } }
+
 /* line 2, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_tinymce.scss */
 .tinymce a {
   color: #585858; }
@@ -1350,16 +1001,20 @@ form .form-row {
 
 /* line 17, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_tinymce.scss */
 .tinymce h1, .tinymce h2, .tinymce h3, .tinymce h4, .tinymce h5, .tinymce h6 {
-  list-style: none; }
-
-/* line 24, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_tinymce.scss */
-.tinymce h1, .tinymce h2, .tinymce h3, .tinymce h4, .tinymce h5, .tinymce h6,.tinymce li {
   margin: 0 0 10px;
   padding: 0;
   vertical-align: baseline;
   border: 0;
-  font-weight: normal; }
+  font-weight: normal;
+  list-style: none; }
+
+/* line 24, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_tinymce.scss */
 .tinymce li {
+  margin: 0 0 10px;
+  padding: 0;
+  vertical-align: baseline;
+  border: 0;
+  font-weight: normal;
   list-style: disc inside; }
   /* line 31, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_tinymce.scss */
   .tinymce li p {
@@ -1525,13 +1180,13 @@ ul.bullets {
   /* line 144, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
   .gg.zeta {
     font-size: 2.125em;
-    /* 34px */ }
-  /* line 149, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
-  .gg.zeta,.gg.eta {
+    /* 34px */
     line-height: 1em; }
+  /* line 149, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
   .gg.eta {
     font-size: 1.75em;
-    /* 28px */ }
+    /* 28px */
+    line-height: 1em; }
 
 /* line 156, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_typography.scss */
 .italic {
@@ -1615,6 +1270,53 @@ svg {
 .wrap {
   position: relative; }
 
+@media (max-width: 767px) {
+  /* line 3, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_global_responsive.scss */
+  body.nav-open {
+    right: 66.66667%; } }
+
+@media (max-width: 991px) {
+  /* line 10, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_global_responsive.scss */
+  body {
+    right: 0;
+    -webkit-transition: right 0.2s ease-in-out;
+    -moz-transition: right 0.2s ease-in-out;
+    transition: right 0.2s ease-in-out; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 21, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_global_responsive.scss */
+  body.nav-open {
+    right: 50%; } }
+
+@media (max-width: 767px) {
+  /* line 4, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/activities_facilities/_panel_responsive.scss */
+  body.activities-facilities article.activity-facility {
+    width: 100%;
+    float: right;
+    margin-right: 0; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 4, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/activities_facilities/_panel_responsive.scss */
+  body.activities-facilities article.activity-facility {
+    width: 48.97959%;
+    float: left;
+    margin-right: 2.04082%; }
+    /* line 12, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/activities_facilities/_panel_responsive.scss */
+    body.activities-facilities article.activity-facility:nth-child(2n+2) {
+      float: right;
+      margin-right: 0; } }
+
+@media (min-width: 992px) {
+  /* line 4, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/activities_facilities/_panel_responsive.scss */
+  body.activities-facilities article.activity-facility {
+    width: 32.20339%;
+    float: left;
+    margin-right: 1.69492%; }
+    /* line 20, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/activities_facilities/_panel_responsive.scss */
+    body.activities-facilities article.activity-facility:nth-child(3n+3) {
+      float: right;
+      margin-right: 0; } }
+
 /* line 2, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/activities_facilities/_panel.scss */
 article.activity-facility {
   box-sizing: border-box;
@@ -1645,7 +1347,6 @@ article.activity-facility {
   article.activity-facility .background-container {
     background-color: #79b84f;
     background-image: -webkit-linear-gradient(-350deg, #79b84f 0%, #79b84f 69%, #86bf60 69%);
-    background-image: -webkit-linear-gradient(10deg,#79b84f 0%, #79b84f 69%, #86bf60 69%);
     background-image: linear-gradient(80deg,#79b84f 0%, #79b84f 69%, #86bf60 69%); }
     /* line 40, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/activities_facilities/_panel.scss */
     article.activity-facility .background-container a:hover {
@@ -1668,13 +1369,13 @@ article.activity-facility {
       width: 100%;
       z-index: 1;
       -webkit-transition: background-color 0.2s ease-in-out;
+      -moz-transition: background-color 0.2s ease-in-out;
       transition: background-color 0.2s ease-in-out;
       text-decoration: none; }
   /* line 70, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/activities_facilities/_panel.scss */
   article.activity-facility .image-container {
     background-color: transparent;
     background-image: -webkit-linear-gradient(top, transparent 50%, #2e2e2e 60%);
-    background-image: -webkit-linear-gradient(top,transparent 50%, #2e2e2e 60%);
     background-image: linear-gradient(to bottom,transparent 50%, #2e2e2e 60%); }
     /* line 74, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/activities_facilities/_panel.scss */
     article.activity-facility .image-container a:hover {
@@ -1683,29 +1384,41 @@ article.activity-facility {
   article.activity-facility .tinymce {
     overflow: auto; }
 
+@media (max-width: 767px) {
+  /* line 1, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/alerts/_alerts_responsive.scss */
+  .alert {
+    width: calc(100% - 90px); } }
+
+@media (min-width: 768px) {
+  /* line 1, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/alerts/_alerts_responsive.scss */
+  .alert {
+    width: calc(80% - 90px); } }
+
 /* line 1, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/alerts/_alerts.scss */
 .alert {
   margin: 5px auto;
   padding: 15px 30px 15px 60px;
   width: calc(80% - 90px);
   position: relative;
+  color: #fff;
   border-radius: 5px; }
   /* line 12, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/alerts/_alerts.scss */
-  .alert,.alert .more-info {
-  color: #fff; }
+  .alert .more-info {
+    color: #fff; }
   /* line 16, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/alerts/_alerts.scss */
   .alert .close-alert {
+    display: block;
+    position: absolute;
     right: 15px;
     top: 15px;
     width: 15px;
     height: 15px;
     background: url('data:image/svg+xml;base64,PHN2ZyBpZD0iaWNvbnMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI0IDI0Ij48c3R5bGU+LnN0MHtmaWxsOm5vbmU7c3Ryb2tlOiNGRkY7c3Ryb2tlLXdpZHRoOjI7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwfTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTAgMGwyMiAyMk0wIDIyTDIyIDAiLz48L3N2Zz4=') center center no-repeat; }
   /* line 26, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/alerts/_alerts.scss */
-  .alert .close-alert,.alert:before {
-    display: block;
-    position: absolute; }
   .alert:before {
     content: "";
+    display: block;
+    position: absolute;
     left: 15px;
     top: 10px;
     width: 30px;
@@ -1763,6 +1476,7 @@ article.activity-facility {
   font-family: "Garage Gothic", Arial, Helvetica, sans-serif;
   font-weight: bold;
   -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   text-transform: uppercase; }
@@ -1792,14 +1506,16 @@ article.activity-facility {
     background-color: #f45b0b; }
     /* line 42, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/buttons/_buttons.scss */
     .button-news:hover .icon {
-      background-position: 0px -72px; }
-  /* line 47, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/buttons/_buttons.scss */
-  .button-news:hover .icon,.button-news .icon {
       background-image: url('/assets/sprites/arrows.png');
+      background-position: 0px -72px;
       width: 14px;
       height: 20px; }
+  /* line 47, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/buttons/_buttons.scss */
   .button-news .icon {
-    background-position: -90px -41px; }
+    background-image: url('/assets/sprites/arrows.png');
+    background-position: -90px -41px;
+    width: 14px;
+    height: 20px; }
 
 /* line 52, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/buttons/_buttons.scss */
 .button-pagination {
@@ -1808,7 +1524,6 @@ article.activity-facility {
   border-bottom-right-radius: 5px;
   background-color: #dbdbdb;
   background-image: -webkit-linear-gradient(top, #dbdbdb, #efefef);
-  background-image: -webkit-linear-gradient(top,#dbdbdb, #efefef);
   background-image: linear-gradient(to bottom,#dbdbdb, #efefef);
   color: #585858;
   font-size: 1.25em;
@@ -1849,6 +1564,54 @@ article.activity-facility {
   /* line 108, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/buttons/_buttons.scss */
   .button-tertiary:hover {
     background-color: #c2c2c2; }
+
+@media (max-width: 767px) {
+  /* line 3, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/carousel/_carousel_responsive.scss */
+  #carousel h2, #carousel h3 {
+    font-size: 1.5em; }
+  /* line 7, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/carousel/_carousel_responsive.scss */
+  #carousel .button, #carousel form input[type="submit"], form #carousel input[type="submit"] {
+    font-size: 80%; }
+  /* line 11, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/carousel/_carousel_responsive.scss */
+  #carousel .carousel-arrows-container {
+    top: 34%; }
+    /* line 15, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/carousel/_carousel_responsive.scss */
+    #carousel .carousel-arrows-container li a {
+      height: 25px;
+      width: 50px; }
+  /* line 22, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/carousel/_carousel_responsive.scss */
+  #carousel .carousel-inner {
+    padding-bottom: 75%;
+    /* 4:3 ratio, ie 480x360 */ }
+  /* line 27, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/carousel/_carousel_responsive.scss */
+  #carousel .carousel-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 35, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/carousel/_carousel_responsive.scss */
+  #carousel .carousel-inner {
+    padding-bottom: 56.25%;
+    /* 16:9 ratio, ie 768x432 */ } }
+
+@media (min-width: 768px) {
+  /* line 42, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/carousel/_carousel_responsive.scss */
+  #carousel .carousel-arrows-container {
+    top: 42%; }
+  /* line 46, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/carousel/_carousel_responsive.scss */
+  #carousel .carousel-overlay {
+    padding: 5% 0 0 13%; } }
+
+@media (min-width: 992px) {
+  /* line 52, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/carousel/_carousel_responsive.scss */
+  #carousel h3 {
+    margin-left: 20px; }
+  /* line 56, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/carousel/_carousel_responsive.scss */
+  #carousel .carousel-inner {
+    padding-bottom: 30.546875%;
+    /* , ie 1280x391. This is Oliver's ratio, as per their design */
+    /* A decision needs to be made regarding the above. As it stands, Oliver are unhappy if we use GLL's ratios as it doesn't match their design and GLL are unhappy if we use Oliver's ratios because the image isn't high enough. */ } }
 
 /* line 1, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/carousel/_carousel.scss */
 #carousel {
@@ -1899,6 +1662,7 @@ article.activity-facility {
     #carousel .carousel-arrows-container li {
       position: absolute;
       -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
       transition: all 0.2s ease-in-out; }
       /* line 58, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/carousel/_carousel.scss */
       #carousel .carousel-arrows-container li.previous {
@@ -1956,6 +1720,7 @@ article.activity-facility {
       margin: 0 3px;
       width: 10px;
       -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
       transition: all 0.2s ease-in-out;
       background-color: #9dcd53;
       border-radius: 5px; }
@@ -2002,10 +1767,45 @@ article.activity-facility {
     /* line 176, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/carousel/_carousel.scss */
     #carousel .carousel-item.animating {
       -webkit-transition: left 0.6s cubic-bezier(0.86, 0, 0.07, 1);
+      -moz-transition: left 0.6s cubic-bezier(0.86, 0, 0.07, 1);
       transition: left 0.6s cubic-bezier(0.86, 0, 0.07, 1); }
     /* line 180, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/carousel/_carousel.scss */
     #carousel .carousel-item.hidden {
       display: none; }
+
+@media (max-width: 767px) {
+  /* line 4, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/centre_locator_toolbar/_centre_locator_toolbar_responsive.scss */
+  section.centre-locator-toolbar .form-row {
+    width: 100%;
+    float: right;
+    margin-right: 0; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 10, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/centre_locator_toolbar/_centre_locator_toolbar_responsive.scss */
+  section.centre-locator-toolbar .form-row {
+    width: 26.53061%;
+    float: left;
+    margin-right: 2.04082%; } }
+
+@media (min-width: 768px) {
+  /* line 16, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/centre_locator_toolbar/_centre_locator_toolbar_responsive.scss */
+  section.centre-locator-toolbar form {
+    position: relative; }
+  /* line 20, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/centre_locator_toolbar/_centre_locator_toolbar_responsive.scss */
+  section.centre-locator-toolbar input[type="submit"] {
+    position: absolute;
+    right: 0;
+    bottom: 10px; } }
+
+@media (min-width: 992px) {
+  /* line 28, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/centre_locator_toolbar/_centre_locator_toolbar_responsive.scss */
+  section.centre-locator-toolbar .content-padding {
+    padding: 20px 60px; }
+  /* line 32, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/centre_locator_toolbar/_centre_locator_toolbar_responsive.scss */
+  section.centre-locator-toolbar .form-row {
+    width: 27.9661%;
+    float: left;
+    margin-right: 1.69492%; } }
 
 /* line 2, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/centre_locator_toolbar/_centre_locator_toolbar.scss */
 section.centre-locator-toolbar {
@@ -2073,6 +1873,156 @@ section.centre-locator-toolbar {
   border: 0 none;
   outline: 0; }
 
+@media (max-width: 767px) {
+  /* line 2, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-sm-1 {
+    width: calc(8.333333333333% - 30px);
+    /* 1/12 */ }
+  /* line 6, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-sm-2 {
+    width: calc(16.666666666667% - 30px);
+    /* 2/12 */ }
+  /* line 10, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-sm-3 {
+    width: calc(25% - 30px);
+    /* 3/12 */ }
+  /* line 14, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-sm-4 {
+    width: calc(33.333333333333% - 30px);
+    /* 4/12 */ }
+  /* line 18, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-sm-5 {
+    width: calc(41.666666666667% - 30px);
+    /* 5/12 */ }
+  /* line 22, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-sm-6 {
+    width: calc(50% - 30px);
+    /* 6/12 */ }
+  /* line 26, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-sm-7 {
+    width: calc(58.333333333333% - 30px);
+    /* 7/12 */ }
+  /* line 30, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-sm-8 {
+    width: calc(66.666666666667% - 30px);
+    /* 8/12 */ }
+  /* line 34, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-sm-9 {
+    width: calc(75% - 30px);
+    /* 9/12 */ }
+  /* line 38, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-sm-10 {
+    width: calc(83.333333333333% - 30px);
+    /* 10/12 */ }
+  /* line 42, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-sm-11 {
+    width: calc(91.666666666667% - 30px);
+    /* 11/12 */ }
+  /* line 46, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-sm-12 {
+    width: calc(100% - 30px);
+    /* 12/12 */ } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 52, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-md-1 {
+    width: calc(8.333333333333% - 30px);
+    /* 1/12 */ }
+  /* line 56, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-md-2 {
+    width: calc(16.666666666667% - 30px);
+    /* 2/12 */ }
+  /* line 60, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-md-3 {
+    width: calc(25% - 30px);
+    /* 3/12 */ }
+  /* line 64, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-md-4 {
+    width: calc(33.333333333333% - 30px);
+    /* 4/12 */ }
+  /* line 68, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-md-5 {
+    width: calc(41.666666666667% - 30px);
+    /* 5/12 */ }
+  /* line 72, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-md-6 {
+    width: calc(50% - 30px);
+    /* 6/12 */ }
+  /* line 76, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-md-7 {
+    width: calc(58.333333333333% - 30px);
+    /* 7/12 */ }
+  /* line 80, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-md-8 {
+    width: calc(66.666666666667% - 30px);
+    /* 8/12 */ }
+  /* line 84, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-md-9 {
+    width: calc(75% - 30px);
+    /* 9/12 */ }
+  /* line 88, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-md-10 {
+    width: calc(83.333333333333% - 30px);
+    /* 10/12 */ }
+  /* line 92, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-md-11 {
+    width: calc(91.666666666667% - 30px);
+    /* 11/12 */ }
+  /* line 96, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-md-12 {
+    width: calc(100% - 30px);
+    /* 12/12 */ } }
+
+@media (min-width: 992px) {
+  /* line 102, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-lg-1 {
+    width: calc(8.333333333333% - 30px);
+    /* 1/12 */ }
+  /* line 106, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-lg-2 {
+    width: calc(16.666666666667% - 30px);
+    /* 2/12 */ }
+  /* line 110, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-lg-3 {
+    width: calc(25% - 30px);
+    /* 3/12 */ }
+  /* line 114, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-lg-4 {
+    width: calc(33.333333333333% - 30px);
+    /* 4/12 */ }
+  /* line 118, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-lg-5 {
+    width: calc(41.666666666667% - 30px);
+    /* 5/12 */ }
+  /* line 122, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-lg-6 {
+    width: calc(50% - 30px);
+    /* 6/12 */ }
+  /* line 126, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-lg-7 {
+    width: calc(58.333333333333% - 30px);
+    /* 7/12 */ }
+  /* line 130, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-lg-8 {
+    width: calc(66.666666666667% - 30px);
+    /* 8/12 */ }
+  /* line 134, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-lg-9 {
+    width: calc(75% - 30px);
+    /* 9/12 */ }
+  /* line 138, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-lg-10 {
+    width: calc(83.333333333333% - 30px);
+    /* 10/12 */ }
+  /* line 142, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-lg-11 {
+    width: calc(91.666666666667% - 30px);
+    /* 11/12 */ }
+  /* line 146, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
+  .col-lg-12 {
+    width: calc(100% - 30px);
+    /* 12/12 */ } }
+
 /* line 1, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns.scss */
 .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
   float: left;
@@ -2108,6 +2058,7 @@ section.centre-locator-toolbar {
     bottom: 0;
     z-index: 2;
     -webkit-transition: opacity 0.2s ease-in-out;
+    -moz-transition: opacity 0.2s ease-in-out;
     transition: opacity 0.2s ease-in-out;
     background-color: #fff; }
     /* line 32, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/content_carousel/_content_carousel.scss */
@@ -2120,6 +2071,7 @@ section.centre-locator-toolbar {
     top: 0;
     bottom: 0;
     -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out; }
     /* line 47, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/content_carousel/_content_carousel.scss */
     .content-carousel-arrows-container li.next {
@@ -2159,6 +2111,7 @@ section.centre-locator-toolbar {
   position: relative;
   left: 0;
   -webkit-transition: left 0.6s cubic-bezier(0.86, 0, 0.07, 1);
+  -moz-transition: left 0.6s cubic-bezier(0.86, 0, 0.07, 1);
   transition: left 0.6s cubic-bezier(0.86, 0, 0.07, 1); }
 
 /* line 86, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/content_carousel/_content_carousel.scss */
@@ -2227,16 +2180,57 @@ section.centre-locator-toolbar {
   max-height: 0;
   overflow: hidden;
   -webkit-transition: max-height 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+  -moz-transition: max-height 0.5s cubic-bezier(0.86, 0, 0.07, 1);
   transition: max-height 0.5s cubic-bezier(0.86, 0, 0.07, 1); }
   /* line 10, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/filterable_form/_filterable_form.scss */
   .filterable-form .common.open, .filterable-form .filterable.open {
     max-height: 1000px; }
 
+@media (max-width: 767px) {
+  /* line 3, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/find_us/_find_us_responsive.scss */
+  section.find-us {
+    width: 100%;
+    float: right;
+    margin-right: 0; }
+    /* line 7, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/find_us/_find_us_responsive.scss */
+    section.find-us .map-legend dl {
+      width: 100%; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 17, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/find_us/_find_us_responsive.scss */
+  section.find-us {
+    width: 100%;
+    float: right;
+    margin-right: 0; }
+    /* line 21, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/find_us/_find_us_responsive.scss */
+    section.find-us .map-legend dl {
+      width: calc(33.333333333333% - 20px); }
+      /* line 24, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/find_us/_find_us_responsive.scss */
+      section.find-us .map-legend dl:nth-child(3n+1) {
+        margin-left: 0; } }
+
+@media (min-width: 768px) {
+  /* line 37, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/find_us/_find_us_responsive.scss */
+  section.find-us .map-legend dl {
+    margin-left: 20px; } }
+
+@media (min-width: 992px) {
+  /* line 47, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/find_us/_find_us_responsive.scss */
+  section.find-us {
+    width: 100%;
+    float: right;
+    margin-right: 0; }
+    /* line 51, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/find_us/_find_us_responsive.scss */
+    section.find-us .map-legend dl {
+      width: calc(20% - 20px); }
+      /* line 54, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/find_us/_find_us_responsive.scss */
+      section.find-us .map-legend dl:nth-child(5n+1) {
+        margin-left: 0; } }
+
 /* line 3, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/find_us/_find_us.scss */
 section.find-us .map-legend {
   background-color: #55a440;
   background-image: -webkit-linear-gradient(-315deg, #55a440, #9dcd53);
-  background-image: -webkit-linear-gradient(45deg,#55a440, #9dcd53);
   background-image: linear-gradient(45deg,#55a440, #9dcd53);
   color: #fff; }
   /* line 8, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/find_us/_find_us.scss */
@@ -2248,16 +2242,19 @@ section.find-us .map-legend {
   /* line 16, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/find_us/_find_us.scss */
   section.find-us .map-legend dd {
     margin: 0 0 0 60px;
-    vertical-align: baseline; }
-  /* line 23, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/find_us/_find_us.scss */
-  section.find-us .map-legend dd,section.find-us .map-legend dl {
     padding: 0;
+    vertical-align: baseline;
     border: 0;
     font-weight: normal;
     list-style: none; }
+  /* line 23, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/find_us/_find_us.scss */
   section.find-us .map-legend dl {
     margin: 0 0 20px;
+    padding: 0;
     vertical-align: top;
+    border: 0;
+    font-weight: normal;
+    list-style: none;
     display: inline-block;
     text-align: left; }
     /* line 34, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/find_us/_find_us.scss */
@@ -2333,8 +2330,113 @@ section.find-us .map-legend {
   -moz-box-lines: multiple;
   box-lines: multiple;
   -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
+
+@media (max-width: 767px) {
+  /* line 6, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
+  footer.main section.sign-up input[type="submit"] {
+    float: right; }
+  /* line 10, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
+  footer.main section.sign-up .email, footer.main section.sign-up .first-name {
+    margin-bottom: 20px; }
+  /* line 16, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
+  footer.main .footer-footer {
+    background-color: #dedede; } }
+
+@media (max-width: 991px) {
+  /* line 23, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
+  footer.main section.footer-about, footer.main section.footer-information, footer.main section.footer-location, footer.main section.footer-offer {
+    margin-bottom: 20px; }
+    /* line 26, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
+    footer.main section.footer-about h1, footer.main section.footer-information h1, footer.main section.footer-location h1, footer.main section.footer-offer h1 {
+      margin-right: -10px;
+      margin-left: -10px;
+      padding-right: 10px;
+      padding-left: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background-color: #cfcfcf;
+      border-bottom: 1px solid #b6b6b6; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 42, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
+  footer.main section.sign-up {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    position: relative; }
+    /* line 46, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
+    footer.main section.sign-up .email {
+      width: 28.57143%;
+      float: left;
+      margin-right: 2.04082%; }
+    /* line 50, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
+    footer.main section.sign-up .first-name {
+      width: 28.57143%;
+      float: left;
+      margin-right: 2.04082%; } }
+
+@media (min-width: 768px) {
+  /* line 59, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
+  footer.main section:before {
+    content: "";
+    display: block;
+    height: 1px;
+    margin-bottom: 15px;
+    width: 30px;
+    background-color: #b6b6b6; }
+  /* line 72, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
+  footer.main section.sign-up input[type="submit"] {
+    position: absolute;
+    bottom: 0; }
+  /* line 79, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
+  footer.main .footer-footer {
+    background-color: #fff; } }
+
+@media (min-width: 992px) {
+  /* line 2, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
+  footer.main {
+    width: 100%;
+    float: right;
+    margin-right: 0; }
+    /* line 87, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
+    footer.main .column-one {
+      width: 83.05085%;
+      float: left;
+      margin-right: 1.69492%;
+      box-sizing: border-box;
+      padding-right: 1.69492%;
+      border-right: 1px solid #cfcfcf; }
+      /* line 96, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
+      footer.main .column-one section {
+        width: 18.36735%;
+        float: left;
+        margin-right: 2.04082%; }
+        /* line 99, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
+        footer.main .column-one section.sign-up {
+          width: 100%;
+          float: left;
+          margin-left: 0;
+          margin-right: 0;
+          position: relative; }
+          /* line 103, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
+          footer.main .column-one section.sign-up .email {
+            width: 18.36735%;
+            float: left;
+            margin-right: 2.04082%; }
+          /* line 107, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
+          footer.main .column-one section.sign-up .first-name {
+            width: 18.36735%;
+            float: left;
+            margin-right: 2.04082%; }
+    /* line 114, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
+    footer.main .column-two {
+      width: 15.25424%;
+      float: right;
+      margin-right: 0; } }
 
 /* line 2, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer.scss */
 footer.main {
@@ -2344,16 +2446,20 @@ footer.main {
   border-top: 4px solid #585858; }
   /* line 11, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer.scss */
   footer.main h1 {
-    margin: 0 0 5px; }
-  /* line 18, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer.scss */
-  footer.main h1,footer.main li, footer.main ul {
+    margin: 0 0 5px;
     padding: 0;
     vertical-align: baseline;
     border: 0;
     font-weight: normal;
     list-style: none; }
+  /* line 18, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer.scss */
   footer.main li, footer.main ul {
-    margin: 0; }
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: 0;
+    font-weight: normal;
+    list-style: none; }
   /* line 25, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer.scss */
   footer.main section.footer-social a {
     margin-bottom: 10px; }
@@ -2398,13 +2504,57 @@ footer.main {
   footer.main .footer-footer {
     margin-right: -1000px;
     margin-left: -1000px;
-    padding: 20px 1000px;
+    padding-right: 1000px;
+    padding-left: 1000px;
     float: left;
     margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     width: 100%; }
     /* line 71, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer.scss */
     footer.main .footer-footer a {
       color: #008bd0; }
+
+@media (max-width: 767px) {
+  /* line 4, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/header/_header_responsive.scss */
+  header.main .logo {
+    width: 20%; }
+  /* line 11, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/header/_header_responsive.scss */
+  header .top-nav li a {
+    text-align: center;
+    font-size: 1.563em;
+    text-transform: uppercase; }
+    /* line 19, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/header/_header_responsive.scss */
+    header .top-nav li a span {
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      top: auto;
+      left: -10000px;
+      width: 1px; } }
+
+@media (max-width: 991px) {
+  /* line 32, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/header/_header_responsive.scss */
+  body.nav-open header.main {
+    background-color: #6ebe59; }
+  /* line 40, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/header/_header_responsive.scss */
+  header.main {
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -moz-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 49, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/header/_header_responsive.scss */
+  header.main .logo {
+    width: 20%; } }
+
+@media (min-width: 992px) {
+  /* line 58, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/header/_header_responsive.scss */
+  header.main {
+    position: relative; }
+    /* line 61, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/header/_header_responsive.scss */
+    header.main .logo {
+      width: 10%; } }
 
 /* line 2, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/header/_header.scss */
 header.main {
@@ -2423,10 +2573,7 @@ header.main {
     display: inline-block;
     height: 58px;
     position: relative;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    user-select: none;
     width: 100%; }
     /* line 26, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/header/_header.scss */
     header.main .logo-svg-container canvas {
@@ -2456,15 +2603,9 @@ header .top-nav {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   height: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -2484,10 +2625,7 @@ header .top-nav {
     border: 0;
     font-weight: normal;
     list-style: none;
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    flex: 1;
     height: 100%;
     position: relative;
     border-left: 1px solid #3b722d; }
@@ -2503,16 +2641,11 @@ header .top-nav {
       display: -moz-flex;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-          -ms-flex-align: center;
-              align-items: center;
+      align-items: center;
       height: 100%;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-          -ms-flex-pack: center;
-              justify-content: center;
+      justify-content: center;
       -webkit-transition: background-color 0.2s ease-in-out;
+      -moz-transition: background-color 0.2s ease-in-out;
       transition: background-color 0.2s ease-in-out;
       color: #fff;
       text-decoration: none; }
@@ -2541,7 +2674,6 @@ header .top-nav {
   width: calc(100% - 40px);
   height: calc(100% - 40px);
   padding: 20px;
-  background: -webkit-linear-gradient(45deg, #55a440 0%, #9dcd53 100%);
   background: linear-gradient(45deg, #55a440 0%, #9dcd53 100%);
   color: #fff;
   font-family: "Lato", Arial, Verdana, sans-serif; }
@@ -2595,6 +2727,51 @@ header .top-nav {
       font-size: 1.455em;
       text-align: center; }
 
+@media (max-width: 767px) {
+  /* line 2, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/membership/_membership_benefit_responsive.scss */
+  article.membership-benefit {
+    width: 100%;
+    float: right;
+    margin-right: 0; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 2, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/membership/_membership_benefit_responsive.scss */
+  article.membership-benefit {
+    width: 48.97959%;
+    float: left;
+    margin-right: 2.04082%; }
+    /* line 10, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/membership/_membership_benefit_responsive.scss */
+    article.membership-benefit:nth-child(even) {
+      float: right;
+      margin-right: 0; } }
+
+@media (min-width: 992px) {
+  /* line 2, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/membership/_membership_benefit_responsive.scss */
+  article.membership-benefit {
+    width: 100%;
+    float: right;
+    margin-right: 0; }
+    /* line 19, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/membership/_membership_benefit_responsive.scss */
+    article.membership-benefit:nth-child(even) .image-container {
+      width: 49.15254%;
+      float: right;
+      margin-right: 0; }
+    /* line 23, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/membership/_membership_benefit_responsive.scss */
+    article.membership-benefit:nth-child(even) .text-container {
+      width: 49.15254%;
+      float: left;
+      margin-right: 1.69492%; }
+    /* line 29, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/membership/_membership_benefit_responsive.scss */
+    article.membership-benefit:nth-child(odd) .image-container {
+      width: 49.15254%;
+      float: left;
+      margin-right: 1.69492%; }
+    /* line 33, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/membership/_membership_benefit_responsive.scss */
+    article.membership-benefit:nth-child(odd) .text-container {
+      width: 49.15254%;
+      float: right;
+      margin-right: 0; } }
+
 /* line 2, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/membership/_membership_benefit.scss */
 article.membership-benefit {
   box-sizing: border-box;
@@ -2618,6 +2795,35 @@ article.membership-benefit {
     /* 77px */
     font-weight: 300; }
 
+@media (max-width: 767px) {
+  /* line 2, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/membership/_membership_category_responsive.scss */
+  article.membership-category {
+    width: 100%;
+    float: right;
+    margin-right: 0; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 2, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/membership/_membership_category_responsive.scss */
+  article.membership-category {
+    width: 48.97959%;
+    float: left;
+    margin-right: 2.04082%; }
+    /* line 10, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/membership/_membership_category_responsive.scss */
+    article.membership-category:nth-child(2n+2) {
+      float: right;
+      margin-right: 0; } }
+
+@media (min-width: 992px) {
+  /* line 2, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/membership/_membership_category_responsive.scss */
+  article.membership-category {
+    width: 32.20339%;
+    float: left;
+    margin-right: 1.69492%; }
+    /* line 18, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/membership/_membership_category_responsive.scss */
+    article.membership-category:nth-child(3n+3) {
+      float: right;
+      margin-right: 0; } }
+
 /* line 2, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/membership/_membership_category.scss */
 article.membership-category {
   box-sizing: border-box;
@@ -2639,7 +2845,6 @@ article.membership-category {
   article.membership-category header {
     background-color: #fff;
     background-image: -webkit-linear-gradient(top, #fff, rgba(0, 0, 0, 0.03));
-    background-image: -webkit-linear-gradient(top,#fff, rgba(0, 0, 0, 0.03));
     background-image: linear-gradient(to bottom,#fff, rgba(0, 0, 0, 0.03)); }
 
 /* line 2, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/membership/_membership_preview.scss */
@@ -2663,7 +2868,6 @@ article.membership-preview {
   article.membership-preview header {
     background-color: #fff;
     background-image: -webkit-linear-gradient(top, #fff, rgba(0, 0, 0, 0.03));
-    background-image: -webkit-linear-gradient(top,#fff, rgba(0, 0, 0, 0.03));
     background-image: linear-gradient(to bottom,#fff, rgba(0, 0, 0, 0.03)); }
   /* line 26, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/membership/_membership_preview.scss */
   article.membership-preview li span {
@@ -2687,7 +2891,6 @@ article.membership-preview {
   article.membership-preview .pricing {
     background-color: #55a440;
     background-image: -webkit-linear-gradient(left, #55a440, #9dcd53);
-    background-image: -webkit-linear-gradient(left,#55a440, #9dcd53);
     background-image: linear-gradient(to right,#55a440, #9dcd53);
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.15);
     color: #fff; }
@@ -2701,6 +2904,52 @@ article.membership-preview {
     /* line 64, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/membership/_membership_preview.scss */
     article.membership-preview .pricing .pricing-left, article.membership-preview .pricing .pricing-right {
       display: inline-block; }
+
+@media (max-width: 767px) {
+  /* line 3, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/news_items/_news_items_grid_responsive.scss */
+  section.news-items-grid {
+    width: 100%;
+    float: right;
+    margin-right: 0; }
+    /* line 6, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/news_items/_news_items_grid_responsive.scss */
+    section.news-items-grid article {
+      width: 100%; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 15, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/news_items/_news_items_grid_responsive.scss */
+  section.news-items-grid {
+    width: 100%;
+    float: right;
+    margin-right: 0; }
+    /* line 18, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/news_items/_news_items_grid_responsive.scss */
+    section.news-items-grid article {
+      flex-basis: calc(50% - 20px);
+      /* spans 1/2 */ }
+      /* line 21, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/news_items/_news_items_grid_responsive.scss */
+      section.news-items-grid article:nth-child(2n+2) {
+        float: right;
+        margin-right: 0; } }
+
+@media (min-width: 768px) {
+  /* line 32, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/news_items/_news_items_grid_responsive.scss */
+  section.news-items-grid article {
+    flex-grow: 0;
+    flex-shrink: 0; } }
+
+@media (min-width: 992px) {
+  /* line 42, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/news_items/_news_items_grid_responsive.scss */
+  section.news-items-grid {
+    width: 100%;
+    float: right;
+    margin-right: 0; }
+    /* line 45, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/news_items/_news_items_grid_responsive.scss */
+    section.news-items-grid article {
+      flex-basis: calc(16.666666666667% - 20px);
+      /* spans 1/6 */ }
+      /* line 48, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/news_items/_news_items_grid_responsive.scss */
+      section.news-items-grid article.double {
+        flex-basis: calc(33.333333333333% - 20px);
+        /* spans 1/3 */ } }
 
 /* line 3, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/news_items/_news_items_grid.scss */
 section.news-items-grid article {
@@ -2781,7 +3030,6 @@ section.news-items-grid article {
     position: relative;
     background-color: transparent;
     background-image: -webkit-linear-gradient(top, transparent 50%, #2e2e2e 60%);
-    background-image: -webkit-linear-gradient(top,transparent 50%, #2e2e2e 60%);
     background-image: linear-gradient(to bottom,transparent 50%, #2e2e2e 60%); }
 
 /* line 113, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/news_items/_news_items_grid.scss */
@@ -2802,6 +3050,7 @@ section.news-items-grid .articles {
     padding: 6px 12px;
     position: relative;
     -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     background-color: #fff;
     border: 1px solid #d7d7d7;
@@ -2822,9 +3071,11 @@ section.news-items-grid .articles {
     /* line 35, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/pagination/_pagination.scss */
     .pagination li:first-child a {
       margin-left: 0;
+      border-top-left-radius: 4px;
       border-top-left-radius: 4px; }
     /* line 46, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/pagination/_pagination.scss */
     .pagination li:last-child a {
+      border-top-right-radius: 4px;
       border-top-right-radius: 4px; }
     /* line 53, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/pagination/_pagination.scss */
     .pagination li.current a {
@@ -2929,6 +3180,368 @@ section.news-items-grid .articles {
     display: block;
     color: #41a1db; }
 
+@media (max-width: 767px) {
+  /* line 2, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+  .nav-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #dbdbdb; }
+    /* line 13, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+    .nav-list li a {
+      display: block;
+      padding: 20px;
+      width: calc(100% - 40px);
+      border-bottom: 1px solid #b0b0b0;
+      color: #4a4a4a;
+      font-size: 1.875em;
+      text-decoration: none; }
+      /* line 25, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+      .nav-list li a:hover {
+        background: #55a440;
+        color: #fff; }
+      /* line 30, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+      .nav-list li a.has-subs {
+        position: relative; }
+        /* line 33, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+        .nav-list li a.has-subs:after {
+          content: "";
+          display: block;
+          height: 15px;
+          margin: auto;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 30px;
+          width: 15px;
+          background: url('data:image/svg+xml;base64,PHN2ZyBpZD0nTGF5ZXJfMScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PSctMjgxIDQwNC45IDYuNiA4LjknPjxzdHlsZT4uc3Qwe2ZpbGw6bm9uZTtzdHJva2U6IzU1YTQ0MDtzdHJva2Utd2lkdGg6MjtzdHJva2UtbWl0ZXJsaW1pdDoxMH08L3N0eWxlPjxwYXRoIGNsYXNzPSdzdDAnIGQ9J00tMjgwIDQwNS45bDQgMy41LTQgMy41Jy8+PC9zdmc+') center center no-repeat; }
+        /* line 50, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+        .nav-list li a.has-subs:hover:after {
+          background: url('data:image/svg+xml;base64,PHN2ZyBpZD0nTGF5ZXJfMScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PSctMjgxIDQwNC45IDYuNiA4LjknPjxzdHlsZT4uc3Qwe2ZpbGw6bm9uZTtzdHJva2U6I2ZmZjtzdHJva2Utd2lkdGg6MjtzdHJva2UtbWl0ZXJsaW1pdDoxMH08L3N0eWxlPjxwYXRoIGNsYXNzPSdzdDAnIGQ9J00tMjgwIDQwNS45bDQgMy41LTQgMy41Jy8+PC9zdmc+') center center no-repeat; }
+    /* line 58, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+    .nav-list li.current-section a {
+      color: #55a440;
+      text-transform: uppercase; }
+      /* line 62, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+      .nav-list li.current-section a:hover {
+        color: #fff; }
+    /* line 69, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+    .nav-list li.previous-section a {
+      background: #686967;
+      color: #fff; }
+      /* line 73, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+      .nav-list li.previous-section a:before {
+        content: "";
+        display: inline-block;
+        height: 15px;
+        margin: auto 8px auto 0;
+        width: 15px;
+        background: url('data:image/svg+xml;base64,PHN2ZyBpZD0nTGF5ZXJfMScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PSctMjgxIDQwNC45IDYuNiA4LjknPjxzdHlsZT4uc3Qwe2ZpbGw6bm9uZTtzdHJva2U6I2ZmZjtzdHJva2Utd2lkdGg6MjtzdHJva2UtbWl0ZXJsaW1pdDoxMH08L3N0eWxlPjxwYXRoIGNsYXNzPSdzdDAnIGQ9J00tMjgwIDQwNS45bDQgMy41LTQgMy41Jy8+PC9zdmc+') center center no-repeat;
+        transform: rotate(180deg); }
+      /* line 86, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+      .nav-list li.previous-section a:hover {
+        color: #fff; }
+  /* line 94, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+  .open-nav {
+    display: table-cell;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 24%;
+    width: 50px;
+    border-left: 1px solid #3b722d;
+    border-right: 1px solid #3b722d; }
+    /* line 107, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+    .open-nav:hover {
+      background-color: #4d9a38; }
+    /* line 111, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+    .open-nav .icon-hamburger {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      align-items: center;
+      display: block;
+      height: 100%;
+      justify-content: center;
+      margin: 0 auto;
+      width: 50%;
+      background: url('data:image/svg+xml;base64,PHN2ZyBpZD0nTGF5ZXJfMScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PScwIDAgNDYgMjYnPjxzdHlsZT4uc3QwLC5zdDF7ZGlzcGxheTpub25lfS5zdDF7c3Ryb2tlOiM5OTk7c3Ryb2tlLXdpZHRoOi4xfS5zdDEsLnN0MntmaWxsOm5vbmU7c3Ryb2tlLW1pdGVybGltaXQ6MTB9LnN0MntzdHJva2U6I0ZGRjtzdHJva2Utd2lkdGg6MjtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmR9PC9zdHlsZT48ZyBpZD0nZ3JpZCc+PHBhdGggY2xhc3M9J3N0MCcgZD0nTTIzLTE1LjljMTYuNSAwIDI5LjkgMTMuNCAyOS45IDI5LjlTMzkuNSA0My45IDIzIDQzLjktNi45IDMwLjUtNi45IDE0IDYuNS0xNS45IDIzLTE1LjltMC0uMUM2LjQtMTYtNy0yLjYtNyAxNFM2LjQgNDQgMjMgNDRzMzAtMTMuNCAzMC0zMC0xMy40LTMwLTMwLTMweicvPjxwYXRoIGNsYXNzPSdzdDAnIGQ9J00yMyA0LjFjNS41IDAgOS45IDQuNCA5LjkgOS45cy00LjQgOS45LTkuOSA5LjktOS45LTQuNC05LjktOS45IDQuNC05LjkgOS45LTkuOW0wLS4xYy01LjUgMC0xMCA0LjUtMTAgMTBzNC41IDEwIDEwIDEwIDEwLTQuNSAxMC0xMFMyOC41IDQgMjMgNHonLz48cGF0aCBjbGFzcz0nc3QwJyBkPSdNMjMtNS45QzM0LTUuOSA0Mi45IDMgNDIuOSAxNFMzNCAzMy45IDIzIDMzLjkgMy4xIDI1IDMuMSAxNCAxMi01LjkgMjMtNS45bTAtLjFDMTItNiAzIDMgMyAxNHM5IDIwIDIwIDIwIDIwLTkgMjAtMjBTMzQtNiAyMy02eicvPjxwYXRoIGNsYXNzPSdzdDAnIGQ9J001My0xNnY2MEgtN3YtNjBoNjBtMCAwSC03djYwaDYwdi02MHonLz48cGF0aCBjbGFzcz0nc3QxJyBkPSdNLTItMTFsNTAgNTBtMC01MEwtMiAzOScvPjwvZz48cGF0aCBjbGFzcz0nc3QyJyBkPSdNMSAxNGg0NE0xIDJoNDRNMSAyNmg0NCcgaWQ9J2ljb25zJy8+PC9zdmc+') center center no-repeat; } }
+
+@media (min-width: 768px) {
+  /* line 128, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+  .primery-nav {
+    position: relative;
+    background: #585858;
+    color: #fff; }
+    /* line 136, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+    .primery-nav .nav-holder {
+      float: left;
+      position: relative;
+      left: 50%; }
+      /* line 141, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+      .primery-nav .nav-holder .primary-nav-list {
+        float: left;
+        position: relative;
+        left: -50%; }
+  /* line 149, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+  .single {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(0deg, #e9e7ea 0%, #f3f3f7 100%);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.24); }
+    /* line 162, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+    .single .level-1 .home-link {
+      float: left;
+      height: 50px;
+      width: 20%;
+      background: #dedede; }
+      /* line 171, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+      .single .level-1 .home-link a {
+        display: block;
+        float: left;
+        padding: 15px 25px;
+        color: #000;
+        font-size: 0.813em;
+        text-decoration: none; }
+    /* line 188, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+    .single .level-2 .home-link {
+      margin: 0 20px;
+      padding: 30px 0; }
+      /* line 192, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+      .single .level-2 .home-link a {
+        font-size: 1.438em;
+        font-weight: 300;
+        text-decoration: none;
+        text-transform: uppercase; }
+    /* line 200, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+    .single .level-2 .nav-list {
+      margin: 0;
+      padding: 0;
+      vertical-align: baseline;
+      border: 0;
+      font-weight: normal;
+      list-style: none;
+      float: left;
+      margin-top: 20px;
+      background-color: #f6f6f6; }
+      /* line 211, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+      .single .level-2 .nav-list .secondary-nav-list {
+        margin-top: 20px; }
+    /* line 216, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+    .single .level-2 .secondary-nav-list {
+      border-bottom: 1px solid #b9b9b9; }
+      /* line 219, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+      .single .level-2 .secondary-nav-list li {
+        *zoom: 1;
+        position: relative;
+        border-top: 1px solid #b9b9b9;
+        border-right: 1px solid #b9b9b9; }
+        /* line 4, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/utils/_mixins.scss */
+        .single .level-2 .secondary-nav-list li:before, .single .level-2 .secondary-nav-list li:after {
+          content: "";
+          display: table; }
+        /* line 9, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/utils/_mixins.scss */
+        .single .level-2 .secondary-nav-list li:after {
+          clear: both; }
+        /* line 230, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+        .single .level-2 .secondary-nav-list li.active a:after, .single .level-2 .secondary-nav-list li:hover a:after {
+          content: "";
+          display: block;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          width: 10px;
+          background-color: #55a440; }
+        /* line 247, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+        .single .level-2 .secondary-nav-list li a {
+          display: block;
+          margin: 10px 10px 10px 30px;
+          color: #585858;
+          text-decoration: none; }
+    /* line 261, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+    .single .level-3 {
+      border-right: 1px solid #c7c7c7; }
+    /* line 265, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+    .single .level-3, .single .level-4 {
+      margin-top: 20px;
+      background-color: #f6f6f6; }
+      /* line 275, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+      .single .level-3 .nav-list li.active a, .single .level-3 .nav-list li:hover a, .single .level-4 .nav-list li.active a, .single .level-4 .nav-list li:hover a {
+        background-color: #55a440;
+        color: #fff; }
+        /* line 280, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+        .single .level-3 .nav-list li.active a.has-subs:after, .single .level-3 .nav-list li:hover a.has-subs:after, .single .level-4 .nav-list li.active a.has-subs:after, .single .level-4 .nav-list li:hover a.has-subs:after {
+          background: url('data:image/svg+xml;base64,PHN2ZyBpZD0nTGF5ZXJfMScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PSctMjgxIDQwNC45IDYuNiA4LjknPjxzdHlsZT4uc3Qwe2ZpbGw6bm9uZTtzdHJva2U6I2ZmZjtzdHJva2Utd2lkdGg6MjtzdHJva2UtbWl0ZXJsaW1pdDoxMH08L3N0eWxlPjxwYXRoIGNsYXNzPSdzdDAnIGQ9J00tMjgwIDQwNS45bDQgMy41LTQgMy41Jy8+PC9zdmc+') center center no-repeat; }
+      /* line 287, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+      .single .level-3 .nav-list li a, .single .level-4 .nav-list li a {
+        display: block;
+        padding: 5px 20px;
+        color: #585858;
+        text-decoration: none; }
+        /* line 296, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+        .single .level-3 .nav-list li a.has-subs, .single .level-4 .nav-list li a.has-subs {
+          position: relative; }
+          /* line 299, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+          .single .level-3 .nav-list li a.has-subs:after, .single .level-4 .nav-list li a.has-subs:after {
+            content: "";
+            display: block;
+            height: 10px;
+            margin: auto;
+            position: absolute;
+            width: 10px;
+            top: 0;
+            bottom: 0;
+            right: 20px;
+            background: url('data:image/svg+xml;base64,PHN2ZyBpZD0nTGF5ZXJfMScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PSctMjgxIDQwNC45IDYuNiA4LjknPjxzdHlsZT4uc3Qwe2ZpbGw6bm9uZTtzdHJva2U6IzU1YTQ0MDtzdHJva2Utd2lkdGg6MjtzdHJva2UtbWl0ZXJsaW1pdDoxMH08L3N0eWxlPjxwYXRoIGNsYXNzPSdzdDAnIGQ9J00tMjgwIDQwNS45bDQgMy41LTQgMy41Jy8+PC9zdmc+') center center no-repeat; }
+    /* line 321, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+    .single .levels .home-link, .single .levels .title-link {
+      border-bottom: 1px solid #c7c7c7;
+      box-shadow: 0px 0 1px 0px rgba(255, 255, 255, 0.76); }
+      /* line 325, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+      .single .levels .home-link:before, .single .levels .title-link:before {
+        content: "";
+        display: inline-block;
+        height: 10px;
+        margin: 3px 10px 3px 0;
+        width: 10px;
+        background: url('data:image/svg+xml;base64,PHN2ZyBpZD0nTGF5ZXJfMScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PSctMjgxIDQwNC45IDYuNiA4LjknPjxzdHlsZT4uc3Qwe2ZpbGw6bm9uZTtzdHJva2U6IzU1YTQ0MDtzdHJva2Utd2lkdGg6MjtzdHJva2UtbWl0ZXJsaW1pdDoxMH08L3N0eWxlPjxwYXRoIGNsYXNzPSdzdDAnIGQ9J00tMjgwIDQwNS45bDQgMy41LTQgMy41Jy8+PC9zdmc+') center center no-repeat;
+        background-size: cover; }
+      /* line 338, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+      .single .levels .home-link a, .single .levels .title-link a {
+        color: #55a440;
+        text-decoration: none; }
+    /* line 344, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+    .single .levels .title-link {
+      margin: 0 20px;
+      padding: 15px 0; }
+    /* line 350, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+    .single .secondary-nav-touch-list {
+      margin: 0;
+      padding: 0;
+      vertical-align: baseline;
+      border: 0;
+      font-weight: normal;
+      list-style: none;
+      height: 50px;
+      position: absolute;
+      left: 0;
+      transition: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1); }
+      /* line 362, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+      .single .secondary-nav-touch-list li {
+        display: inline-block;
+        float: left; }
+        /* line 366, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+        .single .secondary-nav-touch-list li a {
+          display: block;
+          float: left;
+          padding: 10px 25px;
+          color: #797878;
+          font-size: 1em;
+          text-decoration: none; }
+      /* line 381, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+      .single .secondary-nav-touch-list .secondary-nav-list.level-1 li {
+        display: inline-block;
+        float: left; }
+        /* line 385, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+        .single .secondary-nav-touch-list .secondary-nav-list.level-1 li a {
+          display: block;
+          float: left;
+          padding: 20px 30px;
+          color: #797878;
+          font-size: 1.154em;
+          text-decoration: none; }
+    /* line 401, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+    .single .touch-sub-nav {
+      float: right;
+      width: 80%; }
+      /* line 405, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+      .single .touch-sub-nav .list-holder {
+        float: left;
+        height: 40px;
+        overflow: hidden;
+        position: relative;
+        width: calc(100% - 100px); }
+      /* line 413, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+      .single .touch-sub-nav .nav-mover {
+        margin: 0;
+        padding: 0;
+        vertical-align: baseline;
+        border: 0;
+        font-weight: normal;
+        list-style: none;
+        float: left;
+        height: 20px;
+        margin: 15px;
+        position: relative;
+        width: 10px;
+        background-size: contain;
+        font-size: 1.25em;
+        /* 20px */
+        font-weight: 300;
+        line-height: 1em; }
+        /* line 430, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+        .single .touch-sub-nav .nav-mover:after {
+          content: "";
+          height: 20px;
+          position: absolute;
+          top: 0;
+          width: 1px;
+          background-color: #cfcfcf; }
+        /* line 442, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+        .single .touch-sub-nav .nav-mover.move-left {
+          background: url('data:image/svg+xml;base64,PHN2ZyBpZD0nTGF5ZXJfMScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PScxNTcuMyA0OTEuNyAyMS43IDM5Jz48c3R5bGU+LnN0MHtmaWxsOiAjY2ZjZmNmfTwvc3R5bGU+PHBhdGggY2xhc3M9J3N0MCcgZD0nTTE3NyA1MzAuN2wtMTkuNi0xOS41IDIuMS0yLjEgMTkuNiAxOS41LTIuMSAyLjF6Jy8+PHBhdGggY2xhc3M9J3N0MCcgZD0nTTE3OSA0OTMuOGwtMTkuNSAxOS42LTIuMS0yLjEgMTkuNS0xOS42IDIuMSAyLjF6Jy8+PC9zdmc+') center center no-repeat; }
+          /* line 445, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+          .single .touch-sub-nav .nav-mover.move-left:after {
+            right: -20px; }
+        /* line 450, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+        .single .touch-sub-nav .nav-mover.move-right {
+          float: right;
+          background: url('data:image/svg+xml;base64,PHN2ZyBpZD0nTGF5ZXJfMScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PScxNTcuNCA0OTEuNiAyMS43IDM5LjInPjxzdHlsZT4uc3Qwe2ZpbGw6I2NmY2ZjZn08L3N0eWxlPjxwYXRoIGNsYXNzPSdzdDAnIGQ9J00xNTkuNSA0OTEuNmwxOS42IDE5LjYtMi4xIDIuMS0xOS42LTE5LjYgMi4xLTIuMXonLz48cGF0aCBjbGFzcz0nc3QwJyBkPSdNMTU3LjQgNTI4LjZMMTc3IDUwOWwyLjEgMi4xLTE5LjYgMTkuNi0yLjEtMi4xeicvPjwvc3ZnPg==') center center no-repeat; }
+          /* line 457, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+          .single .touch-sub-nav .nav-mover.move-right:after {
+            left: -20px; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 469, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+  .single .level-2 .nav-list {
+    width: 33.33%; }
+  /* line 474, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+  .single .level-3 {
+    width: 33.33%; }
+  /* line 478, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+  .single .level-3, .single .level-4 {
+    float: left; }
+  /* line 482, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+  .single .level-4 {
+    width: calc(33.33% - 2px); } }
+
+@media (min-width: 992px) {
+  /* line 491, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+  .single .level-2 .nav-list {
+    width: 25%; }
+  /* line 496, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+  .single .level-3 {
+    width: 25%; }
+  /* line 500, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+  .single .level-3, .single .level-4 {
+    float: left; }
+  /* line 504, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+  .single .level-4 {
+    width: calc(50% - 2px); }
+    /* line 508, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
+    .single .level-4 .nav-list li {
+      float: left;
+      width: 50%; } }
+
 /* line 3, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav.scss */
 .nav-list {
   margin: 0;
@@ -2957,6 +3570,7 @@ section.news-items-grid .articles {
   display: block;
   padding: 15px;
   -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   color: #fff;
   text-decoration: none;
@@ -2998,6 +3612,15 @@ section.news-items-grid .articles {
   top: auto;
   left: -10000px;
   width: 1px; }
+
+@media (min-width: 992px) {
+  /* line 11, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/sections/_sections_responsive.scss */
+  .page-header p {
+    width: 59.32203%;
+    float: left;
+    margin-right: 1.69492%;
+    padding-left: 20.33898%;
+    padding-right: 20.33898%; } }
 
 /* line 1, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/sections/_sections.scss */
 .page-header, .section-header {
@@ -3148,15 +3771,16 @@ section.news-items-grid .articles {
 .tabbed-content-tab {
   display: none; }
   /* line 92, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/tabbed_content/_tabbed_content.scss */
+  .tabbed-content-tab.active {
+    display: block; }
 
 /* line 1, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/toggle_button/_toggle_button.scss */
-.tabbed-content-tab.active,.button-toggle {
-    display: block; }
 .button-toggle {
   margin-right: -10px;
   margin-left: -10px;
   padding-right: 10px;
   padding-left: 10px;
+  display: block;
   padding: 20px 30px;
   position: relative;
   background-color: #f6f6f6;
@@ -3175,17 +3799,20 @@ section.news-items-grid .articles {
   .button-toggle .divider {
     display: block;
     height: 70%;
-    right: 80px;
-    width: 1px;
-    background-color: #e14e00; }
-  /* line 39, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/toggle_button/_toggle_button.scss */
-  .button-toggle .divider,.button-toggle .icon {
     margin: auto;
     position: absolute;
     top: 0;
-    bottom: 0; }
+    right: 80px;
+    bottom: 0;
+    width: 1px;
+    background-color: #e14e00; }
+  /* line 39, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/toggle_button/_toggle_button.scss */
   .button-toggle .icon {
-    right: 30px; }
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 30px;
+    bottom: 0; }
 
 /* line 1, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/touch_nav/_touch_nav.scss */
 .touch-nav {
@@ -3205,7 +3832,9 @@ section.news-items-grid .articles {
     display: table; }
   /* line 9, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/utils/_mixins.scss */
   .touch-nav:after {
-    clear: both;
+    clear: both; }
+  /* line 11, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/touch_nav/_touch_nav.scss */
+  .touch-nav:after {
     content: "";
     position: absolute;
     width: 100%;
@@ -3214,7 +3843,6 @@ section.news-items-grid .articles {
     left: 0;
     right: 0;
     background-color: #cfcfcf; }
-  /* line 11, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/touch_nav/_touch_nav.scss */
   /* line 27, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/touch_nav/_touch_nav.scss */
   .touch-nav .nav-items {
     margin: 0;
@@ -3227,7 +3855,6 @@ section.news-items-grid .articles {
     position: absolute;
     left: 0;
     height: 50px;
-    -webkit-transition: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
     transition: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1); }
   /* line 40, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/touch_nav/_touch_nav.scss */
   .touch-nav .list-holder {
@@ -3343,7 +3970,6 @@ section.news-items-grid .articles {
 .venue-nav-container {
   background-color: #fff;
   background-image: -webkit-linear-gradient(top, #fff, rgba(233, 231, 234, 0.6));
-  background-image: -webkit-linear-gradient(top,#fff, rgba(233, 231, 234, 0.6));
   background-image: linear-gradient(to bottom,#fff, rgba(233, 231, 234, 0.6));
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.24); }
   /* line 5, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/venue_nav/_venue_nav.scss */
@@ -3376,6 +4002,49 @@ section.news-items-grid .articles {
     /* line 43, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/venue_nav/_venue_nav.scss */
     .venue-nav-container .touch-nav:after {
       display: none; }
+
+@media (max-width: 767px) {
+  /* line 3, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
+  .weekly-prog .date-nav {
+    height: 110px; }
+    /* line 6, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
+    .weekly-prog .date-nav .date-nav-item {
+      height: 90px; }
+    /* line 11, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
+    .weekly-prog .date-nav .date-nav-item-link span {
+      display: block;
+      text-align: center; }
+      /* line 15, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
+      .weekly-prog .date-nav .date-nav-item-link span.nav-date {
+        font-size: 2em;
+        line-height: 1em; }
+      /* line 20, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
+      .weekly-prog .date-nav .date-nav-item-link span.nav-day {
+        font-size: 0.8em; }
+    /* line 26, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
+    .weekly-prog .date-nav .list-holder {
+      width: calc(100% - 200px);
+      height: 99px; }
+    /* line 31, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
+    .weekly-prog .date-nav .nav-mover {
+      height: 60px; }
+      /* line 34, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
+      .weekly-prog .date-nav .nav-mover:after {
+        height: 60px; }
+  /* line 41, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
+  .weekly-prog .tr .bold-weight {
+    font-size: 1.733em; }
+  /* line 45, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
+  .weekly-prog .tr .icon-information {
+    float: right;
+    height: 50px;
+    width: 50px;
+    background: url("data:image/svg+xml;utf8,<svg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='157.4 491.6 21.7 39.2'><style>.st0{fill:#cfcfcf}</style><path class='st0' d='M159.5 491.6l19.6 19.6-2.1 2.1-19.6-19.6 2.1-2.1z'/><path class='st0' d='M157.4 528.6L177 509l2.1 2.1-19.6 19.6-2.1-2.1z'/></svg>") center center no-repeat;
+    background-size: contain; }
+  /* line 56, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
+  .weekly-prog .tr .pill {
+    font-size: 1.467em;
+    text-align: center; } }
 
 /* line 2, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
 .weekly-prog .additional {
@@ -3443,11 +4112,11 @@ section.news-items-grid .articles {
 
 /* line 64, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
 .weekly-prog .now {
-  background-color: #41a1db; }
+  background-color: #41a1db !important; }
 
 /* line 68, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
 .weekly-prog .old-session {
-  background-color: #585858; }
+  background-color: #585858 !important; }
 
 /* line 72, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
 .weekly-prog .weekly-pagination {
@@ -3536,7 +4205,9 @@ section.news-items-grid .articles {
     display: table; }
   /* line 9, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/utils/_mixins.scss */
   .date-nav:after {
-    clear: both;
+    clear: both; }
+  /* line 169, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
+  .date-nav:after {
     content: "";
     height: 1px;
     position: absolute;
@@ -3545,24 +4216,27 @@ section.news-items-grid .articles {
     right: 0;
     width: 100%;
     background-color: #cfcfcf; }
-  /* line 169, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
   /* line 183, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
   .date-nav .date-list {
-    height: auto;
-    height: 50px;
-    position: absolute;
-    left: 0;
-    -webkit-transition: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
-    transition: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1); }
-  /* line 197, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
-  .date-nav .date-list,.date-nav .date-nav-item {
     margin: 0;
     padding: 0;
     vertical-align: baseline;
     border: 0;
     font-weight: normal;
-    list-style: none; }
+    list-style: none;
+    height: auto;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    transition: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1); }
+  /* line 197, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
   .date-nav .date-nav-item {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: 0;
+    font-weight: normal;
+    list-style: none;
     float: left;
     height: 50px;
     position: relative;
@@ -3684,22 +4358,27 @@ section.news-items-grid .articles {
     left: 50%; }
     /* line 358, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
     .timetable-nav .timetable-nav-holder ul {
+      margin: 0;
+      padding: 0;
+      vertical-align: baseline;
       border: 0;
+      font-weight: normal;
+      list-style: none;
+      position: relative;
       float: left;
       left: -50%;
       border: 1px solid #cecece;
       border-radius: 10px; }
       /* line 371, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
-      .timetable-nav .timetable-nav-holder ul,.timetable-nav .timetable-nav-holder ul li {
-      margin: 0;
-      padding: 0;
-      vertical-align: baseline;
-      font-weight: normal;
-      list-style: none;
-      position: relative; }
       .timetable-nav .timetable-nav-holder ul li {
+        margin: 0;
+        padding: 0;
+        vertical-align: baseline;
         border: 0;
-        display: inline; }
+        font-weight: normal;
+        list-style: none;
+        display: inline;
+        position: relative; }
         /* line 379, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog.scss */
         .timetable-nav .timetable-nav-holder ul li a {
           display: block;
@@ -3732,961 +4411,4 @@ section.news-items-grid .articles {
       display: inline-block;
       padding: 20px; }
 
-@media (max-width: 767px){
-  /* line 10, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_breakpoints.scss */
-  .wrap{
-    max-width: 767px;
-    margin-left: auto;
-    margin-right: auto; }
-  /* line 12, /Users/adrianstainforth/sites/modules/weekly-prog/bower_components/susy/sass/susy/output/support/_clearfix.scss */
-  .wrap:after{
-    content: " ";
-    display: block;
-    clear: both; }
-  /* line 3, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_forms_responsive.scss */
-  form input[type="email"], form input[type="tel"], form input[type="text"], form select, form textarea{
-    padding: 20px;
-    border: 2px solid #d7d7d7;
-    font-size: 1em;
-    /* 16px */ }
-  /* line 11, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_forms_responsive.scss */
-  form input[type="email"].required, form input[type="tel"].required, form input[type="text"].required, form select.required, form textarea.required{
-    background: url('/assets/forms/form-mandatory.png') 100% 0 no-repeat; }
-  /* line 16, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_forms_responsive.scss */
-  form label{
-    font-size: 1em;
-    /* 16px */ }
-  /* line 3, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_global_responsive.scss */
-  body.nav-open{
-    right: 66.66667%; }
-  /* line 4, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/activities_facilities/_panel_responsive.scss */
-  body.activities-facilities article.activity-facility{
-    width: 100%;
-    float: right;
-    margin-right: 0; }
-  /* line 1, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/alerts/_alerts_responsive.scss */
-  .alert{
-    width: calc(100% - 90px); }
-  /* line 3, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/carousel/_carousel_responsive.scss */
-  #carousel h2, #carousel h3{
-    font-size: 1.5em; }
-  /* line 7, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/carousel/_carousel_responsive.scss */
-  #carousel .button, #carousel form input[type="submit"], form #carousel input[type="submit"]{
-    font-size: 80%; }
-  /* line 11, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/carousel/_carousel_responsive.scss */
-  #carousel .carousel-arrows-container{
-    top: 34%; }
-  /* line 15, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/carousel/_carousel_responsive.scss */
-  #carousel .carousel-arrows-container li a{
-    height: 25px;
-    width: 50px; }
-  /* line 22, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/carousel/_carousel_responsive.scss */
-  #carousel .carousel-inner{
-    padding-bottom: 75%;
-    /* 4:3 ratio, ie 480x360 */ }
-  /* line 27, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/carousel/_carousel_responsive.scss */
-  #carousel .carousel-overlay{
-    position: absolute;
-    bottom: 20px;
-    left: 20px; }
-  /* line 4, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/centre_locator_toolbar/_centre_locator_toolbar_responsive.scss */
-  section.centre-locator-toolbar .form-row{
-    width: 100%;
-    float: right;
-    margin-right: 0; }
-  /* line 2, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-sm-1{
-    width: calc(8.333333333333% - 30px);
-    /* 1/12 */ }
-  /* line 6, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-sm-2{
-    width: calc(16.666666666667% - 30px);
-    /* 2/12 */ }
-  /* line 10, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-sm-3{
-    width: calc(25% - 30px);
-    /* 3/12 */ }
-  /* line 14, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-sm-4{
-    width: calc(33.333333333333% - 30px);
-    /* 4/12 */ }
-  /* line 18, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-sm-5{
-    width: calc(41.666666666667% - 30px);
-    /* 5/12 */ }
-  /* line 22, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-sm-6{
-    width: calc(50% - 30px);
-    /* 6/12 */ }
-  /* line 26, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-sm-7{
-    width: calc(58.333333333333% - 30px);
-    /* 7/12 */ }
-  /* line 30, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-sm-8{
-    width: calc(66.666666666667% - 30px);
-    /* 8/12 */ }
-  /* line 34, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-sm-9{
-    width: calc(75% - 30px);
-    /* 9/12 */ }
-  /* line 38, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-sm-10{
-    width: calc(83.333333333333% - 30px);
-    /* 10/12 */ }
-  /* line 42, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-sm-11{
-    width: calc(91.666666666667% - 30px);
-    /* 11/12 */ }
-  /* line 46, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-sm-12{
-    width: calc(100% - 30px);
-    /* 12/12 */ }
-  /* line 3, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/find_us/_find_us_responsive.scss */
-  section.find-us{
-    float: right;
-    margin-right: 0; }
-  /* line 7, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/find_us/_find_us_responsive.scss */
-  section.find-us,section.find-us .map-legend dl{
-    width: 100%; }
-  /* line 6, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
-  footer.main section.sign-up input[type="submit"]{
-    float: right; }
-  /* line 10, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
-  footer.main section.sign-up .email, footer.main section.sign-up .first-name{
-    margin-bottom: 20px; }
-  /* line 16, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
-  footer.main .footer-footer{
-    background-color: #dedede; }
-  /* line 4, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/header/_header_responsive.scss */
-  header.main .logo{
-    width: 20%; }
-  /* line 11, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/header/_header_responsive.scss */
-  header .top-nav li a{
-    text-align: center;
-    font-size: 1.563em;
-    text-transform: uppercase; }
-  /* line 19, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/header/_header_responsive.scss */
-  header .top-nav li a span{
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    top: auto;
-    left: -10000px;
-    width: 1px; }
-  /* line 2, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/membership/_membership_benefit_responsive.scss */
-  /* line 2, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/membership/_membership_category_responsive.scss */
-  /* line 3, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/news_items/_news_items_grid_responsive.scss */
-  article.membership-benefit,article.membership-category,section.news-items-grid{
-    width: 100%;
-    float: right;
-    margin-right: 0; }
-  /* line 6, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/news_items/_news_items_grid_responsive.scss */
-  /* line 2, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  section.news-items-grid article,.nav-list{
-    width: 100%; }
-  .nav-list{
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #dbdbdb; }
-  /* line 13, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .nav-list li a{
-    display: block;
-    padding: 20px;
-    width: calc(100% - 40px);
-    border-bottom: 1px solid #b0b0b0;
-    color: #4a4a4a;
-    font-size: 1.875em;
-    text-decoration: none; }
-  /* line 25, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .nav-list li a:hover{
-    background: #55a440;
-    color: #fff; }
-  /* line 30, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .nav-list li a.has-subs{
-    position: relative; }
-  /* line 33, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .nav-list li a.has-subs:after{
-    content: "";
-    display: block;
-    height: 15px;
-    margin: auto;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 30px;
-    width: 15px;
-    background: url('data:image/svg+xml;base64,PHN2ZyBpZD0nTGF5ZXJfMScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PSctMjgxIDQwNC45IDYuNiA4LjknPjxzdHlsZT4uc3Qwe2ZpbGw6bm9uZTtzdHJva2U6IzU1YTQ0MDtzdHJva2Utd2lkdGg6MjtzdHJva2UtbWl0ZXJsaW1pdDoxMH08L3N0eWxlPjxwYXRoIGNsYXNzPSdzdDAnIGQ9J00tMjgwIDQwNS45bDQgMy41LTQgMy41Jy8+PC9zdmc+') center center no-repeat; }
-  /* line 50, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .nav-list li a.has-subs:hover:after{
-    background: url('data:image/svg+xml;base64,PHN2ZyBpZD0nTGF5ZXJfMScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PSctMjgxIDQwNC45IDYuNiA4LjknPjxzdHlsZT4uc3Qwe2ZpbGw6bm9uZTtzdHJva2U6I2ZmZjtzdHJva2Utd2lkdGg6MjtzdHJva2UtbWl0ZXJsaW1pdDoxMH08L3N0eWxlPjxwYXRoIGNsYXNzPSdzdDAnIGQ9J00tMjgwIDQwNS45bDQgMy41LTQgMy41Jy8+PC9zdmc+') center center no-repeat; }
-  /* line 58, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .nav-list li.current-section a{
-    color: #55a440;
-    text-transform: uppercase; }
-  /* line 62, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .nav-list li.current-section a:hover{
-    color: #fff; }
-  /* line 69, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .nav-list li.previous-section a{
-    background: #686967;
-    color: #fff; }
-  /* line 73, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .nav-list li.previous-section a:before{
-    content: "";
-    display: inline-block;
-    height: 15px;
-    margin: auto 8px auto 0;
-    width: 15px;
-    background: url('data:image/svg+xml;base64,PHN2ZyBpZD0nTGF5ZXJfMScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PSctMjgxIDQwNC45IDYuNiA4LjknPjxzdHlsZT4uc3Qwe2ZpbGw6bm9uZTtzdHJva2U6I2ZmZjtzdHJva2Utd2lkdGg6MjtzdHJva2UtbWl0ZXJsaW1pdDoxMH08L3N0eWxlPjxwYXRoIGNsYXNzPSdzdDAnIGQ9J00tMjgwIDQwNS45bDQgMy41LTQgMy41Jy8+PC9zdmc+') center center no-repeat;
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg); }
-  /* line 86, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .nav-list li.previous-section a:hover{
-    color: #fff; }
-  /* line 94, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .open-nav{
-    display: table-cell;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 24%;
-    width: 50px;
-    border-left: 1px solid #3b722d;
-    border-right: 1px solid #3b722d; }
-  /* line 107, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .open-nav:hover{
-    background-color: #4d9a38; }
-  /* line 111, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .open-nav .icon-hamburger{
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    display: block;
-    height: 100%;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    margin: 0 auto;
-    width: 50%;
-    background: url('data:image/svg+xml;base64,PHN2ZyBpZD0nTGF5ZXJfMScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PScwIDAgNDYgMjYnPjxzdHlsZT4uc3QwLC5zdDF7ZGlzcGxheTpub25lfS5zdDF7c3Ryb2tlOiM5OTk7c3Ryb2tlLXdpZHRoOi4xfS5zdDEsLnN0MntmaWxsOm5vbmU7c3Ryb2tlLW1pdGVybGltaXQ6MTB9LnN0MntzdHJva2U6I0ZGRjtzdHJva2Utd2lkdGg6MjtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmR9PC9zdHlsZT48ZyBpZD0nZ3JpZCc+PHBhdGggY2xhc3M9J3N0MCcgZD0nTTIzLTE1LjljMTYuNSAwIDI5LjkgMTMuNCAyOS45IDI5LjlTMzkuNSA0My45IDIzIDQzLjktNi45IDMwLjUtNi45IDE0IDYuNS0xNS45IDIzLTE1LjltMC0uMUM2LjQtMTYtNy0yLjYtNyAxNFM2LjQgNDQgMjMgNDRzMzAtMTMuNCAzMC0zMC0xMy40LTMwLTMwLTMweicvPjxwYXRoIGNsYXNzPSdzdDAnIGQ9J00yMyA0LjFjNS41IDAgOS45IDQuNCA5LjkgOS45cy00LjQgOS45LTkuOSA5LjktOS45LTQuNC05LjktOS45IDQuNC05LjkgOS45LTkuOW0wLS4xYy01LjUgMC0xMCA0LjUtMTAgMTBzNC41IDEwIDEwIDEwIDEwLTQuNSAxMC0xMFMyOC41IDQgMjMgNHonLz48cGF0aCBjbGFzcz0nc3QwJyBkPSdNMjMtNS45QzM0LTUuOSA0Mi45IDMgNDIuOSAxNFMzNCAzMy45IDIzIDMzLjkgMy4xIDI1IDMuMSAxNCAxMi01LjkgMjMtNS45bTAtLjFDMTItNiAzIDMgMyAxNHM5IDIwIDIwIDIwIDIwLTkgMjAtMjBTMzQtNiAyMy02eicvPjxwYXRoIGNsYXNzPSdzdDAnIGQ9J001My0xNnY2MEgtN3YtNjBoNjBtMCAwSC03djYwaDYwdi02MHonLz48cGF0aCBjbGFzcz0nc3QxJyBkPSdNLTItMTFsNTAgNTBtMC01MEwtMiAzOScvPjwvZz48cGF0aCBjbGFzcz0nc3QyJyBkPSdNMSAxNGg0NE0xIDJoNDRNMSAyNmg0NCcgaWQ9J2ljb25zJy8+PC9zdmc+') center center no-repeat; }
-  /* line 3, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
-  .weekly-prog .date-nav{
-    height: 110px; }
-  /* line 6, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
-  .weekly-prog .date-nav .date-nav-item{
-    height: 90px; }
-  /* line 11, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
-  .weekly-prog .date-nav .date-nav-item-link span{
-    display: block;
-    text-align: center; }
-  /* line 15, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
-  .weekly-prog .date-nav .date-nav-item-link span.nav-date{
-    font-size: 2em;
-    line-height: 1em; }
-  /* line 20, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
-  .weekly-prog .date-nav .date-nav-item-link span.nav-day{
-    font-size: 0.8em; }
-  /* line 26, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
-  .weekly-prog .date-nav .list-holder{
-    width: calc(100% - 200px);
-    height: 99px; }
-  /* line 31, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
-  /* line 34, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
-  .weekly-prog .date-nav .nav-mover,.weekly-prog .date-nav .nav-mover:after{
-    height: 60px; }
-  /* line 41, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
-  .weekly-prog .tr .bold-weight{
-    font-size: 1.733em; }
-  /* line 45, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
-  .weekly-prog .tr .icon-information{
-    float: right;
-    height: 50px;
-    width: 50px;
-    background: url("data:image/svg+xml;utf8,<svg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='157.4 491.6 21.7 39.2'><style>.st0{fill:#cfcfcf}</style><path class='st0' d='M159.5 491.6l19.6 19.6-2.1 2.1-19.6-19.6 2.1-2.1z'/><path class='st0' d='M157.4 528.6L177 509l2.1 2.1-19.6 19.6-2.1-2.1z'/></svg>") center center no-repeat;
-    background-size: contain; }
-  /* line 56, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/weekly_prog/_weekly_prog_responsive.scss */
-  .weekly-prog .tr .pill{
-    font-size: 1.467em;
-    text-align: center; } }
-
-@media (min-width: 768px) and (max-width: 991px){
-  /* line 10, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_breakpoints.scss */
-  .wrap{
-    max-width: 991px;
-    margin-left: auto;
-    margin-right: auto; }
-  /* line 12, /Users/adrianstainforth/sites/modules/weekly-prog/bower_components/susy/sass/susy/output/support/_clearfix.scss */
-  .wrap:after{
-    content: " ";
-    display: block;
-    clear: both; }
-  /* line 21, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_global_responsive.scss */
-  body.nav-open{
-    right: 50%; }
-  /* line 4, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/activities_facilities/_panel_responsive.scss */
-  body.activities-facilities article.activity-facility{
-    width: 48.97959%;
-    float: left;
-    margin-right: 2.04082%; }
-  /* line 12, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/activities_facilities/_panel_responsive.scss */
-  body.activities-facilities article.activity-facility:nth-child(2n+2){
-    float: right;
-    margin-right: 0; }
-  /* line 35, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/carousel/_carousel_responsive.scss */
-  #carousel .carousel-inner{
-    padding-bottom: 56.25%;
-    /* 16:9 ratio, ie 768x432 */ }
-  /* line 10, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/centre_locator_toolbar/_centre_locator_toolbar_responsive.scss */
-  section.centre-locator-toolbar .form-row{
-    width: 26.53061%;
-    float: left;
-    margin-right: 2.04082%; }
-  /* line 52, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-md-1{
-    width: calc(8.333333333333% - 30px);
-    /* 1/12 */ }
-  /* line 56, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-md-2{
-    width: calc(16.666666666667% - 30px);
-    /* 2/12 */ }
-  /* line 60, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-md-3{
-    width: calc(25% - 30px);
-    /* 3/12 */ }
-  /* line 64, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-md-4{
-    width: calc(33.333333333333% - 30px);
-    /* 4/12 */ }
-  /* line 68, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-md-5{
-    width: calc(41.666666666667% - 30px);
-    /* 5/12 */ }
-  /* line 72, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-md-6{
-    width: calc(50% - 30px);
-    /* 6/12 */ }
-  /* line 76, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-md-7{
-    width: calc(58.333333333333% - 30px);
-    /* 7/12 */ }
-  /* line 80, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-md-8{
-    width: calc(66.666666666667% - 30px);
-    /* 8/12 */ }
-  /* line 84, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-md-9{
-    width: calc(75% - 30px);
-    /* 9/12 */ }
-  /* line 88, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-md-10{
-    width: calc(83.333333333333% - 30px);
-    /* 10/12 */ }
-  /* line 92, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-md-11{
-    width: calc(91.666666666667% - 30px);
-    /* 11/12 */ }
-  /* line 96, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-md-12{
-    width: calc(100% - 30px);
-    /* 12/12 */ }
-  /* line 17, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/find_us/_find_us_responsive.scss */
-  section.find-us{
-    width: 100%;
-    float: right;
-    margin-right: 0; }
-  /* line 21, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/find_us/_find_us_responsive.scss */
-  section.find-us .map-legend dl{
-    width: calc(33.333333333333% - 20px); }
-  /* line 24, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/find_us/_find_us_responsive.scss */
-  section.find-us .map-legend dl:nth-child(3n+1){
-    margin-left: 0; }
-  /* line 42, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
-  footer.main section.sign-up{
-    width: 100%;
-    float: left;
-    margin-left: 0;
-    margin-right: 0;
-    position: relative; }
-  /* line 46, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
-  /* line 50, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
-  footer.main section.sign-up .email,footer.main section.sign-up .first-name{
-    width: 28.57143%;
-    float: left;
-    margin-right: 2.04082%; }
-  /* line 49, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/header/_header_responsive.scss */
-  header.main .logo{
-    width: 20%; }
-  /* line 2, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/membership/_membership_benefit_responsive.scss */
-  article.membership-benefit{
-    width: 48.97959%;
-    float: left;
-    margin-right: 2.04082%; }
-  /* line 10, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/membership/_membership_benefit_responsive.scss */
-  article.membership-benefit:nth-child(even){
-    float: right;
-    margin-right: 0; }
-  /* line 2, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/membership/_membership_category_responsive.scss */
-  article.membership-category{
-    width: 48.97959%;
-    float: left;
-    margin-right: 2.04082%; }
-  /* line 10, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/membership/_membership_category_responsive.scss */
-  /* line 15, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/news_items/_news_items_grid_responsive.scss */
-  article.membership-category:nth-child(2n+2),section.news-items-grid{
-    float: right;
-    margin-right: 0; }
-  section.news-items-grid{
-    width: 100%; }
-  /* line 18, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/news_items/_news_items_grid_responsive.scss */
-  section.news-items-grid article{
-    -webkit-flex-basis: calc(50% - 20px);
-    -ms-flex-preferred-size: calc(50% - 20px);
-    flex-basis: calc(50% - 20px);
-    /* spans 1/2 */ }
-  /* line 21, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/news_items/_news_items_grid_responsive.scss */
-  section.news-items-grid article:nth-child(2n+2){
-    float: right;
-    margin-right: 0; }
-  /* line 469, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  /* line 474, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .level-2 .nav-list,.single .level-3{
-    width: 33.33%; }
-  /* line 478, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .level-3, .single .level-4{
-    float: left; }
-  /* line 482, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .level-4{
-    width: calc(33.33% - 2px); } }
-
-@media (min-width: 992px){
-  /* line 10, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_breakpoints.scss */
-  .wrap{
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto; }
-  /* line 12, /Users/adrianstainforth/sites/modules/weekly-prog/bower_components/susy/sass/susy/output/support/_clearfix.scss */
-  .wrap:after{
-    content: " ";
-    display: block;
-    clear: both; }
-  /* line 4, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/activities_facilities/_panel_responsive.scss */
-  body.activities-facilities article.activity-facility{
-    width: 32.20339%;
-    float: left;
-    margin-right: 1.69492%; }
-  /* line 20, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/activities_facilities/_panel_responsive.scss */
-  body.activities-facilities article.activity-facility:nth-child(3n+3){
-    float: right;
-    margin-right: 0; }
-  /* line 52, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/carousel/_carousel_responsive.scss */
-  #carousel h3{
-    margin-left: 20px; }
-  /* line 56, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/carousel/_carousel_responsive.scss */
-  #carousel .carousel-inner{
-    padding-bottom: 30.546875%;
-    /* , ie 1280x391. This is Oliver's ratio, as per their design */
-    /* A decision needs to be made regarding the above. As it stands, Oliver are unhappy if we use GLL's ratios as it doesn't match their design and GLL are unhappy if we use Oliver's ratios because the image isn't high enough. */ }
-  /* line 28, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/centre_locator_toolbar/_centre_locator_toolbar_responsive.scss */
-  section.centre-locator-toolbar .content-padding{
-    padding: 20px 60px; }
-  /* line 32, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/centre_locator_toolbar/_centre_locator_toolbar_responsive.scss */
-  section.centre-locator-toolbar .form-row{
-    width: 27.9661%;
-    float: left;
-    margin-right: 1.69492%; }
-  /* line 102, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-lg-1{
-    width: calc(8.333333333333% - 30px);
-    /* 1/12 */ }
-  /* line 106, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-lg-2{
-    width: calc(16.666666666667% - 30px);
-    /* 2/12 */ }
-  /* line 110, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-lg-3{
-    width: calc(25% - 30px);
-    /* 3/12 */ }
-  /* line 114, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-lg-4{
-    width: calc(33.333333333333% - 30px);
-    /* 4/12 */ }
-  /* line 118, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-lg-5{
-    width: calc(41.666666666667% - 30px);
-    /* 5/12 */ }
-  /* line 122, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-lg-6{
-    width: calc(50% - 30px);
-    /* 6/12 */ }
-  /* line 126, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-lg-7{
-    width: calc(58.333333333333% - 30px);
-    /* 7/12 */ }
-  /* line 130, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-lg-8{
-    width: calc(66.666666666667% - 30px);
-    /* 8/12 */ }
-  /* line 134, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-lg-9{
-    width: calc(75% - 30px);
-    /* 9/12 */ }
-  /* line 138, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-lg-10{
-    width: calc(83.333333333333% - 30px);
-    /* 10/12 */ }
-  /* line 142, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-lg-11{
-    width: calc(91.666666666667% - 30px);
-    /* 11/12 */ }
-  /* line 146, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/columns/_columns_responsive.scss */
-  .col-lg-12{
-    width: calc(100% - 30px);
-    /* 12/12 */ }
-  /* line 47, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/find_us/_find_us_responsive.scss */
-  section.find-us{
-    width: 100%;
-    float: right;
-    margin-right: 0; }
-  /* line 51, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/find_us/_find_us_responsive.scss */
-  section.find-us .map-legend dl{
-    width: calc(20% - 20px); }
-  /* line 54, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/find_us/_find_us_responsive.scss */
-  section.find-us .map-legend dl:nth-child(5n+1){
-    margin-left: 0; }
-  /* line 2, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
-  footer.main{
-    width: 100%;
-    float: right;
-    margin-right: 0; }
-  /* line 87, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
-  footer.main .column-one{
-    width: 83.05085%;
-    float: left;
-    margin-right: 1.69492%;
-    box-sizing: border-box;
-    padding-right: 1.69492%;
-    border-right: 1px solid #cfcfcf; }
-  /* line 96, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
-  footer.main .column-one section{
-    width: 18.36735%;
-    float: left;
-    margin-right: 2.04082%; }
-  /* line 99, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
-  footer.main .column-one section.sign-up{
-    width: 100%;
-    float: left;
-    margin-left: 0;
-    margin-right: 0;
-    position: relative; }
-  /* line 103, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
-  /* line 107, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
-  footer.main .column-one section.sign-up .email,footer.main .column-one section.sign-up .first-name{
-    width: 18.36735%;
-    float: left;
-    margin-right: 2.04082%; }
-  /* line 114, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
-  footer.main .column-two{
-    width: 15.25424%;
-    float: right;
-    margin-right: 0; }
-  /* line 58, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/header/_header_responsive.scss */
-  header.main{
-    position: relative; }
-  /* line 61, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/header/_header_responsive.scss */
-  header.main .logo{
-    width: 10%; }
-  /* line 2, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/membership/_membership_benefit_responsive.scss */
-  article.membership-benefit{
-    width: 100%;
-    float: right;
-    margin-right: 0; }
-  /* line 19, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/membership/_membership_benefit_responsive.scss */
-  article.membership-benefit:nth-child(even) .image-container{
-    width: 49.15254%;
-    float: right;
-    margin-right: 0; }
-  /* line 23, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/membership/_membership_benefit_responsive.scss */
-  /* line 29, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/membership/_membership_benefit_responsive.scss */
-  article.membership-benefit:nth-child(even) .text-container,article.membership-benefit:nth-child(odd) .image-container{
-    width: 49.15254%;
-    float: left;
-    margin-right: 1.69492%; }
-  /* line 33, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/membership/_membership_benefit_responsive.scss */
-  article.membership-benefit:nth-child(odd) .text-container{
-    width: 49.15254%;
-    float: right;
-    margin-right: 0; }
-  /* line 2, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/membership/_membership_category_responsive.scss */
-  article.membership-category{
-    width: 32.20339%;
-    float: left;
-    margin-right: 1.69492%; }
-  /* line 18, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/membership/_membership_category_responsive.scss */
-  /* line 42, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/news_items/_news_items_grid_responsive.scss */
-  article.membership-category:nth-child(3n+3),section.news-items-grid{
-    float: right;
-    margin-right: 0; }
-  section.news-items-grid{
-    width: 100%; }
-  /* line 45, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/news_items/_news_items_grid_responsive.scss */
-  section.news-items-grid article{
-    -webkit-flex-basis: calc(16.666666666667% - 20px);
-    -ms-flex-preferred-size: calc(16.666666666667% - 20px);
-    flex-basis: calc(16.666666666667% - 20px);
-    /* spans 1/6 */ }
-  /* line 48, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/news_items/_news_items_grid_responsive.scss */
-  section.news-items-grid article.double{
-    -webkit-flex-basis: calc(33.333333333333% - 20px);
-    -ms-flex-preferred-size: calc(33.333333333333% - 20px);
-    flex-basis: calc(33.333333333333% - 20px);
-    /* spans 1/3 */ }
-  /* line 491, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  /* line 496, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .level-2 .nav-list,.single .level-3{
-    width: 25%; }
-  /* line 500, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .level-3, .single .level-4{
-    float: left; }
-  /* line 504, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .level-4{
-    width: calc(50% - 2px); }
-  /* line 508, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .level-4 .nav-list li{
-    float: left;
-    width: 50%; }
-  /* line 11, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/sections/_sections_responsive.scss */
-  .page-header p{
-    width: 59.32203%;
-    float: left;
-    margin-right: 1.69492%;
-    padding-left: 20.33898%;
-    padding-right: 20.33898%; } }
-
-@media (min-width: 768px){
-  /* line 22, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_forms_responsive.scss */
-  form input[type="email"], form input[type="tel"], form input[type="text"], form select, form textarea{
-    padding: 15px;
-    border: 1px solid #d7d7d7;
-    font-size: 0.813em;
-    /* 13px */ }
-  /* line 31, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_forms_responsive.scss */
-  form label{
-    font-size: 0.875em;
-    /* 14px */ }
-  /* line 1, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/alerts/_alerts_responsive.scss */
-  .alert{
-    width: calc(80% - 90px); }
-  /* line 42, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/carousel/_carousel_responsive.scss */
-  #carousel .carousel-arrows-container{
-    top: 42%; }
-  /* line 46, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/carousel/_carousel_responsive.scss */
-  #carousel .carousel-overlay{
-    padding: 5% 0 0 13%; }
-  /* line 16, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/centre_locator_toolbar/_centre_locator_toolbar_responsive.scss */
-  section.centre-locator-toolbar form{
-    position: relative; }
-  /* line 20, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/centre_locator_toolbar/_centre_locator_toolbar_responsive.scss */
-  section.centre-locator-toolbar input[type="submit"]{
-    position: absolute;
-    right: 0;
-    bottom: 10px; }
-  /* line 37, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/find_us/_find_us_responsive.scss */
-  section.find-us .map-legend dl{
-    margin-left: 20px; }
-  /* line 59, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
-  footer.main section:before{
-    content: "";
-    display: block;
-    height: 1px;
-    margin-bottom: 15px;
-    width: 30px;
-    background-color: #b6b6b6; }
-  /* line 72, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
-  footer.main section.sign-up input[type="submit"]{
-    position: absolute;
-    bottom: 0; }
-  /* line 79, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
-  footer.main .footer-footer{
-    background-color: #fff; }
-  /* line 32, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/news_items/_news_items_grid_responsive.scss */
-  section.news-items-grid article{
-    -webkit-box-flex: 0;
-    -webkit-flex-grow: 0;
-    -ms-flex-positive: 0;
-    flex-grow: 0;
-    -webkit-flex-shrink: 0;
-    -ms-flex-negative: 0;
-    flex-shrink: 0; }
-  /* line 128, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .primery-nav{
-    position: relative;
-    background: #585858;
-    color: #fff; }
-  /* line 136, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .primery-nav .nav-holder{
-    float: left;
-    position: relative;
-    left: 50%; }
-  /* line 141, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .primery-nav .nav-holder .primary-nav-list{
-    float: left;
-    position: relative;
-    left: -50%; }
-  /* line 149, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single{
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: -webkit-linear-gradient(bottom, #e9e7ea 0%, #f3f3f7 100%);
-    background: linear-gradient(0deg, #e9e7ea 0%, #f3f3f7 100%);
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.24); }
-  /* line 162, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .level-1 .home-link{
-    float: left;
-    height: 50px;
-    width: 20%;
-    background: #dedede; }
-  /* line 171, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .level-1 .home-link a{
-    display: block;
-    float: left;
-    padding: 15px 25px;
-    color: #000;
-    font-size: 0.813em;
-    text-decoration: none; }
-  /* line 188, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .level-2 .home-link{
-    margin: 0 20px;
-    padding: 30px 0; }
-  /* line 192, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .level-2 .home-link a{
-    font-size: 1.438em;
-    font-weight: 300;
-    text-decoration: none;
-    text-transform: uppercase; }
-  /* line 200, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .level-2 .nav-list{
-    margin: 0;
-    padding: 0;
-    vertical-align: baseline;
-    border: 0;
-    font-weight: normal;
-    list-style: none;
-    float: left;
-    margin-top: 20px;
-    background-color: #f6f6f6; }
-  /* line 211, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .level-2 .nav-list .secondary-nav-list{
-    margin-top: 20px; }
-  /* line 216, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .level-2 .secondary-nav-list{
-    border-bottom: 1px solid #b9b9b9; }
-  /* line 219, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .level-2 .secondary-nav-list li{
-    zoom: 1;
-    position: relative;
-    border-top: 1px solid #b9b9b9;
-    border-right: 1px solid #b9b9b9; }
-  /* line 4, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/utils/_mixins.scss */
-  .single .level-2 .secondary-nav-list li:before, .single .level-2 .secondary-nav-list li:after{
-    content: "";
-    display: table; }
-  /* line 9, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/utils/_mixins.scss */
-  .single .level-2 .secondary-nav-list li:after{
-    clear: both; }
-  /* line 230, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .level-2 .secondary-nav-list li.active a:after, .single .level-2 .secondary-nav-list li:hover a:after{
-    content: "";
-    display: block;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 10px;
-    background-color: #55a440; }
-  /* line 247, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .level-2 .secondary-nav-list li a{
-    display: block;
-    margin: 10px 10px 10px 30px;
-    color: #585858;
-    text-decoration: none; }
-  /* line 261, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .level-3{
-    border-right: 1px solid #c7c7c7; }
-  /* line 265, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .level-3, .single .level-4{
-    margin-top: 20px;
-    background-color: #f6f6f6; }
-  /* line 275, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .level-3 .nav-list li.active a, .single .level-3 .nav-list li:hover a, .single .level-4 .nav-list li.active a, .single .level-4 .nav-list li:hover a{
-    background-color: #55a440;
-    color: #fff; }
-  /* line 280, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .level-3 .nav-list li.active a.has-subs:after, .single .level-3 .nav-list li:hover a.has-subs:after, .single .level-4 .nav-list li.active a.has-subs:after, .single .level-4 .nav-list li:hover a.has-subs:after{
-    background: url('data:image/svg+xml;base64,PHN2ZyBpZD0nTGF5ZXJfMScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PSctMjgxIDQwNC45IDYuNiA4LjknPjxzdHlsZT4uc3Qwe2ZpbGw6bm9uZTtzdHJva2U6I2ZmZjtzdHJva2Utd2lkdGg6MjtzdHJva2UtbWl0ZXJsaW1pdDoxMH08L3N0eWxlPjxwYXRoIGNsYXNzPSdzdDAnIGQ9J00tMjgwIDQwNS45bDQgMy41LTQgMy41Jy8+PC9zdmc+') center center no-repeat; }
-  /* line 287, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .level-3 .nav-list li a, .single .level-4 .nav-list li a{
-    display: block;
-    padding: 5px 20px;
-    color: #585858;
-    text-decoration: none; }
-  /* line 296, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .level-3 .nav-list li a.has-subs, .single .level-4 .nav-list li a.has-subs{
-    position: relative; }
-  /* line 299, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .level-3 .nav-list li a.has-subs:after, .single .level-4 .nav-list li a.has-subs:after{
-    content: "";
-    display: block;
-    height: 10px;
-    margin: auto;
-    position: absolute;
-    width: 10px;
-    top: 0;
-    bottom: 0;
-    right: 20px;
-    background: url('data:image/svg+xml;base64,PHN2ZyBpZD0nTGF5ZXJfMScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PSctMjgxIDQwNC45IDYuNiA4LjknPjxzdHlsZT4uc3Qwe2ZpbGw6bm9uZTtzdHJva2U6IzU1YTQ0MDtzdHJva2Utd2lkdGg6MjtzdHJva2UtbWl0ZXJsaW1pdDoxMH08L3N0eWxlPjxwYXRoIGNsYXNzPSdzdDAnIGQ9J00tMjgwIDQwNS45bDQgMy41LTQgMy41Jy8+PC9zdmc+') center center no-repeat; }
-  /* line 321, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .levels .home-link, .single .levels .title-link{
-    border-bottom: 1px solid #c7c7c7;
-    box-shadow: 0px 0 1px 0px rgba(255, 255, 255, 0.76); }
-  /* line 325, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .levels .home-link:before, .single .levels .title-link:before{
-    content: "";
-    display: inline-block;
-    height: 10px;
-    margin: 3px 10px 3px 0;
-    width: 10px;
-    background: url('data:image/svg+xml;base64,PHN2ZyBpZD0nTGF5ZXJfMScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PSctMjgxIDQwNC45IDYuNiA4LjknPjxzdHlsZT4uc3Qwe2ZpbGw6bm9uZTtzdHJva2U6IzU1YTQ0MDtzdHJva2Utd2lkdGg6MjtzdHJva2UtbWl0ZXJsaW1pdDoxMH08L3N0eWxlPjxwYXRoIGNsYXNzPSdzdDAnIGQ9J00tMjgwIDQwNS45bDQgMy41LTQgMy41Jy8+PC9zdmc+') center center no-repeat;
-    background-size: cover; }
-  /* line 338, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .levels .home-link a, .single .levels .title-link a{
-    color: #55a440;
-    text-decoration: none; }
-  /* line 344, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .levels .title-link{
-    margin: 0 20px;
-    padding: 15px 0; }
-  /* line 350, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .secondary-nav-touch-list{
-    margin: 0;
-    padding: 0;
-    vertical-align: baseline;
-    border: 0;
-    font-weight: normal;
-    list-style: none;
-    height: 50px;
-    position: absolute;
-    left: 0;
-    -webkit-transition: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
-    transition: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1); }
-  /* line 362, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .secondary-nav-touch-list li{
-    display: inline-block;
-    float: left; }
-  /* line 366, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .secondary-nav-touch-list li a{
-    display: block;
-    float: left;
-    padding: 10px 25px;
-    color: #797878;
-    font-size: 1em;
-    text-decoration: none; }
-  /* line 381, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .secondary-nav-touch-list .secondary-nav-list.level-1 li{
-    display: inline-block;
-    float: left; }
-  /* line 385, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .secondary-nav-touch-list .secondary-nav-list.level-1 li a{
-    display: block;
-    float: left;
-    padding: 20px 30px;
-    color: #797878;
-    font-size: 1.154em;
-    text-decoration: none; }
-  /* line 401, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .touch-sub-nav{
-    float: right;
-    width: 80%; }
-  /* line 405, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .touch-sub-nav .list-holder{
-    float: left;
-    height: 40px;
-    overflow: hidden;
-    position: relative;
-    width: calc(100% - 100px); }
-  /* line 413, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .touch-sub-nav .nav-mover{
-    margin: 0;
-    padding: 0;
-    vertical-align: baseline;
-    border: 0;
-    font-weight: normal;
-    list-style: none;
-    float: left;
-    height: 20px;
-    margin: 15px;
-    position: relative;
-    width: 10px;
-    background-size: contain;
-    font-size: 1.25em;
-    /* 20px */
-    font-weight: 300;
-    line-height: 1em; }
-  /* line 430, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .touch-sub-nav .nav-mover:after{
-    content: "";
-    height: 20px;
-    position: absolute;
-    top: 0;
-    width: 1px;
-    background-color: #cfcfcf; }
-  /* line 442, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .touch-sub-nav .nav-mover.move-left{
-    background: url('data:image/svg+xml;base64,PHN2ZyBpZD0nTGF5ZXJfMScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PScxNTcuMyA0OTEuNyAyMS43IDM5Jz48c3R5bGU+LnN0MHtmaWxsOiAjY2ZjZmNmfTwvc3R5bGU+PHBhdGggY2xhc3M9J3N0MCcgZD0nTTE3NyA1MzAuN2wtMTkuNi0xOS41IDIuMS0yLjEgMTkuNiAxOS41LTIuMSAyLjF6Jy8+PHBhdGggY2xhc3M9J3N0MCcgZD0nTTE3OSA0OTMuOGwtMTkuNSAxOS42LTIuMS0yLjEgMTkuNS0xOS42IDIuMSAyLjF6Jy8+PC9zdmc+') center center no-repeat; }
-  /* line 445, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .touch-sub-nav .nav-mover.move-left:after{
-    right: -20px; }
-  /* line 450, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .touch-sub-nav .nav-mover.move-right{
-    float: right;
-    background: url('data:image/svg+xml;base64,PHN2ZyBpZD0nTGF5ZXJfMScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PScxNTcuNCA0OTEuNiAyMS43IDM5LjInPjxzdHlsZT4uc3Qwe2ZpbGw6I2NmY2ZjZn08L3N0eWxlPjxwYXRoIGNsYXNzPSdzdDAnIGQ9J00xNTkuNSA0OTEuNmwxOS42IDE5LjYtMi4xIDIuMS0xOS42LTE5LjYgMi4xLTIuMXonLz48cGF0aCBjbGFzcz0nc3QwJyBkPSdNMTU3LjQgNTI4LjZMMTc3IDUwOWwyLjEgMi4xLTE5LjYgMTkuNi0yLjEtMi4xeicvPjwvc3ZnPg==') center center no-repeat; }
-  /* line 457, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/primary_nav/_primary_nav_responsive.scss */
-  .single .touch-sub-nav .nav-mover.move-right:after{
-    left: -20px; } }
-
-@media (max-width: 991px){
-  /* line 10, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/base/_global_responsive.scss */
-  body{
-    right: 0;
-    -webkit-transition: right 0.2s ease-in-out;
-    transition: right 0.2s ease-in-out; }
-  /* line 23, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
-  footer.main section.footer-about, footer.main section.footer-information, footer.main section.footer-location, footer.main section.footer-offer{
-    margin-bottom: 20px; }
-  /* line 26, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/footer/_footer_responsive.scss */
-  footer.main section.footer-about h1, footer.main section.footer-information h1, footer.main section.footer-location h1, footer.main section.footer-offer h1{
-    margin-right: -10px;
-    margin-left: -10px;
-    padding: 10px;
-    background-color: #cfcfcf;
-    border-bottom: 1px solid #b6b6b6; }
-  /* line 32, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/header/_header_responsive.scss */
-  body.nav-open header.main{
-    background-color: #6ebe59; }
-  /* line 40, /Users/adrianstainforth/sites/modules/weekly-prog/test_assets/stylesheets/components/header/_header_responsive.scss */
-  header.main{
-    -webkit-transition: background-color 0.2s ease-in-out;
-    transition: background-color 0.2s ease-in-out; } } /*# sourceMappingURL=application.css.map */
+/*# sourceMappingURL=application.cssmap */ /*# sourceMappingURL=application.css.map */
