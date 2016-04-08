@@ -1,7 +1,6 @@
 const Dispatcher = require('flux').Dispatcher;
-const assign     = require('react/lib/Object.assign');
 
-const ColumnsDispatcher = assign(new Dispatcher(), {
+const ColumnsDispatcher = Object.assign(new Dispatcher(), {
 
   /**
    * @param {object} action The details of the action, including the action's

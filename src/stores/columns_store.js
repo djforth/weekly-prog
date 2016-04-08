@@ -1,5 +1,4 @@
 const EventEmitter  = require('events').EventEmitter;
-const assign        = require('react/lib/Object.assign');
 
 const _    = require('lodash/core')
     , includes = require('lodash/includes')
@@ -187,7 +186,7 @@ const store = {
 Object.assign(store, textMixins);
 
 
-const ColumnsStore = assign({}, EventEmitter.prototype, store);
+const ColumnsStore = Object.assign({}, EventEmitter.prototype, store);
 
 const registeredCallback = function(payload) {
   let action = payload.action;

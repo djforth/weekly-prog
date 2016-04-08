@@ -1,9 +1,9 @@
 [
 {
-"id": 8431956,
+"id": 8431957,
 "cancelled": false,
-"start": "2016-04-11 07:30",
-"finish": "2016-04-11 08:15",
+"start": "2016-04-18 07:30",
+"finish": "2016-04-18 08:15",
 "session": "Circuits<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
@@ -16,10 +16,10 @@
 }
 },
 {
-"id": 8432269,
+"id": 8432270,
 "cancelled": false,
-"start": "2016-04-11 16:30",
-"finish": "2016-04-11 17:00",
+"start": "2016-04-18 16:30",
+"finish": "2016-04-18 17:00",
 "session": "Cardio - (T)<p>&nbsp;</p>",
 "lanes": null,
 "location": "Gym",
@@ -32,10 +32,10 @@
 }
 },
 {
-"id": 8432679,
+"id": 8432680,
 "cancelled": false,
-"start": "2016-04-11 18:00",
-"finish": "2016-04-11 19:00",
+"start": "2016-04-18 18:00",
+"finish": "2016-04-18 19:00",
 "session": "Circuits<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
@@ -48,10 +48,10 @@
 }
 },
 {
-"id": 8432887,
+"id": 8432888,
 "cancelled": false,
-"start": "2016-04-11 19:30",
-"finish": "2016-04-11 20:00",
+"start": "2016-04-18 19:30",
+"finish": "2016-04-18 20:00",
 "session": "Strength & Conditioning<p>&nbsp;</p>",
 "lanes": null,
 "location": "X-Cube ",
@@ -64,10 +64,10 @@
 }
 },
 {
-"id": 8432991,
+"id": 8432992,
 "cancelled": false,
-"start": "2016-04-11 20:00",
-"finish": "2016-04-11 21:00",
+"start": "2016-04-18 20:00",
+"finish": "2016-04-18 21:00",
 "session": "Yoga<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
@@ -80,10 +80,10 @@
 }
 },
 {
-"id": 8433095,
+"id": 8433096,
 "cancelled": false,
-"start": "2016-04-12 09:30",
-"finish": "2016-04-12 10:30",
+"start": "2016-04-19 09:30",
+"finish": "2016-04-19 10:30",
 "session": "Dance Aerobics<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
@@ -96,10 +96,10 @@
 }
 },
 {
-"id": 8433199,
+"id": 8433200,
 "cancelled": false,
-"start": "2016-04-12 10:30",
-"finish": "2016-04-12 11:30",
+"start": "2016-04-19 10:30",
+"finish": "2016-04-19 11:30",
 "session": "Total Body Conditioning<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
@@ -112,10 +112,10 @@
 }
 },
 {
-"id": 8433303,
+"id": 8433304,
 "cancelled": false,
-"start": "2016-04-12 14:00",
-"finish": "2016-04-12 14:45",
+"start": "2016-04-19 14:00",
+"finish": "2016-04-19 14:45",
 "session": "Circuits<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
@@ -128,10 +128,10 @@
 }
 },
 {
-"id": 8433407,
+"id": 8433408,
 "cancelled": false,
-"start": "2016-04-12 17:30",
-"finish": "2016-04-12 18:00",
+"start": "2016-04-19 17:30",
+"finish": "2016-04-19 18:00",
 "session": "Strength & Conditioning<p>&nbsp;</p>",
 "lanes": null,
 "location": "X-Cube ",
@@ -144,10 +144,10 @@
 }
 },
 {
-"id": 8433511,
+"id": 8433512,
 "cancelled": false,
-"start": "2016-04-12 18:00",
-"finish": "2016-04-12 19:00",
+"start": "2016-04-19 18:00",
+"finish": "2016-04-19 19:00",
 "session": "Step<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
@@ -160,10 +160,10 @@
 }
 },
 {
-"id": 8433720,
+"id": 8433721,
 "cancelled": false,
-"start": "2016-04-13 07:30",
-"finish": "2016-04-13 08:00",
+"start": "2016-04-20 07:30",
+"finish": "2016-04-20 08:00",
 "session": "Strength & Conditioning<p>&nbsp;</p>",
 "lanes": null,
 "location": "X-Cube ",
@@ -176,10 +176,10 @@
 }
 },
 {
-"id": 8434351,
+"id": 8434352,
 "cancelled": false,
-"start": "2016-04-13 17:30",
-"finish": "2016-04-13 18:00",
+"start": "2016-04-20 17:30",
+"finish": "2016-04-20 18:00",
 "session": "Stamina & Endurance<p>&nbsp;</p>",
 "lanes": null,
 "location": "Gym",
@@ -192,10 +192,10 @@
 }
 },
 {
-"id": 8434872,
+"id": 8434873,
 "cancelled": false,
-"start": "2016-04-13 19:00",
-"finish": "2016-04-13 20:00",
+"start": "2016-04-20 19:00",
+"finish": "2016-04-20 20:00",
 "session": "Core Stability<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
@@ -208,10 +208,10 @@
 }
 },
 {
-"id": 8435184,
+"id": 8435185,
 "cancelled": false,
-"start": "2016-04-14 09:30",
-"finish": "2016-04-14 10:30",
+"start": "2016-04-21 09:30",
+"finish": "2016-04-21 10:30",
 "session": "Extreme Interval Fitness<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
@@ -224,10 +224,10 @@
 }
 },
 {
-"id": 8435289,
+"id": 8435290,
 "cancelled": false,
-"start": "2016-04-14 10:00",
-"finish": "2016-04-14 10:30",
+"start": "2016-04-21 10:00",
+"finish": "2016-04-21 10:30",
 "session": "Cardio<p>&nbsp;</p>",
 "lanes": null,
 "location": "Gym",
@@ -240,10 +240,10 @@
 }
 },
 {
-"id": 8435497,
+"id": 8435498,
 "cancelled": false,
-"start": "2016-04-14 10:30",
-"finish": "2016-04-14 11:30",
+"start": "2016-04-21 10:30",
+"finish": "2016-04-21 11:30",
 "session": "Dance Aerobics<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
@@ -256,10 +256,10 @@
 }
 },
 {
-"id": 8435910,
+"id": 8435911,
 "cancelled": false,
-"start": "2016-04-14 18:15",
-"finish": "2016-04-14 19:00",
+"start": "2016-04-21 18:15",
+"finish": "2016-04-21 19:00",
 "session": "Step<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
@@ -272,10 +272,10 @@
 }
 },
 {
-"id": 8436014,
+"id": 8436015,
 "cancelled": false,
-"start": "2016-04-14 19:00",
-"finish": "2016-04-14 20:00",
+"start": "2016-04-21 19:00",
+"finish": "2016-04-21 20:00",
 "session": "Total Body Conditioning<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
@@ -288,10 +288,10 @@
 }
 },
 {
-"id": 8436118,
+"id": 8436119,
 "cancelled": false,
-"start": "2016-04-14 20:00",
-"finish": "2016-04-14 21:00",
+"start": "2016-04-21 20:00",
+"finish": "2016-04-21 21:00",
 "session": "Pilates<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
@@ -304,10 +304,10 @@
 }
 },
 {
-"id": 8436534,
+"id": 8436535,
 "cancelled": false,
-"start": "2016-04-15 10:00",
-"finish": "2016-04-15 11:00",
+"start": "2016-04-22 10:00",
+"finish": "2016-04-22 11:00",
 "session": "Total Body Conditioning<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
@@ -320,10 +320,10 @@
 }
 },
 {
-"id": 8436637,
+"id": 8436639,
 "cancelled": false,
-"start": "2016-04-15 13:00",
-"finish": "2016-04-15 14:00",
+"start": "2016-04-22 13:00",
+"finish": "2016-04-22 14:00",
 "session": "Yoga<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
@@ -336,10 +336,10 @@
 }
 },
 {
-"id": 8436743,
+"id": 8436744,
 "cancelled": false,
-"start": "2016-04-15 17:30",
-"finish": "2016-04-15 18:00",
+"start": "2016-04-22 17:30",
+"finish": "2016-04-22 18:00",
 "session": "Strength & Conditioning<p>&nbsp;</p>",
 "lanes": null,
 "location": "X-Cube ",
@@ -352,10 +352,10 @@
 }
 },
 {
-"id": 8436847,
+"id": 8436849,
 "cancelled": false,
-"start": "2016-04-09 09:30",
-"finish": "2016-04-09 10:00",
+"start": "2016-04-16 09:30",
+"finish": "2016-04-16 10:00",
 "session": "Strength & Conditioning<p>&nbsp;</p>",
 "lanes": null,
 "location": "X-Cube ",
@@ -368,10 +368,10 @@
 }
 },
 {
-"id": 8436952,
+"id": 8436953,
 "cancelled": false,
-"start": "2016-04-09 10:00",
-"finish": "2016-04-09 11:00",
+"start": "2016-04-16 10:00",
+"finish": "2016-04-16 11:00",
 "session": "Circuits<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
@@ -384,10 +384,10 @@
 }
 },
 {
-"id": 8437162,
+"id": 8437163,
 "cancelled": false,
-"start": "2016-04-09 12:30",
-"finish": "2016-04-09 13:00",
+"start": "2016-04-16 12:30",
+"finish": "2016-04-16 13:00",
 "session": "Strength & Conditioning<p>&nbsp;</p>",
 "lanes": null,
 "location": "X-Cube ",
@@ -400,10 +400,10 @@
 }
 },
 {
-"id": 8437267,
+"id": 8437268,
 "cancelled": false,
-"start": "2016-04-10 10:00",
-"finish": "2016-04-10 10:30",
+"start": "2016-04-17 10:00",
+"finish": "2016-04-17 10:30",
 "session": "Cardio<p>&nbsp;</p>",
 "lanes": null,
 "location": "Gym",
@@ -416,10 +416,10 @@
 }
 },
 {
-"id": 8437372,
+"id": 8437373,
 "cancelled": false,
-"start": "2016-04-10 10:30",
-"finish": "2016-04-10 11:30",
+"start": "2016-04-17 10:30",
+"finish": "2016-04-17 11:30",
 "session": "Total Body Conditioning<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
@@ -432,10 +432,10 @@
 }
 },
 {
-"id": 8437687,
+"id": 8437688,
 "cancelled": false,
-"start": "2016-04-10 12:30",
-"finish": "2016-04-10 13:00",
+"start": "2016-04-17 12:30",
+"finish": "2016-04-17 13:00",
 "session": "Strength & Conditioning<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
@@ -448,10 +448,10 @@
 }
 },
 {
-"id": 8448034,
+"id": 8448037,
 "cancelled": false,
-"start": "2016-04-11 15:30",
-"finish": "2016-04-11 17:30",
+"start": "2016-04-18 15:30",
+"finish": "2016-04-18 17:30",
 "session": "Junior Gym - (T)<p>&nbsp;</p>",
 "lanes": null,
 "location": "Gym",
@@ -464,10 +464,10 @@
 }
 },
 {
-"id": 8448035,
+"id": 8448038,
 "cancelled": false,
-"start": "2016-04-13 15:30",
-"finish": "2016-04-13 17:30",
+"start": "2016-04-20 15:30",
+"finish": "2016-04-20 17:30",
 "session": "Junior Gym - (T)<p>&nbsp;</p>",
 "lanes": null,
 "location": "Gym",
@@ -480,10 +480,10 @@
 }
 },
 {
-"id": 8448036,
+"id": 8448039,
 "cancelled": false,
-"start": "2016-04-15 15:30",
-"finish": "2016-04-15 17:30",
+"start": "2016-04-22 15:30",
+"finish": "2016-04-22 17:30",
 "session": "Junior Gym - (T)<p>&nbsp;</p>",
 "lanes": null,
 "location": "Gym",
@@ -496,10 +496,10 @@
 }
 },
 {
-"id": 8448341,
+"id": 8448342,
 "cancelled": false,
-"start": "2016-04-09 10:00",
-"finish": "2016-04-09 12:00",
+"start": "2016-04-16 10:00",
+"finish": "2016-04-16 12:00",
 "session": "Junior Gym - (T)<p>&nbsp;</p>",
 "lanes": null,
 "location": "Gym",
@@ -512,10 +512,10 @@
 }
 },
 {
-"id": 8601990,
+"id": 8601991,
 "cancelled": false,
-"start": "2016-04-14 16:00",
-"finish": "2016-04-14 17:00",
+"start": "2016-04-21 16:00",
+"finish": "2016-04-21 17:00",
 "session": "Mixed Tennis<p>&nbsp;</p>",
 "lanes": null,
 "location": "Tennis Courts",
@@ -528,10 +528,10 @@
 }
 },
 {
-"id": 8602095,
+"id": 8602096,
 "cancelled": false,
-"start": "2016-04-14 17:00",
-"finish": "2016-04-14 18:00",
+"start": "2016-04-21 17:00",
+"finish": "2016-04-21 18:00",
 "session": "Mixed Tennis<p>&nbsp;</p>",
 "lanes": null,
 "location": "Tennis Courts",
@@ -544,10 +544,10 @@
 }
 },
 {
-"id": 8602200,
+"id": 8602201,
 "cancelled": false,
-"start": "2016-04-14 18:00",
-"finish": "2016-04-14 19:00",
+"start": "2016-04-21 18:00",
+"finish": "2016-04-21 19:00",
 "session": "Mixed Tennis<p>&nbsp;</p>",
 "lanes": null,
 "location": "Tennis Courts",
@@ -560,10 +560,10 @@
 }
 },
 {
-"id": 8602305,
+"id": 8602306,
 "cancelled": false,
-"start": "2016-04-15 15:45",
-"finish": "2016-04-15 16:45",
+"start": "2016-04-22 15:45",
+"finish": "2016-04-22 16:45",
 "session": "Gymnastics<p>&nbsp;</p>",
 "lanes": null,
 "location": "Sports Hall",
@@ -576,10 +576,10 @@
 }
 },
 {
-"id": 8602409,
+"id": 8602410,
 "cancelled": false,
-"start": "2016-04-15 16:45",
-"finish": "2016-04-15 17:45",
+"start": "2016-04-22 16:45",
+"finish": "2016-04-22 17:45",
 "session": "Gymnastics<p>&nbsp;</p>",
 "lanes": null,
 "location": "Sports Hall",
@@ -592,10 +592,10 @@
 }
 },
 {
-"id": 8602619,
+"id": 8602620,
 "cancelled": false,
-"start": "2016-04-12 16:00",
-"finish": "2016-04-12 16:30",
+"start": "2016-04-19 16:00",
+"finish": "2016-04-19 16:30",
 "session": "Ballet<p>&nbsp;</p>",
 "lanes": null,
 "location": "Dance Studio",
@@ -608,10 +608,10 @@
 }
 },
 {
-"id": 8602724,
+"id": 8602725,
 "cancelled": false,
-"start": "2016-04-12 16:30",
-"finish": "2016-04-12 17:00",
+"start": "2016-04-19 16:30",
+"finish": "2016-04-19 17:00",
 "session": "Ballet<p>&nbsp;</p>",
 "lanes": null,
 "location": "Dance Studio",
@@ -624,10 +624,10 @@
 }
 },
 {
-"id": 8602829,
+"id": 8602830,
 "cancelled": false,
-"start": "2016-04-12 17:00",
-"finish": "2016-04-12 17:45",
+"start": "2016-04-19 17:00",
+"finish": "2016-04-19 17:45",
 "session": "Dance<p>&nbsp;</p>",
 "lanes": null,
 "location": "Dance Studio",
@@ -640,10 +640,10 @@
 }
 },
 {
-"id": 8603144,
+"id": 8603145,
 "cancelled": false,
-"start": "2016-04-13 15:45",
-"finish": "2016-04-13 16:45",
+"start": "2016-04-20 15:45",
+"finish": "2016-04-20 16:45",
 "session": "Football<p>&nbsp;</p>",
 "lanes": null,
 "location": "Sports Hall",
@@ -656,10 +656,10 @@
 }
 },
 {
-"id": 8603354,
+"id": 8603355,
 "cancelled": false,
-"start": "2016-04-13 16:45",
-"finish": "2016-04-13 17:45",
+"start": "2016-04-20 16:45",
+"finish": "2016-04-20 17:45",
 "session": "Football<p>&nbsp;</p>",
 "lanes": null,
 "location": "Sports Hall",
@@ -672,10 +672,10 @@
 }
 },
 {
-"id": 8603565,
+"id": 8603566,
 "cancelled": false,
-"start": "2016-04-13 17:00",
-"finish": "2016-04-13 18:00",
+"start": "2016-04-20 17:00",
+"finish": "2016-04-20 18:00",
 "session": "Badminton<p>&nbsp;</p>",
 "lanes": null,
 "location": "Sports Hall",
@@ -688,10 +688,10 @@
 }
 },
 {
-"id": 8603565,
+"id": 8603566,
 "cancelled": false,
-"start": "2016-04-13 18:00",
-"finish": "2016-04-13 19:00",
+"start": "2016-04-20 18:00",
+"finish": "2016-04-20 19:00",
 "session": "Badminton<p>&nbsp;</p>",
 "lanes": null,
 "location": "Sports Hall",
@@ -704,10 +704,10 @@
 }
 },
 {
-"id": 8603775,
+"id": 8603776,
 "cancelled": false,
-"start": "2016-04-14 18:00",
-"finish": "2016-04-14 19:00",
+"start": "2016-04-21 18:00",
+"finish": "2016-04-21 19:00",
 "session": "Judo<p>&nbsp;</p>",
 "lanes": null,
 "location": "Sports Hall",
@@ -720,10 +720,10 @@
 }
 },
 {
-"id": 8603879,
+"id": 8603881,
 "cancelled": false,
-"start": "2016-04-14 19:00",
-"finish": "2016-04-14 20:00",
+"start": "2016-04-21 19:00",
+"finish": "2016-04-21 20:00",
 "session": "Judo<p>&nbsp;</p>",
 "lanes": null,
 "location": "Sports Hall",
@@ -736,10 +736,10 @@
 }
 },
 {
-"id": 8606712,
+"id": 8606717,
 "cancelled": false,
-"start": "2016-04-12 13:00",
-"finish": "2016-04-12 15:00",
+"start": "2016-04-19 13:00",
+"finish": "2016-04-19 15:00",
 "session": "Toddlers World<p>&nbsp;</p>",
 "lanes": null,
 "location": "Sports Hall",
@@ -752,10 +752,10 @@
 }
 },
 {
-"id": 8606714,
+"id": 8606718,
 "cancelled": false,
-"start": "2016-04-13 13:00",
-"finish": "2016-04-13 15:00",
+"start": "2016-04-20 13:00",
+"finish": "2016-04-20 15:00",
 "session": "Toddlers World<p>&nbsp;</p>",
 "lanes": null,
 "location": "Sports Hall",
@@ -768,10 +768,10 @@
 }
 },
 {
-"id": 8606715,
+"id": 8606719,
 "cancelled": false,
-"start": "2016-04-15 13:00",
-"finish": "2016-04-15 15:00",
+"start": "2016-04-22 13:00",
+"finish": "2016-04-22 15:00",
 "session": "Toddlers World<p>&nbsp;</p>",
 "lanes": null,
 "location": "Sports Hall",
@@ -784,298 +784,10 @@
 }
 },
 {
-"id": 8607159,
+"id": 8607814,
 "cancelled": false,
-"start": "2016-04-11 12:00",
-"finish": "2016-04-11 13:00",
-"session": "Zorball for £1.00<p>&nbsp;</p>",
-"lanes": null,
-"location": "Sports Hall",
-"instructor": null,
-"activity": "Zorball for £1.00",
-"places_left": null,
-"description": null,
-"buttons": {
-"book": "#"
-}
-},
-{
-"id": 8607160,
-"cancelled": false,
-"start": "2016-04-13 12:00",
-"finish": "2016-04-13 13:00",
-"session": "Zorball for £1.00<p>&nbsp;</p>",
-"lanes": null,
-"location": "Sports Hall",
-"instructor": null,
-"activity": "Zorball for £1.00",
-"places_left": null,
-"description": null,
-"buttons": {
-"book": "#"
-}
-},
-{
-"id": 8607161,
-"cancelled": false,
-"start": "2016-04-15 12:00",
-"finish": "2016-04-15 13:00",
-"session": "Zorball for £1.00<p>&nbsp;</p>",
-"lanes": null,
-"location": "Sports Hall",
-"instructor": null,
-"activity": "Zorball for £1.00",
-"places_left": null,
-"description": null,
-"buttons": {
-"book": "#"
-}
-},
-{
-"id": 8607165,
-"cancelled": false,
-"start": "2016-04-11 13:00",
-"finish": "2016-04-11 14:00",
-"session": "Zorball for £1.00<p>&nbsp;</p>",
-"lanes": null,
-"location": "Sports Hall",
-"instructor": null,
-"activity": "Zorball for £1.00",
-"places_left": null,
-"description": null,
-"buttons": {
-"book": "#"
-}
-},
-{
-"id": 8607166,
-"cancelled": false,
-"start": "2016-04-13 13:00",
-"finish": "2016-04-13 14:00",
-"session": "Zorball for £1.00<p>&nbsp;</p>",
-"lanes": null,
-"location": "Sports Hall",
-"instructor": null,
-"activity": "Zorball for £1.00",
-"places_left": null,
-"description": null,
-"buttons": {
-"book": "#"
-}
-},
-{
-"id": 8607167,
-"cancelled": false,
-"start": "2016-04-15 13:00",
-"finish": "2016-04-15 14:00",
-"session": "Zorball for £1.00<p>&nbsp;</p>",
-"lanes": null,
-"location": "Sports Hall",
-"instructor": null,
-"activity": "Zorball for £1.00",
-"places_left": null,
-"description": null,
-"buttons": {
-"book": "#"
-}
-},
-{
-"id": 8607171,
-"cancelled": false,
-"start": "2016-04-11 10:00",
-"finish": "2016-04-11 11:00",
-"session": "Football for £1<p>&nbsp;</p>",
-"lanes": null,
-"location": "Astro Pitch",
-"instructor": null,
-"activity": "Football for £1",
-"places_left": null,
-"description": null,
-"buttons": {
-"book": "#"
-}
-},
-{
-"id": 8607172,
-"cancelled": false,
-"start": "2016-04-13 10:00",
-"finish": "2016-04-13 11:00",
-"session": "Football for £1<p>&nbsp;</p>",
-"lanes": null,
-"location": "Astro Pitch",
-"instructor": null,
-"activity": "Football for £1",
-"places_left": null,
-"description": null,
-"buttons": {
-"book": "#"
-}
-},
-{
-"id": 8607173,
-"cancelled": false,
-"start": "2016-04-15 10:00",
-"finish": "2016-04-15 11:00",
-"session": "Football for £1<p>&nbsp;</p>",
-"lanes": null,
-"location": "Astro Pitch",
-"instructor": null,
-"activity": "Football for £1",
-"places_left": null,
-"description": null,
-"buttons": {
-"book": "#"
-}
-},
-{
-"id": 8607177,
-"cancelled": false,
-"start": "2016-04-11 11:00",
-"finish": "2016-04-11 12:00",
-"session": "Football for £1<p>&nbsp;</p>",
-"lanes": null,
-"location": "Astro Pitch",
-"instructor": null,
-"activity": "Football for £1",
-"places_left": null,
-"description": null,
-"buttons": {
-"book": "#"
-}
-},
-{
-"id": 8607178,
-"cancelled": false,
-"start": "2016-04-13 11:00",
-"finish": "2016-04-13 12:00",
-"session": "Football for £1<p>&nbsp;</p>",
-"lanes": null,
-"location": "Astro Pitch",
-"instructor": null,
-"activity": "Football for £1",
-"places_left": null,
-"description": null,
-"buttons": {
-"book": "#"
-}
-},
-{
-"id": 8607179,
-"cancelled": false,
-"start": "2016-04-15 11:00",
-"finish": "2016-04-15 12:00",
-"session": "Football for £1<p>&nbsp;</p>",
-"lanes": null,
-"location": "Astro Pitch",
-"instructor": null,
-"activity": "Football for £1",
-"places_left": null,
-"description": null,
-"buttons": {
-"book": "#"
-}
-},
-{
-"id": 8607392,
-"cancelled": false,
-"start": "2016-04-11 10:00",
-"finish": "2016-04-11 12:00",
-"session": "Toddlers World<p>&nbsp;</p>",
-"lanes": null,
-"location": "Sports Hall",
-"instructor": "Holiday Club ",
-"activity": "Toddlers World",
-"places_left": null,
-"description": "<p><p>A fun filled and colourful environment designed to challenge and stimulate children under the age of 5.</p>\r\n<p>Equipment can include soft play, inflatables, ladders, slides and a variety of other elements that will assist develop balance, coordination and social skills.</p>\r\n<p> </p></p>",
-"buttons": {
-"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
-}
-},
-{
-"id": 8607392,
-"cancelled": false,
-"start": "2016-04-11 12:00",
-"finish": "2016-04-11 13:00",
-"session": "Toddlers World<p>&nbsp;</p>",
-"lanes": null,
-"location": "Sports Hall",
-"instructor": "Holiday Club ",
-"activity": "Toddlers World",
-"places_left": null,
-"description": "<p><p>A fun filled and colourful environment designed to challenge and stimulate children under the age of 5.</p>\r\n<p>Equipment can include soft play, inflatables, ladders, slides and a variety of other elements that will assist develop balance, coordination and social skills.</p>\r\n<p> </p></p>",
-"buttons": {
-"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
-}
-},
-{
-"id": 8607393,
-"cancelled": false,
-"start": "2016-04-13 10:00",
-"finish": "2016-04-13 12:00",
-"session": "Toddlers World<p>&nbsp;</p>",
-"lanes": null,
-"location": "Sports Hall",
-"instructor": "Holiday Club ",
-"activity": "Toddlers World",
-"places_left": null,
-"description": "<p><p>A fun filled and colourful environment designed to challenge and stimulate children under the age of 5.</p>\r\n<p>Equipment can include soft play, inflatables, ladders, slides and a variety of other elements that will assist develop balance, coordination and social skills.</p>\r\n<p> </p></p>",
-"buttons": {
-"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
-}
-},
-{
-"id": 8607393,
-"cancelled": false,
-"start": "2016-04-13 12:00",
-"finish": "2016-04-13 13:00",
-"session": "Toddlers World<p>&nbsp;</p>",
-"lanes": null,
-"location": "Sports Hall",
-"instructor": "Holiday Club ",
-"activity": "Toddlers World",
-"places_left": null,
-"description": "<p><p>A fun filled and colourful environment designed to challenge and stimulate children under the age of 5.</p>\r\n<p>Equipment can include soft play, inflatables, ladders, slides and a variety of other elements that will assist develop balance, coordination and social skills.</p>\r\n<p> </p></p>",
-"buttons": {
-"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
-}
-},
-{
-"id": 8607394,
-"cancelled": false,
-"start": "2016-04-15 10:00",
-"finish": "2016-04-15 12:00",
-"session": "Toddlers World<p>&nbsp;</p>",
-"lanes": null,
-"location": "Sports Hall",
-"instructor": "Holiday Club ",
-"activity": "Toddlers World",
-"places_left": null,
-"description": "<p><p>A fun filled and colourful environment designed to challenge and stimulate children under the age of 5.</p>\r\n<p>Equipment can include soft play, inflatables, ladders, slides and a variety of other elements that will assist develop balance, coordination and social skills.</p>\r\n<p> </p></p>",
-"buttons": {
-"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
-}
-},
-{
-"id": 8607394,
-"cancelled": false,
-"start": "2016-04-15 12:00",
-"finish": "2016-04-15 13:00",
-"session": "Toddlers World<p>&nbsp;</p>",
-"lanes": null,
-"location": "Sports Hall",
-"instructor": "Holiday Club ",
-"activity": "Toddlers World",
-"places_left": null,
-"description": "<p><p>A fun filled and colourful environment designed to challenge and stimulate children under the age of 5.</p>\r\n<p>Equipment can include soft play, inflatables, ladders, slides and a variety of other elements that will assist develop balance, coordination and social skills.</p>\r\n<p> </p></p>",
-"buttons": {
-"book": "https://better.legendonlineservices.co.uk/enterprise/account/Login"
-}
-},
-{
-"id": 8607813,
-"cancelled": false,
-"start": "2016-04-12 12:15",
-"finish": "2016-04-12 12:55",
+"start": "2016-04-19 12:15",
+"finish": "2016-04-19 12:55",
 "session": "Running Group<p>&nbsp;</p>",
 "lanes": null,
 "location": "Outdoor Parks",
@@ -1088,10 +800,10 @@
 }
 },
 {
-"id": 8608021,
+"id": 8608022,
 "cancelled": false,
-"start": "2016-04-10 09:30",
-"finish": "2016-04-10 10:00",
+"start": "2016-04-17 09:30",
+"finish": "2016-04-17 10:00",
 "session": "Running Group<p>&nbsp;</p>",
 "lanes": null,
 "location": "Outdoor Parks",
@@ -1104,10 +816,10 @@
 }
 },
 {
-"id": 8608283,
+"id": 8608285,
 "cancelled": false,
-"start": "2016-04-09 09:00",
-"finish": "2016-04-09 11:00",
+"start": "2016-04-16 09:00",
+"finish": "2016-04-16 11:00",
 "session": "No Strings Badminton<p>&nbsp;</p>",
 "lanes": null,
 "location": "Sports Hall",
@@ -1120,10 +832,10 @@
 }
 },
 {
-"id": 8608437,
+"id": 8608438,
 "cancelled": false,
-"start": "2016-04-10 10:00",
-"finish": "2016-04-10 12:00",
+"start": "2016-04-17 10:00",
+"finish": "2016-04-17 12:00",
 "session": "Badminton<p>&nbsp;</p>",
 "lanes": null,
 "location": "Sports Hall",
@@ -1136,10 +848,10 @@
 }
 },
 {
-"id": 8608647,
+"id": 8608648,
 "cancelled": false,
-"start": "2016-04-14 13:00",
-"finish": "2016-04-14 15:00",
+"start": "2016-04-21 13:00",
+"finish": "2016-04-21 15:00",
 "session": "Badminton young@hearts - (S)<p>&nbsp;</p>",
 "lanes": null,
 "location": "Sports Hall",
@@ -1152,10 +864,10 @@
 }
 },
 {
-"id": 8618996,
+"id": 8618997,
 "cancelled": false,
-"start": "2016-04-11 10:00",
-"finish": "2016-04-11 11:00",
+"start": "2016-04-18 10:00",
+"finish": "2016-04-18 11:00",
 "session": "Total Body Conditioning<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",
@@ -1168,10 +880,10 @@
 }
 },
 {
-"id": 8626982,
+"id": 8626985,
 "cancelled": false,
-"start": "2016-04-09 11:00",
-"finish": "2016-04-09 11:45",
+"start": "2016-04-16 11:00",
+"finish": "2016-04-16 11:45",
 "session": "Group Cycle<p>&nbsp;</p>",
 "lanes": null,
 "location": "Group Cycle Studio",
@@ -1184,10 +896,10 @@
 }
 },
 {
-"id": 8627807,
+"id": 8627809,
 "cancelled": false,
-"start": "2016-04-10 11:30",
-"finish": "2016-04-10 12:15",
+"start": "2016-04-17 11:30",
+"finish": "2016-04-17 12:15",
 "session": "Group Cycle<p>&nbsp;</p>",
 "lanes": null,
 "location": "Group Cycle Studio",
@@ -1200,10 +912,10 @@
 }
 },
 {
-"id": 8628120,
+"id": 8628121,
 "cancelled": false,
-"start": "2016-04-11 12:00",
-"finish": "2016-04-11 12:45",
+"start": "2016-04-18 12:00",
+"finish": "2016-04-18 12:45",
 "session": "Group Cycle<p>&nbsp;</p>",
 "lanes": null,
 "location": "Group Cycle Studio",
@@ -1216,10 +928,10 @@
 }
 },
 {
-"id": 8628328,
+"id": 8628331,
 "cancelled": false,
-"start": "2016-04-11 19:00",
-"finish": "2016-04-11 19:45",
+"start": "2016-04-18 19:00",
+"finish": "2016-04-18 19:45",
 "session": "Group Cycle<p>&nbsp;</p>",
 "lanes": null,
 "location": "Group Cycle Studio",
@@ -1232,10 +944,10 @@
 }
 },
 {
-"id": 8628536,
+"id": 8628537,
 "cancelled": false,
-"start": "2016-04-12 19:00",
-"finish": "2016-04-12 19:45",
+"start": "2016-04-19 19:00",
+"finish": "2016-04-19 19:45",
 "session": "Group Cycle<p>&nbsp;</p>",
 "lanes": null,
 "location": "Group Cycle Studio",
@@ -1248,10 +960,10 @@
 }
 },
 {
-"id": 8628848,
+"id": 8628849,
 "cancelled": false,
-"start": "2016-04-13 09:15",
-"finish": "2016-04-13 10:00",
+"start": "2016-04-20 09:15",
+"finish": "2016-04-20 10:00",
 "session": "Group Cycle<p>&nbsp;</p>",
 "lanes": null,
 "location": "Group Cycle Studio",
@@ -1264,10 +976,10 @@
 }
 },
 {
-"id": 8629162,
+"id": 8629163,
 "cancelled": false,
-"start": "2016-04-13 18:00",
-"finish": "2016-04-13 18:45",
+"start": "2016-04-20 18:00",
+"finish": "2016-04-20 18:45",
 "session": "Group Cycle<p>&nbsp;</p>",
 "lanes": null,
 "location": "Group Cycle Studio",
@@ -1280,10 +992,10 @@
 }
 },
 {
-"id": 8629789,
+"id": 8629790,
 "cancelled": false,
-"start": "2016-04-14 17:30",
-"finish": "2016-04-14 18:15",
+"start": "2016-04-21 17:30",
+"finish": "2016-04-21 18:15",
 "session": "Group Cycle<p>&nbsp;</p>",
 "lanes": null,
 "location": "Group Cycle Studio",
@@ -1296,10 +1008,10 @@
 }
 },
 {
-"id": 8629894,
+"id": 8629895,
 "cancelled": false,
-"start": "2016-04-15 07:30",
-"finish": "2016-04-15 08:15",
+"start": "2016-04-22 07:30",
+"finish": "2016-04-22 08:15",
 "session": "Group Cycle<p>&nbsp;</p>",
 "lanes": null,
 "location": "Group Cycle Studio",
@@ -1312,10 +1024,10 @@
 }
 },
 {
-"id": 8631673,
+"id": 8631672,
 "cancelled": false,
-"start": "2016-04-13 16:30",
-"finish": "2016-04-13 17:00",
+"start": "2016-04-20 16:30",
+"finish": "2016-04-20 17:00",
 "session": "Cardio - (T)<p>&nbsp;</p>",
 "lanes": null,
 "location": "Gym",
@@ -1328,10 +1040,10 @@
 }
 },
 {
-"id": 8751256,
+"id": 8751257,
 "cancelled": false,
-"start": "2016-04-13 11:00",
-"finish": "2016-04-13 12:00",
+"start": "2016-04-20 11:00",
+"finish": "2016-04-20 12:00",
 "session": "Yoga<p>&nbsp;</p>",
 "lanes": null,
 "location": "Studio",

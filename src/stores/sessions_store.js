@@ -1,5 +1,4 @@
-const assign      = require('react/lib/Object.assign')
-  , EventEmitter  = require('events').EventEmitter
+const EventEmitter  = require('events').EventEmitter
   , _             = require('lodash/core');
 
 //Internal Modules
@@ -204,7 +203,7 @@ const store = {
   }
 };
 
-const SessionStore = assign({}, EventEmitter.prototype, store);
+const SessionStore = Object.assign({}, EventEmitter.prototype, store);
 SessionStore.setMaxListeners(0);
 
 const registeredCallback = function(payload) {

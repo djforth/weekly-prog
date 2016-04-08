@@ -1,7 +1,6 @@
 const Dispatcher = require('flux').Dispatcher;
-const assign     = require('react/lib/Object.assign');
 
-const SessionsDispatcher = assign(new Dispatcher(), {
+const SessionsDispatcher = Object.assign(new Dispatcher(), {
   changeDate: function(action) {
     var payload = {
       source: 'CHANGE_DATE',

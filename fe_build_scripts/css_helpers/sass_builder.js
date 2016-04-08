@@ -2,7 +2,6 @@ var sass         = require('node-sass')
   , _            = require("lodash")
   , create       = require('../utils/folder_helpers')
   , globbing     = require('node-sass-globbing')
-  , postCSSHelper = require("./postcss_helper")
   , sass_helpers = require('./sass_helpers');
 
 
