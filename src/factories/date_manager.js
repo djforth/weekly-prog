@@ -1,11 +1,11 @@
-const checker = require("../utils/day_checker")
-    , SessionsFcty = require("./sessions_fcty")
-    // , DateFormatter = require("@djforth/date-formatter")
-    , Moment = require("moment");
+const checker = require('../utils/day_checker')
+    , SessionsFcty = require('./sessions_fcty')
+    // , DateFormatter = require('@djforth/date-formatter')
+    , Moment = require('moment');
 
 //lodash
- const _       = require("lodash/core")
-     , partial = require("lodash/partial")
+ const _       = require('lodash/core')
+     , partial = require('lodash/partial')
 
 function getDate(dates, date){
   return _.find(dates, (d)=>{
@@ -55,7 +55,7 @@ function createWeek(createFcty, start=new Date()){
 function dateUpdate(dates, date, data){
 
   return _.map(dates, (d)=>{
-    if(checker(d.date, date)){
+    if (checker(d.date, date)){
       // console.log(d.data.size(), data.length)
       d.data.add(data);
       // console.log(d.data.size(), data.length)
@@ -74,12 +74,12 @@ function getNewDate(date, n=1){
 function processForNav(dm){
   let dateFmt = Moment(dm.date);
 
-  // if(dm.data.size() === 0) console.log("dm", dm)
+  // if (dm.data.size() === 0) console.log('dm', dm)
   return {
       date:dm.date
     , fmt:dateFmt
-    , title:dateFmt.format("ddd Do")
-    , alt:dateFmt.format("dddd, MMMM Do YYYY")
+    , title:dateFmt.format('ddd Do')
+    , alt:dateFmt.format('dddd, MMMM Do YYYY')
     , today: checker(dm.date, new Date())
     , nosessions:(dm.data.size() === 0 && !dm.fetched)
   }
@@ -91,7 +91,7 @@ function resetDates(dates){
 
 function earliestDate(dates){
   return _.reduce(dates, (prev, curr)=>{
-    if(prev.date.getTime() > curr.date.getTime()){
+    if (prev.date.getTime() > curr.date.getTime()){
       return curr;
     }
 
@@ -108,9 +108,9 @@ function dateManager(groupBy, ds){
 
   return {
     addDate:(date, data)=>{
-      if(!_.isDate(date)) return false;
+      if (!_.isDate(date)) return false;
 
-      if(checkDates(dates,date)){
+      if (checkDates(dates,date)){
         let fn = partial(dateUpdate, dates);
         dates = fn(date, data)
       } else {
@@ -133,8 +133,8 @@ function dateManager(groupBy, ds){
       let today = new Date();
 
       dates = dates.sort((a, b)=>{
-        if(a.date.getTime() > b.date.getTime()) return 1;
-        if(a.date.getTime() < b.date.getTime()) return -1;
+        if (a.date.getTime() > b.date.getTime()) return 1;
+        if (a.date.getTime() < b.date.getTime()) return -1;
         return 0
       });
       return _.map(dates, (dm)=>processForNav(dm));
@@ -144,7 +144,7 @@ function dateManager(groupBy, ds){
       let fetch_date = _.find(dates, (dm)=>{
         return dm.data.size() === 0 && !dm.fetched
       });
-      if(fetch_date) return fetch_date.date;
+      if (fetch_date) return fetch_date.date;
 
       let newDates = weekCreator(getNewDate(_.last(dates).date));
       dates = dates.concat(newDates);

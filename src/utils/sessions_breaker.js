@@ -1,9 +1,9 @@
-const Moment        = require("moment-strftime");
+const Moment        = require('moment-strftime');
 
-const _        = require("lodash/core")
-    , includes = require("lodash/includes")
+const _        = require('lodash/core')
+    , includes = require('lodash/includes')
 
-var checker       = require("./day_checker");
+var checker       = require('./day_checker');
 
 
 function createKey(date){
@@ -14,7 +14,7 @@ function groupSessions(sessions){
   let new_sessions = _.sortBy(sessions, (s)=> s.groupBy);
   let groups   = {};
   let ses      = _.first(new_sessions);
-  if(_.isUndefined(ses) || _.isEmpty(ses)) return groups;
+  if (_.isUndefined(ses) || _.isEmpty(ses)) return groups;
   let date     = _.first(new_sessions).groupBy;
   // console.log(date)
   let key      = createKey(date)
@@ -22,7 +22,7 @@ function groupSessions(sessions){
   groups[key] = {date:date, sessions:[]};
   _.forEach(new_sessions, (session)=>{
 
-    if(checker(date, session.groupBy)){
+    if (checker(date, session.groupBy)){
       groups[key].sessions.push(session)
     } else {
       date = session.groupBy;
@@ -43,7 +43,7 @@ function makeDates(sessions, key){
 
     let date     = Moment(s[key]);
 
-    s["groupBy"] = date.toDate();
+    s['groupBy'] = date.toDate();
 
     return s;
   });
@@ -64,7 +64,7 @@ function currentDates(dates){
   return function(test){
     let check = false;
     _.forEach(dates, (d)=>{
-      if(d.isSame(test, "d")){
+      if (d.isSame(test, 'd')){
         check = true;
         return false;
       }
@@ -76,16 +76,16 @@ function currentDates(dates){
 }
 
 function fillGaps(groups, start, end=7){
-  let dates = currentDates(_.map(_.values(groups), "date"));
+  let dates = currentDates(_.map(_.values(groups), 'date'));
   start = (_.isUndefined(start)) ? _.first(dates) : start;
   start = Moment(start);
-  end = start.clone().add(end, "d");
+  end = start.clone().add(end, 'd');
 
   do{
-    if(!dates(start)){
+    if (!dates(start)){
       groups = addDay(groups, start)
     }
-    start.add(1, "d");
+    start.add(1, 'd');
   } while(start.isBefore(end));
   return groups;
 }

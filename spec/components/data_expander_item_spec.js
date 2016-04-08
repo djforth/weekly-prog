@@ -4,13 +4,13 @@ const _ = require("lodash")
     , ReactDOM  = require('react-dom')
     , TestUtils = require("react-addons-test-utils");
 
-const DataExpander   = require("../../src/components/data_expander_item");
+const DataExpander   = require("../../src/components/sessions/data_expander_item");
 
 
 const componentHelper = require("react-jasmine").componentHelpers
     , storeListeners = require("react-jasmine").checkListeners;
 
-describe("DataExpander", function() {
+xdescribe("DataExpander", function() {
   let dataexpander, cssMixins, spy, revert, ColumnsStore;;
   let data = Immutable.fromJS({foo:"Phil", bar:"Collins"})
   let keys = ["foo", "bar"];

@@ -3,7 +3,7 @@
  * @module  weekly-prog/actions/sessions_actions
 */
 
- const SessionsDispatcher = require("../dispatchers/sessions_dispatcher");
+const SessionsDispatcher = require('../dispatchers/sessions_dispatcher');
 
 /**
   * This will change current date in sessions store
@@ -12,10 +12,10 @@
   * @return {} returns nothing
   */
 
-var changeDate = (date)=>{
+function changeDate(date){
   SessionsDispatcher.changeDate({
-    type: "CHANGE_DATE",
-    date:date
+    type: 'CHANGE_DATE'
+    , date: date
   });
 }
 
@@ -26,10 +26,10 @@ var changeDate = (date)=>{
   * @return {} returns nothing
   */
 
-var calendarChange = (date)=>{
+function calendarChange(date){
   SessionsDispatcher.calendarChange({
-    type: "CALENDAR_CHANGE",
-    date:date
+    type: 'CALENDAR_CHANGE'
+    , date: date
   });
 }
 
@@ -40,11 +40,11 @@ var calendarChange = (date)=>{
   * @param {date} date, to add to query string.
   * @return {} returns nothing
   */
-var fetchData = (progress, date)=>{
+function fetchData(progress, date){
   SessionsDispatcher.fetchData({
-    type: "FETCH_DATA",
-    progress:progress,
-    date:date
+    type: 'FETCH_DATA'
+    , progress: progress
+    , date: date
   });
 }
 
@@ -54,21 +54,21 @@ var fetchData = (progress, date)=>{
   * @param {progress} function - tracks loading.
   * @return {} returns nothing
   */
-var fetchNowNext = (progress)=>{
-    SessionsDispatcher.fetchNowNext({
-      type: "FETCH_NOWNEXT",
-      progress:progress
-    });
-  }
+function fetchNowNext(progress){
+  SessionsDispatcher.fetchNowNext({
+    type: 'FETCH_NOWNEXT'
+    ,  progress: progress
+  });
+}
 
 /**
   * Will get the following days data
   * @type {function}
   * @return {} returns nothing
   */
-var getMoreDays = ()=>{
+function getMoreDays(){
   SessionsDispatcher.getMoreDays({
-    type: "MORE_DAYS"
+    type: 'MORE_DAYS'
   });
 }
 
@@ -77,10 +77,10 @@ var getMoreDays = ()=>{
   * @type {function}
   * @return {} returns nothing
   */
-var getPreviousDays = (date)=>{
+function getPreviousDays(date){
   SessionsDispatcher.getPreviousDays({
-    type: "PREVIOUS_DAYS",
-    date: date
+    type: 'PREVIOUS_DAYS'
+    , date: date
   });
 }
 
@@ -90,10 +90,10 @@ var getPreviousDays = (date)=>{
   * @param {data} array
   * @return {} returns nothing
   */
-var prerenderData = (data)=>{
+function prerenderData(data){
   SessionsDispatcher.prerenderData({
-    type: "PRERENDER_DATA",
-    data: data
+    type: 'PRERENDER_DATA'
+    , data: data
   });
 }
 
@@ -103,10 +103,10 @@ var prerenderData = (data)=>{
   * @param {string} url for api call
   * @return {} returns nothing
   */
-var setApi = (url)=>{
+function setApi(url){
   SessionsDispatcher.setApi({
-    type : "SET_API",
-    url  : url
+    type: 'SET_API'
+    , url: url
   });
 }
 
@@ -116,10 +116,10 @@ var setApi = (url)=>{
   * @param {number} id of facility
   * @return {} returns nothing
   */
-var setFacility = (id)=>{
+function setFacility(id){
   SessionsDispatcher.setFacility({
-    type : "SET_FACILITY",
-    id   : id
+    type: 'SET_FACILITY'
+    , id: id
   });
 }
 
@@ -129,22 +129,22 @@ var setFacility = (id)=>{
   * @param {string} key
   * @return {} returns nothing
   */
-var setGroupby = (groupBy)=>{
+function setGroupby(groupBy){
   SessionsDispatcher.setGroupBy({
-    type: "SET_GROUPBY",
-    groupBy: groupBy
+    type: 'SET_GROUPBY'
+    , groupBy: groupBy
   });
 }
 
 module.exports = {
-    changeDate:changeDate
-  , calendarChange:calendarChange
-  , fetchData:fetchData
-  , fetchNowNext:fetchNowNext
-  , getMoreDays:getMoreDays
+  changeDate: changeDate
+  , calendarChange: calendarChange
+  , fetchData: fetchData
+  , fetchNowNext: fetchNowNext
+  , getMoreDays: getMoreDays
   , getPreviousDays: getPreviousDays
-  , prerenderData:prerenderData
-  , setApi:setApi
-  , setFacility:setFacility
-  , setGroupby:setGroupby
-}
+  , prerenderData: prerenderData
+  , setApi: setApi
+  , setFacility: setFacility
+  , setGroupby: setGroupby
+};

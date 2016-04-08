@@ -1,18 +1,18 @@
-const assign      = require("react/lib/Object.assign")
-  , EventEmitter  = require("events").EventEmitter
-  , _             = require("lodash/core");
+const assign      = require('react/lib/Object.assign')
+  , EventEmitter  = require('events').EventEmitter
+  , _             = require('lodash/core');
 
 //Internal Modules
-const AjaxManager  = require("../utils/ajax_manager")
-    , DateManager  = require("../factories/date_manager")
-    , SessionsFcty = require("../factories/sessions_fcty")
-    , Breaker      = require("../utils/sessions_breaker")
-    , checker      = require("../utils/day_checker");
+const AjaxManager  = require('../utils/ajax_manager')
+    , DateManager  = require('../factories/date_manager')
+    , SessionsFcty = require('../factories/sessions_fcty')
+    , Breaker      = require('../utils/sessions_breaker')
+    , checker      = require('../utils/day_checker');
 
 
 //Flux
-const SessionsDispatcher = require("../dispatchers/sessions_dispatcher")
-    , SessionsAction     = require("../actions/sessions_actions");
+const SessionsDispatcher = require('../dispatchers/sessions_dispatcher')
+    , SessionsAction     = require('../actions/sessions_actions');
 
 let ajaxManager, processor, sessions, facility;
 
@@ -24,7 +24,7 @@ function processData(groupBy){
   let sessions = DateManager(groupBy);
 
   return function(d, date, reset=false){
-    if(reset) sessions.resetDates();
+    if (reset) sessions.resetDates();
 
     let groups = Breaker(d, groupBy, date);
     _.forEach(_.values(groups), (ses)=>{
@@ -38,7 +38,7 @@ function processData(groupBy){
 }
 
 function processDates(dates){
-  if(_.isEmpty(dates)) return dates;
+  if (_.isEmpty(dates)) return dates;
   let yesterday = new Date();
   yesterday.setDate(yesterday.getDate()-1);
   return _.filter(dates, (d)=>{
@@ -74,7 +74,7 @@ const store = {
   // <<<<<<<<<<<<<<< Fetching and processing session >>>>>>>>>>>>
   , _addSessions(data){
 
-    if(_.isFunction(processor)){
+    if (_.isFunction(processor)){
       sessions = processor(data);
     }
   }
@@ -85,19 +85,19 @@ const store = {
   }
 
   , _fetchData(date, reset=false){
-    if(!ajaxManager){
-      throw new Error("please set API path")
+    if (!ajaxManager){
+      throw new Error('please set API path')
     }
 
     ajaxManager.addQuery(date);
     let request = ajaxManager.fetch();
 
-    if(request){
+    if (request){
       return request.then((data)=>{
         fetched = true;
         sessions = processor(data, date, reset);
 
-        this.emitChange("fetched");
+        this.emitChange('fetched');
 
         return sessions.getAllDates();
       })
@@ -113,21 +113,21 @@ const store = {
         fetched = true;
         sessions = processor(data, false);
 
-        this.emitChange("fetched");
+        this.emitChange('fetched');
       });
   }
 
   , _fetchRest(dates){
       let fetch = _.filter(dates, (d)=>d.nosessions)
       fetch = _.reduce(fetch, (prev, curr)=>{
-        if(prev.date.getTime() > curr.date.getTime()){
+        if (prev.date.getTime() > curr.date.getTime()){
           return curr;
         }
 
         return prev;
       });
 
-      if(fetch) this._fetchData(fetch.date)
+      if (fetch) this._fetchData(fetch.date)
   }
 
   , _getCurrentDate(){
@@ -135,18 +135,18 @@ const store = {
   }
 
   , _getDate(date){
-    if(!this.current){
+    if (!this.current){
       this.current = currentDate(date);
     }
     this.current.setDate(date);
-    if(sessions){
+    if (sessions){
       let current_day = sessions.findDate(this.current.getDate());
-      if(current_day) return current_day;
+      if (current_day) return current_day;
     }
 
-    if(fetched){
+    if (fetched){
       this._fetchData(this.current.getDate());
-      this.emitChange("fetching");
+      this.emitChange('fetching');
     } else {
       return []
     }
@@ -155,26 +155,26 @@ const store = {
   }
 
   , _getFacility(){
-    return sessions.findDate(new Date()).data.filter("facility", facility)
+    return sessions.findDate(new Date()).data.filter('facility', facility)
   }
 
   , _getMoreDays(){
 
-    if(fetched){
+    if (fetched){
       let date = sessions.getMoreDays();
-      if(_.isDate(date)) this._fetchData(date)
+      if (_.isDate(date)) this._fetchData(date)
     }
   }
 
   , _getPreviousDays(date){
     let d = sessions.getPreviousDays(date);
-    if(_.isDate(d)){
+    if (_.isDate(d)){
       this._fetchData(d);
     }
   }
 
   , _getAllDates(){
-    if(_.isUndefined(sessions)) return [new Date()]
+    if (_.isUndefined(sessions)) return [new Date()]
     return processDates(sessions.getAllDates());
   }
 
@@ -183,7 +183,7 @@ const store = {
   }
 
   , _setDate(date){
-    if(!this.current){
+    if (!this.current){
       this.current = currentDate(date);
     }
     this.current.setDate(date);
@@ -194,12 +194,12 @@ const store = {
   }
 
   , _setGroups(groupBy){
-    if(!_.isString(groupBy)) return;
+    if (!_.isString(groupBy)) return;
     processor = processData(groupBy);
   }
 
   , _progress(prog){
-    if(!_.isFunction(prog)) return;
+    if (!_.isFunction(prog)) return;
     this.progress = prog
   }
 };
@@ -210,53 +210,53 @@ SessionStore.setMaxListeners(0);
 const registeredCallback = function(payload) {
   var action = payload.action;
   switch(action.type) {
-    case "CHANGE_DATE":
+    case 'CHANGE_DATE':
       SessionStore._setDate(action.date);
-      SessionStore.emitChange("changing_date");
+      SessionStore.emitChange('changing_date');
       break;
-    case "CALENDAR_CHANGE":
+    case 'CALENDAR_CHANGE':
       SessionStore._calendarChange(action.date);
-      SessionStore.emitChange("calendar_changing");
+      SessionStore.emitChange('calendar_changing');
       break;
-    case "FETCH_DATA":
-      if(action.progress) SessionStore._progress(action.progress)
+    case 'FETCH_DATA':
+      if (action.progress) SessionStore._progress(action.progress)
       SessionStore._fetchData(action.date);
-      SessionStore.emitChange("fetching");
+      SessionStore.emitChange('fetching');
       break;
 
-    case "FETCH_NOWNEXT":
-      if(action.progress) SessionStore._progress(action.progress)
+    case 'FETCH_NOWNEXT':
+      if (action.progress) SessionStore._progress(action.progress)
       SessionStore._fetchNowNext();
-      SessionStore.emitChange("fetching_nownext");
+      SessionStore.emitChange('fetching_nownext');
       break;
 
-    case "MORE_DAYS":
+    case 'MORE_DAYS':
       SessionStore._getMoreDays();
-      SessionStore.emitChange("more_days");
+      SessionStore.emitChange('more_days');
       break;
 
-    case "PREVIOUS_DAYS":
+    case 'PREVIOUS_DAYS':
       SessionStore._getPreviousDays(action.date);
-      SessionStore.emitChange("previous_days");
+      SessionStore.emitChange('previous_days');
       break;
 
-    case "PRERENDER_DATA":
+    case 'PRERENDER_DATA':
       SessionStore._addSessions(action.data);
-      SessionStore.emitChange("prerender");
+      SessionStore.emitChange('prerender');
       break;
 
-    case "SET_FACILITY":
+    case 'SET_FACILITY':
       SessionStore._setFacility(action.id);
-      SessionStore.emitChange("set_facility");
+      SessionStore.emitChange('set_facility');
       break;
 
-    case "SET_GROUPBY":
+    case 'SET_GROUPBY':
       SessionStore._setGroups(action.groupBy);
-      SessionStore.emitChange("groupby");
+      SessionStore.emitChange('groupby');
       break;
-    case "SET_API":
+    case 'SET_API':
       SessionStore._setApi(action.url);
-      SessionStore.emitChange("api_set");
+      SessionStore.emitChange('api_set');
 
       break;
 

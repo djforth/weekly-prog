@@ -1,10 +1,10 @@
-const Dispatcher = require("flux").Dispatcher;
-const assign     = require("react/lib/Object.assign");
+const Dispatcher = require('flux').Dispatcher;
+const assign     = require('react/lib/Object.assign');
 
 const SessionsDispatcher = assign(new Dispatcher(), {
   changeDate: function(action) {
     var payload = {
-      source: "CHANGE_DATE",
+      source: 'CHANGE_DATE',
       action: action
     };
     this.dispatch(payload);
@@ -12,7 +12,7 @@ const SessionsDispatcher = assign(new Dispatcher(), {
 
   , calendarChange: function(action) {
     var payload = {
-      source: "CALENDAR_CHANGE",
+      source: 'CALENDAR_CHANGE',
       action: action
     };
     this.dispatch(payload);
@@ -20,7 +20,7 @@ const SessionsDispatcher = assign(new Dispatcher(), {
 
   , fetchData: function(action) {
     var payload = {
-      source: "FETCH_DATA",
+      source: 'FETCH_DATA',
       action: action
     };
     this.dispatch(payload);
@@ -28,7 +28,7 @@ const SessionsDispatcher = assign(new Dispatcher(), {
 
   , fetchNowNext: function(action) {
     var payload = {
-      source: "FETCH_NOWNEXT",
+      source: 'FETCH_NOWNEXT',
       action: action
     };
     this.dispatch(payload);
@@ -36,7 +36,7 @@ const SessionsDispatcher = assign(new Dispatcher(), {
 
   , getMoreDays: function(action) {
     var payload = {
-      source: "MORE_DAYS",
+      source: 'MORE_DAYS',
       action: action
     };
     this.dispatch(payload);
@@ -44,7 +44,7 @@ const SessionsDispatcher = assign(new Dispatcher(), {
 
   , getPreviousDays: function(action) {
     var payload = {
-      source: "PREVIOUS_DAYS",
+      source: 'PREVIOUS_DAYS',
       action: action
     };
     this.dispatch(payload);
@@ -52,7 +52,7 @@ const SessionsDispatcher = assign(new Dispatcher(), {
 
   , prerenderData: function(action) {
     var payload = {
-      source: "PRERENDER_DATA",
+      source: 'PRERENDER_DATA',
       action: action
     };
     this.dispatch(payload);
@@ -60,7 +60,7 @@ const SessionsDispatcher = assign(new Dispatcher(), {
 
   , setApi: function(action) {
     var payload = {
-      source: "SET_API",
+      source: 'SET_API',
       action: action
     };
     this.dispatch(payload);
@@ -68,7 +68,7 @@ const SessionsDispatcher = assign(new Dispatcher(), {
 
   , setFacility: function(action) {
     var payload = {
-      source: "SET_FACILITY",
+      source: 'SET_FACILITY',
       action: action
     };
     this.dispatch(payload);
@@ -76,7 +76,7 @@ const SessionsDispatcher = assign(new Dispatcher(), {
 
   , setGroupBy: function(action) {
     var payload = {
-      source: "SET_GROUPBY",
+      source: 'SET_GROUPBY',
       action: action
     };
     this.dispatch(payload);

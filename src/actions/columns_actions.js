@@ -3,7 +3,7 @@
  * @module weekly-prog/actions/columns_actions
 */
 
-const ColumnsDispatcher = require("../dispatchers/columns_dispatcher");
+const ColumnsDispatcher = require('../dispatchers/columns_dispatcher');
 
 /**
   * This will add column to store
@@ -12,12 +12,12 @@ const ColumnsDispatcher = require("../dispatchers/columns_dispatcher");
   * @return {} returns nothing
   */
 
-var addingColumns = (cols)=>{
-    ColumnsDispatcher.handleAddingColumns({
-      type    : "ADDING_COLUMNS",
-      columns : cols
-    });
-  };
+function addingColumns(cols){
+  ColumnsDispatcher.handleAddingColumns({
+    type: 'ADDING_COLUMNS'
+    , columns: cols
+  });
+}
 
 /**
   * This will change device in store
@@ -26,14 +26,14 @@ var addingColumns = (cols)=>{
   * @return {} returns nothing
   */
 
-var changeDevice = (device)=>{
-    ColumnsDispatcher.handleChangeDevice({
-      type   : "CHANGE_DEVICE",
-      device : device
-    });
-  }
+function changeDevice(device){
+  ColumnsDispatcher.handleChangeDevice({
+    type: 'CHANGE_DEVICE'
+    , device: device
+  });
+}
 
 module.exports = {
-    addingColumns:addingColumns
-  , changeDevice:changeDevice
+  addingColumns: addingColumns
+  , changeDevice: changeDevice
 };

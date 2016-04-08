@@ -49,8 +49,7 @@
         ".es6.js"
       ],
       "files": [
-        "application.js",
-        "now.js"
+        "application.js"
       ],
       "ignore": [],
       "externals": [],
@@ -70,6 +69,9 @@
         ]
       ]
     },
+    "karma": {
+      "input": "./spec"
+    },
     "port": 9090,
     "rails_port": 3030,
     "uiport": 8080
@@ -81,7 +83,7 @@
     "port": 4000,
     "rails_port": 3030,
     "uiport": 9080,
-      "img_config": {
+    "img_config": {
       "ext": [
         "*.png",
         "*.gif",
@@ -91,7 +93,6 @@
       ]
     }
   },
-
   "scripts": {
     "browserSync": "node ./fe_build_scripts/browserSync.js",
     "build": "babel src -x '.js' -d lib",
@@ -104,9 +105,9 @@
     "sass:build": "node ./fe_build_scripts/sass-build.js -m",
     "sass:watch": "node ./fe_build_scripts/sass-build.js -w",
     "start": "npm run browserSync & npm run build:watch",
-    "test": "npm run lint && ./node_modules/.bin/karma start fe_build_scripts/karma.conf.js --browsers PhantomJS --single-run",
-    "test:watch": "karma start fe_build_scripts/karma.conf.js --browsers PhantomJS",
-    "test:mac": "karma start fe_build_scripts/karma.conf.js --single-run --browsers Chrome,Firefox,Safari"
+    "test": "asset-pipeline-karma",
+    "test:watch": "asset-pipeline-karma -w",
+    "test:mac": "asset-pipeline-karma -b"
   },
   "repository": {
     "type": "git",
@@ -121,9 +122,11 @@
   "devDependencies": {
     "@djforth/ap_browserify": "^1.3.10",
     "@djforth/ap_imagemin": "2.0.3",
-    "@djforth/ap_sprites": "1.0.6",
     "@djforth/ap_karma": "1.1.9",
+    "@djforth/ap_sprites": "1.0.6",
     "@djforth/ap_utils": "^2.0.13",
+    "@djforth/morse-jasmine": "^1.0.16",
+    "ajax-es6-module": "1.0.2",
     "autoprefixer": "^6.3.2",
     "babel": "^6.5.2",
     "babel-cli": "^6.6.5",
@@ -136,56 +139,51 @@
     "browserify": "^13.0.0",
     "browserslist": "^1.0.1",
     "chokidar": "^1.4.3",
+    "classnames": "^2.2.0",
     "css-mqpacker": "^4.0.0",
-    "eslint": "^2.7.0",
+    "datamanager": "1.0.2",
+    "eslint": "^2.3.0",
+    "eslint-config-google": "^0.4.0",
     "eslint-plugin-react": "^4.2.3",
+    "estraverse-fb": "^1.3.1",
     "event-stream": "^3.3.2",
+    "flux": "^2.1.1",
     "image-size": "^0.5.0",
+    "immutable": "^3.7.5",
+    "lodash": "~4.8.2",
     "mime": "^1.3.4",
     "mkdirp": "^0.5.1",
+    "moment": "~2.12.0",
+    "moment-strftime": "^0.1.5",
+    "morse-react-mixins": "1.1.0",
     "node-sass": "^3.4.2",
     "node-sass-globbing": "0.0.23",
     "path": "^0.12.7",
-    "postcss": "^5.0.12",
-    "postcss-discard-duplicates": "^2.0.0",
-    "postcss-import": "^7.1.3",
-    "postcss-merge-longhand": "^2.0.1",
-    "postcss-merge-rules": "^2.0.1",
-    "react-addons-test-utils": "0.14.7",
-    "react-jasmine": "0.1.6",
+    "react": "~0.14.8",
+    "react-addons-test-utils": "~0.14.8",
+    "react-date-range": "~0.2.4",
+    "react-dom": "~0.14.8",
+    "react-jasmine": "~1.0.0",
     "readdirp": "^2.0.0",
     "require-dir": "^0.3.0",
+    "sinon": "^1.17.3",
     "through2": "^2.0.1",
-    "ajax-es6-module": "1.0.2",
-    "datamanager": "1.0.2",
-    "morse-react-mixins": "1.0.2",
-    "touch-nav": "2.0.2",
-    "viewport-detection-es6": "2.0.4",
-    "classnames": "^2.2.0",
-    "flux": "^2.1.1",
-    "immutable": "^3.7.5",
-    "lodash": "~4.6.1",
-    "moment": "~2.12.0",
-    "moment-strftime": "^0.1.5",
-    "react": "0.14.8",
-    "react-date-range": "0.2.4",
-    "react-dom": "0.14.8"
+    "viewport-detection-es6": "2.0.4"
   },
   "peerDependencies": {
     "ajax-es6-module": "1.0.2",
     "datamanager": "1.0.2",
-    "morse-react-mixins": "1.0.2",
-    "touch-nav": "2.0.2",
+    "morse-react-mixins": "1.1.0",
     "viewport-detection-es6": "2.0.4",
     "classnames": "^2.2.0",
     "flux": "^2.1.1",
     "immutable": "^3.7.5",
-    "lodash": "^4.6.1",
+    "lodash": "~4.8.2",
     "moment": "~2.12.0",
     "moment-strftime": "^0.1.5",
-    "react": "0.14.8",
-    "react-date-range": "0.2.4",
-    "react-dom": "0.14.8"
+    "react": "~0.14.8",
+    "react-date-range": "~0.2.4",
+    "react-dom": "~0.14.8"
   },
   "dependencies": {}
 }

@@ -55,19 +55,19 @@ describe('formatter', function() {
 
   describe('getValue', function() {
     let getValue = getter('getValue');
-    let data, dataIm;
+    let data,  value;
     beforeEach(function() {
       data = {foo:"bar", bar:2}
-      dataIm = Immutable.fromJS(data)
+      value = getValue(Immutable.fromJS(data));
     });
 
     it('should return value of key if string', function() {
-      expect(getValue(dataIm, "foo")).toEqual("bar")
-      expect(getValue(dataIm, "bar")).toEqual(2)
+      expect(value("foo")).toEqual("bar")
+      expect(value("bar")).toEqual(2)
     });
 
     it('should return an array of value of keys array sent', function() {
-      expect(getValue(dataIm, ["foo", "bar"])).toEqual(["bar", 2])
+      expect(value(["foo", "bar"])).toEqual(["bar", 2])
 
     });
   });

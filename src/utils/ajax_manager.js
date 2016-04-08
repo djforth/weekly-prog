@@ -1,28 +1,28 @@
- const Ajax  = require("ajax-es6-module")
-    , Moment = require("moment-strftime");
-    // , DateFormatter = require("@djforth/date-formatter");
+ const Ajax  = require('ajax-es6-module')
+    , Moment = require('moment-strftime');
+    // , DateFormatter = require('@djforth/date-formatter');
 
-const _        = require("lodash/core")
-    , includes = require("lodash/includes")
-    , reject   = require("lodash/reject")
+const _        = require('lodash/core')
+    , includes = require('lodash/includes')
+    , reject   = require('lodash/reject')
 
 const ajaxManager = new Ajax();
 
 let currentRequests = [];
 
 function setApi(api, date){
-  if(!_.isDate(date)) return api;
+  if (!_.isDate(date)) return api;
 
   let dateFmt = Moment(date);
   // new DateFormatter(date);
-  let path = dateFmt.strftime("/%Y/%m/%d[.json]");
+  let path = dateFmt.strftime('/%Y/%m/%d[.json]');
   return api.replace(/.json/, path)
 }
 
 
 module.exports = function(api){
-  if(!api){
-    throw new Error("api url required");
+  if (!api){
+    throw new Error('api url required');
   }
 
   let progress, date;
@@ -40,7 +40,7 @@ module.exports = function(api){
 
     , fetch:()=>{
       let url = setApi(api, date);
-      if(includes(currentRequests, url)) return null;
+      if (includes(currentRequests, url)) return null;
       currentRequests.push(url)
       ajaxManager.addUrl(setApi(api, date));
 

@@ -1,7 +1,7 @@
-const _     = require("lodash/core");
+const _     = require('lodash/core');
 
 
-module.exports = function(items, txt="Sessions for "){
+module.exports = function(items, txt='Sessions for '){
   return _.map(items, (item, i)=>{
     item.name  = _.clone(item.title);
     item.title = `${txt} ${item.name}`

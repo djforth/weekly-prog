@@ -1,5 +1,5 @@
-const _         = require("lodash/core")
-    , checkers = ["getDate", "getMonth", "getFullYear"];
+const _         = require('lodash/core')
+    , checkers = ['getDate', 'getMonth', 'getFullYear'];
 
 module.exports = function(check, checkee){
   let test = false;

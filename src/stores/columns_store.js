@@ -1,18 +1,18 @@
-const EventEmitter  = require("events").EventEmitter;
-const assign        = require("react/lib/Object.assign");
+const EventEmitter  = require('events').EventEmitter;
+const assign        = require('react/lib/Object.assign');
 
-const _    = require("lodash/core")
-    , includes = require("lodash/includes")
-    , pick = require("lodash/pick");
+const _    = require('lodash/core')
+    , includes = require('lodash/includes')
+    , pick = require('lodash/pick');
 
-const textMixins = require("morse-react-mixins").text_mixins;
-const ColumnsDispatcher = require("../dispatchers/columns_dispatcher");
+const textMixins = require('morse-react-mixins').text_mixins;
+const ColumnsDispatcher = require('../dispatchers/columns_dispatcher');
 
 
 
 
 const store = {
-  device          : "desktop",
+  device          : 'desktop',
   columns         : [],
   columns_ids     : [],
   visible_columns : [],
@@ -53,7 +53,7 @@ const store = {
 
   getColumn(id){
     let items;
-    if(id){
+    if (id){
       items =  _.find(this.columns, (col)=>{
         return col.id === id;
       });
@@ -61,7 +61,7 @@ const store = {
       items = _.first(this.columns);
     }
 
-    if(items){
+    if (items){
       return items;
     }
 
@@ -71,8 +71,8 @@ const store = {
   getDateColumns(id){
     let column = this.getColumn(id).cols;
     let dates = _.chain(column)
-      .filter((col)=>(col.type === "date" || col.type === "dateTime"))
-      .map((col)=> this.reduceObj(col, ["key", "title", "type", "fmt"]))
+      .filter((col)=>(col.type === 'date' || col.type === 'dateTime'))
+      .map((col)=> this.reduceObj(col, ['key', 'title', 'type', 'fmt']))
       .value();
 
     return dates;
@@ -86,12 +86,12 @@ const store = {
 
   getKeys(id){
     let visible = this.getColumn(id).visible;
-    return _.map(visible, "key");
+    return _.map(visible, 'key');
   },
 
   getKeyAndTitle(id){
     let visible = this.getColumn(id).visible;
-    return _.map(visible, (col)=> this.reduceObj(col, ["key", "title"]));
+    return _.map(visible, (col)=> this.reduceObj(col, ['key', 'title']));
   },
 
   getLabeled(id){
@@ -110,7 +110,7 @@ const store = {
     let column = this.getColumn(id).cols;
     let searchables = _.chain(column)
       .filter((col)=>col.searchable)
-      .map((col)=> this.reduceObj(col, ["key", "title"]))
+      .map((col)=> this.reduceObj(col, ['key', 'title']))
       .value();
 
     return searchables;
@@ -122,7 +122,7 @@ const store = {
       .filter((col)=>{
         return col.show && !includes(column.visible, col);
       })
-      .map((col)=> this.reduceObj(col, ["key", "title"]))
+      .map((col)=> this.reduceObj(col, ['key', 'title']))
       .value();
     return showables;
   },
@@ -131,7 +131,7 @@ const store = {
     let column = this.getColumn(id).cols;
     let sortables = _.chain(column)
       .filter((col)=>col.sortable)
-      .map((col)=> this.reduceObj(col, ["key", "title"]))
+      .map((col)=> this.reduceObj(col, ['key', 'title']))
       .value();
 
     return sortables;
@@ -139,7 +139,7 @@ const store = {
 
   getTitles(id){
     let visible = this.getColumn(id).visible;
-    return _.map(visible, "title");
+    return _.map(visible, 'title');
   },
 
   getTitleForKey(key, id){
@@ -172,7 +172,7 @@ const store = {
   setTitles(columns){
     columns = _.map(columns, function(col){
       // console.log(that.capitalize)
-      if(!_.has(col, "title")){
+      if (!_.has(col, 'title')){
         let title = this.capitalize(col.key);
         col.title = title;
       }
@@ -192,14 +192,14 @@ const ColumnsStore = assign({}, EventEmitter.prototype, store);
 const registeredCallback = function(payload) {
   let action = payload.action;
   switch(action.type) {
-    case "ADDING_COLUMNS":
+    case 'ADDING_COLUMNS':
       ColumnsStore.addColumns(action.columns, action.id);
-      ColumnsStore.emitChange("adding");
+      ColumnsStore.emitChange('adding');
       break;
 
-    case "CHANGE_DEVICE":
+    case 'CHANGE_DEVICE':
       ColumnsStore.changeDevice(action.device);
-      ColumnsStore.emitChange("change");
+      ColumnsStore.emitChange('change');
       break;
     }
 };

@@ -1,15 +1,15 @@
-const Dispatcher = require("flux").Dispatcher;
-const assign     = require("react/lib/Object.assign");
+const Dispatcher = require('flux').Dispatcher;
+const assign     = require('react/lib/Object.assign');
 
 const ColumnsDispatcher = assign(new Dispatcher(), {
 
   /**
-   * @param {object} action The details of the action, including the action"s
+   * @param {object} action The details of the action, including the action's
    * type and additional data coming from the server.
    */
   handleAddingColumns: function(action) {
     var payload = {
-      source: "ADDING_COLUMNS",
+      source: 'ADDING_COLUMNS',
       action: action
     };
     this.dispatch(payload);
@@ -17,7 +17,7 @@ const ColumnsDispatcher = assign(new Dispatcher(), {
 
   handleChangeDevice: function(action) {
     var payload = {
-      source: "CHANGE_DEVICE",
+      source: 'CHANGE_DEVICE',
       action: action
     };
     this.dispatch(payload);

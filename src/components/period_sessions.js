@@ -1,52 +1,63 @@
 //Libraries
-const React = require("react");
+const React = require('react');
 
-const DataHead     = require("./data_head")
-    , DataItems    = require("./data_items")
-    , DataExpander = require("./data_expander_item");
+const DataHead     = require('./data_head')
+    , DataItems    = require('./data_items')
+    , DataExpander = require('./data_expander_item')
+    , NoSessions   = require('./simple/no_sessions')
+    , Paginate     = require('./simple/paginate')
+    , PeriodHead   = require('./simple/period_head');
 
 // Flux
-const SessionsStore = require("../stores/sessions_store");
+const ColumnsStore   = require('../stores/columns_store')
+    , SessionsStore = require('../stores/sessions_store');
 
 // Mixins
-const cssMixins  = require("morse-react-mixins").css_mixins;
+const cssMixins  = require('morse-react-mixins').css_mixins;
 
 class PeriodSessions extends DataItems {
 
   constructor(props) {
     super(props);
     let sessions = this.props.sessions.getTimePeriod(this.props.time.st, this.props.time.fn)
-    this.pagination = ["weekly-pagination", {"hidden": (sessions.size <= 4)}];
+    this.pagination = ['weekly-pagination', {'hidden': (sessions.size <= 4)}];
 
     this.state = {
-        data:sessions
+        columns: []
+      , data:sessions
       , keys:[]
       , visible:[]
-      , device:"desktop"
+      , device:'desktop'
       , paginate:4
       , pagination_css:this.getClasses(this.pagination)};
   }
 
+  componentWillMount() {
+    this.setState({columns:ColumnsStore.getVisible()});
+  }
+
   componentDidMount() {
     //Data Changers
-    SessionsStore.addChangeListener("changing_date", this._onLoaded.bind(this));
-    SessionsStore.addChangeListener("fetched", this._onLoaded.bind(this));
+    ColumnsStore.addChangeListener('change', this._onChange.bind(this));
+    SessionsStore.addChangeListener('changing_date', this._onLoaded.bind(this));
+    SessionsStore.addChangeListener('fetched', this._onLoaded.bind(this));
   }
 
   componentWillUnmount() {
-    SessionsStore.removeChangeListener("changing_date", this._onLoaded);
-    SessionsStore.removeChangeListener("fetched", this._onLoaded);
+    SessionsStore.removeChangeListener('changing_date', this._onLoaded);
+    SessionsStore.removeChangeListener('fetched', this._onLoaded);
+    ColumnsStore.removeChangeListener('change', this._onChange);
   }
 
   _renderData(){
 
-    if(this.state.data && this.state.data.size > 0){
+    if (this.state.data && this.state.data.size > 0){
        let data = this.state.data.slice(0, this.state.paginate);
        let items = []
        data.forEach(function(k){
-         if(k){
+         if (k){
           items.push(
-            <DataExpander css={this.props.css} data={k} key={`session-${k.get("id")}`} />
+            <DataExpander css={this.props.css} data={k} key={`session-${k.get('id')}`} />
             );
          }
 
@@ -54,45 +65,55 @@ class PeriodSessions extends DataItems {
 
       return items;
     } else {
-      return (<div className="cols-lg-12" key={`${this.props.title.toLowerCase()}-nosessions`}>
-        <h5 className="no-sessions">{this.props.no_sessions || "There are no sessions this"} {this.props.title}</h5>
-      </div>);
+      return (
+        <NoSessions
+          no_session={this.props.no_sessions}
+          title={this.props.title} />);
     }
   }
 
   render() {
     return (
-      <section key="items" className={`panel ${this.props.title.toLowerCase()}`}>
-        <header className="section-header">
-          <h1 className="gg beta secondary">{this.props.title}</h1>
-        </header>
-        <div className="table">
-          <DataHead device={this.props.device} css={this.props.css} key={`${this.props.title.toLowerCase()}head`} />
-            <div className="tbody">
-              {this._renderData(this.state.paginate)}
-            </div>
+      <section key='items' className={`panel ${this.props.title.toLowerCase()}`}>
+        <PeriodHead title={this.props.title} />
+        <div className='table'>
+          <DataHead columns={this.state.columns} css={this.props.css}  />
+          <div className='tbody'>
+            {this._renderData(this.state.paginate)}
+          </div>
         </div>
-        <div className={this.state.pagination_css}>
-          <a href="#" onClick={this._paginate.bind(this)} className="button button-pagination">Load More</a>
-        </div>
+        <Paginate
+          css     = {this.state.pagination_css}
+          onClick = {this._paginate.bind(this)}
+        />
+
       </section>
     );
+  }
+
+  _onChange(){
+    let columns = ColumnsStore.getKeyAndTitle();
+    this.setState({
+      columns:columns
+    });
   }
 
   _onLoaded(){
 
     let sessions = SessionsStore._getDate().data.getTimePeriod(this.props.time.st, this.props.time.fn);
 
-    this.pagination[1]["hidden"] = (sessions.size <= 4 );
-    // console.log("pagination", this.pagination)
+    this.pagination[1]['hidden'] = (sessions.size <= 4 );
+    // console.log('pagination', this.pagination)
     this.setState({paginate:4, pagination_css:this.getClasses(this.pagination), data:sessions});
   }
+
+
 
 
   _paginate(e){
     e.preventDefault();
     let pag = this.state.paginate + 4;
-    if(pag > this.state.data.size){
+    if (pag > this.state.data.size){
 
       this.pagination  = this.toggleCss(this.pagination);
     }

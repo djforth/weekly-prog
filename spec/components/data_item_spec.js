@@ -3,7 +3,7 @@ const _ = require("lodash")
     , ReactDOM  = require('react-dom')
     , TestUtils = require("react-addons-test-utils");
 
-const DataItem   = require("../../src/components/data_item");
+const DataItem   = require("../../src/components/sessions/data_item");
 
 const Immutable = require("immutable");
 
