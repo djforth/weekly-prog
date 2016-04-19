@@ -6,7 +6,8 @@ function titleCreator(checker, time){
   return checker.setNowOrPast(
     'This session has started'
     , 'This session has finished'
-    , `This sessions runs between ${time}`);
+    , `This sessions runs between ${time}`
+    );
 }
 
 module.exports = function(props){
@@ -14,5 +15,9 @@ module.exports = function(props){
     return (<Cancelled time={props.time} />);
   }
 
-  return (<span title={titleCreator(props.checker, props.time)}>{props.time}</span>);
+  return (
+    <span title={titleCreator(props.checker, props.time)}>
+      {props.time}
+    </span>
+  );
 };

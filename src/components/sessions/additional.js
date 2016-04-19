@@ -103,7 +103,6 @@ class Additional extends React.Component{
 }
 
 Object.assign(Additional.prototype, cssMixins);
-
 Object.assign(Additional.prototype, textMixins);
 
 module.exports = Additional;
