@@ -1,4 +1,4 @@
-//Libraries
+// Libraries
 const React = require('react');
 var _ = require('lodash/core');
 _.includes = require('lodash/includes');
@@ -15,20 +15,19 @@ const AdditionalContent  = require('./stateless/additional_content')
     , Description = require('./stateless/description')
     , RichText    = require('./stateless/richtext');
 
-
-class Additional extends React.Component {
-  constructor(props) {
+class Additional extends React.Component{
+  constructor(props){
     super(props);
-    this.state = {columns:ColumnsStore.getShowable()}
+    this.state = {columns: ColumnsStore.getShowable()};
   }
 
-  componentWillMount() {
+  componentWillMount(){
     this.mounted = true;
-    this.setState({columns:ColumnsStore.getShowable()});
+    this.setState({columns: ColumnsStore.getShowable()});
     ColumnsStore.addChangeListener('change', this._onChange.bind(this));
   }
 
-  componentWillUnmount() {
+  componentWillUnmount(){
     this.mounted = false;
     ColumnsStore.removeChangeListener('change', this._onChange);
   }
@@ -36,39 +35,44 @@ class Additional extends React.Component {
   _onChange(){
     if (this.mounted){
       this.setState({
-        columns:ColumnsStore.getShowable()
+        columns: ColumnsStore.getShowable()
       });
     }
+  }
+
+  _checkButton(item){
+    return item.has('buttons') && item.get('buttons').has('book');
   }
 
   _renderActions(){
     let col, link, item, key, places;
 
-    col = _.filter(this.state.columns, {key:'actions'})
+    col = _.filter(this.state.columns, {key: 'actions'});
     if (_.isEmpty(col)) return '';
 
     item = this.props.data;
     places = item.get('places_left');
-    link = (item.has('buttons') && item.get('buttons').has('book')) ? item.get('buttons').get('book') : null;
-    key = this.createId(col.key, item.get('id'))
+    link = (this._checkButton(item)) ? item.get('buttons').get('book') : null;
+    key = this.createId(col.key, item.get('id'));
 
     return (<BookBtn
       places = {places}
       link   = {link}
       key    = {key}
-    />)
+    />);
   }
 
-  _renderList() {
-    let data = this.props.data;
+  _renderList(){
+    let data, extra;
+    data = this.props.data;
 
-    let extra = _.reject(this.state.columns, {key:'description'});
-    extra  = _.reject(extra, {key:'actions'});
-    if (data && extra) {
-      let li = _.map(extra, (col) => {
+    extra = _.reject(this.state.columns, {key: 'description'});
+    extra  = _.reject(extra, {key: 'actions'});
+    if (data && extra){
+      let li = _.map(extra, (col)=>{
         let key = this.createId(col.key, this.props.data.get('id'));
         return (
-          <li className='list-group-item col-md-4'
+          <li className="list-group-item col-md-4"
             key  = {key}>
             <strong>{col.title}: </strong>
             <AdditionalContent
@@ -85,14 +89,12 @@ class Additional extends React.Component {
     return '';
   }
 
-
-
   render(){
     return (<div className={`additional ${this.props.active}`}>
          <ul className={this.props.info}>
           {this._renderList()}
         </ul>
-        <div className='description'>
+        <div className="description">
           <RichText content={this.props.data.get('description')} />
         </div>
         {this._renderActions()}
@@ -104,4 +106,5 @@ Object.assign(Additional.prototype, cssMixins);
 
 Object.assign(Additional.prototype, textMixins);
 
-module.exports = Additional
+module.exports = Additional;
+
