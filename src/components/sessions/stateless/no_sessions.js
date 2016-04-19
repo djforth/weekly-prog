@@ -1,8 +1,11 @@
-const React = require('react')
+const React = require('react');
 
 module.exports = function(props){
+  let key, nosession;
+  key = `${props.title.toLowerCase()}-nosessions`;
+  nosession = props.no_sessions || 'There are no sessions this';
   return (
-    <div className='cols-lg-12' key={`${props.title.toLowerCase()}-nosessions`}>
-      <h5 className='no-sessions'>{props.no_sessions || 'There are no sessions this'} {props.title}</h5>
+    <div className="cols-lg-12" key={key}>
+      <h5 className="no-sessions">{nosession} {props.title}</h5>
   </div>);
-}
+};

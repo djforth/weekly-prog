@@ -1,28 +1,24 @@
-const EventEmitter  = require('events').EventEmitter
-  , _             = require('lodash/core');
+var AjaxManager, Breaker, DateManager, EventEmitter, SessionsDispatcher, _;
 
-//Internal Modules
-const AjaxManager  = require('../utils/ajax_manager')
-    , DateManager  = require('../factories/date_manager')
-    , SessionsFcty = require('../factories/sessions_fcty')
-    , Breaker      = require('../utils/sessions_breaker')
-    , checker      = require('../utils/day_checker');
+let ajaxManager, processor, sessions, facility, fetched;
 
+EventEmitter = require('events').EventEmitter;
+_ = require('lodash/core');
 
-//Flux
-const SessionsDispatcher = require('../dispatchers/sessions_dispatcher')
-    , SessionsAction     = require('../actions/sessions_actions');
+// Internal Modules
+AjaxManager  = require('../utils/ajax_manager');
+DateManager  = require('../factories/date_manager');
+Breaker      = require('../utils/sessions_breaker');
 
-let ajaxManager, processor, sessions, facility;
+// Flux
+SessionsDispatcher = require('../dispatchers/sessions_dispatcher');
 
-let fetched     = false;
-let requestMade = false;
+fetched     = false;
 
 function processData(groupBy){
-
   let sessions = DateManager(groupBy);
 
-  return function(d, date, reset=false){
+  return function(d, date, reset = false){
     if (reset) sessions.resetDates();
 
     let groups = Breaker(d, groupBy, date);
@@ -30,49 +26,46 @@ function processData(groupBy){
       sessions.addDate(ses.date, ses.sessions);
     });
 
-
-
-    return sessions
+    return sessions;
   };
 }
 
 function processDates(dates){
   if (_.isEmpty(dates)) return dates;
   let yesterday = new Date();
-  yesterday.setDate(yesterday.getDate()-1);
+  yesterday.setDate(yesterday.getDate() - 1);
   return _.filter(dates, (d)=>{
     return d.date.getTime() >= yesterday.getTime();
-  })
+  });
 }
 
 function currentDate(date){
   let current = (_.isDate(date)) ? date : new Date();
 
   return {
-      getDate:()=>current
-    , setDate:(d)=>{
+    getDate: ()=>current
+    , setDate: (d)=>{
       current = (_.isDate(d)) ? d : current;
     }
-  }
+  };
 }
 
 const store = {
   // <<<<<<<<<<<<<<<< Event management >>>>>>>>>>
-  emitChange(event) {
+  emitChange(event){
     this.emit(event);
   }
 
-  , addChangeListener(event, callback) {
+  , addChangeListener(event, callback){
     this.on(event, callback);
   }
 
-  , removeChangeListener(event, callback) {
+  , removeChangeListener(event, callback){
     this.removeListener(event, callback);
   }
 
   // <<<<<<<<<<<<<<< Fetching and processing session >>>>>>>>>>>>
   , _addSessions(data){
-
     if (_.isFunction(processor)){
       sessions = processor(data);
     }
@@ -83,9 +76,9 @@ const store = {
     this._fetchData(date, true);
   }
 
-  , _fetchData(date, reset=false){
+  , _fetchData(date, reset = false){
     if (!ajaxManager){
-      throw new Error('please set API path')
+      throw new Error('please set API path');
     }
 
     ajaxManager.addQuery(date);
@@ -101,36 +94,36 @@ const store = {
         return sessions.getAllDates();
       })
       .then((data)=>{
-        this._fetchRest(data)
-        return data
+        this._fetchRest(data);
+        return data;
       });
     }
   }
 
   , _fetchNowNext(){
-    let request = ajaxManager.fetch().then((data)=>{
-        fetched = true;
-        sessions = processor(data, false);
+    ajaxManager.fetch().then((data)=>{
+      fetched = true;
+      sessions = processor(data, false);
 
-        this.emitChange('fetched');
-      });
+      this.emitChange('fetched');
+    });
   }
 
   , _fetchRest(dates){
-      let fetch = _.filter(dates, (d)=>d.nosessions)
-      fetch = _.reduce(fetch, (prev, curr)=>{
-        if (prev.date.getTime() > curr.date.getTime()){
-          return curr;
-        }
+    let fetch = _.filter(dates, (d)=>d.nosessions);
+    fetch = _.reduce(fetch, (prev, curr)=>{
+      if (prev.date.getTime() > curr.date.getTime()){
+        return curr;
+      }
 
-        return prev;
-      });
+      return prev;
+    });
 
-      if (fetch) this._fetchData(fetch.date)
+    if (fetch) this._fetchData(fetch.date);
   }
 
   , _getCurrentDate(){
-    return this.current.getDate()
+    return this.current.getDate();
   }
 
   , _getDate(date){
@@ -147,21 +140,20 @@ const store = {
       this._fetchData(this.current.getDate());
       this.emitChange('fetching');
     } else {
-      return []
+      return [];
     }
 
     return null;
   }
 
   , _getFacility(){
-    return sessions.findDate(new Date()).data.filter('facility', facility)
+    return sessions.findDate(new Date()).data.filter('facility', facility);
   }
 
   , _getMoreDays(){
-
     if (fetched){
       let date = sessions.getMoreDays();
-      if (_.isDate(date)) this._fetchData(date)
+      if (_.isDate(date)) this._fetchData(date);
     }
   }
 
@@ -173,7 +165,7 @@ const store = {
   }
 
   , _getAllDates(){
-    if (_.isUndefined(sessions)) return [new Date()]
+    if (_.isUndefined(sessions)) return [new Date()];
     return processDates(sessions.getAllDates());
   }
 
@@ -199,16 +191,16 @@ const store = {
 
   , _progress(prog){
     if (!_.isFunction(prog)) return;
-    this.progress = prog
+    this.progress = prog;
   }
 };
 
 const SessionStore = Object.assign({}, EventEmitter.prototype, store);
 SessionStore.setMaxListeners(0);
 
-const registeredCallback = function(payload) {
+const registeredCallback = function(payload){
   var action = payload.action;
-  switch(action.type) {
+  switch(action.type){
     case 'CHANGE_DATE':
       SessionStore._setDate(action.date);
       SessionStore.emitChange('changing_date');
@@ -218,13 +210,13 @@ const registeredCallback = function(payload) {
       SessionStore.emitChange('calendar_changing');
       break;
     case 'FETCH_DATA':
-      if (action.progress) SessionStore._progress(action.progress)
+      if (action.progress) SessionStore._progress(action.progress);
       SessionStore._fetchData(action.date);
       SessionStore.emitChange('fetching');
       break;
 
     case 'FETCH_NOWNEXT':
-      if (action.progress) SessionStore._progress(action.progress)
+      if (action.progress) SessionStore._progress(action.progress);
       SessionStore._fetchNowNext();
       SessionStore.emitChange('fetching_nownext');
       break;
@@ -258,7 +250,8 @@ const registeredCallback = function(payload) {
       SessionStore.emitChange('api_set');
 
       break;
-
+    default:
+      throw (new Error('No Action'));
   }
 };
 

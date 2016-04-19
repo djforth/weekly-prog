@@ -1,4 +1,4 @@
-//Libraries
+// Libraries
 const React = require('react');
 
 const DataHead     = require('./data_head')
@@ -15,35 +15,40 @@ const ColumnsStore   = require('../../stores/columns_store')
 const cssMixins  = require('morse-react-mixins').css_mixins
     , textMixins = require('morse-react-mixins').text_mixins;
 
-class PeriodSessions extends React.Component {
-
-  constructor(props) {
+class PeriodSessions extends React.Component{
+  constructor(props){
     super(props);
-    let sessions = this.props.sessions.getTimePeriod(this.props.time.st, this.props.time.fn)
-    this.pagination = ['weekly-pagination', {'hidden': (sessions.size <= 4)}];
+    let st, fn, sessions, hidden;
+    st = this.props.time.st;
+    fn = this.props.time.fn;
+    sessions = this.props.sessions.getTimePeriod(st, fn);
+
+    hidden = (sessions.size <= 100);
+    this.pagination = ['weekly-pagination', {hidden: hidden}];
 
     this.state = {
-        columns: []
-      , data:sessions
-      , keys:[]
-      , visible:[]
-      , device:'desktop'
-      , paginate:4
-      , pagination_css:this.getClasses(this.pagination)};
+      columns: []
+      , data: sessions
+      , keys: []
+      , visible: []
+      , device: 'desktop'
+      , paginate: 4
+      , pagination_css: this.getClasses(this.pagination)
+    };
   }
 
-  componentWillMount() {
-    this.setState({columns:ColumnsStore.getVisible()});
+  componentWillMount(){
+    this.setState({columns: ColumnsStore.getVisible()});
   }
 
-  componentDidMount() {
-    //Data Changers
+  componentDidMount(){
+    // Data Changers
     ColumnsStore.addChangeListener('change', this._onChange.bind(this));
     SessionsStore.addChangeListener('changing_date', this._onLoaded.bind(this));
     SessionsStore.addChangeListener('fetched', this._onLoaded.bind(this));
   }
 
-  componentWillUnmount() {
+  componentWillUnmount(){
     SessionsStore.removeChangeListener('changing_date', this._onLoaded);
     SessionsStore.removeChangeListener('fetched', this._onLoaded);
     ColumnsStore.removeChangeListener('change', this._onChange);
@@ -51,33 +56,38 @@ class PeriodSessions extends React.Component {
 
   _renderData(){
     if (this.state.data && this.state.data.size > 0){
-       let data = this.state.data.slice(0, this.state.paginate);
-       // console.log(data)
-       let items = data.map((d)=>{
-        return (
-            <DataExpander
-              css  = {this.props.css}
-              data = {d}
-              key  = {this.createId('session', d.get('id'))} />
-            );
-       })
+      return this._renderSessions();
+    }
+    return this._renderNoSessions();
+  }
 
-      return items;
-    } else {
-      return (
+  _renderNoSessions(){
+    return (
         <NoSessions
           no_session={this.props.no_sessions}
           title={this.props.title} />);
-    }
   }
 
-  render() {
+  _renderSessions(){
+    let data = this.state.data.slice(0, this.state.paginate);
+     // console.log(data)
+    return data.map((d)=>{
+      return (
+        <DataExpander
+          css  = {this.props.css}
+          data = {d}
+          key  = {this.createId('session', d.get('id'))} />
+        );
+    });
+  }
+
+  render(){
     return (
-      <section key='items' className={`panel ${this.props.title.toLowerCase()}`}>
+      <section key="items" className={this._setCss()}>
         <PeriodHead title={this.props.title} />
-        <div className='table'>
+        <div className="table">
           <DataHead columns={this.state.columns} css={this.props.css}  />
-          <div className='tbody'>
+          <div className="tbody">
             {this._renderData(this.state.paginate)}
           </div>
         </div>
@@ -90,29 +100,42 @@ class PeriodSessions extends React.Component {
     );
   }
 
+  _setCss(){
+    return `panel ${this.props.title.toLowerCase()}`;
+  }
+
   _onChange(){
     let columns = ColumnsStore.getKeyAndTitle();
     this.setState({
-      columns:columns
+      columns: columns
     });
   }
 
   _onLoaded(){
-    let sessions = SessionsStore._getDate().data.getTimePeriod(this.props.time.st, this.props.time.fn);
-
-    this.pagination[1]['hidden'] = (sessions.size <= 4 );
-    // console.log('pagination', this.pagination)
-    this.setState({paginate:4, pagination_css:this.getClasses(this.pagination), data:sessions});
+    let sessions, st, fn;
+    st = this.props.time.st;
+    fn = this.props.time.fn;
+    sessions = SessionsStore._getDate().data;
+    sessions = sessions.getTimePeriod(st, fn);
+    this.pagination[1].hidden = (sessions.size <= 100);
+    this.setState({
+      paginate: 100
+      , pagination_css: this.getClasses(this.pagination)
+      , data: sessions
+    });
   }
 
   _paginate(e){
     e.preventDefault();
-    let pag = this.state.paginate + 4;
+    let pag = this.state.paginate + 10;
     if (pag > this.state.data.size){
-
       this.pagination  = this.toggleCss(this.pagination);
     }
-    this.setState({paginate:pag, pagination_css:this.getClasses(this.pagination)})
+
+    this.setState({
+      paginate: pag
+      , pagination_css: this.getClasses(this.pagination)
+    });
   }
 }
 

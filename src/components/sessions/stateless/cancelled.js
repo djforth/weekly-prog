@@ -1,5 +1,6 @@
-
+const React = require('react');
 
 module.exports = function(props){
-  return <span title={`The session between ${props.time} is cancelled`}>Cancelled</span>
-}
+  let title = `The session between ${props.time} is cancelled`;
+  return (<span title={title}>Cancelled</span>);
+};

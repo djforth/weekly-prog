@@ -1,16 +1,11 @@
-const React = require('react')
-    , _     = require('lodash/core');
+const React = require('react');
 
 const timeChecker = require('../../../utils/time_checker')
     , formatter   = require('../../../utils/formatter');
 
 // Components
-let BookBtn  = require('./book_btn')
-  , Time     = require('./time')
-  , RichText = require('./richtext')
-  , Wrapper  = require('./wrapper');
-
-
+let Time     = require('./time')
+  , RichText = require('./richtext');
 
 module.exports = function(props){
   let col, getVal, item, value;
@@ -19,7 +14,7 @@ module.exports = function(props){
   getVal = formatter(item);
   value  = getVal(col);
 
-  if (col.type === 'time') {
+  if (col.type === 'time'){
     return (<Time
       cols = {col}
       checker = {timeChecker(item, col)}
@@ -29,4 +24,4 @@ module.exports = function(props){
   }
 
   return <RichText content={value} />;
-}
+};

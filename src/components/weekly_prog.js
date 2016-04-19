@@ -95,7 +95,7 @@ class WeeklyProg extends React.Component {
           device={this.state.device}
           print={this.props.print}
         />
-        <DateNav device={this.state.device} />
+        <DateNav />
         <div id='sessions' className='clearfix'>
           {this._renderPeriodSessions()}
         </div>

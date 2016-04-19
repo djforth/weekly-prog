@@ -1,6 +1,7 @@
 const _     = require('lodash/core')
-     , React = require('react')
-     , timeChecker = require('../../../utils/time_checker');
+     , React = require('react');
+
+var timeChecker = require('../../../utils/time_checker');
 
 function setCss(item, col){
   if (!_.has(col, 'wrapper')) return '';
@@ -12,10 +13,10 @@ function setCss(item, col){
 }
 
 module.exports = function(props){
-  let css = setCss(props.item, props.col)
-    return (
-      <div className={css}>
-        {props.children}
-      </div>
-    );
+  let css = setCss(props.item, props.col);
+  return (
+    <div className={css}>
+      {props.children}
+    </div>
+  );
 };

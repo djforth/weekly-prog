@@ -57,12 +57,12 @@ function addSessions(filter){
 
   function createSession(date){
 
-    let session = _.cloneDeep(default_session)
-    session.id         = _.uniqueId()
-    session.session    = _.sample(titles)
-    session.location   = _.sample(locations)
-    session.instructor = _.sample(instructors)
-    session.activity   = _.sample(activities)
+    let session = _.cloneDeep(default_session);
+    session.id         = _.uniqueId();
+    session.session    = _.sample(titles);
+    session.location   = _.sample(locations);
+    session.instructor = _.sample(instructors);
+    session.activity   = _.sample(activities);
     let d   = new Date(date)
     let fmt = moment(d);
     session.start      = fmt.strftime("%Y-%m-%d %H:%M");

@@ -1,5 +1,5 @@
 
-const React = require('react')
+const React = require('react');
 
 module.exports = function(props){
   return (
@@ -7,4 +7,4 @@ module.exports = function(props){
       {props.title}
     </div>
   );
-}
+};

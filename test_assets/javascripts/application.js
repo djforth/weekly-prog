@@ -94,7 +94,7 @@ ReactDom.render(
     css         = {css}
     groupby     = "start"
     no_sessions = "There are no activities this"
-    print       = "/timetable/print/:date.pdf"
+    print       = "/timetable/print/:date/timetable.pdf"
     sessionsApi = "/api/timetable.json"
     sessions    = {sessions(1, new Date())}
     timeperiod  = {timeperiod}

@@ -5,11 +5,11 @@ module.exports = function(props){
   if (props.device === 'mobile'){
     return (
       <span>
-        <span className='nav-date'>{fmt.format('DD')}</span>
-        <span className='nav-day'>{fmt.format('ddd')}</span>
+        <span className="nav-date">{fmt.format('DD')}</span>
+        <span className="nav-day">{fmt.format('ddd')}</span>
       </span>
     );
-  } else {
-    return <span>{fmt.format('ddd Do')}</span>;
   }
-}
+
+  return <span>{fmt.format('ddd Do')}</span>;
+};
