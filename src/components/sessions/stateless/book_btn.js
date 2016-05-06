@@ -2,7 +2,8 @@ const React = require('react')
     , _     = require('lodash/core');
 
 function checkBook(url){
-  return !_.isEmpty(url) || url !== '#';
+  console.log( !_.isEmpty(url) && url !== '#');
+  return !_.isEmpty(url) && url !== '#';
 }
 
 function checkPlaces(places){
@@ -14,7 +15,9 @@ module.exports = function(props){
     return (<span className="session-full">Session full</span>);
   }
 
+
   if (checkBook(props.link)){
+
     return (<a className="button button-secondary" href={props.link}>Book</a>);
   }
 
