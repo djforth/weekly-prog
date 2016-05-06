@@ -1,23 +1,20 @@
 const checker = require('../utils/day_checker')
-    , SessionsFcty = require('./sessions_fcty')
-    // , DateFormatter = require('@djforth/date-formatter')
-    , Moment = require('moment');
+    , SessionsFcty = require('./sessions_fcty');
 
-//lodash
- const _       = require('lodash/core')
-     , partial = require('lodash/partial')
+// lodash
+const _ = require('lodash/core')
+     , partial = require('lodash/partial');
+const Moment = require('moment');
 
 function getDate(dates, date){
-  return _.find(dates, (d)=>{
-   return checker(d.date, date);
-  });
+  return _.find(dates, (d)=>checker(d.date, date));
 }
 
-
+/*eslint-disable*/
 function checkDates (dates, date){
-
   return (getDate(dates, date)) ? true : false;
 }
+/*eslint-enable*/
 
 function createFactory(groupBy){
   return function(data){
@@ -25,35 +22,33 @@ function createFactory(groupBy){
     fcty.setTimeKey(groupBy);
 
     return fcty;
-  }
+  };
 }
 
-function createWeek(createFcty, start=new Date()){
+function createWeek(createFcty, start = new Date()){
   // var start = new Date();
   var week  = [{
-      date:start
-    , data:createFcty([])
+    date: start
+    , data: createFcty([])
   }];
-  var i     = 1;
+  var i = 1;
 
-  do{
+  do {
     start = new Date(start.getTime());
-    start.setDate(start.getDate()+1);
+    start.setDate(start.getDate() + 1);
     week.push({
-        date:start
-      , data:createFcty()
-      , fetched:false
+      date: start
+      , data: createFcty()
+      , fetched: false
     });
 
     i++;
-  } while(i < 7);
+  } while (i < 7);
 
   return week;
 }
 
-
 function dateUpdate(dates, date, data){
-
   return _.map(dates, (d)=>{
     if (checker(d.date, date)){
       // console.log(d.data.size(), data.length)
@@ -61,13 +56,13 @@ function dateUpdate(dates, date, data){
       // console.log(d.data.size(), data.length)
       d.fetched = true;
     }
-    return d
+    return d;
   });
 }
 
-function getNewDate(date, n=1){
+function getNewDate(date, n = 1){
   let create_date = new Date(date);
-  create_date.setDate(create_date.getDate()+n);
+  create_date.setDate(create_date.getDate() + n);
   return create_date;
 }
 
@@ -76,13 +71,13 @@ function processForNav(dm){
 
   // if (dm.data.size() === 0) console.log('dm', dm)
   return {
-      date:dm.date
-    , fmt:dateFmt
-    , title:dateFmt.format('ddd Do')
-    , alt:dateFmt.format('dddd, MMMM Do YYYY')
+    date: dm.date
+    , fmt: dateFmt
+    , title: dateFmt.format('ddd Do')
+    , alt: dateFmt.format('dddd, MMMM Do YYYY')
     , today: checker(dm.date, new Date())
-    , nosessions:(dm.data.size() === 0 && !dm.fetched)
-  }
+    , nosessions: (dm.data.size() === 0 && !dm.fetched)
+  };
 }
 
 function resetDates(dates){
@@ -99,50 +94,47 @@ function earliestDate(dates){
   });
 }
 
-
-
 function dateManager(groupBy, ds){
   let fctyCreator = createFactory(groupBy);
-  let weekCreator = partial(createWeek, fctyCreator)
+  let weekCreator = partial(createWeek, fctyCreator);
   let dates = (_.isArray(ds)) ? ds : weekCreator();
 
   return {
-    addDate:(date, data)=>{
+    addDate: (date, data)=>{
       if (!_.isDate(date)) return false;
 
       if (checkDates(dates,date)){
         let fn = partial(dateUpdate, dates);
-        dates = fn(date, data)
+        dates = fn(date, data);
       } else {
         let fcty = fctyCreator(data);
-        dates.push({date:date, data:fcty, fetched:true})
+        dates.push({date: date, data: fcty, fetched: true});
       }
     }
 
-    , createWeek:weekCreator
+    , createWeek: weekCreator
 
-    , findDate:(...args)=>{
-        let fn = partial(getDate, dates);
-        return fn.apply(this, args)
+    , findDate: (...args)=>{
+      let fn = partial(getDate, dates);
+      return fn.apply(this, args);
+    }
 
-      }
+    , getAll: ()=>dates
 
-    , getAll:()=>dates
-
-    , getAllDates:()=>{
-      let today = new Date();
+    , getAllDates: ()=>{
+      // let today = new Date();
 
       dates = dates.sort((a, b)=>{
         if (a.date.getTime() > b.date.getTime()) return 1;
         if (a.date.getTime() < b.date.getTime()) return -1;
-        return 0
+        return 0;
       });
       return _.map(dates, (dm)=>processForNav(dm));
     }
     // Should refactor this ADE
     , getMoreDays(){
       let fetch_date = _.find(dates, (dm)=>{
-        return dm.data.size() === 0 && !dm.fetched
+        return dm.data.size() === 0 && !dm.fetched;
       });
       if (fetch_date) return fetch_date.date;
 
@@ -162,11 +154,11 @@ function dateManager(groupBy, ds){
       dates = resetDates(dates);
     }
 
-    , updateDate:(...args)=>{
+    , updateDate: (...args)=>{
       let fn = partial(dateUpdate, dates);
-      dates = fn.apply(this, args)
+      dates = fn.apply(this, args);
     }
-  }
+  };
 }
 
 module.exports = dateManager;

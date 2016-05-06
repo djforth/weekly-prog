@@ -1,22 +1,20 @@
 const React = require('react')
     , _     = require('lodash/core');
 
-const ColumnsStore   = require('../../stores/columns_store');
-
-//Mixins
+// Mixins
 const cssMixins  = require('morse-react-mixins').css_mixins;
 const textMixins = require('morse-react-mixins').text_mixins;
 
-const Heading = require('./stateless/heading')
+const Heading = require('./stateless/heading');
 
-class DataHead extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+class DataHead extends React.Component{
+  // constructor(props){
+  //   super(props);
+  // }
 
   renderTh(){
     if (this.props.columns){
-      let th = _.map(this.props.columns, function(col, i){
+      let th = _.map(this.props.columns, function(col){
         return (
           <Heading
             css={this.checkCss(this.props.css, col.key)}
@@ -31,10 +29,10 @@ class DataHead extends React.Component {
     return '';
   }
 
-  render() {
+  render(){
     return (
-      <div className='thead'>
-        <div className='tr'>
+      <div className="thead">
+        <div className="tr">
           {this.renderTh()}
         </div>
       </div>

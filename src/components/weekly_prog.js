@@ -1,8 +1,8 @@
-//Libraries
+// Libraries
 const React = require('react')
     , _     = require('lodash/core');
 
-//Mixins
+// Mixins
 const cssMixins    = require('morse-react-mixins').css_mixins
     , textMixins   = require('morse-react-mixins').text_mixins
     , widthsMixins = require('morse-react-mixins').widths_mixins;
@@ -10,9 +10,8 @@ const cssMixins    = require('morse-react-mixins').css_mixins
 // Morse Libraies
 const ViewportDetect = require('viewport-detection-es6');
 
-//Flux
+// Flux
 const ColumnsActions  = require('../actions/columns_actions')
-    , ColumnsStore    = require('../stores/columns_store')
     , SessionsActions = require('../actions/sessions_actions')
     , SessionsStore   = require('../stores/sessions_store');
 
@@ -21,27 +20,26 @@ const DateNav        = require('./nav/date_nav')
     , PeriodSessions = require('./sessions/period_sessions')
     , TopBar         = require('./topbar/top_bar');
 
-
-class WeeklyProg extends React.Component {
-  constructor(props) {
+class WeeklyProg extends React.Component{
+  constructor(props){
     super(props);
     SessionsActions.setGroupby(this.props.groupby);
 
     this.percent = 0;
-    this.state = {sessions:[], keys:[], visible:[], device:'desktop'};
+    this.state = {sessions: [], keys: [], visible: [], device: 'desktop'};
   }
 
   _fetchData(){
     SessionsStore.removeChangeListener('api_set', this._fetchData);
     _.defer(()=>{
-      SessionsActions.fetchData()
+      SessionsActions.fetchData();
     });
   }
 
   _getSessions(){
-    let session = SessionsStore._getDate()
-    if (!_.isEmpty(session)) {
-      this.setState({date:session.date, sessions:session.data})
+    let session = SessionsStore._getDate();
+    if (!_.isEmpty(session)){
+      this.setState({date: session.date, sessions: session.data});
     }
   }
 
@@ -52,13 +50,13 @@ class WeeklyProg extends React.Component {
         sessions = {this.state.sessions}
         time     = {tp.time}
         title    = {tp.title}
-        key      = {tp.title.toLowerCase()} />)
+        key      = {tp.title.toLowerCase()} />);
     });
   }
 
   componentWillMount(){
     SessionsStore.addChangeListener('prerender', this._getSessions.bind(this));
-    let ses = (_.isEmpty(this.props.sessions)) ? [] : this.props.sessions
+    let ses = (_.isEmpty(this.props.sessions)) ? [] : this.props.sessions;
     SessionsActions.prerenderData(ses);
     ColumnsActions.addingColumns(this.props.columns);
     ColumnsActions.changeDevice(this.device);
@@ -75,7 +73,7 @@ class WeeklyProg extends React.Component {
     SessionsActions.setApi(this.props.sessionsApi);
   }
 
-  componentWillUnmount() {
+  componentWillUnmount(){
     this.detect.removeCallback(this.id);
     SessionsStore.removeChangeListener('prerender', this._getSessions);
   }
@@ -90,13 +88,13 @@ class WeeklyProg extends React.Component {
 
   render(){
     return (
-      <div className='weekly-prog'>
+      <div className="weekly-prog">
         <TopBar
           device={this.state.device}
           print={this.props.print}
         />
         <DateNav />
-        <div id='sessions' className='clearfix'>
+        <div id="sessions" className="clearfix">
           {this._renderPeriodSessions()}
         </div>
       </div>

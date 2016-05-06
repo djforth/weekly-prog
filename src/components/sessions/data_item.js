@@ -3,38 +3,36 @@ const React = require('react')
 
 const ColumnsStore   = require('../../stores/columns_store');
 
-const timeChecker = require('../../utils/time_checker')
-    , formatter   = require('../../utils/formatter');
+const formatter   = require('../../utils/formatter');
 
-//Mixins
+// Mixins
 let mixins = require('morse-react-mixins');
 const [cssMixins, textMixins]  = [mixins.css_mixins, mixins.text_mixins];
 
 // Components
-let ColumnItem = require('./column_item'),
-    ExpandBtn  = require('./stateless/expand_btn');
+let ColumnItem = require('./column_item')
+    , ExpandBtn  = require('./stateless/expand_btn');
 
-class DataItem extends React.Component {
-  constructor(props) {
+class DataItem extends React.Component{
+  constructor(props){
     super(props);
-    this.active = [{active:false}];
+    this.active = [{active: false}];
     // this._select.bind(this);
-    this.formatter = formatter(this.props.data)
-    this.state = {data:this.props.data, columns:[], datefield:[]};
-
+    this.formatter = formatter(this.props.data);
+    this.state = {data: this.props.data, columns: [], datefield: []};
   }
 
   _createKey(keys){
     return this.createId(keys, this.props.data.get('id'));
   }
 
-  componentWillMount() {
+  componentWillMount(){
     this.mounted = true;
-    this.setState({data:this.props.data, columns:ColumnsStore.getVisible()});
+    this.setState({data: this.props.data, columns: ColumnsStore.getVisible()});
     ColumnsStore.addChangeListener('change', this._onChange.bind(this));
   }
 
-  componentWillUnmount() {
+  componentWillUnmount(){
     this.mounted = false;
     ColumnsStore.removeChangeListener('change', this._onChange);
   }
@@ -62,7 +60,7 @@ class DataItem extends React.Component {
   _onChange(){
     if (this.mounted){
       this.setState({
-        columns:ColumnsStore.getVisible()
+        columns: ColumnsStore.getVisible()
       });
     }
   }
@@ -70,20 +68,17 @@ class DataItem extends React.Component {
   _renderTd(){
     let item = this.props.data;
     if (item && this.state.columns){
-       let td = _.map(this.state.columns, function(col){
-
+      let td = _.map(this.state.columns, function(col){
         if (this._expandTest(col)){
-          return this._expander()
+          return this._expander();
         }
 
-
-         return (<ColumnItem
-            css  = {this.props.css}
-            col  = {col}
-            item = {item}
-            key  = {this._createKey(col.key)}
-          />)
-         this._renderColumn(col, item);
+        return (<ColumnItem
+          css  = {this.props.css}
+          col  = {col}
+          item = {item}
+          key  = {this._createKey(col.key)}
+        />);
       }.bind(this));
 
       return td;
@@ -91,15 +86,13 @@ class DataItem extends React.Component {
     return '';
   }
 
-  render() {
+  render(){
     return (
-      <div className='clearfix'>
+      <div className="clearfix">
         {this._renderTd()}
       </div>
     );
   }
-
-
 }
 
 Object.assign(DataItem.prototype, cssMixins);

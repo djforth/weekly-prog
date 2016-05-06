@@ -7,50 +7,48 @@ const _    = require('lodash/core')
 const textMixins = require('morse-react-mixins').text_mixins;
 const ColumnsDispatcher = require('../dispatchers/columns_dispatcher');
 
-
-
-
 const store = {
-  device          : 'desktop',
-  columns         : [],
-  columns_ids     : [],
-  visible_columns : [],
+  device: 'desktop'
+  , columns: []
+  , columns_ids: []
+  , visible_columns: []
 
-
-  emitChange(event) {
+  , emitChange(event) {
     this.emit(event);
-  },
+  }
 
-  addChangeListener(event, callback) {
+  , addChangeListener(event, callback) {
     this.on(event, callback);
-  },
+  }
 
-  removeChangeListener(event, callback) {
+  , removeChangeListener(event, callback) {
     this.removeListener(event, callback);
-  },
+  }
 
-  addColumns(c, id){
+  , addColumns(c, id){
     id   = id || _.uniqueId();
     let cols = this.setTitles(c);
-    this.columns.push({id:id, cols:cols, visible:this.setVisibleColumns(cols)});
-    // console.log('columns', this.columns);
+    this.columns.push({
+      id: id
+      , cols: cols
+      , visible: this.setVisibleColumns(cols)
+    });
     return id;
-  },
+  }
 
-  changeDevice(d){
+  , changeDevice(d){
     this.device = (d) ? d : this.device;
     this.columns = _.map(this.columns, (col)=>{
       col.visible = this.setVisibleColumns(col.cols);
       return col;
     });
+  }
 
-  },
-
-  getDevice(){
+  , getDevice(){
     return this.device;
-  },
+  }
 
-  getColumn(id){
+  , getColumn(id){
     let items;
     if (id){
       items =  _.find(this.columns, (col)=>{
@@ -64,113 +62,112 @@ const store = {
       return items;
     }
 
-    return {cols:[], visible:[]};
-  },
+    return {cols: [], visible: []};
+  }
 
-  getDateColumns(id){
+  , getDateColumns(id){
     let column = this.getColumn(id).cols;
     let dates = _.chain(column)
       .filter((col)=>(col.type === 'date' || col.type === 'dateTime'))
-      .map((col)=> this.reduceObj(col, ['key', 'title', 'type', 'fmt']))
+      .map((col)=>this.reduceObj(col, ['key', 'title', 'type', 'fmt']))
       .value();
 
     return dates;
-  },
+  }
 
-  getHeadline(id){
+  , getHeadline(id){
     return _.find(this.getColumn(id).visible, (col)=>{
       return col.headline;
     });
-  },
+  }
 
-  getKeys(id){
+  , getKeys(id){
     let visible = this.getColumn(id).visible;
     return _.map(visible, 'key');
-  },
+  }
 
-  getKeyAndTitle(id){
+  , getKeyAndTitle(id){
     let visible = this.getColumn(id).visible;
-    return _.map(visible, (col)=> this.reduceObj(col, ['key', 'title']));
-  },
+    return _.map(visible, (col)=>this.reduceObj(col, ['key', 'title']));
+  }
 
-  getLabeled(id){
+  , getLabeled(id){
     return _.filter(this.getColumn(id).visible, (col)=>{
       return col.label;
     });
-  },
+  }
 
-  getNonLabeled(id){
+  , getNonLabeled(id){
     return _.filter(this.getColumn(id).visible, (col)=>{
       return _.isBoolean(col.label) && !col.label;
     });
-  },
+  }
 
-  getSearchable(id){
+  , getSearchable(id){
     let column = this.getColumn(id).cols;
     let searchables = _.chain(column)
       .filter((col)=>col.searchable)
-      .map((col)=> this.reduceObj(col, ['key', 'title']))
+      .map((col)=>this.reduceObj(col, ['key', 'title']))
       .value();
 
     return searchables;
-  },
+  }
 
-  getShowable(id){
+  , getShowable(id){
     let column = this.getColumn(id);
     let showables = _.chain(column.cols)
       .filter((col)=>{
         return col.show && !includes(column.visible, col);
       })
-      .map((col)=> this.reduceObj(col, ['key', 'title']))
+      .map((col)=>this.reduceObj(col, ['key', 'title']))
       .value();
     return showables;
-  },
+  }
 
-  getSortable(id){
+  , getSortable(id){
     let column = this.getColumn(id).cols;
     let sortables = _.chain(column)
       .filter((col)=>col.sortable)
-      .map((col)=> this.reduceObj(col, ['key', 'title']))
+      .map((col)=>this.reduceObj(col, ['key', 'title']))
       .value();
 
     return sortables;
-  },
+  }
 
-  getTitles(id){
+  , getTitles(id){
     let visible = this.getColumn(id).visible;
     return _.map(visible, 'title');
-  },
+  }
 
-  getTitleForKey(key, id){
+  , getTitleForKey(key, id){
     let column = this.getColumn(id).cols;
-    let item = _.find(column, (col)=> col.key === key );
+    let item = _.find(column, (col)=>col.key === key);
     return item.title;
-  },
+  }
 
-  getVisible(id){
+  , getVisible(id){
     return this.getColumn(id).visible;
-  },
+  }
 
-  reduceObj(obj, values){
-    return pick(obj, values)
-  },
+  , reduceObj(obj, values){
+    return pick(obj, values);
+  }
 
-  removeCols(removeItems){
+  , removeCols(removeItems){
     return _.reject(this.columns, (col)=>{
       return includes(removeItems, col);
     });
-  },
+  }
 
-  setVisibleColumns(cols){
+  , setVisibleColumns(cols){
     let check = {};
     check[this.device] = true;
 
     return _.filter(cols, (c)=>c[this.device]);
-  },
+  }
 
-  setTitles(columns){
+  , setTitles(columns){
     columns = _.map(columns, function(col){
-      // console.log(that.capitalize)
       if (!_.has(col, 'title')){
         let title = this.capitalize(col.key);
         col.title = title;
@@ -185,12 +182,12 @@ const store = {
 
 Object.assign(store, textMixins);
 
-
 const ColumnsStore = Object.assign({}, EventEmitter.prototype, store);
 
-const registeredCallback = function(payload) {
+const registeredCallback = function(payload){
   let action = payload.action;
-  switch(action.type) {
+  /*eslint-disable*/
+  switch (action.type) {
     case 'ADDING_COLUMNS':
       ColumnsStore.addColumns(action.columns, action.id);
       ColumnsStore.emitChange('adding');
@@ -201,6 +198,7 @@ const registeredCallback = function(payload) {
       ColumnsStore.emitChange('change');
       break;
     }
+  /*eslint-enable*/
 };
 
 ColumnsStore.dispatchToken = ColumnsDispatcher.register(registeredCallback);

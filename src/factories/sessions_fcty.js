@@ -1,26 +1,26 @@
 
 const _           = require('lodash/core');
 const DataManager = require('datamanager');
-const Immutable   = require('immutable')
+const Immutable   = require('immutable');
 
 class SessionsFcty extends DataManager {
 
   checkInPeriod(time, st, fn){
     if (
-        !(_.isNumber(st)
-          && _.isNumber(fn)
-          && _.isDate(time)
+        !(_.isNumber(st) &&
+          _.isNumber(fn) &&
+          _.isDate(time)
           )
-      ) {
+      ){
       return false;
     }
 
-    return time.getHours() >= st
-           && time.getHours() <= fn
+    return time.getHours() >= st &&
+      time.getHours() <= fn;
   }
 
   checkFilter(filter, id){
-    if (_.isArray(filter)) return _.includes(filter, id)
+    if (_.isArray(filter)) return _.includes(filter, id);
 
     return filter === id;
   }
@@ -35,20 +35,20 @@ class SessionsFcty extends DataManager {
       if (!filters.has(key)) return false;
 
       return this.checkFilter(filters.get(key), id);
-    })
+    });
   }
 
   getTimePeriod(st, fn){
     if (!this.data) return Immutable.fromJS([]);
 
-    if(!this.key) return this.data;
+    if (!this.key) return this.data;
 
     return this.data.filter((d)=>{
-      if(!d.has(this.key)) return false;
+      if (!d.has(this.key)) return false;
 
       let time = d.get(this.key);
       return this.checkInPeriod(time, st, fn);
-    })
+    });
   }
 
   setTimeKey(key){
@@ -56,7 +56,7 @@ class SessionsFcty extends DataManager {
   }
 
   size(){
-    return (this.data) ? this.data.size : 0
+    return (this.data) ? this.data.size : 0;
   }
 }
 

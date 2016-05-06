@@ -1,49 +1,42 @@
 const Moment        = require('moment-strftime');
 
-const _        = require('lodash/core')
-    , includes = require('lodash/includes')
+const _        = require('lodash/core');
 
 var checker       = require('./day_checker');
 
-
 function createKey(date){
-  return `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`
+  return `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
 }
 
 function groupSessions(sessions){
-  let new_sessions = _.sortBy(sessions, (s)=> s.groupBy);
+  let new_sessions = _.sortBy(sessions, (s)=>s.groupBy);
   let groups   = {};
   let ses      = _.first(new_sessions);
   if (_.isUndefined(ses) || _.isEmpty(ses)) return groups;
   let date     = _.first(new_sessions).groupBy;
-  // console.log(date)
-  let key      = createKey(date)
+  let key      = createKey(date);
 
-  groups[key] = {date:date, sessions:[]};
+  groups[key] = {date: date, sessions: []};
   _.forEach(new_sessions, (session)=>{
-
     if (checker(date, session.groupBy)){
-      groups[key].sessions.push(session)
+      groups[key].sessions.push(session);
     } else {
       date = session.groupBy;
       key  = createKey(date);
-      groups[key] = {date:date, sessions:[session]};
-
+      groups[key] = {date: date, sessions: [session]};
     }
 
-    return groups
+    return groups;
   });
 
-  return groups
+  return groups;
 }
-
 
 function makeDates(sessions, key){
   return _.map(sessions, (s)=>{
-
     let date     = Moment(s[key]);
 
-    s['groupBy'] = date.toDate();
+    s.groupBy = date.toDate();
 
     return s;
   });
@@ -51,7 +44,7 @@ function makeDates(sessions, key){
 
 function addDay(groups, date){
   let key  = createKey(date.toDate());
-  groups[key] = {date:date.clone().toDate(), sessions:[]};
+  groups[key] = {date: date.clone().toDate(), sessions: []};
 
   return groups;
 }
@@ -70,30 +63,27 @@ function currentDates(dates){
       }
     });
 
-    return check
-  }
-
+    return check;
+  };
 }
 
-function fillGaps(groups, start, end=7){
+function fillGaps(groups, start, end = 7){
   let dates = currentDates(_.map(_.values(groups), 'date'));
   start = (_.isUndefined(start)) ? _.first(dates) : start;
   start = Moment(start);
   end = start.clone().add(end, 'd');
 
-  do{
+  do {
     if (!dates(start)){
-      groups = addDay(groups, start)
+      groups = addDay(groups, start);
     }
     start.add(1, 'd');
-  } while(start.isBefore(end));
+  } while (start.isBefore(end));
   return groups;
 }
 
-
 module.exports = function(sessions, groupBy, st){
-  // console.log(groupBy, sessions)
   let list = makeDates(sessions, groupBy);
   let groups = groupSessions(list);
   return fillGaps(groups, st);
-}
+};

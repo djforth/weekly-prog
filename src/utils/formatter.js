@@ -4,7 +4,6 @@ const moment = require('moment-strftime')
 _.partial = require('lodash/partial');
 _.includes = require('lodash/includes');
 
-
 function getFormat(col){
   if (_.has(col, 'fmt')) return col.fmt;
 
@@ -16,11 +15,7 @@ function getFormat(col){
 }
 
 function displayData(data, col){
-
-  if (!_.isDate(data)){
-
-    return data;
-  }
+  if (!_.isDate(data))  return data;
   return moment(data).strftime(getFormat(col));
 }
 
@@ -30,19 +25,12 @@ function getValue(item){
     if (_.isString(keys)) return data.get(keys);
 
     let values =  keys.map(function(key){
-      let d = data.get(key);
       return data.get(key);
     });
 
-    if (_.includes(values, true)){
-      alert(`${values} >>> ${data.get(keys[0])} >>> ${data.get(keys[1])} >>> ${keys}`)
-    }
-
-    return values
-  }
-
+    return values;
+  };
 }
-
 
 function concatValues(item, col){
   let concat = item([col.key, col.concat]);
@@ -52,15 +40,13 @@ function concatValues(item, col){
     return data;
   });
 
-  return val.join(` ${col.split} `)
+  return val.join(` ${col.split} `);
 }
-
-
 
 module.exports = function(item){
   let value = getValue(item);
 
   return function(col){
     return (_.has(col, 'concat')) ? concatValues(value, col) : value(col.key);
-  }
-}
+  };
+};

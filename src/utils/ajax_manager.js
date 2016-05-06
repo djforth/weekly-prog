@@ -1,10 +1,9 @@
- const Ajax  = require('ajax-es6-module')
+const Ajax  = require('ajax-es6-module')
     , Moment = require('moment-strftime');
-    // , DateFormatter = require('@djforth/date-formatter');
 
-const _        = require('lodash/core')
-    , includes = require('lodash/includes')
-    , reject   = require('lodash/reject')
+const _ = require('lodash/core')
+     , includes = require('lodash/includes')
+     , reject   = require('lodash/reject');
 
 const ajaxManager = new Ajax();
 
@@ -14,11 +13,9 @@ function setApi(api, date){
   if (!_.isDate(date)) return api;
 
   let dateFmt = Moment(date);
-  // new DateFormatter(date);
   let path = dateFmt.strftime('/%Y/%m/%d[.json]');
-  return api.replace(/.json/, path)
+  return api.replace(/.json/, path);
 }
-
 
 module.exports = function(api){
   if (!api){
@@ -28,20 +25,20 @@ module.exports = function(api){
   let progress, date;
 
   return {
-    addProgress:(p)=>{
+    addProgress: (p)=>{
       progress = (_.isFunction(p)) ? p : null;
       return progress;
     }
 
-    , addQuery:(d)=>{
+    , addQuery: (d)=>{
       date = (_.isDate(d)) ? d : null;
       return date;
     }
 
-    , fetch:()=>{
+    , fetch: ()=>{
       let url = setApi(api, date);
       if (includes(currentRequests, url)) return null;
-      currentRequests.push(url)
+      currentRequests.push(url);
       ajaxManager.addUrl(setApi(api, date));
 
       return ajaxManager.fetch(progress)
@@ -54,5 +51,5 @@ module.exports = function(api){
           throw new Error(err);
         });
     }
-  }
-}
+  };
+};

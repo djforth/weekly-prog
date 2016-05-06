@@ -1,27 +1,21 @@
 const Dispatcher = require('flux').Dispatcher;
 
 const ColumnsDispatcher = Object.assign(new Dispatcher(), {
-
-  /**
-   * @param {object} action The details of the action, including the action's
-   * type and additional data coming from the server.
-   */
-  handleAddingColumns: function(action) {
+  handleAddingColumns: function(action){
     var payload = {
-      source: 'ADDING_COLUMNS',
-      action: action
+      source: 'ADDING_COLUMNS'
+      , action: action
     };
     this.dispatch(payload);
-  },
+  }
 
-  handleChangeDevice: function(action) {
+  , handleChangeDevice: function(action){
     var payload = {
-      source: 'CHANGE_DEVICE',
-      action: action
+      source: 'CHANGE_DEVICE'
+      , action: action
     };
     this.dispatch(payload);
   }
 });
-
 
 module.exports = ColumnsDispatcher;

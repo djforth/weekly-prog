@@ -1,82 +1,82 @@
 const Dispatcher = require('flux').Dispatcher;
 
 const SessionsDispatcher = Object.assign(new Dispatcher(), {
-  changeDate: function(action) {
+  changeDate: function(action){
     var payload = {
-      source: 'CHANGE_DATE',
-      action: action
+      source: 'CHANGE_DATE'
+      , action: action
     };
     this.dispatch(payload);
   }
 
-  , calendarChange: function(action) {
+  , calendarChange: function(action){
     var payload = {
-      source: 'CALENDAR_CHANGE',
-      action: action
+      source: 'CALENDAR_CHANGE'
+      , action: action
     };
     this.dispatch(payload);
   }
 
-  , fetchData: function(action) {
+  , fetchData: function(action){
     var payload = {
-      source: 'FETCH_DATA',
-      action: action
+      source: 'FETCH_DATA'
+      , action: action
     };
     this.dispatch(payload);
   }
 
-  , fetchNowNext: function(action) {
+  , fetchNowNext: function(action){
     var payload = {
-      source: 'FETCH_NOWNEXT',
-      action: action
+      source: 'FETCH_NOWNEXT'
+      , action: action
     };
     this.dispatch(payload);
   }
 
-  , getMoreDays: function(action) {
+  , getMoreDays: function(action){
     var payload = {
-      source: 'MORE_DAYS',
-      action: action
+      source: 'MORE_DAYS'
+      , action: action
     };
     this.dispatch(payload);
   }
 
-  , getPreviousDays: function(action) {
+  , getPreviousDays: function(action){
     var payload = {
-      source: 'PREVIOUS_DAYS',
-      action: action
+      source: 'PREVIOUS_DAYS'
+      , action: action
     };
     this.dispatch(payload);
   }
 
-  , prerenderData: function(action) {
+  , prerenderData: function(action){
     var payload = {
-      source: 'PRERENDER_DATA',
-      action: action
+      source: 'PRERENDER_DATA'
+      , action: action
     };
     this.dispatch(payload);
   }
 
-  , setApi: function(action) {
+  , setApi: function(action){
     var payload = {
-      source: 'SET_API',
-      action: action
+      source: 'SET_API'
+      , action: action
     };
     this.dispatch(payload);
   }
 
-  , setFacility: function(action) {
+  , setFacility: function(action){
     var payload = {
-      source: 'SET_FACILITY',
-      action: action
+      source: 'SET_FACILITY'
+      , action: action
     };
     this.dispatch(payload);
   }
 
-  , setGroupBy: function(action) {
+  , setGroupBy: function(action){
     var payload = {
-      source: 'SET_GROUPBY',
-      action: action
+      source: 'SET_GROUPBY'
+      , action: action
     };
     this.dispatch(payload);
   }
