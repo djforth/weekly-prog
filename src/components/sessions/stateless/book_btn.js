@@ -15,7 +15,7 @@ module.exports = function(props){
   }
 
   if (checkBook(props.link)){
-    return (<a className="button button-secondary" href={props.link}>Book</a>);
+    return (<a className="button button-secondary" href={props.link}>{props.title}</a>);
   }
 
   return (<span className="session-full">No booking required</span>);

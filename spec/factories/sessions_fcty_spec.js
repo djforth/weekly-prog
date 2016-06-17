@@ -84,11 +84,11 @@ describe('SessionsFcty', function() {
     });
 
     it('should return empty data object if no data', function() {
-      let s = new SessionsFcty()
+      let s = new SessionsFcty();
       expect(s.data).toBeNull();
       let data = s.filter('foo', 1);
       expect(data.size).toEqual(0);
-      expect(sessions.checkFilter).not.toHaveBeenCalled()
+      expect(sessions.checkFilter).not.toHaveBeenCalled();
     });
 
     it('should return empty array if no filters', function() {

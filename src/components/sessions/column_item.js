@@ -21,15 +21,38 @@ class ColumnItem extends React.Component{
   }
 
   _checkbtn(item){
-    return item.has('buttons') && item.get('buttons').has('book');
+    console.log(item.toJS())
+    let no_link = {link: null, title: null}
+    if (!item.has('buttons')) return no_link;
+    let btns = item.get('buttons');
+    console.log('buy', btns.has('buy'))
+    if (btns.has('buy')){
+      console.log('buy', btns.get('buy'))
+      return {
+        title: 'Buy'
+        , link: btns.get('buy')
+      }
+    }
+
+    if (btns.has('book')){
+      return {
+        title: 'Book'
+        , link: btns.get('book')
+      }
+    }
+
+    return no_link;
   }
 
+
+
   _actions(){
-    let item, places, link;
+    let item, places;
     item = this.props.item;
     places = item.get('places_left');
-    link = (this._checkbtn(item)) ? item.get('buttons').get('book') : null;
-    return (<BookBtn places={places} link={link}/>);
+    let {link, title} = this._checkbtn(item);
+    console.log(link, title)
+    return (<BookBtn places={places} link={link} title={title} />);
   }
 
   _showContent(value){
