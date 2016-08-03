@@ -1,8 +1,8 @@
 
 const ColumnsStore = require('../../src/stores/columns_store');
 
-const storeHelper    = require("react-jasmine").storeHelpers;
-const defaultsHelper = require("react-jasmine").checkDefaults;
+const storeHelper    = require('@djforth/react-jasmine').storeHelpers;
+const defaultsHelper = require('@djforth/react-jasmine').checkDefaults;
 
 const _    = require('lodash')
     , omit = require("lodash/omit");

@@ -1,6 +1,6 @@
 const SessionsDispatcher = require("../../src/dispatchers/sessions_dispatcher");
 
-const dispatcherHelper = require("react-jasmine").checkDispatcher;
+const dispatcherHelper = require('@djforth/react-jasmine').checkDispatcher;
 
 
 describe("SessionsDispatcher", function() {

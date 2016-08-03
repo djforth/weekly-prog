@@ -9,13 +9,17 @@ function checkPlaces(places){
   return _.isNumber(places) && places === 0;
 }
 
-module.exports = function(props){
-  if (checkPlaces(props.places)){
+module.exports = function({instruction, link, places, title}){
+  if(instruction){
+    return (<span className="session-full">{instruction}</span>);
+  }
+
+  if (checkPlaces(places)){
     return (<span className="session-full">Session full</span>);
   }
 
-  if (checkBook(props.link)){
-    return (<a className="button button-secondary" href={props.link}>{props.title}</a>);
+  if (checkBook(link)){
+    return (<a className="button button-secondary" href={link}>{title}</a>);
   }
 
   return (<span className="session-full">No booking required</span>);

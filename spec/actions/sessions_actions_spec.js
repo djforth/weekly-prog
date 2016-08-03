@@ -1,7 +1,7 @@
 const SessionsAction = require("../../src/actions/sessions_actions");
 
 
-const actionHelper = require("react-jasmine").checkActions;
+const actionHelper = require('@djforth/react-jasmine').checkActions;
 
 let date = new Date()
 

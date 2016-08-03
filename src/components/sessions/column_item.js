@@ -21,38 +21,36 @@ class ColumnItem extends React.Component{
   }
 
   _checkbtn(item){
-    console.log(item.toJS())
-    let no_link = {link: null, title: null}
-    if (!item.has('buttons')) return no_link;
-    let btns = item.get('buttons');
-    console.log('buy', btns.has('buy'))
-    if (btns.has('buy')){
-      console.log('buy', btns.get('buy'))
-      return {
-        title: 'Buy'
-        , link: btns.get('buy')
-      }
+    let no_link = {link: null, title: null, instruction: null};
+    if (item.has('booking_instruction')){
+      return Object.assign(no_link, {
+        instruction: item.get('booking_instruction')
+      });
     }
 
-    if (btns.has('book')){
-      return {
+    if (item.hasIn(['buttons', 'buy'])){
+      return Object.assign(no_link, {
+        title: 'Buy'
+        , link: item.getIn(['buttons', 'buy'])
+      });
+    }
+
+    if (item.hasIn(['buttons', 'book'])){
+      return Object.assign(no_link, {
         title: 'Book'
-        , link: btns.get('book')
-      }
+        , link: item.getIn(['buttons', 'book'])
+      });
     }
 
     return no_link;
   }
 
-
-
   _actions(){
     let item, places;
     item = this.props.item;
     places = item.get('places_left');
-    let {link, title} = this._checkbtn(item);
-    console.log(link, title)
-    return (<BookBtn places={places} link={link} title={title} />);
+    let {link, title, instruction} = this._checkbtn(item);
+    return (<BookBtn places={places} link={link} title={title} instruction={instruction} />);
   }
 
   _showContent(value){

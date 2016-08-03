@@ -8,8 +8,8 @@ const DataItem   = require("../../src/components/sessions/data_item");
 const Immutable = require("immutable");
 
 // Test Helpers
-const componentHelper = require("react-jasmine").componentHelpers;
-const storeListeners = require("react-jasmine").checkListeners
+const componentHelper = require('@djforth/react-jasmine').componentHelpers;
+const storeListeners = require('@djforth/react-jasmine').checkListeners
 
 
 xdescribe("DataItem", function() {

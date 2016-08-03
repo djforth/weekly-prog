@@ -1,7 +1,7 @@
 
 const ColumnsDispatcher = require("../../src/dispatchers/columns_dispatcher");
 
-const dispatcherHelper = require("react-jasmine").checkDispatcher;
+const dispatcherHelper = require('@djforth/react-jasmine').checkDispatcher;
 
 
 describe("ColumnsDispatcher", function() {
