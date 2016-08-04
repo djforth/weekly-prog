@@ -10,6 +10,10 @@ const ColumnsStore   = require('../../stores/columns_store');
 const cssMixins  = require('morse-react-mixins').css_mixins;
 const textMixins  = require('morse-react-mixins').text_mixins;
 
+// Helpers
+const ButtonCheck = require('../../helpers/buttons_helper');
+// console.log('ButtonCheck', ButtonCheck)
+
 const AdditionalContent  = require('./stateless/additional_content')
     , BookBtn     = require('./stateless/book_btn')
     , Description = require('./stateless/description')
@@ -45,19 +49,22 @@ class Additional extends React.Component{
   }
 
   _renderActions(){
-    let col, link, item, key, places;
+    let col, item, key, places;
 
     col = _.filter(this.state.columns, {key: 'actions'});
     if (_.isEmpty(col)) return '';
 
     item = this.props.data;
-    places = item.get('places_left');
-    link = (this._checkButton(item)) ? item.get('buttons').get('book') : null;
-    key = this.createId(col.key, item.get('id'));
 
+    places = item.get('places_left');
+
+    key = this.createId(col.key, item.get('id'));
+    let {link, title, instruction} = ButtonCheck(item);
     return (<BookBtn
       places = {places}
       link   = {link}
+      title  ={title}
+      instruction={instruction}
       key    = {key}
     />);
   }

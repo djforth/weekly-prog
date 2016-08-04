@@ -1,6 +1,8 @@
 const React = require('react')
     , _     = require('lodash/core');
 
+const ButtonCheck = require('../../helpers/buttons_helper');
+
 const timeChecker = require('../../utils/time_checker')
     , formatter   = require('../../utils/formatter');
 
@@ -20,36 +22,11 @@ class ColumnItem extends React.Component{
     this.formatter = formatter(this.props.item);
   }
 
-  _checkbtn(item){
-    let no_link = {link: null, title: null, instruction: null};
-    if (item.has('booking_instruction')){
-      return Object.assign(no_link, {
-        instruction: item.get('booking_instruction')
-      });
-    }
-
-    if (item.hasIn(['buttons', 'buy'])){
-      return Object.assign(no_link, {
-        title: 'Buy'
-        , link: item.getIn(['buttons', 'buy'])
-      });
-    }
-
-    if (item.hasIn(['buttons', 'book'])){
-      return Object.assign(no_link, {
-        title: 'Book'
-        , link: item.getIn(['buttons', 'book'])
-      });
-    }
-
-    return no_link;
-  }
-
   _actions(){
     let item, places;
     item = this.props.item;
     places = item.get('places_left');
-    let {link, title, instruction} = this._checkbtn(item);
+    let {link, title, instruction} = ButtonCheck(item);
     return (<BookBtn places={places} link={link} title={title} instruction={instruction} />);
   }
 
