@@ -1,6 +1,6 @@
 {
   "name": "@djforth/weekly-prog",
-  "version": "5.3.1",
+  "version": "5.3.2",
   "description": "Better Weekly Prog",
   "main": "index.js",
   "babel": {
