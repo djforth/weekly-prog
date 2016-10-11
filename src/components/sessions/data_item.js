@@ -61,6 +61,7 @@ class DataItem extends React.Component{
     if (this.mounted){
       this.setState({
         columns: ColumnsStore.getVisible()
+        , device: ColumnsStore.getDevice()
       });
     }
   }

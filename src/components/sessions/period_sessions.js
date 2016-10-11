@@ -70,7 +70,6 @@ class PeriodSessions extends React.Component{
 
   _renderSessions(){
     let data = this.state.data.slice(0, this.state.paginate);
-     // console.log(data)
     return data.map((d)=>{
       return (
         <DataExpander

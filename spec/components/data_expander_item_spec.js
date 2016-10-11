@@ -7,8 +7,8 @@ const _ = require("lodash")
 const DataExpander   = require("../../src/components/sessions/data_expander_item");
 
 
-const componentHelper = require('@djforth/react-jasmine').componentHelpers
-    , storeListeners = require('@djforth/react-jasmine').checkListeners;
+const componentHelper = require('@djforth/react-jasmine-wp').componentHelpers
+    , storeListeners = require('@djforth/react-jasmine-wp').checkListeners;
 
 xdescribe("DataExpander", function() {
   let dataexpander, cssMixins, spy, revert, ColumnsStore;;

@@ -5,16 +5,16 @@ const _ = require('lodash')
 
 const DateNav   = require('../../../src/components/nav/date_nav');
 
-const jasmineReactHelpers = require('@djforth/react-jasmine');
+const jasmineReactHelpers = require('@djforth/react-jasmine-wp');
 
 const storeListeners  = jasmineReactHelpers.checkListeners;
 const componentHelper = jasmineReactHelpers.componentHelpers;
 
-const checkCalls = require('@djforth/morse-jasmine/check_calls')
-  , checkMulti = require('@djforth/morse-jasmine/check_multiple_calls')
-  , getMod     = require('@djforth/morse-jasmine/get_module')(DateNav)
-  , spyManager = require('@djforth/morse-jasmine/spy_manager')()
-  , stubs      = require('@djforth/morse-jasmine/stub_inner')(DateNav)
+const checkCalls = require('@djforth/morse-jasmine-wp/check_calls')
+  , checkMulti = require('@djforth/morse-jasmine-wp/check_multiple_calls')
+  , getMod     = require('@djforth/morse-jasmine-wp/get_module')(DateNav)
+  , spyManager = require('@djforth/morse-jasmine-wp/spy_manager')()
+  , stubs      = require('@djforth/morse-jasmine-wp/stub_inner')(DateNav)
   , getStFn = require('../../helpers/time_create');
 
 let device = 'mobile';

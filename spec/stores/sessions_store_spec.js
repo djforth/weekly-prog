@@ -3,8 +3,8 @@ const Immutable = require("immutable");
 
 const SessionsStore = require("../../src/stores/sessions_store");
 
-const storeHelper    = require('@djforth/react-jasmine').storeHelpers;
-const defaultsHelper = require('@djforth/react-jasmine').checkDefaults;
+const storeHelper    = require('@djforth/react-jasmine-wp').storeHelpers;
+const defaultsHelper = require('@djforth/react-jasmine-wp').checkDefaults;
 
 function createSession(i, t){
   let time_str = (t === "morning") ? "09:00" : "18:00";

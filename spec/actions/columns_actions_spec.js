@@ -1,7 +1,7 @@
 const ColumnsAction = require("../../src/actions/columns_actions");
 
 
-const actionHelper = require('@djforth/react-jasmine').checkActions;
+const actionHelper = require('@djforth/react-jasmine-wp').checkActions;
 
 describe("ColumnsAction", function() {
 

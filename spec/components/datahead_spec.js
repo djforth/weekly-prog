@@ -4,7 +4,7 @@ const _ = require("lodash")
 
 const DataHead   = require("../../src/components/sessions/data_head");
 
-const jasmineReactHelpers = require('@djforth/react-jasmine');
+const jasmineReactHelpers = require('@djforth/react-jasmine-wp');
 
 const storeListeners  = jasmineReactHelpers.checkListeners
 const componentHelper = jasmineReactHelpers.componentHelpers;

@@ -5,11 +5,11 @@ const _ = require('lodash')
 var TimeChecker = require("../../src/utils/time_checker");
 
 
-const checkCalls = require("@djforth/morse-jasmine/check_calls")
-  , checkMulti = require('@djforth/morse-jasmine/check_multiple_calls')
-  , getMod     = require("@djforth/morse-jasmine/get_module")(TimeChecker)
-  , spyManager = require("@djforth/morse-jasmine/spy_manager")()
-  , stubs      = require("@djforth/morse-jasmine/stub_inner")(TimeChecker)
+const checkCalls = require("@djforth/morse-jasmine-wp/check_calls")
+  , checkMulti = require('@djforth/morse-jasmine-wp/check_multiple_calls')
+  , getMod     = require("@djforth/morse-jasmine-wp/get_module")(TimeChecker)
+  , spyManager = require("@djforth/morse-jasmine-wp/spy_manager")()
+  , stubs      = require("@djforth/morse-jasmine-wp/stub_inner")(TimeChecker)
   , getStFn = require('../helpers/time_create')
 
 // function getStFn(st, fn, amount='hours'){

@@ -1,0 +1,118 @@
+.weekly-prog {
+  @include breakpoint($mobile-breakpoint) {
+    // Layout classes
+    .mb{
+      float: none;
+      padding:5px 10px;
+    }
+
+    .mb-actions{
+      position: absolute;
+      top: 30px;
+      right: 10px;
+    }
+
+    .mb-start{
+      padding: 10px;
+
+      font-size: 1.143em;
+      font-weight: bold;
+
+      .now{
+        color: $weely-prog-now-session !important;
+      }
+    }
+
+    .mb-locations{
+      position: absolute;
+      top: 10px;
+      right: 10px;
+
+      font-size: 1.143em;
+    }
+
+    .mb-session {
+      width:80%;
+    }
+
+    .thead {
+      .tr {
+        padding: 0;
+        div{
+          display: none;
+        }
+      }
+    }
+
+    .section-header{
+      margin-bottom: 0;
+    }
+
+    .date-nav {
+      height: 110px;
+
+      .date-nav-item {
+        height: 90px;
+      }
+
+      .date-nav-item-link {
+        span {
+          display: block;
+          text-align: center;
+
+          &.nav-date {
+            font-size: 2em;
+            line-height: 1em;
+          }
+
+          &.nav-day {
+            font-size: 0.8em;
+          }
+        }
+      }
+
+      .list-holder {
+        width: calc(100% - 200px);
+        height: 99px;
+      }
+
+      .nav-mover {
+        height: 60px;
+
+        &:after {
+          height: 60px;
+        }
+      }
+    }
+
+    .tbody{
+      .tr{
+        position: relative;
+      }
+    }
+
+    .tr {
+      .bold-weight {
+        font-size: 1.733em;
+      }
+    }
+  }
+
+  @include breakpoint($tablet-and-desktop-breakpoint) {
+    .pill-weekly {
+      // layout
+      display: inline-block;
+      // padding: 10px 0;
+      text-align: center;
+      width: 100%;
+
+      // styling
+      color: $weekly-prog-nav-txt;
+      font-size: 1.231em; /* 16px / 13px */
+    }
+  }
+
+  @include breakpoint($desktop-breakpoint) {
+
+  }
+}
