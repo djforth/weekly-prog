@@ -40,10 +40,13 @@ class DataItem extends React.Component{
   _expandTest(col){
     if (col.key !== 'expand') return false;
     let visible  = _.map(ColumnsStore.getShowable(), 'key');
-    return this.props.data.reduce((p, v, k)=>{
-      let t = (_.isBoolean(p)) ? p : false;
-      return (t) ? t : _.includes(visible, k);
-    });
+    return this.props.data.reduce((prev, curr, key)=>{
+      if (_.includes(visible, key) && !_.isEmpty(curr)){
+        return true;
+      }
+
+      return prev;
+    }, false);
   }
 
   _expander(){

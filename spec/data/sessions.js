@@ -26,7 +26,7 @@ var default_session = {
   , finish:''
   , instructor:''
   , places_left:0
-  // , description:'<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda repudiandae et eos quod error, tenetur voluptatum eaque nihil beatae sit praesentium itaque repellat quasi eius, saepe labore, iure at nisi.</p>'
+  , description:'<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda repudiandae et eos quod error, tenetur voluptatum eaque nihil beatae sit praesentium itaque repellat quasi eius, saepe labore, iure at nisi.</p>'
   , buttons:{
     book:'http://legend.better.org.uk'
   }
