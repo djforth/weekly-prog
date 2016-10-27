@@ -5,6 +5,7 @@
   "main": "index.js",
   "babel": {
     "plugins": [
+      "add-module-exports",
       "react-hot-loader/babel"
     ],
     "presets": [
@@ -20,90 +21,6 @@
       "react/jsx-uses-vars": 1
     }
   },
-  "assets": {
-    "assets_in": "test_assets",
-    "assets_out": "app/assets",
-    "name": "server",
-    "images": {
-      "ext": [
-        "*.png",
-        "*.gif",
-        "*.jpg",
-        "*.jpeg",
-        "*.svg"
-      ],
-      "plugins": [
-        [
-          "imagemin-gifsicle",
-          {
-            "interlaced": true
-          }
-        ],
-        [
-          "imagemin-jpegtran",
-          {
-            "progressive": true
-          }
-        ],
-        [
-          "imagemin-optipng",
-          {
-            "optimizationLevel": 3
-          }
-        ],
-        "imagemin-svgo"
-      ]
-    },
-    "javascripts": {
-      "ext": [
-        ".js",
-        ".es6.js"
-      ],
-      "files": [
-        "application.js"
-      ],
-      "ignore": [],
-      "externals": [],
-      "separate": true,
-      "input": "test_assets/javascripts",
-      "output": "app/assets/javascripts",
-      "common": "common.js",
-      "transforms": [
-        [
-          "babelify",
-          {
-            "presets": [
-              "es2015",
-              "react"
-            ]
-          }
-        ]
-      ]
-    },
-    "karma": {
-      "input": "./spec"
-    },
-    "port": 9090,
-    "rails_port": 3030,
-    "uiport": 8080
-  },
-  "config": {
-    "assets_in": "test_assets",
-    "assets_out": "app/assets",
-    "name": "server",
-    "port": 4000,
-    "rails_port": 3030,
-    "uiport": 9080,
-    "img_config": {
-      "ext": [
-        "*.png",
-        "*.gif",
-        "*.jpg",
-        "*.jpeg",
-        "*.svg"
-      ]
-    }
-  },
   "scripts": {
     "build": "babel src -x '.js' -d lib",
     "build:watch": "babel src -x '.js' -w --source-maps  -d lib",
@@ -111,9 +28,9 @@
     "lint": "eslint src/**",
     "lint:tests": "eslint spec/**",
     "start": "node ./webpack/server.js",
-    "test": "./node_modules/karma/bin/karma start --browsers PhantomJS --single-run",
-    "test:mac": "./node_modules/karma/bin/karma start --browsers Chrome,Firefox,Safari  --single-run",
-    "test:watch": "node --max_old_space_size=4096 ./node_modules/karma/bin/karma start --browsers PhantomJS"
+    "test": "asset-pipeline-karma",
+    "test:mac": "asset-pipeline-karma -b",
+    "test:watch": "asset-pipeline-karma -w"
   },
   "repository": {
     "type": "git",
@@ -126,7 +43,8 @@
   },
   "homepage": "https://github.com/djforth/weekly-prog#readme",
   "devDependencies": {
-    "@djforth/ap_utils": "^2.2.0",
+    "@djforth/ap_karma_wp": "^1.0.2",
+    "@djforth/ap_utils": "^3.0.1",
     "@djforth/morse-jasmine-wp": "2.4.2",
     "@djforth/react-jasmine-wp": "^1.1.4",
     "ajax-es6-module": "1.0.2",
@@ -134,11 +52,8 @@
     "babel-core": "^6.17.0",
     "babel-eslint": "^7.0.0",
     "babel-loader": "^6.2.5",
-    "babel-plugin-istanbul": "^2.0.1",
-    "babel-plugin-rewire": "^1.0.0",
-    "babel-plugin-rewire-ignore-coverage": "^1.0.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
     "babel-polyfill": "^6.16.0",
-    "babel-preset-airbnb": "^2.1.1",
     "babel-preset-es2015": "^6.16.0",
     "babel-preset-es2016": "^6.16.0",
     "babel-preset-es2017": "^6.16.0",
@@ -146,10 +61,10 @@
     "classnames": "^2.2.5",
     "css-loader": "^0.25.0",
     "datamanager": "1.0.2",
-    "eslint": "^3.7.1",
-    "eslint-config-google": "^0.6.0",
-    "eslint-config-morsedigital": "^1.0.3",
-    "eslint-plugin-react": "^6.3.0",
+    "eslint": "^3.8.1",
+    "eslint-config-google": "^0.7.0",
+    "eslint-config-morsedigital": "^1.1.0",
+    "eslint-plugin-react": "^6.4.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
     "flux": "^3.0.0",
@@ -158,19 +73,7 @@
     "import-glob-loader": "^1.1.0",
     "istanbul-instrumenter-loader": "^1.0.0",
     "jasmine-core": "^2.5.2",
-    "karma": "^1.3.0",
-    "karma-babel-preprocessor": "^6.0.1",
-    "karma-chrome-launcher": "^2.0.0",
-    "karma-coverage": "^1.1.1",
-    "karma-firefox-launcher": "^1.0.0",
-    "karma-jasmine": "^1.0.2",
-    "karma-phantomjs-launcher": "^1.0.2",
-    "karma-safari-launcher": "^1.0.0",
-    "karma-sourcemap-loader": "^0.3.7",
-    "karma-spec-reporter": "0.0.26",
-    "karma-story-reporter": "^0.3.1",
-    "karma-webpack": "^1.8.0",
-    "lodash": "~4.16.3",
+    "lodash": "~4.16.4",
     "moment": "^2.15.1",
     "moment-strftime": "^0.1.5",
     "morse-react-mixins": "~1.2.1",
@@ -179,6 +82,7 @@
     "react-addons-test-utils": "~15.3.2",
     "react-date-range": "~0.2.4",
     "react-dom": "~15.3.2",
+    "react-hot-loader": "^3.0.0-beta.6",
     "redux": "^3.6.0",
     "redux-thunk": "^2.1.0",
     "sass-loader": "^4.0.2",

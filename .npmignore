@@ -7,3 +7,7 @@ src/
 npm-shrinkwrap.json
 modernizr-config.json
 karma.conf.js
+assets
+bower_components
+webpack
+stylesheets

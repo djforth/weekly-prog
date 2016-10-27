@@ -1,14 +1,5 @@
 // Karma configuration
 // Generated on Mon Jul 11 2016 08:49:56 GMT+0100 (BST)
-var path = require('path');
-// var webpack = require('webpack');
-
-/* eslint-disable */
-var PATHS = {
-  src: path.resolve(__dirname + '/app/assets_uncompiled/javascripts')
-  , dist: path.resolve(__dirname + '/app/assets/javascripts')
-};
-
 
 module.exports = function(config) {
   config.set({

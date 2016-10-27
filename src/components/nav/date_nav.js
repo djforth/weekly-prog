@@ -146,7 +146,7 @@ class DateNav extends React.Component{
       width: this.state.listWidth
       , left: this.state.listPos
     };
-
+    console.log(styles)
     return _.mapValues(styles, (v)=>{
       return v;
     });

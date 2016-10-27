@@ -19,7 +19,7 @@ module.exports = function({instruction, link, places, title}){
   }
 
   if (checkBook(link)){
-    return (<a className="button button-secondary" href={link}>{title}</a>);
+    return (<a className="button button-primary" href={link}>{title}</a>);
   }
 
   return (<span className="session-full">No booking required</span>);
