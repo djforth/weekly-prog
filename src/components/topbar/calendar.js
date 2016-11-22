@@ -1,5 +1,4 @@
-const React  = require('react')
-    , Moment = require('moment');
+const React  = require('react');
 
 const Calendar = require('react-date-range').Calendar;
 // console.log(Calendar)
@@ -77,6 +76,7 @@ class CalendarHolder extends React.Component{
 
   _renderCalendar(){
     if (!this.state.open) return '';
+
     return (
       <Calendar
           date = {this.props.current}

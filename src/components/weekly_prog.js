@@ -2,6 +2,9 @@
 const React = require('react')
     , _     = require('lodash/core');
 
+import Moment from 'moment';
+import 'moment/locale/cy';
+
 // Mixins
 const cssMixins    = require('morse-react-mixins').css_mixins
     , textMixins   = require('morse-react-mixins').text_mixins
@@ -23,6 +26,7 @@ const DateNav        = require('./nav/date_nav')
 class WeeklyProg extends React.Component{
   constructor(props){
     super(props);
+    Moment.locale(props.locales)
     SessionsActions.setGroupby(this.props.groupby);
 
     this.percent = 0;
@@ -92,6 +96,7 @@ class WeeklyProg extends React.Component{
         <TopBar
           device={this.state.device}
           print={this.props.print}
+
         />
         <DateNav />
         <div id="sessions" className="clearfix">

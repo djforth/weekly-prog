@@ -1,13 +1,12 @@
 app/
-fe_build_scripts/
 spec/
-test_asset/
-public/
 src/
-npm-shrinkwrap.json
 modernizr-config.json
-karma.conf.js
 assets
 bower_components
 webpack
 stylesheets
+yarn.lock
+.apconfig
+.babelrc
+.eslintrc.js

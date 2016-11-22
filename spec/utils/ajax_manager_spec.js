@@ -2,7 +2,6 @@ const _         = require("lodash");
 
 const Ajax = require("../../src/utils/ajax_manager");
 
-
 describe('Ajax manager', function() {
   describe('setApi', function() {
     let setApi;

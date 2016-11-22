@@ -78,7 +78,7 @@ cols.addMobile([
 ])
 .addMobileOnly([{key: 'actions', title: ''}])
 .addTabletNoShow(['location'])
-.addDesktop(['instructor', 'activity', {key: 'places_left', wrapper: 'places'}])
+.addDesktop(['instructor', 'activity'])
 .addTabletNoShow([{key: 'actions', title: ''}])
 .additional(['description']);
 
@@ -104,6 +104,7 @@ ReactDom.render(
     columns     = {cols.value()}
     css         = {css}
     groupby     = "start"
+    locales     = "cy"
     no_sessions = "There are no activities this"
     print       = "/timetable/print/:date/timetable.pdf"
     sessionsApi = "/api/timetable.json"

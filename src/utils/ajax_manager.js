@@ -1,5 +1,5 @@
 const Ajax  = require('ajax-es6-module')
-    , Moment = require('moment-strftime');
+    , Moment = require('moment');
 
 const _ = require('lodash/core')
      , includes = require('lodash/includes')
@@ -13,7 +13,7 @@ function setApi(api, date){
   if (!_.isDate(date)) return api;
 
   let dateFmt = Moment(date);
-  let path = dateFmt.strftime('/%Y/%m/%d[.json]');
+  let path = dateFmt.format('/YYYY/MM/DD[.json]');
   return api.replace(/.json/, path);
 }
 

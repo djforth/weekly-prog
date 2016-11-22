@@ -5,6 +5,10 @@ const ColumnsStore   = require('../../stores/columns_store');
 
 const formatter   = require('../../utils/formatter');
 
+import TranslationHelper from '@djforth/I18n_helper';
+
+let wp = TranslationHelper('javascript')('weekly_programme');
+
 // Mixins
 let mixins = require('morse-react-mixins');
 const [cssMixins, textMixins]  = [mixins.css_mixins, mixins.text_mixins];
@@ -50,8 +54,9 @@ class DataItem extends React.Component{
   }
 
   _expander(){
-    let buttonText = (this.state.active) ? 'Less ' : 'More ';
-    buttonText += 'Information';
+    let buttonText = wp('additional.more_info');
+    //(this.state.active) ? 'Less ' : 'More ';
+    // buttonText += 'Information';
     return (<ExpandBtn
       css = {this.checkCss(this.props.css, 'expand')}
       expand = {this.props.expand}
