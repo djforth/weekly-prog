@@ -72,9 +72,11 @@ class Additional extends React.Component{
   _renderList(){
     let data, extra;
     data = this.props.data;
+    extra = _.reject(this.state.columns, (col)=>{
+      return col.key === 'description' ||
+        col.key === 'actions';
+    });
 
-    extra = _.reject(this.state.columns, {key: 'description'});
-    extra  = _.reject(extra, {key: 'actions'});
     if (data && extra){
       let li = _.map(extra, (col)=>{
         let key = this.createId(col.key, this.props.data.get('id'));

@@ -26,7 +26,7 @@ const DateNav        = require('./nav/date_nav')
 class WeeklyProg extends React.Component{
   constructor(props){
     super(props);
-    Moment.locale(props.locales)
+    Moment.locale(props.locales);
     SessionsActions.setGroupby(this.props.groupby);
 
     this.percent = 0;

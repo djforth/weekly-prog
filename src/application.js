@@ -104,7 +104,7 @@ ReactDom.render(
     columns     = {cols.value()}
     css         = {css}
     groupby     = "start"
-    locales     = "cy"
+    locales     = "en"
     no_sessions = "There are no activities this"
     print       = "/timetable/print/:date/timetable.pdf"
     sessionsApi = "/api/timetable.json"
