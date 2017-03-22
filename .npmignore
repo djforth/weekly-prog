@@ -1,12 +1,5 @@
 app/
 spec/
-src/
-modernizr-config.json
-assets
-bower_components
-webpack
-stylesheets
-yarn.lock
 .apconfig
 .babelrc
 .eslintrc.js
