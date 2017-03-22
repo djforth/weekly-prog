@@ -1,9 +1,9 @@
 {
-  "name": "@djforth/weekly-prog-wp",
-  "version": "2.1.1",
+  "name": "@morsedigital/weekly-prog",
+  "version": "1.0.0",
   "description": "Better Weekly Prog",
   "main": "index.js",
-  "repository": "git@github.com:djforth/weekly-prog.git",
+  "repository": "git@github.com:morsedigital/weekly-prog.git",
   "author": "Adrian Stainforth <adrian.stainforth@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
