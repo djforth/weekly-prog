@@ -1,6 +1,6 @@
-const Dispatcher = require('flux').Dispatcher;
+import {Dispatcher} from 'flux';
 
-const SessionsDispatcher = Object.assign(new Dispatcher(), {
+export default Object.assign(new Dispatcher(), {
   changeDate: function(action){
     var payload = {
       source: 'CHANGE_DATE'
@@ -82,4 +82,4 @@ const SessionsDispatcher = Object.assign(new Dispatcher(), {
   }
 });
 
-module.exports = SessionsDispatcher;
+// export default SessionsDispatcher;

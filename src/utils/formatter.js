@@ -1,8 +1,10 @@
-const moment = require('moment-strftime')
-    , _      = require('lodash/core');
 
-_.partial = require('lodash/partial');
-_.includes = require('lodash/includes');
+import moment from 'moment-strftime';
+import _ from 'lodash/core';
+import partial from 'lodash/partial';
+ _.partial = partial;
+import includes from 'lodash/includes';
+ _.includes = includes;
 
 function getFormat(col){
   if (_.has(col, 'fmt')) return col.fmt;
@@ -43,7 +45,7 @@ function concatValues(item, col){
   return val.join(` ${col.split} `);
 }
 
-module.exports = function(item){
+export default function(item){
   let value = getValue(item);
 
   return function(col){

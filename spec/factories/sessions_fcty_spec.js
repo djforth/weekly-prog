@@ -1,11 +1,18 @@
-// const sinon     = require("sinon");
-const _         = require("lodash");
-const Immutable = require("immutable");
+// import sinon from 'sinon';
 
-const SessionsFcty  = require("../../src/factories/sessions_fcty");
+import _ from 'lodash';
 
-var md = require('../helpers/data_helper')
-  , getStFn = require('../helpers/time_create');
+import Immutable from 'immutable';
+
+
+import SessionsFcty from '../../src/factories/sessions_fcty';
+
+
+
+import md from '../helpers/data_helper';
+
+import getStFn from '../helpers/time_create';
+
 
 var mockdata = md(10)
 

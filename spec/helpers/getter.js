@@ -1,6 +1,6 @@
 
 
-module.exports = function(Rewire){
+export default function(Rewire){
 
   return function(title){
     return Rewire.__get__(title);

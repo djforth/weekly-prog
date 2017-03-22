@@ -1,7 +1,6 @@
-const _     = require('lodash/core')
-     , React = require('react');
-
-var timeChecker = require('../../../utils/time_checker');
+import _ from 'lodash/core';
+import React from 'react';
+import timeChecker from '../../../utils/time_checker';
 
 function setCss(item, col){
   if (!_.has(col, 'wrapper')) return '';
@@ -12,7 +11,7 @@ function setCss(item, col){
   return `${col.wrapper} ${checker.setNowOrPast('now', 'old-session')}`;
 }
 
-module.exports = function(props){
+export default function(props){
   let css = setCss(props.item, props.col);
   return (
     <div className={css}>

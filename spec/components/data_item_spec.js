@@ -1,16 +1,23 @@
-const _ = require("lodash")
-    , React = require("react")
-    , ReactDOM  = require('react-dom')
-    , TestUtils = require("react-addons-test-utils");
 
-const DataItem   = require("../../src/components/sessions/data_item");
+import _ from 'lodash';
 
-const Immutable = require("immutable");
+import React from 'react';
+
+import ReactDOM from 'react-dom';
+import TestUtils from 'react-addons-test-utils';
+
+
+import DataItem from '../../src/components/sessions/data_item';
+
+
+import Immutable from 'immutable';
+
 
 // Test Helpers
-const componentHelper = require('@djforth/react-jasmine-wp').componentHelpers;
-const storeListeners = require('@djforth/react-jasmine-wp').checkListeners
-
+import {
+  componentHelpers as componentHelper
+  , checkListeners as storeListeners
+} from '@djforth/react-jasmine-wp';
 
 xdescribe("DataItem", function() {
   let dateFmtSpy = jasmine.createSpy("dateFmt").and.returnValue("1/1/2015");

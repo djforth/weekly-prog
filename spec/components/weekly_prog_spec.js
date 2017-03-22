@@ -1,8 +1,12 @@
-const _ = require("lodash")
-    , React = require("react")
-    , TestUtils = require("react-addons-test-utils");
 
-const WeeklyProg = require("../../src/components/weekly_prog");
+import _ from 'lodash';
+
+import React from 'react';
+import TestUtils from 'react-addons-test-utils';
+
+
+import WeeklyProg from '../../src/components/weekly_prog';
+
 
 xdescribe("WeeklyProg", function() {
   let weekly_prog;

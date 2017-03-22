@@ -1,10 +1,11 @@
-const React = require('react');
+
+import React from 'react';
 
 import TranslationHelper from '@djforth/I18n_helper';
 
 let wp = TranslationHelper('javascript')('weekly_programme');
 
-module.exports = function(props){
+export default function(props){
   let fmt = props.date;
   if (props.device === 'mobile'){
     return (

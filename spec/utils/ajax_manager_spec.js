@@ -1,6 +1,5 @@
-const _         = require("lodash");
-
-const Ajax = require("../../src/utils/ajax_manager");
+import _ from 'lodash';
+import Ajax from '../../src/utils/ajax_manager';
 
 describe('Ajax manager', function() {
   describe('setApi', function() {

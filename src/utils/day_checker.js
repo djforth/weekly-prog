@@ -1,7 +1,7 @@
-const _         = require('lodash/core');
+import _ from 'lodash/core';
 let checkers = ['getDate', 'getMonth', 'getFullYear'];
 
-module.exports = function(check, checkee){
+export default function(check, checkee){
   let test = false;
 
   _.forEach(checkers, (checker)=>{

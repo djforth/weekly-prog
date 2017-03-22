@@ -1,13 +1,15 @@
-const _ = require("lodash")
-    , Immutable = require("immutable");
+import _ from 'lodash';
+import Immutable from 'immutable';
 
-const formatter  = require("../../src/utils/formatter")
-    , reverter   = require("../helpers/reverts")(formatter)
-    , chainHelper = require("../helpers/chain_helper")
-    , getter     =  require("../helpers/getter")(formatter)
+import formatter from '../../src/utils/formatter';
+import Reverter from '../helpers/reverts';
+const reverter = Reverter(formatter);
+import chainHelper from '../helpers/chain_helper';
+
+import Getter from '../helpers/getter';
+const getter = Getter(formatter);
 
 describe('formatter', function() {
-
   describe('getFormat', function() {
     let getFormat = getter('getFormat')
 

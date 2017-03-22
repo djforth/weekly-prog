@@ -1,10 +1,12 @@
-const checker = require('../utils/day_checker')
-    , SessionsFcty = require('./sessions_fcty');
-
+import checker from '../utils/day_checker';
+import SessionsFcty from './sessions_fcty';
 // lodash
-const _ = require('lodash/core')
-     , partial = require('lodash/partial');
-const Moment = require('moment');
+
+import _ from 'lodash/core';
+
+import partial from 'lodash/partial';
+
+import Moment from 'moment';
 
 function getDate(dates, date){
   return _.find(dates, (d)=>checker(d.date, date));
@@ -161,4 +163,4 @@ function dateManager(groupBy, ds){
   };
 }
 
-module.exports = dateManager;
+export default dateManager;

@@ -3,7 +3,8 @@
  * @module  weekly-prog/actions/sessions_actions
 */
 
-const SessionsDispatcher = require('../dispatchers/sessions_dispatcher');
+
+import SessionsDispatcher from '../dispatchers/sessions_dispatcher';
 
 /**
   * This will change current date in sessions store
@@ -136,7 +137,7 @@ function setGroupby(groupBy){
   });
 }
 
-module.exports = {
+export default {
   changeDate: changeDate
   , calendarChange: calendarChange
   , fetchData: fetchData

@@ -1,8 +1,7 @@
-var React, TodayDisplay;
-React        = require('react');
-TodayDisplay = require('./today_display');
+import React from 'react';
+import TodayDisplay from './today_display';
 
-module.exports = function(props){
+export default function(props){
   let css, item;
   item = props.nav_item;
   css  = `date-nav-item today-nav ${props.active}`;

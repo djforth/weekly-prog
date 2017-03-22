@@ -1,13 +1,18 @@
-const React = require('react');
 
-const timeChecker = require('../../../utils/time_checker')
-    , formatter   = require('../../../utils/formatter');
+import React from 'react';
+
+
+import timeChecker from '../../../utils/time_checker';
+
+import formatter from '../../../utils/formatter';
 
 // Components
-let Time     = require('./time')
-  , RichText = require('./richtext');
 
-module.exports = function(props){
+import Time from './time';
+
+import RichText from './richtext';
+
+export default function(props){
   let col, getVal, item, value;
   item   = props.item;
   col    = props.col;

@@ -1,5 +1,5 @@
 
-module.exports = function(Rewire){
+export default function(Rewire){
   return function(method, spy){
     let revert;
 

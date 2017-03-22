@@ -1,10 +1,8 @@
-const React  = require('react');
-
-const Calendar = require('react-date-range').Calendar;
-// console.log(Calendar)
+import React from 'react';
+import {Calendar as Calendar} from 'react-date-range';
 
 // Flux
-const SessionsActions = require('../../actions/sessions_actions');
+import SessionsActions from '../../actions/sessions_actions';
 
 let theme = {
   DateRange: {
@@ -110,4 +108,4 @@ class CalendarHolder extends React.Component{
 
 }
 
-module.exports = CalendarHolder;
+export default CalendarHolder;

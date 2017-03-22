@@ -1,6 +1,7 @@
-const React = require('react');
 
-module.exports = function(props){
+import React from 'react';
+
+export default function(props){
   let key, nosession;
   key = `${props.title.toLowerCase()}-nosessions`;
   nosession = props.no_sessions || 'There are no sessions this';

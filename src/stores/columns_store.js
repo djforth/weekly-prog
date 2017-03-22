@@ -1,11 +1,9 @@
-const EventEmitter  = require('events').EventEmitter;
-
-const _    = require('lodash/core')
-    , includes = require('lodash/includes')
-    , pick = require('lodash/pick');
-
-const textMixins = require('morse-react-mixins').text_mixins;
-const ColumnsDispatcher = require('../dispatchers/columns_dispatcher');
+import {EventEmitter as EventEmitter} from 'events';
+import _ from 'lodash/core';
+import includes from 'lodash/includes';
+import pick from 'lodash/pick';
+import {text_mixins as textMixins} from 'morse-react-mixins';
+import ColumnsDispatcher from '../dispatchers/columns_dispatcher';
 
 const store = {
   device: 'desktop'
@@ -204,4 +202,4 @@ const registeredCallback = function(payload){
 ColumnsStore.dispatchToken = ColumnsDispatcher.register(registeredCallback);
 ColumnsStore.setMaxListeners(0);
 
-module.exports = ColumnsStore;
+export default ColumnsStore;

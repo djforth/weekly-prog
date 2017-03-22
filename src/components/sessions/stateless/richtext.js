@@ -1,11 +1,11 @@
-const _     = require('lodash/core')
-    , React = require('react');
+import _ from 'lodash/core';
+import React from 'react';
 
 function createMarkup(content){
   return {__html: content};
 }
 
-module.exports = function(props){
+export default function(props){
   if (_.isString(props.content) && props.content.match(/<|>/g)){
     return (<div dangerouslySetInnerHTML={ createMarkup(props.content) } />);
   }

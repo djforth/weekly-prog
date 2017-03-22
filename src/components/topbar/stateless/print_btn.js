@@ -1,7 +1,6 @@
+import React from 'react';
 
-const React = require('react');
-
-module.exports = function(props){
+export default function(props){
   return (
     <a href={props.url} target="_blank" className="print-prog">
       <i className="print-prog-icon"></i>

@@ -1,14 +1,20 @@
-const _ = require("lodash")
-    , Immutable = require("immutable")
-    , React     = require("react")
-    , ReactDOM  = require('react-dom')
-    , TestUtils = require("react-addons-test-utils");
 
-const DataExpander   = require("../../src/components/sessions/data_expander_item");
+import _ from 'lodash';
 
+import Immutable from 'immutable';
 
-const componentHelper = require('@djforth/react-jasmine-wp').componentHelpers
-    , storeListeners = require('@djforth/react-jasmine-wp').checkListeners;
+import React from 'react';
+
+import ReactDOM from 'react-dom';
+
+import TestUtils from 'react-addons-test-utils';
+import DataExpander from '../../src/components/sessions/data_expander_item';
+
+import {
+  componentHelpers as componentHelper
+  , checkListeners as storeListeners
+} from '@djforth/react-jasmine-wp';
+
 
 xdescribe("DataExpander", function() {
   let dataexpander, cssMixins, spy, revert, ColumnsStore;;

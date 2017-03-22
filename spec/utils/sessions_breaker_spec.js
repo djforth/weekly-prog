@@ -1,6 +1,6 @@
-const _         = require("lodash");
+import _ from 'lodash';
+import Breaker from '../../src/utils/sessions_breaker';
 
-const Breaker = require("../../src/utils/sessions_breaker");
 
 let json       = []
 let with_dates = []

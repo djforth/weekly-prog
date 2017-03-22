@@ -1,16 +1,19 @@
-const _ = require('lodash')
-    , Moment  = require('moment')
-    , Immutable = require("immutable");
 
-var TimeChecker = require("../../src/utils/time_checker");
+import _ from 'lodash';
+import Moment from 'moment';
+import Immutable from 'immutable';
+import TimeChecker from '../../src/utils/time_checker';
+import checkCalls from '@djforth/morse-jasmine-wp/check_calls';
+import checkMulti from '@djforth/morse-jasmine-wp/check_multiple_calls';
 
+import GetMod from '@djforth/morse-jasmine-wp/get_module';
+const getMod = GetMod(TimeChecker);
+import SpyManager from '@djforth/morse-jasmine-wp/spy_manager';
+const spyManager = SpyManager();
+import Stubs from '@djforth/morse-jasmine-wp/stub_inner';
+const stubs = Stubs(TimeChecker);
+import getStFn from '../helpers/time_create';
 
-const checkCalls = require("@djforth/morse-jasmine-wp/check_calls")
-  , checkMulti = require('@djforth/morse-jasmine-wp/check_multiple_calls')
-  , getMod     = require("@djforth/morse-jasmine-wp/get_module")(TimeChecker)
-  , spyManager = require("@djforth/morse-jasmine-wp/spy_manager")()
-  , stubs      = require("@djforth/morse-jasmine-wp/stub_inner")(TimeChecker)
-  , getStFn = require('../helpers/time_create')
 
 // function getStFn(st, fn, amount='hours'){
 //   var [type, time] = st;

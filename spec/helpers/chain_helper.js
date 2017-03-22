@@ -1,5 +1,5 @@
 
-const _ = require("lodash/core");
+import _ from 'lodash/core';
 
 function add_spy(title, obj){
   if(_.isUndefined(obj)){
@@ -24,7 +24,7 @@ function manage_list(){
   }
 }
 
-module.exports = function(start, methods){
+export default function(start, methods){
   let list = manage_list();
   let current = list.add(start, add_spy(start, methods));
 

@@ -1,4 +1,4 @@
-const Dispatcher = require('flux').Dispatcher;
+import {Dispatcher as Dispatcher} from 'flux';
 
 const ColumnsDispatcher = Object.assign(new Dispatcher(), {
   handleAddingColumns: function(action){
@@ -18,4 +18,4 @@ const ColumnsDispatcher = Object.assign(new Dispatcher(), {
   }
 });
 
-module.exports = ColumnsDispatcher;
+export default ColumnsDispatcher;

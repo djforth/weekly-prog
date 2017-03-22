@@ -1,6 +1,5 @@
-const _ = require('lodash');
-
-var process_nav = require("../../src/utils/process_nav");
+import _ from 'lodash';
+import process_nav from '../../src/utils/process_nav';
 
 describe('process_nav', function() {
   let nav_data;

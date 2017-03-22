@@ -1,19 +1,29 @@
-const React = require('react')
-    , _     = require('lodash/core');
 
-const ButtonCheck = require('../../helpers/buttons_helper');
+import React from 'react';
 
-const timeChecker = require('../../utils/time_checker')
-    , formatter   = require('../../utils/formatter');
+import _ from 'lodash/core';
+
+
+import ButtonCheck from '../../helpers/buttons_helper';
+
+
+import timeChecker from '../../utils/time_checker';
+
+import formatter from '../../utils/formatter';
 
 // Components
-let BookBtn  = require('./stateless/book_btn')
-  , Time     = require('./stateless/time')
-  , RichText = require('./stateless/richtext')
-  , Wrapper  = require('./stateless/wrapper');
+
+import BookBtn from './stateless/book_btn';
+
+import Time from './stateless/time';
+
+import RichText from './stateless/richtext';
+
+import Wrapper from './stateless/wrapper';
 
 // Mixins
-let mixins = require('morse-react-mixins');
+
+import mixins from 'morse-react-mixins';
 const [cssMixins, textMixins]  = [mixins.css_mixins, mixins.text_mixins];
 
 class ColumnItem extends React.Component{
@@ -81,4 +91,4 @@ class ColumnItem extends React.Component{
 Object.assign(ColumnItem.prototype, cssMixins);
 Object.assign(ColumnItem.prototype, textMixins);
 
-module.exports = ColumnItem;
+export default ColumnItem;

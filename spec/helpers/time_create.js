@@ -1,6 +1,5 @@
-const Moment  = require('moment');
-
-module.exports = function(st, fn, amount='hours'){
+import Moment from 'moment';
+export default function(st, fn, amount='hours'){
   var [type, time] = st;
   st = Moment()[type](time, amount);
 

@@ -1,6 +1,6 @@
-const React = require('react');
+import React from 'react';
 
-module.exports = function(props){
+export default function(props){
   return (
     <header className="section-header">
       <h1 className="gg beta secondary">{props.title}</h1>

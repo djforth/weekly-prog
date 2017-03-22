@@ -1,10 +1,12 @@
-const _         = require("lodash");
-const Immutable = require("immutable");
+import _ from 'lodash';
+import Immutable from 'immutable';
+import SessionsStore from '../../src/stores/sessions_store';
 
-const SessionsStore = require("../../src/stores/sessions_store");
+import {
+  storeHelpers as storeHelper
+  , checkDefaults
+} from '@djforth/react-jasmine-wp';
 
-const storeHelper    = require('@djforth/react-jasmine-wp').storeHelpers;
-const defaultsHelper = require('@djforth/react-jasmine-wp').checkDefaults;
 
 function createSession(i, t){
   let time_str = (t === "morning") ? "09:00" : "18:00";

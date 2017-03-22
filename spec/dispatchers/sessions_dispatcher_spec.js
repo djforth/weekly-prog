@@ -1,7 +1,7 @@
-const SessionsDispatcher = require("../../src/dispatchers/sessions_dispatcher");
+import SessionsDispatcher from '../../src/dispatchers/sessions_dispatcher';
+import {checkDispatcher as dispatcherHelper} from '@djforth/react-jasmine-wp';
 
-const dispatcherHelper = require('@djforth/react-jasmine-wp').checkDispatcher;
-
+console.log('dispatcherHelper', dispatcherHelper)
 
 describe("SessionsDispatcher", function() {
 

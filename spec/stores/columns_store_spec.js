@@ -1,12 +1,16 @@
 
-const ColumnsStore = require('../../src/stores/columns_store');
+import ColumnsStore from '../../src/stores/columns_store';
+import {
+  checkDefaults
+  , storeHelpers as storeHelper
+} from '@djforth/react-jasmine-wp';
 
-const storeHelper    = require('@djforth/react-jasmine-wp').storeHelpers;
-const defaultsHelper = require('@djforth/react-jasmine-wp').checkDefaults;
 
-const _    = require('lodash')
-    , omit = require("lodash/omit");
-const Immutable = require('immutable');
+import _ from 'lodash';
+import omit from 'lodash/omit';
+
+import Immutable from 'immutable';
+
 
 
 describe('ColumnsStore', function() {

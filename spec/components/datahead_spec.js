@@ -1,10 +1,15 @@
-const _ = require("lodash")
-    , React = require("react")
-    , TestUtils = require("react-addons-test-utils");
 
-const DataHead   = require("../../src/components/sessions/data_head");
+import _ from 'lodash';
 
-const jasmineReactHelpers = require('@djforth/react-jasmine-wp');
+import React from 'react';
+import TestUtils from 'react-addons-test-utils';
+
+
+import DataHead from '../../src/components/sessions/data_head';
+
+
+import jasmineReactHelpers from '@djforth/react-jasmine-wp';
+
 
 const storeListeners  = jasmineReactHelpers.checkListeners
 const componentHelper = jasmineReactHelpers.componentHelpers;

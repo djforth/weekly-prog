@@ -1,6 +1,9 @@
-const _ = require('lodash/core')
-    , moment = require('moment-strftime');
-    // , DateFormatter = require('@djforth/date-formatter');
+
+import _ from 'lodash/core';
+import moment from 'moment-strftime';
+
+    //import DateFormatter from '@djforth/date-formatter';
+
 _.partial = require('lodash/partial');
 _.random = require('lodash/random');
 _.cloneDeep = require('lodash/cloneDeep');
@@ -104,7 +107,7 @@ function addSessions(filter){
   };
 };
 
-module.exports = function(days=1, date, filter){
+export default function(days=1, date, filter){
   date = (_.isDate(date)) ? date : new Date(2015, 11, 1);
   date.setHours(9, 0, 0);
   var sessions = [];

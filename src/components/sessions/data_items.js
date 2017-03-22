@@ -1,11 +1,14 @@
 // Libraries
-const React = require('react');
+
+import React from 'react';
 
 // Flux
-const SessionsStore = require('../stores/sessions_store');
+
+import SessionsStore from '../stores/sessions_store';
 
 // Components
-const DataExpander = require('./data_expander_item');
+
+import DataExpander from './data_expander_item';
 
 class DataItems extends React.Component{
   constructor(props){
@@ -81,4 +84,4 @@ class DataItems extends React.Component{
   }
 }
 
-module.exports = DataItems;
+export default DataItems;

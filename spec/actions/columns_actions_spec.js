@@ -1,7 +1,5 @@
-const ColumnsAction = require("../../src/actions/columns_actions");
-
-
-const actionHelper = require('@djforth/react-jasmine-wp').checkActions;
+import ColumnsAction from '../../src/actions/columns_actions';
+import {checkActions as actionHelper} from '@djforth/react-jasmine-wp';
 
 describe("ColumnsAction", function() {
 

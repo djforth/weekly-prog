@@ -1,21 +1,28 @@
-const _ = require('lodash')
-    , React = require('react')
-    , TestUtils = require('react-addons-test-utils');
 
+import _ from 'lodash';
 
-const DateNav   = require('../../../src/components/nav/date_nav');
+import React from 'react';
+import TestUtils from 'react-addons-test-utils';
 
-const jasmineReactHelpers = require('@djforth/react-jasmine-wp');
+import DateNav from '../../../src/components/nav/date_nav';
+
+import jasmineReactHelpers from '@djforth/react-jasmine-wp';
 
 const storeListeners  = jasmineReactHelpers.checkListeners;
 const componentHelper = jasmineReactHelpers.componentHelpers;
 
-const checkCalls = require('@djforth/morse-jasmine-wp/check_calls')
-  , checkMulti = require('@djforth/morse-jasmine-wp/check_multiple_calls')
-  , getMod     = require('@djforth/morse-jasmine-wp/get_module')(DateNav)
-  , spyManager = require('@djforth/morse-jasmine-wp/spy_manager')()
-  , stubs      = require('@djforth/morse-jasmine-wp/stub_inner')(DateNav)
-  , getStFn = require('../../helpers/time_create');
+import checkCalls from '@djforth/morse-jasmine-wp/check_calls';
+
+import checkMulti from '@djforth/morse-jasmine-wp/check_multiple_calls';
+
+import GetMod from '@djforth/morse-jasmine-wp/get_module';
+const getMod = GetMod(DateNav);
+import SpyManager from '@djforth/morse-jasmine-wp/spy_manager';
+const spyManager = SpyManager();
+import Stubs from '@djforth/morse-jasmine-wp/stub_inner';
+const stubs = Stubs(DateNav);
+import getStFn from '../../helpers/time_create';
+
 
 let device = 'mobile';
 

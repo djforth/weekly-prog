@@ -1,7 +1,9 @@
-const _ = require('lodash')
-    , Moment  = require('moment')
-    , Immutable = require("immutable")
-    , getStFn = require('./time_create')
+
+import _ from 'lodash';
+import Moment from 'moment';
+import Immutable from 'immutable';
+import getStFn from './time_create';
+
 
 // function getStFn(st, fn, amount='hours'){
 //   var [type, time] = st;
@@ -13,7 +15,7 @@ const _ = require('lodash')
 //   return [st.toDate(), fn.toDate()]
 // }
 
-module.exports = function(no){
+export default function(no){
   let i = 0;
   let sessions = []
   do{

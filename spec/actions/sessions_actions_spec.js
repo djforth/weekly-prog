@@ -1,7 +1,5 @@
-const SessionsAction = require("../../src/actions/sessions_actions");
-
-
-const actionHelper = require('@djforth/react-jasmine-wp').checkActions;
+import SessionsAction from '../../src/actions/sessions_actions';
+import {checkActions as actionHelper} from '@djforth/react-jasmine-wp';
 
 let date = new Date()
 

@@ -1,21 +1,28 @@
-const React = require('react')
-    , _     = require('lodash/core');
 
-const ColumnsStore   = require('../../stores/columns_store');
+import React from 'react';
 
-const formatter   = require('../../utils/formatter');
+import _ from 'lodash/core';
+
+
+import ColumnsStore from '../../stores/columns_store';
+
+
+import formatter from '../../utils/formatter';
 
 import TranslationHelper from '@djforth/I18n_helper';
 
 let wp = TranslationHelper('javascript')('weekly_programme');
 
 // Mixins
-let mixins = require('morse-react-mixins');
+
+import mixins from 'morse-react-mixins';
 const [cssMixins, textMixins]  = [mixins.css_mixins, mixins.text_mixins];
 
 // Components
-let ColumnItem = require('./column_item')
-    , ExpandBtn  = require('./stateless/expand_btn');
+
+import ColumnItem from './column_item';
+
+import ExpandBtn from './stateless/expand_btn';
 
 class DataItem extends React.Component{
   constructor(props){
@@ -107,4 +114,4 @@ class DataItem extends React.Component{
 Object.assign(DataItem.prototype, cssMixins);
 Object.assign(DataItem.prototype, textMixins);
 
-module.exports = DataItem;
+export default DataItem;

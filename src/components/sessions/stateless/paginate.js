@@ -1,6 +1,6 @@
-const React = require('react');
+import React from 'react';
 
-module.exports = function(props){
+export default function(props){
   return (
     <div className={props.css}>
       <a href="#" onClick={props.onClick} className="button button-pagination">

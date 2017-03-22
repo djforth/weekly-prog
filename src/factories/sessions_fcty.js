@@ -1,7 +1,6 @@
-
-const _           = require('lodash/core');
-const DataManager = require('datamanager');
-const Immutable   = require('immutable');
+import _ from 'lodash/core';
+import DataManager from 'datamanager';
+import Immutable from 'immutable';
 
 class SessionsFcty extends DataManager {
 
@@ -60,4 +59,4 @@ class SessionsFcty extends DataManager {
   }
 }
 
-module.exports = SessionsFcty;
+export default SessionsFcty;

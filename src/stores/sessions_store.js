@@ -1,19 +1,18 @@
-var AjaxManager, Breaker, DateManager, EventEmitter, SessionsDispatcher, _;
 
-let ajaxManager, processor, sessions, facility, fetched;
-
-EventEmitter = require('events').EventEmitter;
-_ = require('lodash/core');
+import {EventEmitter} from 'events';
+import _ from 'lodash/core';
 
 // Internal Modules
-AjaxManager  = require('../utils/ajax_manager');
-DateManager  = require('../factories/date_manager');
-Breaker      = require('../utils/sessions_breaker');
+import AjaxManager from '../utils/ajax_manager';
+import DateManager from '../factories/date_manager';
+import Breaker from '../utils/sessions_breaker';
 
 // Flux
-SessionsDispatcher = require('../dispatchers/sessions_dispatcher');
+import SessionsDispatcher from '../dispatchers/sessions_dispatcher';
 
-fetched     = false;
+let ajaxManager, processor, sessions, facility;
+
+let fetched     = false;
 
 function processData(groupBy){
   let sessions = DateManager(groupBy);
@@ -258,4 +257,4 @@ const registeredCallback = function(payload){
 SessionStore.dispatchToken = SessionsDispatcher.register(registeredCallback);
 SessionStore.setMaxListeners(0);
 
-module.exports = SessionStore;
+export default SessionStore;

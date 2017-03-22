@@ -1,9 +1,8 @@
-const Ajax  = require('ajax-es6-module')
-    , Moment = require('moment');
-
-const _ = require('lodash/core')
-     , includes = require('lodash/includes')
-     , reject   = require('lodash/reject');
+import Ajax from 'ajax-es6-module';
+import Moment from 'moment';
+import _ from 'lodash/core';
+import includes from 'lodash/includes';
+import reject from 'lodash/reject';
 
 const ajaxManager = new Ajax();
 
@@ -17,7 +16,7 @@ function setApi(api, date){
   return api.replace(/.json/, path);
 }
 
-module.exports = function(api){
+export default function(api){
   if (!api){
     throw new Error('api url required');
   }

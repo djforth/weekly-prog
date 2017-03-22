@@ -1,19 +1,29 @@
 // Libraries
-const React = require('react');
 
-const DataHead     = require('./data_head')
-    , DataExpander = require('./data_expander_item')
-    , NoSessions   = require('./stateless/no_sessions')
-    , Paginate     = require('./stateless/paginate')
-    , PeriodHead   = require('./stateless/period_head');
+import React from 'react';
+
+
+import DataHead from './data_head';
+
+import DataExpander from './data_expander_item';
+
+import NoSessions from './stateless/no_sessions';
+
+import Paginate from './stateless/paginate';
+
+import PeriodHead from './stateless/period_head';
 
 // Flux
-const ColumnsStore   = require('../../stores/columns_store')
-    , SessionsStore = require('../../stores/sessions_store');
+
+import ColumnsStore from '../../stores/columns_store';
+
+import SessionsStore from '../../stores/sessions_store';
 
 // Mixins
-const cssMixins  = require('morse-react-mixins').css_mixins
-    , textMixins = require('morse-react-mixins').text_mixins;
+import {
+  css_mixinsimport as cssMixins
+  , text_mixins as textMixins
+} from 'morse-react-mixins';
 
 class PeriodSessions extends React.Component{
   constructor(props){
@@ -141,4 +151,4 @@ class PeriodSessions extends React.Component{
 Object.assign(PeriodSessions.prototype, cssMixins);
 Object.assign(PeriodSessions.prototype, textMixins);
 
-module.exports = PeriodSessions;
+export default PeriodSessions;

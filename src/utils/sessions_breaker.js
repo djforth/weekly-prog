@@ -1,8 +1,6 @@
-const Moment        = require('moment-strftime');
-
-const _        = require('lodash/core');
-
-var checker       = require('./day_checker');
+import Moment from 'moment-strftime';
+import _ from 'lodash/core';
+import checker from './day_checker';
 
 function createKey(date){
   return `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
@@ -82,7 +80,7 @@ function fillGaps(groups, start, end = 7){
   return groups;
 }
 
-module.exports = function(sessions, groupBy, st){
+export default function(sessions, groupBy, st){
   let list = makeDates(sessions, groupBy);
   let groups = groupSessions(list);
   return fillGaps(groups, st);

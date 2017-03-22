@@ -1,6 +1,5 @@
-const _         = require("lodash");
-
-const checker = require("../../src/utils/day_checker");
+import _ from 'lodash';
+import checker from '../../src/utils/day_checker';
 
 describe("checker", function() {
   it('should return true if on the same day', function() {

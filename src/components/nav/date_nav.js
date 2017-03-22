@@ -1,25 +1,38 @@
 // Libraries
-const React = require('react')
-    , _     = require('lodash/core');
-_.take = require('lodash/take');
-_.mapValues = require('lodash/mapValues');
-_.reject = require('lodash/reject');
+
+import React from 'react';
+
+import _ from 'lodash/core';
+import take from 'lodash/take';
+ _.take = take;
+import mapValues from 'lodash/mapValues';
+ _.mapValues = mapValues;
+import reject from 'lodash/reject';
+ _.reject = reject;
 
 // Utils
-const checker = require('../../utils/day_checker');
+
+import checker from '../../utils/day_checker';
 
 // Mixins
-const cssMixins    = require('morse-react-mixins').css_mixins
-    , textMixins   = require('morse-react-mixins').text_mixins
-    , widthsMixins = require('morse-react-mixins').widths_mixins;
+import {
+  css_mixins as cssMixins
+  , text_mixinsimport as textMixins
+  , widths_mixins as widthsMixins
+} from 'morse-react-mixins';
 
 // Flux
-const SessionsActions = require('../../actions/sessions_actions')
-    , SessionsStore   = require('../../stores/sessions_store')
-    , ColumnsStore    = require('../../stores/columns_store');
 
-const NavItem = require('./stateless/nav_item')
-    , TodayItem   = require('./stateless/today_nav_item');
+import SessionsActions from '../../actions/sessions_actions';
+
+import SessionsStore from '../../stores/sessions_store';
+
+import ColumnsStore from '../../stores/columns_store';
+
+
+import NavItem from './stateless/nav_item';
+
+import TodayItem from './stateless/today_nav_item';
 
 class DateNav extends React.Component{
   constructor(props){
@@ -235,4 +248,4 @@ Object.assign(DateNav.prototype, cssMixins);
 Object.assign(DateNav.prototype, textMixins);
 Object.assign(DateNav.prototype, widthsMixins);
 
-module.exports = DateNav;
+export default DateNav;

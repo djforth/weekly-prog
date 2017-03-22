@@ -1,6 +1,5 @@
-const _         = require("lodash");
-
-const DateManager = require("../../src/factories/date_manager");
+import _ from 'lodash';
+import DateManager from '../../src/factories/date_manager';
 
 let mockdata = ["sessions", "sessions", "sessions"];
 

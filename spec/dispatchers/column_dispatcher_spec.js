@@ -1,7 +1,6 @@
 
-const ColumnsDispatcher = require("../../src/dispatchers/columns_dispatcher");
-
-const dispatcherHelper = require('@djforth/react-jasmine-wp').checkDispatcher;
+import ColumnsDispatcher from '../../src/dispatchers/columns_dispatcher';
+import {checkDispatcher as dispatcherHelper} from '@djforth/react-jasmine-wp';
 
 
 describe("ColumnsDispatcher", function() {
