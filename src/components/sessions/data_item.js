@@ -50,7 +50,9 @@ class DataItem extends React.Component{
 
   _expandTest(col){
     if (col.key !== 'expand') return false;
+
     let visible  = _.map(ColumnsStore.getShowable(), 'key');
+
     return this.props.data.reduce((prev, curr, key)=>{
       if (_.includes(visible, key) && !_.isEmpty(curr)){
         return true;
@@ -62,8 +64,6 @@ class DataItem extends React.Component{
 
   _expander(){
     let buttonText = wp('additional.more_info');
-    //(this.state.active) ? 'Less ' : 'More ';
-    // buttonText += 'Information';
     return (<ExpandBtn
       css = {this.checkCss(this.props.css, 'expand')}
       expand = {this.props.expand}
@@ -85,6 +85,7 @@ class DataItem extends React.Component{
     let item = this.props.data;
     if (item && this.state.columns){
       let td = _.map(this.state.columns, function(col){
+
         if (this._expandTest(col)){
           return this._expander();
         }

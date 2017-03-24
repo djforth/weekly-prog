@@ -1,5 +1,6 @@
 import React from 'react';
 import {Calendar as Calendar} from 'react-date-range';
+import CalendarIcon from './stateless/calendar_icon'
 
 // Flux
 import SessionsActions from '../../actions/sessions_actions';
@@ -96,7 +97,8 @@ class CalendarHolder extends React.Component{
     return (
       <div className="calendar-btn">
         <button onClick={this._openCalendar.bind(this)}>
-          <i className="calendar-icon"></i>
+          <CalendarIcon title={this._formatDate()}/>
+
           <span className="month-str">{this._formatDate()}</span>
         </button>
         <div className="calendar-holder">

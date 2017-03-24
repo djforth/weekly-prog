@@ -1,7 +1,6 @@
 import {EventEmitter as EventEmitter} from 'events';
 import _ from 'lodash/core';
 import includes from 'lodash/includes';
-import pick from 'lodash/pick';
 import {text_mixins as textMixins} from 'morse-react-mixins';
 import ColumnsDispatcher from '../dispatchers/columns_dispatcher';
 
@@ -86,7 +85,7 @@ const store = {
 
   , getKeyAndTitle(id){
     let visible = this.getColumn(id).visible;
-    return _.map(visible, (col)=>this.reduceObj(col, ['key', 'title']));
+    return visible.map(({key, title})=>Object({key, title}));
   }
 
   , getLabeled(id){
@@ -115,9 +114,13 @@ const store = {
     let column = this.getColumn(id);
     let showables = _.chain(column.cols)
       .filter((col)=>{
+
         return col.show && !includes(column.visible, col);
       })
-      .map((col)=>this.reduceObj(col, ['key', 'title']))
+      .map((col)=>{
+        let obj = this.reduceObj(col, ['key', 'title']);
+        return obj;
+      })
       .value();
     return showables;
   }
@@ -148,7 +151,10 @@ const store = {
   }
 
   , reduceObj(obj, values){
-    return pick(obj, values);
+    return values.reduce((newObj, v)=>{
+      newObj[v] = obj[v];
+      return newObj;
+    }, {});
   }
 
   , removeCols(removeItems){

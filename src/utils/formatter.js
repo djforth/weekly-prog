@@ -24,8 +24,8 @@ function displayData(data, col){
 function getValue(item){
   var data = item;
   return function(keys){
+    if (_.isUndefined(keys)) return null;
     if (_.isString(keys)) return data.get(keys);
-
     let values =  keys.map(function(key){
       return data.get(key);
     });

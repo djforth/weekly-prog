@@ -65,8 +65,8 @@
   },
   "dependencies": {},
   "scripts": {
-    "build": "babel src -x '.js' -d lib",
-    "build:watch": "babel src -x '.js' -w --source-maps  -d lib",
+    "build": "babel src -x '.js,.jsx' -d lib",
+    "build:watch": "babel src -x '.js,.jsx' -w --source-maps  -d lib",
     "js": "webpack --config webpack/webpack.config.js",
     "lint": "eslint src/**",
     "lint:tests": "eslint spec/**",

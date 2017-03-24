@@ -11,27 +11,23 @@ import reject from 'lodash/reject';
  _.reject = reject;
 
 // Utils
-
 import checker from '../../utils/day_checker';
 
 // Mixins
 import {
   css_mixins as cssMixins
-  , text_mixinsimport as textMixins
+  , text_mixins as textMixins
   , widths_mixins as widthsMixins
 } from 'morse-react-mixins';
 
 // Flux
-
 import SessionsActions from '../../actions/sessions_actions';
-
 import SessionsStore from '../../stores/sessions_store';
-
 import ColumnsStore from '../../stores/columns_store';
 
-
+import ArrowLeft from './stateless/arrow_left';
+import ArrowRight from './stateless/arrow_right';
 import NavItem from './stateless/nav_item';
-
 import TodayItem from './stateless/today_nav_item';
 
 class DateNav extends React.Component{
@@ -159,7 +155,7 @@ class DateNav extends React.Component{
       width: this.state.listWidth
       , left: this.state.listPos
     };
-    console.log(styles)
+
     return _.mapValues(styles, (v)=>{
       return v;
     });
@@ -217,31 +213,20 @@ class DateNav extends React.Component{
   render(){
     return (
       <nav className="date-nav">
-      <a href="#"
-         className="nav-mover move-left"
-         onClick={this._mover.bind(this, 'left')}
-      >
-        <span className="hidden">left</span>
-      </a>
-      {this._renderToday()}
-      <div className="list-holder">
-        <ul className="date-list"
-            role="tablist"
-            ref="datelist"
-            style={this._setStyle()}>
-          {this._renderDates()}
-        </ul>
-      </div>
-      <a href="#"
-         className="nav-mover move-right"
-         onClick={this._mover.bind(this, 'right')}
-      >
-        <span className="hidden">right</span>
-      </a>
+        <ArrowLeft onClick={this._mover.bind(this, 'left')}/>
+        {this._renderToday()}
+        <div className="list-holder">
+          <ul className="date-list"
+              role="tablist"
+              ref="datelist"
+              style={this._setStyle()}>
+            {this._renderDates()}
+          </ul>
+        </div>
+        <ArrowRight onClick={this._mover.bind(this, 'right')}/>
       </nav>
     );
   }
-
 }
 
 Object.assign(DateNav.prototype, cssMixins);

@@ -21,7 +21,7 @@ import SessionsStore from '../../stores/sessions_store';
 
 // Mixins
 import {
-  css_mixinsimport as cssMixins
+  css_mixins as cssMixins
   , text_mixins as textMixins
 } from 'morse-react-mixins';
 
@@ -91,6 +91,7 @@ class PeriodSessions extends React.Component{
   }
 
   render(){
+
     return (
       <section key="items" className={this._setCss()}>
         <PeriodHead title={this.props.title} />
