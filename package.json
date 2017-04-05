@@ -1,6 +1,6 @@
 {
   "name": "@morsedigital/weekly-prog",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Better Weekly Prog",
   "main": "index.js",
   "repository": "git@github.com:morsedigital/weekly-prog.git",
