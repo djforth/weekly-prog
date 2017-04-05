@@ -9,7 +9,7 @@ import ColumnsStore from '../../stores/columns_store';
 
 import formatter from '../../utils/formatter';
 
-import TranslationHelper from '@djforth/I18n_helper';
+import TranslationHelper from '@morsedigital/i18n_helper';
 
 let wp = TranslationHelper('javascript')('weekly_programme');
 

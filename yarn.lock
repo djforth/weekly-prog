@@ -2,10 +2,6 @@
 # yarn lockfile v1
 
 
-"@djforth/I18n_helper@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@djforth/I18n_helper/-/I18n_helper-1.0.0.tgz#a9fed17319770f1bdc76b5eb1d449d3590a62281"
-
 "@djforth/ap_karma_wp@2.0.1":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@djforth/ap_karma_wp/-/ap_karma_wp-2.0.1.tgz#04f0d689a14ba75ca5fe680b3a6609e7680badbc"
@@ -50,6 +46,10 @@
 "@djforth/react-jasmine-wp@^1.2.0":
   version "1.2.0"
   resolved "https://registry.npmjs.org/@djforth/react-jasmine-wp/-/react-jasmine-wp-1.2.0.tgz#8c4191836471ef5a4bdff1d8a74e8802edbc9bc0"
+
+"@morsedigital/i18n_helper@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@morsedigital/i18n_helper/-/i18n_helper-1.0.1.tgz#3662415e22679b518aa152b131a7dbd0e6e4f732"
 
 abbrev@1, abbrev@1.0.x:
   version "1.0.9"
@@ -4193,15 +4193,15 @@ right-align@^0.1.1:
   dependencies:
     align-text "^0.1.1"
 
-rimraf@2, rimraf@^2.2.8, rimraf@~2.5.1, rimraf@~2.5.4:
-  version "2.5.4"
-  resolved "https://registry.npmjs.org/rimraf/-/rimraf-2.5.4.tgz#96800093cbf1a0c86bd95b4625467535c29dfa04"
+rimraf@2, rimraf@^2.2.8, rimraf@^2.3.3, rimraf@^2.6.0:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.6.1.tgz#c2338ec643df7a1b7fe5c54fa86f57428a55f33d"
   dependencies:
     glob "^7.0.5"
 
-rimraf@^2.3.3, rimraf@^2.6.0:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.6.1.tgz#c2338ec643df7a1b7fe5c54fa86f57428a55f33d"
+rimraf@~2.5.1, rimraf@~2.5.4:
+  version "2.5.4"
+  resolved "https://registry.npmjs.org/rimraf/-/rimraf-2.5.4.tgz#96800093cbf1a0c86bd95b4625467535c29dfa04"
   dependencies:
     glob "^7.0.5"
 

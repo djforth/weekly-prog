@@ -1,13 +1,12 @@
 {
   "name": "@morsedigital/weekly-prog",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Better Weekly Prog",
   "main": "index.js",
   "repository": "git@github.com:morsedigital/weekly-prog.git",
   "author": "Adrian Stainforth <adrian.stainforth@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
-    "@djforth/I18n_helper": ">=1.0.0",
     "ajax-es6-module": "^1.0.2",
     "babel-polyfill": ">=6.16.0",
     "classnames": ">=2.2.5",
@@ -24,11 +23,11 @@
     "viewport-detection-es6": "^2.1.3"
   },
   "devDependencies": {
-    "@djforth/I18n_helper": "^1.0.0",
     "@djforth/ap_karma_wp": "2.0.1",
     "@djforth/ap_utils": "^3.0.4",
     "@djforth/morse-jasmine-wp": "^2.4.2",
     "@djforth/react-jasmine-wp": "^1.2.0",
+    "@morsedigital/i18n_helper": "^1.0.1",
     "ajax-es6-module": "^1.0.2",
     "babel-cli": "^6.24.0",
     "babel-core": "^6.24.0",
@@ -67,10 +66,8 @@
   "scripts": {
     "build": "babel src -x '.js,.jsx' -d lib",
     "build:watch": "babel src -x '.js,.jsx' -w --source-maps  -d lib",
-    "js": "webpack --config webpack/webpack.config.js",
     "lint": "eslint src/**",
     "lint:tests": "eslint spec/**",
-    "start": "node ./webpack/server.js",
     "test": "asset-pipeline-karma",
     "test:mac": "asset-pipeline-karma -b",
     "test:watch": "asset-pipeline-karma -w"
