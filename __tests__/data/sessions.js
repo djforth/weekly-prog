@@ -2,7 +2,7 @@
 import _ from 'lodash/core';
 import moment from 'moment-strftime';
 
-    //import DateFormatter from '@djforth/date-formatter';
+    // import DateFormatter from '@djforth/date-formatter';
 
 _.partial = require('lodash/partial');
 _.random = require('lodash/random');
@@ -13,60 +13,58 @@ let activities = ['Gymnastics', 'Group Cycling', 'Acting', 'Adults', 'Acti  viti
 
 let titles = ['Active Lifestyles (MCC)', 'Adult Better Swim School', 'A.H Baby', '55+ Aerobics', 'Active Lifestyles Improvers Swim ', '55+ Swim and Water Workout', 'Active Lifestyles Learn to Swim', 'Active Lifestyles Funquatics', 'Active Lifestyles Mother & Daughter (5 years +)', '60+ Swimming', 'Ab-solution', 'Adult & Infant/Toddler Swim School', 'Active Lifestyles Aqua Natal', '80\'s Style Aerobics', 'Active Lifestyles Aqua Discovery', 'Active Lifestyles Improvers Swim', '5-a-Side Football young@heart', 'Active Lifestyles Water Workout', 'Active Lifestyles Splash to Swim', '15.15.15', 'Active Lifestyles Learn to Swim', '20-20-20', '60+ Badminton', 'ABSolution', 'Ab Attack', 'Ab Blast', '20.20.20', 'Active Lifestyles Mother & Child (6 weeks to 8 years)', 'Active Lifestyles Learn & Improvers Swim', 'Active Lifestyles Aquacise'];
 
-var locations = ['Activity Pool', 'Main Pool', 'Tennis Courts', 'General Swim', 'Astro Pitch', 'Fitness Room', 'Fitness Centre', 'Outdoor Pool', 'Water Workout', 'Gym', 'Dance Studio', 'Sports Hall', 'Main Pool', 'Sauna', 'Studio', 'Grass Pitches', 'Training Pool', 'Outdoor Tennis Courts', 'Group Cycle Studio', 'Conference Room', 'Studio', 'Gymnasium', 'Gym', 'Studio 1', 'Gym', 'X-Cube ', 'Main Pool ', 'Leisure Pool', 'Sports Hall', 'Astro Pitch'];
+let locations = ['Activity Pool', 'Main Pool', 'Tennis Courts', 'General Swim', 'Astro Pitch', 'Fitness Room', 'Fitness Centre', 'Outdoor Pool', 'Water Workout', 'Gym', 'Dance Studio', 'Sports Hall', 'Main Pool', 'Sauna', 'Studio', 'Grass Pitches', 'Training Pool', 'Outdoor Tennis Courts', 'Group Cycle Studio', 'Conference Room', 'Studio', 'Gymnasium', 'Gym', 'Studio 1', 'Gym', 'X-Cube ', 'Main Pool ', 'Leisure Pool', 'Sports Hall', 'Astro Pitch'];
 
-var instructors = ['Adina', 'Helen', 'Sally', 'Helen', 'Craig', 'Cecil', 'Cecil', 'Adina', 'Cecil', 'Priscila', 'Priscila', 'Priscila', 'Priscila', 'Cecil', 'Young@Heart', 'Young@Heart', 'Young@Heart', 'Kate', 'Young@Heart', 'Young@Heart', 'Neil', 'Maria', 'Cecil', 'Sally', 'Neil', 'Neil', 'Sarah', 'Gina Langfield', 'Neil', 'Sarah']
+let instructors = ['Adina', 'Helen', 'Sally', 'Helen', 'Craig', 'Cecil', 'Cecil', 'Adina', 'Cecil', 'Priscila', 'Priscila', 'Priscila', 'Priscila', 'Cecil', 'Young@Heart', 'Young@Heart', 'Young@Heart', 'Kate', 'Young@Heart', 'Young@Heart', 'Neil', 'Maria', 'Cecil', 'Sally', 'Neil', 'Neil', 'Sarah', 'Gina Langfield', 'Neil', 'Sarah'];
 
-var i = 0;
+let i = 0;
 
 let sessions = [];
 
-var default_session = {
-    id:0
-  , title:''
-  , location:''
-  , start:''
-  , finish:''
-  , instructor:''
-  , places_left:0
-  , description:'<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda repudiandae et eos quod error, tenetur voluptatum eaque nihil beatae sit praesentium itaque repellat quasi eius, saepe labore, iure at nisi.</p>'
-  , buttons:{
-    book:'http://legend.better.org.uk'
+let default_session = {
+    id: 0
+  , title: ''
+  , location: ''
+  , start: ''
+  , finish: ''
+  , instructor: ''
+  , places_left: 0
+  , description: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda repudiandae et eos quod error, tenetur voluptatum eaque nihil beatae sit praesentium itaque repellat quasi eius, saepe labore, iure at nisi.</p>'
+  , buttons: {
+    book: 'http://legend.better.org.uk'
   }
-}
+};
 
-var morning   = 9;
-var afternoon = 12;
-var evening   = 18;
+let morning   = 9;
+let afternoon = 12;
+let evening   = 18;
 
 function timeManager(date){
-  var mins  = date.getMinutes();
-  var hours = date.getHours();
+  let mins  = date.getMinutes();
+  let hours = date.getHours();
 
   return function(){
     mins += 15;
-    if(mins > 60){
+    if (mins > 60){
       mins = 15;
       hours++;
     }
 
     return [hours, mins];
-  }
+  };
 }
 
 function addSessions(filter){
-
   // var sessions  = []
 
   function createSession(date){
-
     let session = _.cloneDeep(default_session);
     session.id         = _.uniqueId();
     session.session    = _.sample(titles);
     session.location   = _.sample(locations);
     session.instructor = _.sample(instructors);
     session.activity   = _.sample(activities);
-    let d   = new Date(date)
+    let d   = new Date(date);
     let fmt = moment(d);
     session.start      = fmt.strftime('%Y-%m-%d %H:%M');
     d.setHours(d.getHours()+1);
@@ -82,7 +80,7 @@ function addSessions(filter){
       session.places_left = _.random(0, 20);
     }
 
-    if(filter){
+    if (filter){
       session.filters = filter;
     }
     // console.log(session)
@@ -92,9 +90,9 @@ function addSessions(filter){
   return function(st, n){
     let date = new Date(st);
 
-    var i = 0;
-    var increment = timeManager(date);
-    var sessions  = [];
+    let i = 0;
+    let increment = timeManager(date);
+    let sessions  = [];
 
     do {
       let time = increment();
@@ -102,7 +100,7 @@ function addSessions(filter){
       sessions.push(createSession(date));
 
       i++;
-    } while(i <= n);
+    } while (i <= n);
     return sessions;
   };
 };
@@ -110,8 +108,8 @@ function addSessions(filter){
 export default function(days=1, date, filter){
   date = (_.isDate(date)) ? date : new Date(2015, 11, 1);
   date.setHours(9, 0, 0);
-  var sessions = [];
-  var i = 0;
+  let sessions = [];
+  let i = 0;
   do {
     _.forEach([9, 12, 18], (n)=>{
       date.setDate(date.getDate()+i);

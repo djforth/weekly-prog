@@ -11,7 +11,7 @@ function add_spy(title, obj){
 
 function createSpies(list){
     if(_.isString(list)){
-      return {spy:add_spy(list) title:list}
+      return {spy:add_spy(list), title:list}
     }
 
     if(_.isArray(list)){

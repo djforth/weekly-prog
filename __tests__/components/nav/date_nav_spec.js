@@ -27,38 +27,38 @@ import getStFn from '../../helpers/time_create';
 let device = 'mobile';
 
 let colStubs = [
-    {title:'addChangeListener'},
-    {title:'removeChangeListener'},
-    {title:'getDevice', returnValue:device}
-  ]
+    {title: 'addChangeListener'}
+    , {title: 'removeChangeListener'}
+    , {title: 'getDevice', returnValue: device}
+  ];
 
 let sesStubs = [
-    {title:'addChangeListener'},
-    {title:'removeChangeListener'},
-    {title:'_getAllDates', returnValue:[{today:new Date()}]}
-  ]
+    {title: 'addChangeListener'}
+    , {title: 'removeChangeListener'}
+    , {title: '_getAllDates', returnValue: [{today: new Date()}]}
+  ];
 
-//Stub components
+// Stub components
 let spys = [
   {
-    fn:function(){
+    fn: function(){
       return  (<div>{this.props.get('title')}</div>);
-    },
-    title:'NavItem'
+    }
+    , title: 'NavItem'
   }
   , {
-    fn:function(){
+    fn: function(){
       return  (<div>Today</div>);
-    },
-    title:'TodayItem'
+    }
+    , title: 'TodayItem'
   }
 ];
 
-xdescribe('Datenav', function() {
+xdescribe('Datenav', function(){
   let date_nav, ColumnsStore, SessionsStore;
   let spied   = jasmineReactHelpers.spyOnComponents(spys, DateNav);
 
-  beforeEach(function() {
+  beforeEach(function(){
     ColumnsStore = getMod('ColumnsStore');
     SessionsStore = getMod('SessionsStore');
     storeListeners.stubStore(ColumnsStore, colStubs);

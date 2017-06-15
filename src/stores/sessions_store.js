@@ -198,8 +198,8 @@ const SessionStore = Object.assign({}, EventEmitter.prototype, store);
 SessionStore.setMaxListeners(0);
 
 const registeredCallback = function(payload){
-  var action = payload.action;
-  switch(action.type){
+  let action = payload.action;
+  switch (action.type){
     case 'CHANGE_DATE':
       SessionStore._setDate(action.date);
       SessionStore.emitChange('changing_date');

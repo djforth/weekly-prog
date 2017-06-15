@@ -74,7 +74,6 @@ class DataExpanderItem extends React.Component{
       </div>
     );
   }
-
 }
 
 Object.assign(DataExpanderItem.prototype, cssMixins);

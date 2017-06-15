@@ -11,51 +11,48 @@ import DataHead from '../../src/components/sessions/data_head';
 import jasmineReactHelpers from '@djforth/react-jasmine-wp';
 
 
-const storeListeners  = jasmineReactHelpers.checkListeners
+const storeListeners  = jasmineReactHelpers.checkListeners;
 const componentHelper = jasmineReactHelpers.componentHelpers;
 
 
-
-xdescribe('DataHead', function() {
+xdescribe('DataHead', function(){
   let datahead, cssMixins, textMixins, ColumnsStore;
   let columns = [
-    {key:"foo", title:"Foooo"},
-    {key:"Bar", title:"Baaaaar"}
-  ]
+    {key: 'foo', title: 'Foooo'}
+    , {key: 'Bar', title: 'Baaaaar'}
+  ];
   let stubs = [
-    {title:"addChangeListener"},
-    {title:"removeChangeListener"},
-    {title:"getKeyAndTitle", returnValue:columns}
-  ]
-  let css  = {foo:"class1", default:"class2"}
-  beforeEach(() => {
-    //Spy on Store
-    ColumnsStore = DataHead.__get__("ColumnsStore");
+    {title: 'addChangeListener'}
+    , {title: 'removeChangeListener'}
+    , {title: 'getKeyAndTitle', returnValue: columns}
+  ];
+  let css  = {foo: 'class1', default: 'class2'};
+  beforeEach(()=>{
+    // Spy on Store
+    ColumnsStore = DataHead.__get__('ColumnsStore');
     storeListeners.stubStore(ColumnsStore, stubs);
     datahead = TestUtils.renderIntoDocument(<DataHead css={css} /> );
 
-    spyOn(datahead, "checkCss").and.callThrough();
-    spyOn(datahead, "capitalize").and.callFake((c)=>{
+    spyOn(datahead, 'checkCss').and.callThrough();
+    spyOn(datahead, 'capitalize').and.callFake((c)=>{
       return c;
     });
 
     datahead.forceUpdate();
   });
 
-  afterEach(function() {
+  afterEach(function(){
     datahead.checkCss.calls.reset();
     datahead.capitalize.calls.reset();
   });
 
-  it("renders", () => {
-
-
+  it('renders', ()=>{
     expect(datahead).toBeTruthy();
   });
 
-  describe('props defaults', function() {
-    var propsDefaults = {
-        css  : css
+  describe('props defaults', function(){
+    let propsDefaults = {
+        css: css
       };
 
     componentHelper.checkProps(()=>{
@@ -63,54 +60,51 @@ xdescribe('DataHead', function() {
     }, propsDefaults);
   });
 
-  describe('check componentDidMount spies called', function() {
-
-
-    it("should call addChangeListener on mounting", function() {
-      let events =["change"];
-      storeListeners.checkListeners(ColumnsStore, "addChangeListener", events );
+  describe('check componentDidMount spies called', function(){
+    it('should call addChangeListener on mounting', function(){
+      let events =['change'];
+      storeListeners.checkListeners(ColumnsStore, 'addChangeListener', events );
     });
   });
 
-   describe("check componentWillUnmmont spies", function() {
-    it("should call addRemoveListener on unmounting", function() {
+   describe('check componentWillUnmmont spies', function(){
+    it('should call addRemoveListener on unmounting', function(){
       datahead.componentWillUnmount();
-      let events =["change"];
-      storeListeners.checkListeners(ColumnsStore, "removeChangeListener", events );
+      let events =['change'];
+      storeListeners.checkListeners(ColumnsStore, 'removeChangeListener', events );
     });
   });
 
-  describe("check event functions", function() {
+  describe('check event functions', function(){
     let events = [
-      {fn:"_onChange" , spy:"getKeyAndTitle", state:{columns:columns}}
+      {fn: '_onChange', spy: 'getKeyAndTitle', state: {columns: columns}}
     ];
 
     storeListeners.checkAllEvents(()=>{
-      return {comp:datahead, store:ColumnsStore}
+      return {comp: datahead, store: ColumnsStore};
     }, events);
   });
 
 
-
-  describe("Name of the group", function() {
+  describe('Name of the group', function(){
     let tr;
     beforeEach(()=>{
-      //force render with data
+      // force render with data
       datahead._onChange();
-      let th = TestUtils.findRenderedDOMComponentWithClass(datahead, "thead");
-      tr = th.querySelector(".tr")
+      let th = TestUtils.findRenderedDOMComponentWithClass(datahead, 'thead');
+      tr = th.querySelector('.tr');
     });
 
     componentHelper.checkRender(
       ()=>{
         return tr;
       },
-      {type:"class", className:"class1"},
+      {type: 'class', className: 'class1'},
       {
-        attributes:[
-          {key:"class", value:"class1"}
-        ],
-        textNode:"Foooo"
+        attributes: [
+          {key: 'class', value: 'class1'}
+        ]
+        , textNode: 'Foooo'
       }
     );
 
@@ -118,16 +112,16 @@ xdescribe('DataHead', function() {
       ()=>{
         return tr;
       },
-      {type:"class", className:"class2"},
+      {type: 'class', className: 'class2'},
       {
-        attributes:[
-          {key:"class", value:"class2"}
-        ],
-        textNode:"Baaaaar"
+        attributes: [
+          {key: 'class', value: 'class2'}
+        ]
+        , textNode: 'Baaaaar'
       }
     );
 
-    it("should have called checkCss & capitalize", function() {
+    it('should have called checkCss & capitalize', function(){
       expect(datahead.checkCss.calls.count()).toEqual(2);
       // expect(datahead.capitalize.calls.count()).toEqual(2);
     });

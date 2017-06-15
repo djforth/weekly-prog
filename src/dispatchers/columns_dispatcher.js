@@ -2,7 +2,7 @@ import {Dispatcher as Dispatcher} from 'flux';
 
 const ColumnsDispatcher = Object.assign(new Dispatcher(), {
   handleAddingColumns: function(action){
-    var payload = {
+    let payload = {
       source: 'ADDING_COLUMNS'
       , action: action
     };
@@ -10,7 +10,7 @@ const ColumnsDispatcher = Object.assign(new Dispatcher(), {
   }
 
   , handleChangeDevice: function(action){
-    var payload = {
+    let payload = {
       source: 'CHANGE_DEVICE'
       , action: action
     };

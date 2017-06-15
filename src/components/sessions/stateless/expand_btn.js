@@ -5,12 +5,10 @@ const info_styles = {
   , stroke: '#e14e00'
   , strokeLinecap: 'round'
   , strokeLinejoin: 'round'
-  , strokeWidth:2
-}
+  , strokeWidth: 2
+};
 
 export default function(props){
-
-
   return (
       <div className={props.css}>
         <a href="#"

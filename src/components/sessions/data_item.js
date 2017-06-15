@@ -85,7 +85,6 @@ class DataItem extends React.Component{
     let item = this.props.data;
     if (item && this.state.columns){
       let td = _.map(this.state.columns, function(col){
-
         if (this._expandTest(col)){
           return this._expander();
         }

@@ -91,7 +91,6 @@ class PeriodSessions extends React.Component{
   }
 
   render(){
-
     return (
       <section key="items" className={this._setCss()}>
         <PeriodHead title={this.props.title} />

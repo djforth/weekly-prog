@@ -17,9 +17,9 @@ import getStFn from './time_create';
 
 export default function(no){
   let i = 0;
-  let sessions = []
-  do{
-    var [st, fn] = getStFn(['add', i], ['add', i+1]);
+  let sessions = [];
+  do {
+    let [st, fn] = getStFn(['add', i], ['add', i+1]);
     let session = {
       title: `session ${i}`
       , start: st
@@ -29,11 +29,11 @@ export default function(no){
         foo: (i%2 === 0) ? 1 :2
         , bar: (i%2 === 0) ? [1, 2] : [3, 4]
       }
-    }
+    };
 
     sessions.push(session);
     i++;
-  } while(i < no)
+  } while (i < no);
 
-  return sessions
+  return sessions;
 }

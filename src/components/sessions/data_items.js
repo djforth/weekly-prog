@@ -44,7 +44,7 @@ class DataItems extends React.Component{
     if (this.state.data){
       let items = this.state.data.map(function(k){
         if (k){
-          console.log('data',k)
+          console.log('data', k);
           return (
             <DataExpander css={this.props.css} data={k} key={k.get('id')} />
             );

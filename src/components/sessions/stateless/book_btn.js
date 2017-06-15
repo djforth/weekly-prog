@@ -16,7 +16,7 @@ function checkPlaces(places){
 }
 
 export default function({instruction, link, places, title}){
-  if(instruction){
+  if (instruction){
     return (<span className="session-full">{instruction}</span>);
   }
 

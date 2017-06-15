@@ -22,7 +22,7 @@ function displayData(data, col){
 }
 
 function getValue(item){
-  var data = item;
+  let data = item;
   return function(keys){
     if (_.isUndefined(keys)) return null;
     if (_.isString(keys)) return data.get(keys);
