@@ -1,10 +1,10 @@
-import Ajax from 'ajax-es6-module';
+import AjaxManager from 'ajax-es6-module';
 import Moment from 'moment';
 import _ from 'lodash';
 import includes from 'lodash/includes';
 import reject from 'lodash/reject';
 
-const ajaxManager = new Ajax();
+const ajaxManager = new AjaxManager();
 
 let currentRequests = [];
 

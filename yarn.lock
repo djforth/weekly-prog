@@ -105,9 +105,9 @@ after@0.8.2:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/after/-/after-0.8.2.tgz#fedb394f9f0e02aa9768e702bda23b505fae7e1f"
 
-ajax-es6-module@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/ajax-es6-module/-/ajax-es6-module-1.1.1.tgz#13f57f02daa7249900cf0ec1e8b004579c3b9a2c"
+ajax-es6-module@1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/ajax-es6-module/-/ajax-es6-module-1.1.2.tgz#5e1c24ee21cabc441d3b8336a5f645692a17b126"
 
 ajv-keywords@^1.0.0, ajv-keywords@^1.1.1:
   version "1.1.1"
@@ -1982,9 +1982,9 @@ dashdash@^1.12.0:
   dependencies:
     assert-plus "^1.0.0"
 
-datamanager@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/datamanager/-/datamanager-2.1.0.tgz#2e469f8cfb95c19637011f21ddb94c2b503506ad"
+datamanager@2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/datamanager/-/datamanager-2.1.1.tgz#0e48dfca56f2b47c232d8f2f489be4382ed25afb"
 
 date-now@^0.1.4:
   version "0.1.4"
@@ -2587,7 +2587,7 @@ fbemitter@^2.0.0:
   dependencies:
     fbjs "^0.8.4"
 
-fbjs@^0.8.0, fbjs@^0.8.4:
+fbjs@^0.8.0:
   version "0.8.6"
   resolved "https://registry.npmjs.org/fbjs/-/fbjs-0.8.6.tgz#7eb67d6986b2d5007a9b6e92e0e7cb6f75cad290"
   dependencies:
@@ -2598,7 +2598,7 @@ fbjs@^0.8.0, fbjs@^0.8.4:
     promise "^7.1.1"
     ua-parser-js "^0.7.9"
 
-fbjs@^0.8.9:
+fbjs@^0.8.4, fbjs@^0.8.9:
   version "0.8.12"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.12.tgz#10b5d92f76d45575fd63a217d4ea02bea2f8ed04"
   dependencies:
@@ -4465,7 +4465,7 @@ rc@~1.1.6:
     minimist "^1.2.0"
     strip-json-comments "~1.0.4"
 
-react-addons-test-utils@15.6.1:
+react-addons-test-utils@15.6.0:
   version "15.6.0"
   resolved "https://registry.yarnpkg.com/react-addons-test-utils/-/react-addons-test-utils-15.6.0.tgz#062d36117fe8d18f3ba5e06eb33383b0b85ea5b9"
 
