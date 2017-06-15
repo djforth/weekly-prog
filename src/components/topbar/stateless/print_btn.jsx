@@ -11,7 +11,7 @@ const printStyles = {
 
 export default ({url})=>{
   return (
-    <a href={url} target="_blank" className="svg-print">
+    <a href={url} target="_blank" className="svg-print" rel="nofollow">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
         <title>Print Program</title>
         <g id="icons">

@@ -1,5 +1,5 @@
 
-import _ from 'lodash/core';
+import _ from 'lodash';
 import Moment from 'moment';
 
 import includes from 'lodash/includes';

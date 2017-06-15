@@ -1,6 +1,6 @@
 
 import {EventEmitter} from 'events';
-import _ from 'lodash/core';
+import _ from 'lodash';
 
 // Internal Modules
 import AjaxManager from '../utils/ajax_manager';

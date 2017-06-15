@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-import _ from 'lodash/core';
+import _ from 'lodash';
 
 import TranslationHelper from '@morsedigital/i18n_helper';
 

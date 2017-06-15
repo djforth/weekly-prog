@@ -1,4 +1,4 @@
-import _ from 'lodash/core';
+import _ from 'lodash';
 
 export default function(items, txt = 'Sessions for '){
   return _.map(items, (item, i)=>{

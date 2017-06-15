@@ -1,6 +1,6 @@
 
 import moment from 'moment-strftime';
-import _ from 'lodash/core';
+import _ from 'lodash';
 import partial from 'lodash/partial';
  _.partial = partial;
 import includes from 'lodash/includes';

@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-import _ from 'lodash/core';
+import _ from 'lodash';
 
 
 import ColumnsStore from '../../stores/columns_store';

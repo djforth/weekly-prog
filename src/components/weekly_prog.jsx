@@ -1,7 +1,7 @@
 // Libraries
 
 import React from 'react';
-import _ from 'lodash/core';
+import _ from 'lodash';
 import Moment from 'moment';
 import 'moment/locale/cy';
 

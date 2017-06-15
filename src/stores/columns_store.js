@@ -1,8 +1,13 @@
 import {EventEmitter as EventEmitter} from 'events';
-import _ from 'lodash/core';
+import _ from 'lodash';
 import includes from 'lodash/includes';
 import {text_mixins as textMixins} from 'morse-react-mixins';
 import ColumnsDispatcher from '../dispatchers/columns_dispatcher';
+
+const FilterMap = (filter, map)=>(array)=>{
+  let newArray = array.filter(filter);
+  return newArray.map(map)
+}
 
 const store = {
   device: 'desktop'
@@ -64,12 +69,12 @@ const store = {
 
   , getDateColumns(id){
     let column = this.getColumn(id).cols;
-    let dates = _.chain(column)
-      .filter((col)=>(col.type === 'date' || col.type === 'dateTime'))
-      .map((col)=>this.reduceObj(col, ['key', 'title', 'type', 'fmt']))
-      .value();
+    const filterCols = FilterMap(
+      (col)=>(col.type === 'date' || col.type === 'dateTime')
+      , (col)=>this.reduceObj(col, ['key', 'title', 'type', 'fmt'])
+    )
 
-    return dates;
+    return filterCols(column);
   }
 
   , getHeadline(id){
@@ -102,27 +107,19 @@ const store = {
 
   , getSearchable(id){
     let column = this.getColumn(id).cols;
-    let searchables = _.chain(column)
-      .filter((col)=>col.searchable)
-      .map((col)=>this.reduceObj(col, ['key', 'title']))
-      .value();
-
-    return searchables;
+    let searchables = column.filter((col)=>col.searchable);
+    return searchables.map((col)=>this.reduceObj(col, ['key', 'title']));
   }
 
   , getShowable(id){
     let column = this.getColumn(id);
-    let showables = _.chain(column.cols)
-      .filter((col)=>{
+    let showables = column.cols.filter((col)=>{
+      return col.show && !includes(column.visible, col);
+    });
 
-        return col.show && !includes(column.visible, col);
-      })
-      .map((col)=>{
-        let obj = this.reduceObj(col, ['key', 'title']);
-        return obj;
-      })
-      .value();
-    return showables;
+    return showables.map((col)=>{
+      return this.reduceObj(col, ['key', 'title']);
+    });
   }
 
   , getSortable(id){

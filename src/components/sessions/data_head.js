@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-import _ from 'lodash/core';
+import _ from 'lodash';
 
 // Mixins
 import {css_mixins as cssMixins} from 'morse-react-mixins';

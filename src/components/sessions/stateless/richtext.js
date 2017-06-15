@@ -1,4 +1,4 @@
-import _ from 'lodash/core';
+import _ from 'lodash';
 import React from 'react';
 
 function createMarkup(content){

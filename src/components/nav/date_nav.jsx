@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import _ from 'lodash/core';
+import _ from 'lodash';
 import take from 'lodash/take';
  _.take = take;
 import mapValues from 'lodash/mapValues';

@@ -1,4 +1,4 @@
-import _ from 'lodash/core';
+import _ from 'lodash';
 let checkers = ['getDate', 'getMonth', 'getFullYear'];
 
 export default function(check, checkee){

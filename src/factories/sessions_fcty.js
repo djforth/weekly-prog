@@ -1,4 +1,4 @@
-import _ from 'lodash/core';
+import _ from 'lodash';
 import DataManager from 'datamanager';
 import Immutable from 'immutable';
 
