@@ -2,9 +2,6 @@
 import _ from 'lodash';
 import Moment from 'moment';
 
-import includes from 'lodash/includes';
- _.includes = includes;
-
 function isnow(st, fn){
   let now = Moment();
   return (

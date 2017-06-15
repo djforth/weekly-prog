@@ -1,10 +1,6 @@
 
 import moment from 'moment-strftime';
 import _ from 'lodash';
-import partial from 'lodash/partial';
- _.partial = partial;
-import includes from 'lodash/includes';
- _.includes = includes;
 
 function getFormat(col){
   if (_.has(col, 'fmt')) return col.fmt;

@@ -3,10 +3,6 @@
 import React from 'react';
 
 import _ from 'lodash';
-import includes from 'lodash/includes';
- _.includes = includes;
-import reject from 'lodash/reject';
- _.reject = reject;
 
 // Flux
 

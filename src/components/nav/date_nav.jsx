@@ -3,12 +3,6 @@
 import React from 'react';
 
 import _ from 'lodash';
-import take from 'lodash/take';
- _.take = take;
-import mapValues from 'lodash/mapValues';
- _.mapValues = mapValues;
-import reject from 'lodash/reject';
- _.reject = reject;
 
 // Utils
 import checker from '../../utils/day_checker';
