@@ -57,8 +57,8 @@
     "webpack-dev-server": "^2.9.2"
   },
   "scripts": {
-    "build": "NODE_ENV=production babel src -x '.js' -d lib",
-    "build:watch": "NODE_ENV=production babel src -x '.js' -w --source-maps  -d lib",
+    "build": "NODE_ENV=production babel src -x '.js,.jsx' -d lib",
+    "build:watch": "NODE_ENV=production babel src -x '.js,.jsx' -w --source-maps  -d lib",
     "lint": "eslint src/** --ext .jsx,.js --fix",
     "lint:tests": "eslint __tests__/** --ext .jsx,.js --fix",
     "test": "asset-pipeline-karma",

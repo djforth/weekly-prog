@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import Ajax from '../../src/utils/ajax_manager';
 
-fdescribe('Ajax manager', function(){
+describe('Ajax manager', function(){
   describe('setApi', function(){
     let setApi;
     beforeEach(()=>{
@@ -18,16 +18,15 @@ fdescribe('Ajax manager', function(){
   });
 
   describe('api', function(){
-    let ajax, ajaxManager, spy, resolve, reject, promise;
+    let ajax, Fetch, spy, resolve, reject, promise;
     beforeEach(function(){
-      ajaxManager   = Ajax.__get__('ajaxManager');
       promise = new Promise((res, rej)=>{
         resolve = res;
         reject  = rej;
       });
 
-      spyOn(ajaxManager, 'addUrl');
-      spyOn(ajaxManager, 'fetch').and.returnValue(promise);
+      Fetch = jasmine.createSpy('Fetch').and.returnValue(promise);
+      Ajax.__set__('Fetch', Fetch);
       ajax = Ajax('http://astainforth.com');
     });
 
