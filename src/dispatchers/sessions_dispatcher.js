@@ -1,8 +1,8 @@
-const Dispatcher = require('flux').Dispatcher;
+ import {Dispatcher} from 'flux';
 
 const SessionsDispatcher = Object.assign(new Dispatcher(), {
   changeDate: function(action){
-    var payload = {
+    let payload = {
       source: 'CHANGE_DATE'
       , action: action
     };
@@ -10,7 +10,7 @@ const SessionsDispatcher = Object.assign(new Dispatcher(), {
   }
 
   , calendarChange: function(action){
-    var payload = {
+    let payload = {
       source: 'CALENDAR_CHANGE'
       , action: action
     };
@@ -18,7 +18,7 @@ const SessionsDispatcher = Object.assign(new Dispatcher(), {
   }
 
   , fetchData: function(action){
-    var payload = {
+    let payload = {
       source: 'FETCH_DATA'
       , action: action
     };
@@ -26,7 +26,7 @@ const SessionsDispatcher = Object.assign(new Dispatcher(), {
   }
 
   , fetchNowNext: function(action){
-    var payload = {
+    let payload = {
       source: 'FETCH_NOWNEXT'
       , action: action
     };
@@ -34,7 +34,7 @@ const SessionsDispatcher = Object.assign(new Dispatcher(), {
   }
 
   , getMoreDays: function(action){
-    var payload = {
+    let payload = {
       source: 'MORE_DAYS'
       , action: action
     };
@@ -42,7 +42,7 @@ const SessionsDispatcher = Object.assign(new Dispatcher(), {
   }
 
   , getPreviousDays: function(action){
-    var payload = {
+    let payload = {
       source: 'PREVIOUS_DAYS'
       , action: action
     };
@@ -50,7 +50,7 @@ const SessionsDispatcher = Object.assign(new Dispatcher(), {
   }
 
   , prerenderData: function(action){
-    var payload = {
+    let payload = {
       source: 'PRERENDER_DATA'
       , action: action
     };
@@ -58,7 +58,7 @@ const SessionsDispatcher = Object.assign(new Dispatcher(), {
   }
 
   , setApi: function(action){
-    var payload = {
+    let payload = {
       source: 'SET_API'
       , action: action
     };
@@ -66,7 +66,7 @@ const SessionsDispatcher = Object.assign(new Dispatcher(), {
   }
 
   , setFacility: function(action){
-    var payload = {
+    let payload = {
       source: 'SET_FACILITY'
       , action: action
     };
@@ -74,7 +74,7 @@ const SessionsDispatcher = Object.assign(new Dispatcher(), {
   }
 
   , setGroupBy: function(action){
-    var payload = {
+    let payload = {
       source: 'SET_GROUPBY'
       , action: action
     };
@@ -82,4 +82,4 @@ const SessionsDispatcher = Object.assign(new Dispatcher(), {
   }
 });
 
-module.exports = SessionsDispatcher;
+export default  SessionsDispatcher;

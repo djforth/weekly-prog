@@ -1,13 +1,13 @@
-require('babel-polyfill');
+import 'babel-polyfill';
 
-const _        = require('lodash/core')
-    , React    = require('react')
-    , ReactDom = require('react-dom');
+ import _ from 'lodash';
+ import React from 'react';
+ import ReactDom from 'react-dom';
 
 import '../stylesheets/application.scss';
 
-let sessions = require('../spec/data/sessions.js');
-const WeeklyProg = require('./components/weekly_prog');
+ import sessions from '../spec/data/sessions.js';
+ import WeeklyProg from './components/weekly_prog';
 
 function createColumns(){
   let columns = [{key: 'id'}, {key: 'cancelled'}];

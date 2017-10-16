@@ -1,14 +1,14 @@
-const React = require('react')
-    , _     = require('lodash/core');
+ import React from 'react';
+ import _ from 'lodash';
 
 //Mixins
-const cssMixins    = require('morse-react-mixins').css_mixins
-    , textMixins   = require('morse-react-mixins').text_mixins;
+ import {css_mixins as cssMixins} from 'morse-react-mixins';
+ import {text_mixins as textMixins} from 'morse-react-mixins';
 
 
 //Flux
-const SessionsActions = require('../actions/sessions_actions')
-    , ColumnsStore    = require('../stores/columns_store')
+ import SessionsActions from '../actions/sessions_actions';
+ import ColumnsStore from '../stores/columns_store';
 
 class DateNavItem extends React.Component {
   constructor(props) {
@@ -122,4 +122,4 @@ Object.assign(DateNavItem.prototype, cssMixins);
 Object.assign(DateNavItem.prototype, textMixins);
 
 
-module.exports = DateNavItem;
+export default  DateNavItem;

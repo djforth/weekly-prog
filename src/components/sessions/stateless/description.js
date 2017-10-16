@@ -1,7 +1,7 @@
-const React = require('react');
-var RichText = require('./richtext');
+ import React from 'react';
+ import RichText from './richtext';
 
-module.exports = function(props){
+export default  function(props){
   return (
     <div className="description">
       <RichText content={props.content} />

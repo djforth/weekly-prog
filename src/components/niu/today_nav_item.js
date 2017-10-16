@@ -1,11 +1,11 @@
 //Libraries
-const React = require('react');
+ import React from 'react';
 
-const DateNavItem = require('./date_nav_item');
+ import DateNavItem from './date_nav_item';
 
 //Flux
-const SessionsActions = require('../actions/sessions_actions')
-    , ColumnsStore    = require('../stores/columns_store')
+ import SessionsActions from '../actions/sessions_actions';
+ import ColumnsStore from '../stores/columns_store';
 
 class TodayItem extends DateNavItem {
   constructor(props) {
@@ -47,4 +47,4 @@ class TodayItem extends DateNavItem {
   }
 }
 
-module.exports = TodayItem;
+export default  TodayItem;

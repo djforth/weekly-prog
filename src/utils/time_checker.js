@@ -1,8 +1,8 @@
 
-const _       = require('lodash/core')
-    , Moment  = require('moment');
+ import _, {includes} from 'lodash';
+ import Moment from 'moment';
 
-_.includes    = require('lodash/includes');
+_.includes = includes;
 
 function isnow(st, fn){
   let now = Moment();
@@ -17,10 +17,10 @@ function ispast(fn){
   return now.isAfter(fn);
 }
 
-module.exports = function(item, col){
+export default  function(item, col){
   let times = _.pick(col, ['key', 'concat']);
-  var [stk, fnk] = _.values(times);
-  var [st, fn]   = [item.get(stk), item.get(fnk)];
+  let [stk, fnk] = _.values(times);
+  let [st, fn]   = [item.get(stk), item.get(fnk)];
 
   return {
     isNow: ()=>isnow(st, fn)

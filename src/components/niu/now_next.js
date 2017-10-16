@@ -1,28 +1,28 @@
 //Libraries
-const React = require('react')
-    , _     = require('lodash/core');
+ import React from 'react';
+ import _ from 'lodash';
 
 //Mixins
-const cssMixins    = require('morse-react-mixins').css_mixins
-    , textMixins   = require('morse-react-mixins').text_mixins
-    , widthsMixins = require('morse-react-mixins').widths_mixins;
+ import {css_mixins as cssMixins} from 'morse-react-mixins';
+ import {text_mixins as textMixins} from 'morse-react-mixins';
+ import {widths_mixins as widthsMixins} from 'morse-react-mixins';
 
 // Morse Libraies
-const ViewportDetect = require('viewport-detection-es6');
+ import ViewportDetect from 'viewport-detection-es6';
 
 //utiles
-const process_nav = require('../utils/process_nav');
+ import process_nav from '../utils/process_nav';
 
 //Flux
-const ColumnsActions  = require('../actions/columns_actions')
-    , ColumnsStore    = require('../stores/columns_store')
-    , SessionsActions = require('../actions/sessions_actions')
-    , SessionsStore   = require('../stores/sessions_store');
+ import ColumnsActions from '../actions/columns_actions';
+ import ColumnsStore from '../stores/columns_store';
+ import SessionsActions from '../actions/sessions_actions';
+ import SessionsStore from '../stores/sessions_store';
 
 // Components
-const DataHead     = require('./data_head')
-    , NowNextItems = require('./nownext_sessions')
-    , TouchNav     = require('touch-nav');
+ import DataHead from './data_head';
+ import NowNextItems from './nownext_sessions';
+ import TouchNav from 'touch-nav';
 
 
 class NowNext extends React.Component {
@@ -121,4 +121,4 @@ Object.assign(NowNext.prototype, cssMixins);
 Object.assign(NowNext.prototype, textMixins);
 Object.assign(NowNext.prototype, widthsMixins);
 
-module.exports = NowNext;
+export default  NowNext;

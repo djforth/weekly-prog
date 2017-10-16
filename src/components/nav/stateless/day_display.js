@@ -1,6 +1,6 @@
-const React = require('react');
+ import React from 'react';
 
-module.exports = function(props){
+export default  function(props){
   let fmt = props.date;
   if (props.device === 'mobile'){
     return (

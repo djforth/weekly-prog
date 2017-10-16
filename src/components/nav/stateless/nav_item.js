@@ -1,8 +1,8 @@
-const React = require('react');
+ import React from 'react';
 
-let DayDisplay = require('./day_display');
+ import DayDisplay from './day_display';
 
-module.exports = function(props){
+export default  function(props){
   let item = props.nav_item;
   return (
     <li role="presentation" className={`date-nav-item ${props.active}`}>

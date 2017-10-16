@@ -1,6 +1,6 @@
-const React = require('react');
+ import React from 'react';
 
-module.exports = function(props){
+export default  function(props){
   return (
       <div className="loading">
         <span className="hidden">Loading {props.alt}</span>

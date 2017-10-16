@@ -1,19 +1,22 @@
 // Libraries
-const React = require('react');
-var _ = require('lodash/core');
-_.includes = require('lodash/includes');
-_.reject = require('lodash/reject');
+ import React from 'react';
+ import _, {
+  includes
+  , reject
+ } from 'lodash';
+_.includes = includes;
+_.reject = reject;
 
 // Flux
-const ColumnsStore   = require('../../stores/columns_store');
+ import ColumnsStore from '../../stores/columns_store';
 
 // Components
-const Additional = require('./additional')
-    , DataItem  = require('./data_item');
+ import Additional from './additional';
+ import DataItem from './data_item';
 
 // Mixins
-const cssMixins  = require('morse-react-mixins').css_mixins;
-const textMixins  = require('morse-react-mixins').text_mixins;
+ import {css_mixins as cssMixins} from 'morse-react-mixins';
+ import {text_mixins as textMixins} from 'morse-react-mixins';
 
 class DataExpanderItem extends React.Component{
   constructor(props){
@@ -67,10 +70,9 @@ class DataExpanderItem extends React.Component{
       </div>
     );
   }
-
 }
 
 Object.assign(DataExpanderItem.prototype, cssMixins);
 Object.assign(DataExpanderItem.prototype, textMixins);
 
-module.exports = DataExpanderItem;
+export default  DataExpanderItem;

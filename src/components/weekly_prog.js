@@ -1,27 +1,27 @@
 // Libraries
-const React = require('react')
-    , _     = require('lodash/core');
+ import React from 'react';
+ import _ from 'lodash';
 
 import Moment from 'moment';
 import 'moment/locale/cy';
 
 // Mixins
-const cssMixins    = require('morse-react-mixins').css_mixins
-    , textMixins   = require('morse-react-mixins').text_mixins
-    , widthsMixins = require('morse-react-mixins').widths_mixins;
+ import {css_mixins as cssMixins} from 'morse-react-mixins';
+ import {text_mixins as textMixins} from 'morse-react-mixins';
+ import {widths_mixins as widthsMixins} from 'morse-react-mixins';
 
 // Morse Libraies
-const ViewportDetect = require('viewport-detection-es6');
+ import ViewportDetect from 'viewport-detection-es6';
 
 // Flux
-const ColumnsActions  = require('../actions/columns_actions')
-    , SessionsActions = require('../actions/sessions_actions')
-    , SessionsStore   = require('../stores/sessions_store');
+ import ColumnsActions from '../actions/columns_actions';
+ import SessionsActions from '../actions/sessions_actions';
+ import SessionsStore from '../stores/sessions_store';
 
 // Components
-const DateNav        = require('./nav/date_nav')
-    , PeriodSessions = require('./sessions/period_sessions')
-    , TopBar         = require('./topbar/top_bar');
+ import DateNav from './nav/date_nav';
+ import PeriodSessions from './sessions/period_sessions';
+ import TopBar from './topbar/top_bar';
 
 class WeeklyProg extends React.Component{
   constructor(props){
@@ -105,11 +105,10 @@ class WeeklyProg extends React.Component{
       </div>
     );
   }
-
 }
 
 Object.assign(WeeklyProg.prototype, cssMixins);
 Object.assign(WeeklyProg.prototype, textMixins);
 Object.assign(WeeklyProg.prototype, widthsMixins);
 
-module.exports = WeeklyProg;
+export default  WeeklyProg;

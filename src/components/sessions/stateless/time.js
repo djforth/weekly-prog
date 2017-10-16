@@ -1,6 +1,6 @@
-const React = require('react');
+ import React from 'react';
 
-const Cancelled = require('./cancelled');
+ import Cancelled from './cancelled';
 
 function titleCreator(checker, time){
   return checker.setNowOrPast(
@@ -10,7 +10,7 @@ function titleCreator(checker, time){
     );
 }
 
-module.exports = function(props){
+export default  function(props){
   if (props.cancelled){
     return (<Cancelled time={props.time} />);
   }

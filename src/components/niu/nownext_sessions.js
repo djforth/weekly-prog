@@ -1,16 +1,16 @@
 //Libraries
-const React = require('react')
-    , _     = require('lodash/core');
+ import React from 'react';
+ import _ from 'lodash';
 
-const DataHead     = require('./data_head')
-    , DataItems    = require('./data_items')
-    , DataExpander = require('./data_expander_item');
+ import DataHead from './data_head';
+ import DataItems from './data_items';
+ import DataExpander from './data_expander_item';
 
 // Flux
-const SessionsStore = require('../stores/sessions_store');
+ import SessionsStore from '../stores/sessions_store';
 
 // Mixins
-const cssMixins  = require('morse-react-mixins').css_mixins;
+ import {css_mixins as cssMixins} from 'morse-react-mixins';
 
 class NowNextSessions extends DataItems {
 
@@ -73,4 +73,4 @@ class NowNextSessions extends DataItems {
 
 Object.assign(NowNextSessions.prototype, cssMixins);
 
-module.exports = NowNextSessions;
+export default  NowNextSessions;

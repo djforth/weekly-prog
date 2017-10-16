@@ -1,11 +1,9 @@
-const Ajax  = require('ajax-es6-module')
-    , Moment = require('moment');
+ import Fetch from '@djforth/ajax-es6-fp/fetch';
+ import Moment from 'moment';
 
-const _ = require('lodash/core')
-     , includes = require('lodash/includes')
-     , reject   = require('lodash/reject');
-
-const ajaxManager = new Ajax();
+ import _ from 'lodash';
+ import includes from 'lodash/includes';
+ import reject from 'lodash/reject';
 
 let currentRequests = [];
 
@@ -17,7 +15,7 @@ function setApi(api, date){
   return api.replace(/.json/, path);
 }
 
-module.exports = function(api){
+export default  function(api){
   if (!api){
     throw new Error('api url required');
   }
@@ -39,10 +37,10 @@ module.exports = function(api){
       let url = setApi(api, date);
       if (includes(currentRequests, url)) return null;
       currentRequests.push(url);
-      ajaxManager.addUrl(setApi(api, date));
-
-      return ajaxManager.fetch(progress)
-        .then((data)=>{
+      const fetch = Fetch(setApi(api, date));
+      // console.log('Fetch', Fetch);
+      // console.log('fetch', fetch);
+      return fetch.then((data)=>{
           currentRequests = reject(currentRequests, (cr)=>cr === url);
           // console.log(currentRequests)
           return data;

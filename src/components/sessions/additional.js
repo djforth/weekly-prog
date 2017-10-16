@@ -1,23 +1,26 @@
 // Libraries
-const React = require('react');
-var _ = require('lodash/core');
-_.includes = require('lodash/includes');
-_.reject = require('lodash/reject');
+ import React from 'react';
+ import _, {
+  includes
+  , reject
+ } from 'lodash';
+_.includes = includes;
+_.reject = reject;
 
-const ColumnsStore   = require('../../stores/columns_store');
+ import ColumnsStore from '../../stores/columns_store';
 
 // Mixins
-const cssMixins  = require('morse-react-mixins').css_mixins;
-const textMixins  = require('morse-react-mixins').text_mixins;
+ import {css_mixins as cssMixins} from 'morse-react-mixins';
+ import {text_mixins as textMixins} from 'morse-react-mixins';
 
 // Helpers
-const ButtonCheck = require('../../helpers/buttons_helper');
+ import ButtonCheck from '../../helpers/buttons_helper';
 // console.log('ButtonCheck', ButtonCheck)
 
-const AdditionalContent  = require('./stateless/additional_content')
-    , BookBtn     = require('./stateless/book_btn')
-    , Description = require('./stateless/description')
-    , RichText    = require('./stateless/richtext');
+import AdditionalContent from './stateless/additional_content';
+import BookBtn from './stateless/book_btn';
+import Description from './stateless/description';
+import RichText from './stateless/richtext';
 
 class Additional extends React.Component{
   constructor(props){
@@ -114,5 +117,5 @@ class Additional extends React.Component{
 Object.assign(Additional.prototype, cssMixins);
 Object.assign(Additional.prototype, textMixins);
 
-module.exports = Additional;
+export default Additional;
 

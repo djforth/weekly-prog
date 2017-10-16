@@ -1,25 +1,29 @@
 // Libraries
-const React = require('react')
-    , _     = require('lodash/core');
-_.take = require('lodash/take');
-_.mapValues = require('lodash/mapValues');
-_.reject = require('lodash/reject');
+ import React from 'react';
+ import _, {
+   mapValues
+   , reject
+   , take
+} from 'lodash';
+_.take = take;
+_.mapValues = mapValues;
+_.reject = reject;
 
 // Utils
-const checker = require('../../utils/day_checker');
+ import checker from '../../utils/day_checker';
 
 // Mixins
-const cssMixins    = require('morse-react-mixins').css_mixins
-    , textMixins   = require('morse-react-mixins').text_mixins
-    , widthsMixins = require('morse-react-mixins').widths_mixins;
+ import {css_mixins as cssMixins} from 'morse-react-mixins';
+ import {text_mixins as textMixins} from 'morse-react-mixins';
+ import {widths_mixins as widthsMixins} from 'morse-react-mixins';
 
 // Flux
-const SessionsActions = require('../../actions/sessions_actions')
-    , SessionsStore   = require('../../stores/sessions_store')
-    , ColumnsStore    = require('../../stores/columns_store');
+ import SessionsActions from '../../actions/sessions_actions';
+ import SessionsStore from '../../stores/sessions_store';
+ import ColumnsStore from '../../stores/columns_store';
 
-const NavItem = require('./stateless/nav_item')
-    , TodayItem   = require('./stateless/today_nav_item');
+ import NavItem from './stateless/nav_item';
+ import TodayItem from './stateless/today_nav_item';
 
 class DateNav extends React.Component{
   constructor(props){
@@ -146,7 +150,7 @@ class DateNav extends React.Component{
       width: this.state.listWidth
       , left: this.state.listPos
     };
-    console.log(styles)
+    console.log(styles);
     return _.mapValues(styles, (v)=>{
       return v;
     });
@@ -228,11 +232,10 @@ class DateNav extends React.Component{
       </nav>
     );
   }
-
 }
 
 Object.assign(DateNav.prototype, cssMixins);
 Object.assign(DateNav.prototype, textMixins);
 Object.assign(DateNav.prototype, widthsMixins);
 
-module.exports = DateNav;
+export default  DateNav;

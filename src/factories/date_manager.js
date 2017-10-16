@@ -1,10 +1,10 @@
-const checker = require('../utils/day_checker')
-    , SessionsFcty = require('./sessions_fcty');
+ import checker from '../utils/day_checker';
+ import SessionsFcty from './sessions_fcty';
 
 // lodash
-const _ = require('lodash/core')
-     , partial = require('lodash/partial');
-const Moment = require('moment');
+ import _ from 'lodash';
+ import partial from 'lodash/partial';
+ import Moment from 'moment';
 
 function getDate(dates, date){
   return _.find(dates, (d)=>checker(d.date, date));
@@ -14,7 +14,7 @@ function getDate(dates, date){
 function checkDates (dates, date){
   return (getDate(dates, date)) ? true : false;
 }
-/*eslint-enable*/
+/* eslint-enable*/
 
 function createFactory(groupBy){
   return function(data){
@@ -27,11 +27,11 @@ function createFactory(groupBy){
 
 function createWeek(createFcty, start = new Date()){
   // var start = new Date();
-  var week  = [{
+  let week  = [{
     date: start
     , data: createFcty([])
   }];
-  var i = 1;
+  let i = 1;
 
   do {
     start = new Date(start.getTime());
@@ -103,7 +103,7 @@ function dateManager(groupBy, ds){
     addDate: (date, data)=>{
       if (!_.isDate(date)) return false;
 
-      if (checkDates(dates,date)){
+      if (checkDates(dates, date)){
         let fn = partial(dateUpdate, dates);
         dates = fn(date, data);
       } else {
@@ -161,4 +161,4 @@ function dateManager(groupBy, ds){
   };
 }
 
-module.exports = dateManager;
+export default  dateManager;

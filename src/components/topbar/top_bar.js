@@ -1,14 +1,14 @@
-const React  = require('react')
-    , Moment = require('moment');
+ import React from 'react';
+ import Moment from 'moment';
 
-const SessionsStore = require('../../stores/sessions_store');
+ import SessionsStore from '../../stores/sessions_store';
 
 // Mixins
-const cssMixins  = require('morse-react-mixins').css_mixins;
-const textMixins = require('morse-react-mixins').text_mixins;
+ import {css_mixins as cssMixins} from 'morse-react-mixins';
+ import {text_mixins as textMixins} from 'morse-react-mixins';
 
-const Calendar       = require('./calendar')
-    , PrintBtn       = require('./stateless/print_btn');
+ import Calendar from './calendar';
+ import PrintBtn from './stateless/print_btn';
 
 class TopBar extends React.Component{
   constructor(props){
@@ -55,4 +55,4 @@ class TopBar extends React.Component{
 Object.assign(TopBar.prototype, cssMixins);
 Object.assign(TopBar.prototype, textMixins);
 
-module.exports = TopBar;
+export default  TopBar;

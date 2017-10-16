@@ -1,11 +1,11 @@
-const React = require('react')
-    , _     = require('lodash/core');
+ import React from 'react';
+ import _ from 'lodash';
 
 // Mixins
-const cssMixins  = require('morse-react-mixins').css_mixins;
-const textMixins = require('morse-react-mixins').text_mixins;
+ import {css_mixins as cssMixins} from 'morse-react-mixins';
+ import {text_mixins as textMixins} from 'morse-react-mixins';
 
-const Heading = require('./stateless/heading');
+ import Heading from './stateless/heading';
 
 class DataHead extends React.Component{
   // constructor(props){
@@ -43,4 +43,4 @@ class DataHead extends React.Component{
 Object.assign(DataHead.prototype, cssMixins);
 Object.assign(DataHead.prototype, textMixins);
 
-module.exports = DataHead;
+export default  DataHead;

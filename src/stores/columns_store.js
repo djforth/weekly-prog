@@ -1,27 +1,28 @@
-const EventEmitter  = require('events').EventEmitter;
+ import {EventEmitter} from 'events';
 
-const _    = require('lodash/core')
-    , includes = require('lodash/includes')
-    , pick = require('lodash/pick');
+ import _ from 'lodash';
+ import includes from 'lodash/includes';
+ import pick from 'lodash/pick';
 
-const textMixins = require('morse-react-mixins').text_mixins;
-const ColumnsDispatcher = require('../dispatchers/columns_dispatcher');
-
+ import {text_mixins as textMixins} from 'morse-react-mixins';
+ import mix from 'morse-react-mixins';
+ import ColumnsDispatcher from '../dispatchers/columns_dispatcher';
+console.log('textMixins', mix);
 const store = {
   device: 'desktop'
   , columns: []
   , columns_ids: []
   , visible_columns: []
 
-  , emitChange(event) {
+  , emitChange(event){
     this.emit(event);
   }
 
-  , addChangeListener(event, callback) {
+  , addChangeListener(event, callback){
     this.on(event, callback);
   }
 
-  , removeChangeListener(event, callback) {
+  , removeChangeListener(event, callback){
     this.removeListener(event, callback);
   }
 
@@ -198,10 +199,10 @@ const registeredCallback = function(payload){
       ColumnsStore.emitChange('change');
       break;
     }
-  /*eslint-enable*/
+  /* eslint-enable*/
 };
 
 ColumnsStore.dispatchToken = ColumnsDispatcher.register(registeredCallback);
 ColumnsStore.setMaxListeners(0);
 
-module.exports = ColumnsStore;
+export default  ColumnsStore;

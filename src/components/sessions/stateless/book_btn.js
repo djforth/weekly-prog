@@ -1,5 +1,5 @@
-const React = require('react')
-    , _     = require('lodash/core');
+ import React from 'react';
+ import _ from 'lodash';
 
 import TranslationHelper from '@djforth/I18n_helper';
 
@@ -13,8 +13,8 @@ function checkPlaces(places){
   return _.isNumber(places) && places === 0;
 }
 
-module.exports = function({instruction, link, places, title}){
-  if(instruction){
+export default  function({instruction, link, places, title}){
+  if (instruction){
     return (<span className="session-full">{instruction}</span>);
   }
 

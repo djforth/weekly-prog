@@ -3,7 +3,7 @@
  * @module weekly-prog/actions/columns_actions
 */
 
-const ColumnsDispatcher = require('../dispatchers/columns_dispatcher');
+ import ColumnsDispatcher from '../dispatchers/columns_dispatcher';
 
 /**
   * This will add column to store
@@ -33,7 +33,7 @@ function changeDevice(device){
   });
 }
 
-module.exports = {
+export default  {
   addingColumns: addingColumns
   , changeDevice: changeDevice
 };
