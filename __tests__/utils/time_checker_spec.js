@@ -25,104 +25,103 @@ import getStFn from '../helpers/time_create';
 //   return [st.toDate(), fn.toDate()]
 // }
 
-var [st, fn] = getStFn(['subtract', 1], ['add', 1]);
+let [st, fn] = getStFn(['subtract', 1], ['add', 1]);
 let mockdata = {
   start: st
   , finish: fn
-}
+};
 
 let dataIm = Immutable.fromJS(mockdata);
 
-let col = {key:'start', concat:'finish'}
+let col = {key: 'start', concat: 'finish'};
 
-describe('time_checker', function() {
-  describe('isNow', function() {
+describe('time_checker', function(){
+  describe('isNow', function(){
     let isNow;
-    beforeEach(function() {
+    beforeEach(function(){
       isNow = getMod('isnow');
     });
 
-    it('should return true if now is between start & finish', function() {
-      var [st, fn] = getStFn(['subtract', 1], ['add', 1]);
+    it('should return true if now is between start & finish', function(){
+      let [st, fn] = getStFn(['subtract', 1], ['add', 1]);
       expect(isNow(st, fn)).toBeTruthy();
     });
 
-    it('should return false if now is not between start & finish', function() {
-      var [st, fn] = getStFn(['subtract', 2], ['subtract', 1]);
+    it('should return false if now is not between start & finish', function(){
+      let [st, fn] = getStFn(['subtract', 2], ['subtract', 1]);
       expect(isNow(st, fn)).toBeFalsy();
     });
   });
 
-  describe('isPast', function() {
+  describe('isPast', function(){
     let isPast;
-    beforeEach(function() {
+    beforeEach(function(){
       isPast = getMod('ispast');
     });
 
-    it('should return true if time is in past', function() {
-      var [st, fn] = getStFn(['subtract', 1], ['subtract', 1]);
+    it('should return true if time is in past', function(){
+      let [st, fn] = getStFn(['subtract', 1], ['subtract', 1]);
       expect(isPast(fn)).toBeTruthy();
     });
 
-    it('should return false if now is not between start & finish', function() {
-      var [st, fn] = getStFn(['subtract', 2], ['add', 1]);
+    it('should return false if now is not between start & finish', function(){
+      let [st, fn] = getStFn(['subtract', 2], ['add', 1]);
       expect(isPast(fn)).toBeFalsy();
     });
   });
 
-  describe('main', function() {
+  describe('main', function(){
     let n, p, tc;
-    beforeEach(function() {
-      stubs.addSpy(["ispast", "isnow"]);
+    beforeEach(function(){
+      stubs.addSpy(['ispast', 'isnow']);
       stubs.setSpies([
-        {title:'isnow', func:"callFake", value:()=>n}
-        ,  {title:'ispast', func:"callFake", value:()=>p}
+        {title: 'isnow', func: 'callFake', value: ()=>n}
+        ,  {title: 'ispast', func: 'callFake', value: ()=>p}
       ]);
 
       tc = TimeChecker(dataIm, col);
     });
 
-    afterEach(function () {
+    afterEach(function(){
       stubs.revertAll();
     });
 
-    describe('isNow && isPast', function() {
-
+    describe('isNow && isPast', function(){
       let calls = {
-        'isNow':[()=>{
+        'isNow': [()=>{
             tc.isNow();
-            return stubs.getSpy('isnow')
+            return stubs.getSpy('isnow');
           }
         , ()=>[mockdata.start, mockdata.finish]
         ]
-       , 'isPast':[()=>{
+       , 'isPast': [()=>{
           tc.isPast();
-          return stubs.getSpy('ispast')
+          return stubs.getSpy('ispast');
         }
         , ()=>[mockdata.finish]
         ]
-      }
+      };
       checkMulti(calls);
     });
 
-    describe('setNowOrPast', function() {
+    describe('setNowOrPast', function(){
       let now  = 'now text';
       let past = 'past text';
       let fb   = 'fallback';
-      it('should return now text', function() {
+      it('should return now text', function(){
         n = true;
         let txt = tc.setNowOrPast(now, past, fb);
         expect(txt).toEqual(now);
       });
 
-      it('should return past text', function() {
+      it('should return past text', function(){
         n = false;
         p = true;
         let txt = tc.setNowOrPast(now, past, fb);
         expect(txt).toEqual(past);
       });
 
-      it('should return fallback text', function() {
+      it('should return fallback text', function(){
         n = false;
         p = false;
         let txt = tc.setNowOrPast(now, past, fb);

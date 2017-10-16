@@ -8,7 +8,6 @@ import {text_mixins as textMixins} from 'morse-react-mixins';
 
 
 import Calendar from './calendar';
-
 import PrintBtn from './stateless/print_btn';
 
 class TopBar extends React.Component{

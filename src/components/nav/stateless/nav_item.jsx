@@ -1,7 +1,5 @@
 
 import React from 'react';
-
-
 import DayDisplay from './day_display';
 
 export default function(props){

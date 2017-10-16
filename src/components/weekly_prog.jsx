@@ -1,5 +1,4 @@
 // Libraries
-
 import React from 'react';
 import _ from 'lodash';
 import Moment from 'moment';
@@ -19,17 +18,12 @@ import ViewportDetect from 'viewport-detection-es6';
 // Flux
 
 import ColumnsActions from '../actions/columns_actions';
-
 import SessionsActions from '../actions/sessions_actions';
-
 import SessionsStore from '../stores/sessions_store';
 
 // Components
-
 import DateNav from './nav/date_nav';
-
 import PeriodSessions from './sessions/period_sessions';
-
 import TopBar from './topbar/top_bar';
 
 class WeeklyProg extends React.Component{
@@ -114,7 +108,6 @@ class WeeklyProg extends React.Component{
       </div>
     );
   }
-
 }
 
 Object.assign(WeeklyProg.prototype, cssMixins);

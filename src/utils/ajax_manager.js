@@ -1,10 +1,9 @@
-import Ajax from 'ajax-es6-module';
-import Moment from 'moment';
-import _ from 'lodash';
-import includes from 'lodash/includes';
-import reject from 'lodash/reject';
+ import Fetch from '@djforth/ajax-es6-fp/fetch';
+ import Moment from 'moment';
 
-const ajaxManager = new Ajax();
+ import _ from 'lodash';
+ import includes from 'lodash/includes';
+ import reject from 'lodash/reject';
 
 let currentRequests = [];
 
@@ -38,10 +37,10 @@ export default function(api){
       let url = setApi(api, date);
       if (includes(currentRequests, url)) return null;
       currentRequests.push(url);
-      ajaxManager.addUrl(setApi(api, date));
-
-      return ajaxManager.fetch(progress)
-        .then((data)=>{
+      const fetch = Fetch(setApi(api, date));
+      // console.log('Fetch', Fetch);
+      // console.log('fetch', fetch);
+      return fetch.then((data)=>{
           currentRequests = reject(currentRequests, (cr)=>cr === url);
           // console.log(currentRequests)
           return data;

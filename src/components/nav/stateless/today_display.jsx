@@ -1,6 +1,4 @@
-
 import React from 'react';
-
 import TranslationHelper from '@morsedigital/i18n_helper';
 
 let wp = TranslationHelper('javascript')('weekly_programme');

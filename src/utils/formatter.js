@@ -1,10 +1,8 @@
+ import moment from 'moment-strftime';
+ import _, {includes, partial} from 'lodash';
 
-import moment from 'moment-strftime';
-import _ from 'lodash';
-import partial from 'lodash/partial';
- _.partial = partial;
-import includes from 'lodash/includes';
- _.includes = includes;
+_.partial = partial;
+_.includes = includes;
 
 function getFormat(col){
   if (_.has(col, 'fmt')) return col.fmt;
@@ -22,7 +20,7 @@ function displayData(data, col){
 }
 
 function getValue(item){
-  var data = item;
+  let data = item;
   return function(keys){
     if (_.isUndefined(keys)) return null;
     if (_.isString(keys)) return data.get(keys);

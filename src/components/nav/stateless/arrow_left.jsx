@@ -7,7 +7,7 @@ const arrowStyles = {
   , strokeLinecap: 'round'
   , strokeLinejoin: 'round'
   , strokeMiterlimit: 10
-}
+};
 
 export default ({onClick})=>{
   return (<a href="#"

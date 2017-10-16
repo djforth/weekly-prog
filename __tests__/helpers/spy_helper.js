@@ -1,4 +1,3 @@
-
 import _ from 'lodash/core';
 
 function add_spy(title, obj){
@@ -11,13 +10,13 @@ function add_spy(title, obj){
 
 function createSpies(list){
     if(_.isString(list)){
-      return {spy:add_spy(list) title:list}
+      return {spy:add_spy(list), title:list}
     }
 
     if(_.isArray(list)){
       return _.map(list, (title)=>{
         let spy = (_.isArray(list)) ? add_spy(title[0], title[1])
-        return {spy:add_spy(title) title:title}
+        return {spy:add_spy(title), title:title}
       });
     }
 

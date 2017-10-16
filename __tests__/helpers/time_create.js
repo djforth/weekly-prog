@@ -6,5 +6,6 @@ export default function(st, fn, amount='hours'){
   var [type, time] = fn;
   fn = Moment()[type](time, amount);
 
-  return [st.toDate(), fn.toDate()]
+  return [st.toDate(), fn.toDate()];
 }
+;

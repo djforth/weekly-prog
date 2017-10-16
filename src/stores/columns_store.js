@@ -6,8 +6,8 @@ import ColumnsDispatcher from '../dispatchers/columns_dispatcher';
 
 const FilterMap = (filter, map)=>(array)=>{
   let newArray = array.filter(filter);
-  return newArray.map(map)
-}
+  return newArray.map(map);
+};
 
 const store = {
   device: 'desktop'
@@ -15,15 +15,15 @@ const store = {
   , columns_ids: []
   , visible_columns: []
 
-  , emitChange(event) {
+  , emitChange(event){
     this.emit(event);
   }
 
-  , addChangeListener(event, callback) {
+  , addChangeListener(event, callback){
     this.on(event, callback);
   }
 
-  , removeChangeListener(event, callback) {
+  , removeChangeListener(event, callback){
     this.removeListener(event, callback);
   }
 
@@ -72,7 +72,7 @@ const store = {
     const filterCols = FilterMap(
       (col)=>(col.type === 'date' || col.type === 'dateTime')
       , (col)=>this.reduceObj(col, ['key', 'title', 'type', 'fmt'])
-    )
+    );
 
     return filterCols(column);
   }
@@ -199,7 +199,7 @@ const registeredCallback = function(payload){
       ColumnsStore.emitChange('change');
       break;
     }
-  /*eslint-enable*/
+  /* eslint-enable*/
 };
 
 ColumnsStore.dispatchToken = ColumnsDispatcher.register(registeredCallback);

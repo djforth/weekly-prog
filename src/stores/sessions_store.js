@@ -1,3 +1,6 @@
+// let AjaxManager, Breaker, DateManager, EventEmitter, SessionsDispatcher, _;
+
+let ajaxManager, processor, sessions, facility;
 
 import {EventEmitter} from 'events';
 import _ from 'lodash';
@@ -9,8 +12,6 @@ import Breaker from '../utils/sessions_breaker';
 
 // Flux
 import SessionsDispatcher from '../dispatchers/sessions_dispatcher';
-
-let ajaxManager, processor, sessions, facility;
 
 let fetched     = false;
 
@@ -198,8 +199,8 @@ const SessionStore = Object.assign({}, EventEmitter.prototype, store);
 SessionStore.setMaxListeners(0);
 
 const registeredCallback = function(payload){
-  var action = payload.action;
-  switch(action.type){
+  let action = payload.action;
+  switch (action.type){
     case 'CHANGE_DATE':
       SessionStore._setDate(action.date);
       SessionStore.emitChange('changing_date');
