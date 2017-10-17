@@ -29,7 +29,12 @@ class ColumnItem extends React.Component{
     item = this.props.item;
     places = item.get('places_left');
     let {link, title, instruction} = ButtonCheck(item);
-    return (<BookBtn places={places} link={link} title={title} instruction={instruction} />);
+    return (<BookBtn
+      places={places}
+      link={link}
+      title={title}
+      instruction={instruction}
+    />);
   }
 
   _showContent(value){

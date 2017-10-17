@@ -18,14 +18,14 @@ describe('Ajax manager', function(){
   });
 
   describe('api', function(){
-    let ajax, Fetch, spy, resolve, reject, promise;
+    let ajax, fetch, Fetch, spy, resolve, reject, promise;
     beforeEach(function(){
       promise = new Promise((res, rej)=>{
         resolve = res;
         reject  = rej;
       });
-
-      Fetch = jasmine.createSpy('Fetch').and.returnValue(promise);
+      fetch = jasmine.createSpy('fetch').and.returnValue(promise);
+      Fetch = jasmine.createSpy('Fetch').and.returnValue(fetch);
       Ajax.__set__('Fetch', Fetch);
       ajax = Ajax('http://astainforth.com');
     });

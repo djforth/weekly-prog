@@ -8,6 +8,7 @@
   "license": "MIT",
   "dependencies": {
     "@djforth/ajax-es6-fp": "1.5.1",
+    "@djforth/viewport-detection-fp": "^2.0.1",
     "@morsedigital/i18n_helper": "1.2.1",
     "babel-polyfill": "^6.26.0",
     "classnames": "^2.2.5",

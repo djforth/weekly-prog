@@ -12,8 +12,7 @@ import {
 } from 'morse-react-mixins';
 
 // Morse Libraies
-
-import ViewportDetect from 'viewport-detection-es6';
+import ViewportDetect from '@djforth/viewport-detection-fp';
 
 // Flux
 
@@ -53,18 +52,23 @@ class WeeklyProg extends React.Component{
   }
 
   componentDidMount(){
-    this.detect = new ViewportDetect();
-    this.device = this.detect.getDevice();
-    this.size  = this.detect.windowSize();
+    this.vpDetect = ViewportDetect();
+    this.vpDetect.addCallback((device)=>{
+      this.setState({device});
+    });
+    this.vpDetect.track();
+    // this.detect = new ViewportDetect();
+    this.device = this.vpDetect.getDevice();
+    this.size  = this.vpDetect.getWidth();
     ColumnsActions.changeDevice(this.device);
 
-    this.id = this.detect.trackSize(this._onDeviceChange.bind(this));
+    // this.id = this.detect.trackSize(this._onDeviceChange.bind(this));
     SessionsStore.addChangeListener('api_set', this._fetchData.bind(this));
     SessionsActions.setApi(this.props.sessionsApi);
   }
 
   componentWillUnmount(){
-    this.detect.removeCallback(this.id);
+    // this.detect.removeCallback(this.id);
     SessionsStore.removeChangeListener('prerender', this._getSessions);
   }
 
