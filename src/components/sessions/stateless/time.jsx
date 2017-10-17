@@ -9,7 +9,7 @@ function titleCreator(checker, time){
     );
 }
 
-export default function(props){
+const Time = (props)=>{
   if (props.cancelled){
     return (<Cancelled time={props.time} />);
   }
@@ -20,3 +20,5 @@ export default function(props){
     </span>
   );
 };
+
+export default Time;

@@ -11,7 +11,7 @@ function setCss(item, col){
   return `${col.wrapper} ${checker.setNowOrPast('now', 'old-session')}`;
 }
 
-export default function(props){
+ const Wrapper = function(props){
   let css = setCss(props.item, props.col);
   return (
     <div className={css}>
@@ -19,3 +19,5 @@ export default function(props){
     </div>
   );
 };
+
+export default Wrapper;

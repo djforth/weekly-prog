@@ -13,8 +13,10 @@ import RichText from './stateless/richtext';
 import Wrapper from './stateless/wrapper';
 
 // Mixins
-import mixins from 'morse-react-mixins';
-const [cssMixins, textMixins]  = [mixins.css_mixins, mixins.text_mixins];
+import {
+  css_mixins as cssMixins
+  , text_mixins as textMixins
+} from 'morse-react-mixins';
 
 class ColumnItem extends React.Component{
   constructor(props){
@@ -40,6 +42,7 @@ class ColumnItem extends React.Component{
     let cancelled, item;
     item = this.props.item;
     cancelled = (item.has('cancelled')) ? item.get('cancelled') : false;
+    // return 'time';
     return (<Time
       cols = {this.props.col}
       checker = {timeChecker(item, this.props.col)}
@@ -69,7 +72,7 @@ class ColumnItem extends React.Component{
     col = this.props.col;
     css = this.checkCss(this.props.css, col.key);
     return (
-      <div className={css} key={_.uniqueId('dataItem')}>
+      <div className={css}>
         <Wrapper item={this.props.item} col={col} >
           {this._showValues()}
         </Wrapper>

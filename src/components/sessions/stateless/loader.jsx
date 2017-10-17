@@ -1,10 +1,11 @@
 
 import React from 'react';
 
-export default function(props){
+const Loader = function(props){
   return (
       <div className="loading">
         <span className="hidden">Loading {props.alt}</span>
       </div>
     );
 };
+export default Loader;

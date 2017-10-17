@@ -38,9 +38,9 @@ export default function(api){
       if (includes(currentRequests, url)) return null;
       currentRequests.push(url);
       const fetch = Fetch(setApi(api, date));
-      // console.log('Fetch', Fetch);
-      // console.log('fetch', fetch);
-      return fetch.then((data)=>{
+      console.log('Fetch', Fetch);
+      console.log('fetch', fetch);
+      return fetch().then((data)=>{
           currentRequests = reject(currentRequests, (cr)=>cr === url);
           // console.log(currentRequests)
           return data;

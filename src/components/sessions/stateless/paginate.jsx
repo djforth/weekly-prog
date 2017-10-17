@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function(props){
+const Paginate = function(props){
   return (
     <div className={props.css}>
       <a href="#" onClick={props.onClick} className="button button-pagination">
@@ -9,3 +9,5 @@ export default function(props){
     </div>
   );
 };
+
+export default  Paginate;

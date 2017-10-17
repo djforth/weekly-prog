@@ -37,6 +37,7 @@ class DateNav extends React.Component{
     dates = this._splitDates();
     today = dates[0];
     current = today.date;
+    this.dateList = null;
     this.pos = 0;
     this.state = {
       dates: dates[1]
@@ -161,7 +162,7 @@ class DateNav extends React.Component{
   }
 
   _setWidth(){
-    this.convertDomlist(this.refs.datelist.querySelectorAll('li'));
+    this.convertDomlist(this.dateList.querySelectorAll('li'));
     return Math.ceil(this.getWidths());
   }
 
@@ -217,7 +218,10 @@ class DateNav extends React.Component{
         <div className="list-holder">
           <ul className="date-list"
               role="tablist"
-              ref="datelist"
+              ref= {(e)=>{
+                console.log('target', e);
+                this.dateList = e;
+              }}
               style={this._setStyle()}>
             {this._renderDates()}
           </ul>

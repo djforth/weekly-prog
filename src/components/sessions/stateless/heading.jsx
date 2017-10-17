@@ -1,9 +1,11 @@
 import React from 'react';
 
-export default function(props){
+const Heading = function(props){
   return (
     <div className={props.css}>
       {props.title}
     </div>
   );
 };
+
+export default Heading;

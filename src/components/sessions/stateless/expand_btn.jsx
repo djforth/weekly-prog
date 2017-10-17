@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default  function(props){
+const ExpandBtn = function(props){
   return (
       <div className={props.css}>
         <a href="#"
@@ -17,3 +17,5 @@ export default  function(props){
       </div>
     );
 };
+
+export default ExpandBtn;

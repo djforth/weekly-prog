@@ -8,9 +8,10 @@ import {manageTranslations as TranslationHelper} from '@morsedigital/i18n_helper
 let wp = TranslationHelper('javascript')('weekly_programme');
 
 // Mixins
-
-import mixins from 'morse-react-mixins';
-const [cssMixins, textMixins]  = [mixins.css_mixins, mixins.text_mixins];
+import {
+  css_mixins as cssMixins
+  , text_mixins as textMixins
+} from 'morse-react-mixins';
 
 // Components
 import ColumnItem from './column_item';
@@ -97,7 +98,7 @@ class DataItem extends React.Component{
   render(){
     return (
       <div className="clearfix">
-        {this._renderTd()}
+        {this._renderTd() }
       </div>
     );
   }

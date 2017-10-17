@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-export default function(props){
+ const NoSession = function(props){
   let key, nosession;
   key = `${props.title.toLowerCase()}-nosessions`;
   nosession = props.no_sessions || 'There are no sessions this';
@@ -10,3 +10,4 @@ export default function(props){
       <h5 className="no-sessions">{nosession} {props.title}</h5>
   </div>);
 };
+export default NoSession;

@@ -7,7 +7,7 @@
  import Time from './time';
  import RichText from './richtext';
 
-export default  function(props){
+const AdditionalContent = (props)=>{
   let col, getVal, item, value;
   item   = props.item;
   col    = props.col;
@@ -25,3 +25,5 @@ export default  function(props){
 
   return <RichText content={value} />;
 };
+
+export default AdditionalContent;

@@ -12,8 +12,10 @@ import ColumnsStore from '../../stores/columns_store';
 import SessionsStore from '../../stores/sessions_store';
 
 // Mixins
-import {css_mixins as cssMixins} from 'morse-react-mixins';
-import {text_mixins as textMixins} from 'morse-react-mixins';
+import {
+  css_mixins as cssMixins
+  , text_mixins as textMixins
+} from 'morse-react-mixins';
 
 class PeriodSessions extends React.Component{
   constructor(props){

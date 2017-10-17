@@ -13,7 +13,7 @@ function checkPlaces(places){
   return _.isNumber(places) && places === 0;
 }
 
-export default function({instruction, link, places, title}){
+const BookBtn = ({instruction, link, places, title})=>{
   if (instruction){
     return (<span className="session-full">{instruction}</span>);
   }
@@ -28,3 +28,5 @@ export default function({instruction, link, places, title}){
 
   return (<span className="session-full">{wp('additional.no_booking')}</span>);
 };
+
+export default BookBtn;

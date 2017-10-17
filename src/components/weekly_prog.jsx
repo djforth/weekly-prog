@@ -7,7 +7,7 @@ import 'moment/locale/cy';
 // Mixins
 import {
   css_mixins as cssMixins
-  , text_mixinsimport as textMixins
+  , text_mixins as textMixins
   , widths_mixins as widthsMixins
 } from 'morse-react-mixins';
 
@@ -33,32 +33,15 @@ class WeeklyProg extends React.Component{
     SessionsActions.setGroupby(this.props.groupby);
 
     this.percent = 0;
-    this.state = {sessions: [], keys: [], visible: [], device: 'desktop'};
+    this.state = {sessions: [], keys: [], visible: [], device: 'desktop', hasError: false};
   }
 
-  _fetchData(){
-    SessionsStore.removeChangeListener('api_set', this._fetchData);
-    _.defer(()=>{
-      SessionsActions.fetchData();
-    });
-  }
-
-  _getSessions(){
-    let session = SessionsStore._getDate();
-    if (!_.isEmpty(session)){
-      this.setState({date: session.date, sessions: session.data});
-    }
-  }
-
-  _renderPeriodSessions(){
-    return _.map(this.props.timeperiod, (tp)=>{
-      return (<PeriodSessions {...this.props}
-        devive   = {this.state.device}
-        sessions = {this.state.sessions}
-        time     = {tp.time}
-        title    = {tp.title}
-        key      = {tp.title.toLowerCase()} />);
-    });
+  componentDidCatch(error, info){
+    console.log(this.props);
+    // Display fallback UI
+    this.setState({hasError: true});
+    // You can also log the error to an error reporting service
+    logErrorToMyService(error, info);
   }
 
   componentWillMount(){
@@ -85,6 +68,35 @@ class WeeklyProg extends React.Component{
     SessionsStore.removeChangeListener('prerender', this._getSessions);
   }
 
+  // shouldComponentUpdate(){
+  //   return true
+  // }
+
+  _fetchData(){
+    SessionsStore.removeChangeListener('api_set', this._fetchData);
+    _.defer(()=>{
+      SessionsActions.fetchData();
+    });
+  }
+
+  _getSessions(){
+    let session = SessionsStore._getDate();
+    if (!_.isEmpty(session)){
+      this.setState({date: session.date, sessions: session.data});
+    }
+  }
+
+  _renderPeriodSessions(){
+    return _.map(this.props.timeperiod, (tp)=>{
+      return (<PeriodSessions {...this.props}
+        devive   = {this.state.device}
+        sessions = {this.state.sessions}
+        time     = {tp.time}
+        title    = {tp.title}
+        key      = {tp.title.toLowerCase()} />);
+    });
+  }
+
   _onDeviceChange(device, size){
     if (this.device !== device){
       this.device = device;
@@ -99,11 +111,10 @@ class WeeklyProg extends React.Component{
         <TopBar
           device={this.state.device}
           print={this.props.print}
-
         />
         <DateNav />
         <div id="sessions" className="clearfix">
-          {this._renderPeriodSessions()}
+        {this._renderPeriodSessions()}
         </div>
       </div>
     );
@@ -115,3 +126,5 @@ Object.assign(WeeklyProg.prototype, textMixins);
 Object.assign(WeeklyProg.prototype, widthsMixins);
 
 export default WeeklyProg;
+
+

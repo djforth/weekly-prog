@@ -15,8 +15,10 @@ _.reject = reject;
  import DataItem from './data_item';
 
 // Mixins
- import {css_mixins as cssMixins} from 'morse-react-mixins';
- import {text_mixins as textMixins} from 'morse-react-mixins';
+import {
+  css_mixins as cssMixins
+  , text_mixins as textMixins
+} from 'morse-react-mixins';
 
 class DataExpanderItem extends React.Component{
   constructor(props){
