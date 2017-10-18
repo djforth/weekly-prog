@@ -2,19 +2,19 @@ import React from 'react';
 
 const circleStyles = {
   'stroke': '#e14e00'
-  , 'stroke-width': '2px'
+  , 'strokeWidth': '2px'
   , 'fill': 'transparent'
 };
 
 const lineStyles = {
   'stroke': '#e14e00'
-  , 'stroke-width': '2px'
+  , 'strokeWidth': '2px'
 };
 
 const ellipseStyles = {
-  "fill": '#e14e00'
+  'fill': '#e14e00'
   , 'stroke': '#e14e00'
-  , 'stroke-width': '2px'
+  , 'strokeWidth': '2px'
 };
 
 const ExpandBtn = function(props){

@@ -23,6 +23,7 @@
     },
     "production": {
       "plugins": [
+        "add-module-exports"
       ]
       , "presets": [
         ["env", {

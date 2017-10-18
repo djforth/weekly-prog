@@ -1,8 +1,6 @@
 
-import _ from 'lodash';
+import _, {includes} from 'lodash';
 import Moment from 'moment';
-
-import includes from 'lodash/includes';
  _.includes = includes;
 
 function isnow(st, fn){

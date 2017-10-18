@@ -2,13 +2,7 @@
 
 import React from 'react';
 
-import _ from 'lodash';
-import take from 'lodash/take';
- _.take = take;
-import mapValues from 'lodash/mapValues';
- _.mapValues = mapValues;
-import reject from 'lodash/reject';
- _.reject = reject;
+import _, {reject} from 'lodash';
 
 // Utils
 import checker from '../../utils/day_checker';
@@ -135,7 +129,7 @@ class DateNav extends React.Component{
       this.pos++;
     }
 
-    move  = _.map(_.take(elms, this.pos), 'width');
+    move  = _.map(elms.slice(0, this.pos), 'width');
     mover = -this._getDistance(move);
     this.setState({listPos: mover});
     this._getPrevious(mover);
@@ -156,7 +150,7 @@ class DateNav extends React.Component{
       width: this.state.listWidth
       , left: this.state.listPos
     };
-    return _.mapValues(styles, (v)=>{
+    return Object.values(styles).map((v)=>{
       return v;
     });
   }
@@ -168,7 +162,7 @@ class DateNav extends React.Component{
 
   _splitDates(){
     let dates = SessionsStore._getAllDates();
-    return [_.find(dates, (d)=>d.today), _.reject(dates, (d)=>d.today)];
+    return [_.find(dates, (d)=>d.today), reject(dates, (d)=>d.today)];
   }
 
   _reset(){

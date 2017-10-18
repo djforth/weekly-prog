@@ -1,9 +1,7 @@
  import Fetch from '@djforth/ajax-es6-fp/fetch';
  import Moment from 'moment';
 
- import _ from 'lodash';
- import includes from 'lodash/includes';
- import reject from 'lodash/reject';
+ import _, {includes, reject} from 'lodash';
 
 let currentRequests = [];
 

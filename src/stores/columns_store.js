@@ -1,6 +1,5 @@
 import {EventEmitter as EventEmitter} from 'events';
-import _ from 'lodash';
-import includes from 'lodash/includes';
+import _, {includes} from 'lodash';
 import {text_mixins as textMixins} from 'morse-react-mixins';
 import ColumnsDispatcher from '../dispatchers/columns_dispatcher';
 
@@ -124,12 +123,9 @@ const store = {
 
   , getSortable(id){
     let column = this.getColumn(id).cols;
-    let sortables = _.chain(column)
-      .filter((col)=>col.sortable)
-      .map((col)=>this.reduceObj(col, ['key', 'title']))
-      .value();
-
-    return sortables;
+    return column
+            .filter((col)=>col.sortable)
+            .map(({key, title})=>({key, title}));
   }
 
   , getTitles(id){
