@@ -1,8 +1,8 @@
 {
   "name": "@morsedigital/weekly-prog",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "Better Weekly Prog",
-  "main": "index.js",
+  "main": "lib/components/weekly_prog.js",
   "repository": "git@github.com:morsedigital/weekly-prog.git",
   "author": "Adrian Stainforth <adrian.stainforth@gmail.com>",
   "license": "MIT",
@@ -19,12 +19,10 @@
     "moment": "^2.19.1",
     "moment-strftime": "^0.2.3",
     "morse-react-mixins": "^2.1.4",
-    "react": "^16.0.0",
-    "react-date-range": "^0.9.4",
-    "react-dom": "^16.0.0",
-    "viewport-detection-es6": "^2.1.6"
+    "react-date-range": "^0.9.4"
   },
   "devDependencies": {
+    "@djforth/ap_karma_wp": "^3.0.2",
     "@djforth/ap_utils": "^3.1.2",
     "@djforth/morse-jasmine-wp": "^2.5.0",
     "@djforth/react-jasmine-wp": "^1.3.3",
@@ -34,6 +32,7 @@
     "babel-loader": "^7.1.2",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-istanbul": "^4.1.5",
+    "babel-plugin-lodash": "^3.2.11",
     "babel-plugin-rewire": "^1.1.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-minify": "^0.2.0",
@@ -49,6 +48,7 @@
     "import-glob-loader": "^1.1.0",
     "istanbul-instrumenter-loader": "^3.0.0",
     "jasmine-core": "^2.8.0",
+    "karma-webpack": "^2.0.5",
     "node-sass": "^4.5.3",
     "react-hot-loader": "^3.1.1",
     "sass-loader": "^6.0.6",
