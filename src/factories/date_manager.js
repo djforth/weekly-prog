@@ -2,8 +2,7 @@ import checker from '../utils/day_checker';
 import SessionsFcty from './sessions_fcty';
 // lodash
 
-import _ from 'lodash';
-import partial from 'lodash/partial';
+import _, {partial} from 'lodash';
 import Moment from 'moment';
 
 function getDate(dates, date){

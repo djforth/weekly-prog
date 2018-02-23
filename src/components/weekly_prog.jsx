@@ -15,7 +15,6 @@ import {
 import ViewportDetect from '@djforth/viewport-detection-fp';
 
 // Flux
-
 import ColumnsActions from '../actions/columns_actions';
 import SessionsActions from '../actions/sessions_actions';
 import SessionsStore from '../stores/sessions_store';
